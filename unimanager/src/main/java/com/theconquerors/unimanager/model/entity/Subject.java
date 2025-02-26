@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "subjects")
-public class Subject {
+public class Subject extends BaseEntity{
 
     @NotBlank
     @Column(name = "name", nullable = false)

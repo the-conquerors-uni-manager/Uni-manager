@@ -16,7 +16,7 @@ import java.util.Date;
 @Setter
 @Entity
 @Table(name = "teachers")
-public class Teacher {
+public class Teacher extends BaseEntity {
 
     @NotBlank
     @Column(name = "firstName", nullable = false)

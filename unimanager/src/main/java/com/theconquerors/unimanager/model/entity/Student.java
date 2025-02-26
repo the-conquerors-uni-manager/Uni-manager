@@ -15,7 +15,7 @@ import java.util.Date;
 @Setter
 @Entity
 @Table(name = "students")
-public class Student {
+public class Student extends BaseEntity {
 
     /*
      * @NotNull: The CharSequence, Collection, Map or Array object is not null, but can be empty.
