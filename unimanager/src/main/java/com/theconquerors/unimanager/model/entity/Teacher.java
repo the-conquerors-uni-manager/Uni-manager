@@ -66,4 +66,3 @@ public class Teacher {
     @Column(name = "birthDate", nullable = false, unique = true)
     private Date birthDate;
 }
-}
