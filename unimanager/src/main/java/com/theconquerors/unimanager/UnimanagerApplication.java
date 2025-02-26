@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class UnimanagerApplication {
 
 	public static void main(String[] args) {
-
-		System.out.println("Hello");
 		SpringApplication.run(UnimanagerApplication.class, args);
 	}
 
