@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
 
 @Getter
 @Setter
@@ -88,8 +88,8 @@ public class Student extends BaseEntity {
     private Group group;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private List<Grade> grades;
+    private HashSet<Grade> grades;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = ScholarshipApplication.class)
-    private List<ScholarshipApplication> scholarshipApplications;
+    private HashSet<ScholarshipApplication> scholarshipApplications;
 }

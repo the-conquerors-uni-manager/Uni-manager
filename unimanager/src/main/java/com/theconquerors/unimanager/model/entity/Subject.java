@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.HashSet;
 
 @Getter
 @Setter
@@ -25,5 +25,8 @@ public class Subject extends BaseEntity{
     private String description;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private List<Grade> grades;
+    private HashSet<Grade> grades;
+
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Exam.class)
+    private HashSet<Exam> exams;
 }

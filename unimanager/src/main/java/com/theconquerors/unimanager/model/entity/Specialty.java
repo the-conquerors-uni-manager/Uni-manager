@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.HashSet;
 
 @Getter
 @Setter
@@ -29,6 +29,6 @@ public class Specialty extends BaseEntity {
     private Faculty faculty;
 
     @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL,targetEntity = Group.class)
-    private List<Group> groupList;
+    private HashSet<Group> groupList;
 
 }
