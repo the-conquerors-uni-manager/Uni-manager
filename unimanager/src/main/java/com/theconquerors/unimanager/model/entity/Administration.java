@@ -1,6 +1,8 @@
 package com.theconquerors.unimanager.model.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,14 +10,15 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Date;
-import java.util.HashSet;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "teachers")
-public class Teacher extends BaseEntity {
+@Table(name = "administrations")
+public class Administration extends BaseEntity {
 
     @NotBlank
     @Column(name = "firstName", nullable = false,length = 50)
@@ -65,9 +68,11 @@ public class Teacher extends BaseEntity {
     @Column(name = "birthDate", nullable = false, unique = true)
     private Date birthDate;
 
-    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private HashSet<Grade> grades;
+    @NotBlank
+    @Column(name = "opens", nullable = false)
+    private LocalTime opens;
 
-    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = Exam.class)
-    private HashSet<Exam> exams;
+    @NotBlank
+    @Column(name = "close", nullable = false)
+    private LocalTime close ;
 }
