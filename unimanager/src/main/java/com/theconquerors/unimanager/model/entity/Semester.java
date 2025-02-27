@@ -1,13 +1,12 @@
 package com.theconquerors.unimanager.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,4 +25,7 @@ public class Semester extends BaseEntity {
     @NotNull
     @Column(name = "endDate", nullable = false)
     private Date endDate;
+
+    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Grade.class)
+    private List<Grade> grades;
 }

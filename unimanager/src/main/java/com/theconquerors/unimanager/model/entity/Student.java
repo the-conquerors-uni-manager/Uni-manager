@@ -1,13 +1,14 @@
 package com.theconquerors.unimanager.model.entity;
 
-import com.theconquerors.unimanager.model.entity.enums.TypeOfLearningEnum;
-import com.theconquerors.unimanager.model.entity.enums.TypeOfReceptionEnum;
+import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
+import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -71,19 +72,21 @@ public class Student extends BaseEntity {
     private String phoneNumber;
 
     @NotNull
-    @Column(name = "typeOfReceptionEnum", nullable = false, unique = true)
-    private TypeOfReceptionEnum typeOfReceptionEnum;
+    @Column(name = "receptionType", nullable = false, unique = true)
+    private ReceptionTypeEnum receptionType;
 
     @NotNull
-    @Column(name = "typeOfLearning", nullable = false, unique = true)
-    private TypeOfLearningEnum typeOfLearning;
+    @Column(name = "learningType", nullable = false, unique = true)
+    private LearningTypeEnum learningType;
 
     @NotNull
     @Column(name = "birthDate", nullable = false, unique = true)
     private Date birthDate;
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
-    @JoinColumn(name = "group_id", referencedColumnName = "id")
-    @Column(nullable = false)
+    @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
     private Group group;
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Grade.class)
+    private List<Grade> grades;
 }

@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.model.entity.enums;
 
-public enum TypeOfLearningEnum {
+public enum LearningTypeEnum {
     FULLTIME,
     PARTTIME,
     ONLINE,

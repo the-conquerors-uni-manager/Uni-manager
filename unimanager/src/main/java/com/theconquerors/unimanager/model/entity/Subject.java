@@ -1,13 +1,13 @@
 package com.theconquerors.unimanager.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,4 +23,7 @@ public class Subject extends BaseEntity{
     @NotNull
     @Column(name = "description", nullable = false)
     private String description;
+
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Grade.class)
+    private List<Grade> grades;
 }
