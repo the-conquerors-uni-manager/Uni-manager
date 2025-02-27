@@ -92,4 +92,7 @@ public class Student extends BaseEntity {
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = ScholarshipApplication.class)
     private HashSet<ScholarshipApplication> scholarshipApplications;
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Payment.class)
+    private HashSet<Payment> payments;
 }
