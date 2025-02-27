@@ -2,9 +2,7 @@ package com.theconquerors.unimanager.model.entity;
 
 import com.theconquerors.unimanager.model.entity.enums.TypeOfLearningEnum;
 import com.theconquerors.unimanager.model.entity.enums.TypeOfReceptionEnum;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -83,4 +81,9 @@ public class Student extends BaseEntity {
     @NotNull
     @Column(name = "birthDate", nullable = false, unique = true)
     private Date birthDate;
+
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
+    @JoinColumn(name = "group_id", referencedColumnName = "id")
+    @Column(nullable = false)
+    private Group group;
 }
