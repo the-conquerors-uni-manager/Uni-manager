@@ -28,4 +28,7 @@ public class Semester extends BaseEntity {
 
     @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Grade.class)
     private List<Grade> grades;
+
+    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = ScholarshipApplication.class)
+    private List<ScholarshipApplication> scholarshipApplications;
 }
