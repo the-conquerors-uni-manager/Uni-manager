@@ -23,7 +23,7 @@ public class Specialty extends BaseEntity {
     @Column(name = "description", nullable = true,columnDefinition = "TEXT")
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity =  Faculty.class)
     @JoinColumn(name = "faculty_id", referencedColumnName = "id")
     @Column(nullable = false)
     private Faculty faculty;
