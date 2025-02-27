@@ -15,7 +15,7 @@ import java.util.List;
 public class Faculty extends BaseEntity{
 
     @NotBlank
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, length = 250)
     @Size(max = 250)
     private String name;
 
@@ -23,6 +23,6 @@ public class Faculty extends BaseEntity{
     @Column(name = "description", nullable = true,columnDefinition = "TEXT")
     private String description;
 
-    @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL, targetEntity = Specialty.class)
     private List<Specialty> specialties;
 }
