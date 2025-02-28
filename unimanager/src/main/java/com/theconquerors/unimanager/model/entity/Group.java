@@ -11,7 +11,7 @@ import java.util.HashSet;
 @Getter
 @Setter
 @Entity
-@Table(name = "groups")
+@Table(name = "studentsGroups")
 public class Group extends BaseEntity {
 
     @NotNull
