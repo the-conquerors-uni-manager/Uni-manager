@@ -2,6 +2,7 @@ package com.theconquerors.unimanager.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,8 +15,9 @@ import java.util.HashSet;
 public class Group extends BaseEntity {
 
     @NotNull
-    @Column(name = "number", nullable = false, unique = true)
-    private int number;
+    @Column(name = "name", nullable = false, length = 5)
+    @Size(max = 5)
+    private String name;
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Specialty.class)
     @JoinColumn(name = "specialty_id", referencedColumnName = "id",nullable = false)
@@ -26,4 +28,7 @@ public class Group extends BaseEntity {
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Exam.class)
     private HashSet<Exam> exams;
+
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
+    private HashSet<WeeklySchedule> weeklySchedules;
 }

@@ -70,4 +70,7 @@ public class Teacher extends BaseEntity {
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = Exam.class)
     private HashSet<Exam> exams;
+
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
+    private HashSet<WeeklySchedule> weeklySchedules;
 }

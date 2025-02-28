@@ -34,4 +34,7 @@ public class Semester extends BaseEntity {
 
     @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Exam.class)
     private HashSet<Exam> exams;
+
+    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
+    private HashSet<WeeklySchedule> weeklySchedules;
 }

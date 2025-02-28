@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "administrators")
+@Table(name = "healthInsurancePayments")
 public class HealthInsurancePayment extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Student.class)

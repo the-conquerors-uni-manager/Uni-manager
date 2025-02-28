@@ -29,4 +29,7 @@ public class Subject extends BaseEntity{
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Exam.class)
     private HashSet<Exam> exams;
+
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
+    private HashSet<WeeklySchedule> weeklySchedules;
 }
