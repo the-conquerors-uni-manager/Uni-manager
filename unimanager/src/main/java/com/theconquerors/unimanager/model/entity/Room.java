@@ -17,11 +17,11 @@ import java.util.HashSet;
 )
 public class Room extends BaseEntity{
     @NotNull
-    @Column(name = "number", nullable = false)
+    @Column(name = "block", nullable = false)
     private long block;
 
     @NotNull
-    @Column(name = "number", nullable = false)
+    @Column(name = "floor", nullable = false)
     private short floor;
 
     @NotNull
@@ -29,11 +29,11 @@ public class Room extends BaseEntity{
     private byte number;
 
     @NotNull
-    @Column(name = "number", nullable = false)
+    @Column(name = "roomType", nullable = false)
     private RoomTypeEnum roomType;
 
     @NotNull
-    @Column(name = "number", nullable = false)
+    @Column(name = "capacity", nullable = false)
     private byte capacity;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
