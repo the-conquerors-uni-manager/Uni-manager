@@ -16,7 +16,7 @@ import java.util.Date;
         name = "exams",
         uniqueConstraints = @UniqueConstraint(columnNames = {"subject","teacher","semester","group"})
 )
-public class Exam {
+public class Exam extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Subject.class)
     @JoinColumn(name = "subject_id", referencedColumnName = "id",nullable = false)
@@ -46,5 +46,5 @@ public class Exam {
     @Column(name = "endTime", nullable = false)
     private LocalTime endTime ;
 
-    private Duration duration = Duration.between(startTime, endTime);
+    //private Duration duration = Duration.between(startTime, endTime);
 }
