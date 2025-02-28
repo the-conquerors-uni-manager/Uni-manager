@@ -39,4 +39,6 @@ public class Room extends BaseEntity{
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
     private HashSet<WeeklySchedule> weeklySchedules;
 
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
+    private HashSet<DormitoryAssignment> dormitoryAssignments;
 }
