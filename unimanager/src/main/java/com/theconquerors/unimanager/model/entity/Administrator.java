@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "administrations")
+@Table(name = "administrators")
 public class Administrator extends BaseEntity {
 
     @NotBlank
