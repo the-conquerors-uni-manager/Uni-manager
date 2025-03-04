@@ -27,10 +27,6 @@ public class WeeklySchedule extends BaseEntity {
     @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
     private Group group;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Semester.class)
-    @JoinColumn(name = "semester_id", referencedColumnName = "id",nullable = false)
-    private Semester semester;
-
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Room.class)
     @JoinColumn(name = "room_id", referencedColumnName = "id",nullable = false)
     private Room room;
