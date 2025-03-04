@@ -23,6 +23,10 @@ public class Group extends BaseEntity {
     @JoinColumn(name = "specialty_id", referencedColumnName = "id",nullable = false)
     private Specialty specialty;
 
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Student.class)
+    @JoinColumn(name = "foreman_id", referencedColumnName = "id",nullable = false)
+    private Student foreman;
+
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Student.class)
     private HashSet<Student> students;
 

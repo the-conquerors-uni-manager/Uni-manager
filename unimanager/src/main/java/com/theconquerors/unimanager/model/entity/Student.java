@@ -101,4 +101,7 @@ public class Student extends BaseEntity {
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
     private HashSet<DormitoryAssignment> dormitoryAssignments;
+
+    @OneToOne(mappedBy = "foreman",cascade = CascadeType.ALL,targetEntity = Group.class)
+    private Group groupForeman;
 }
