@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.model.entity;
 
+import com.theconquerors.unimanager.model.entity.enums.AcademicActivitiesEnum;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.model.entity.enums.WeekRepeatingEnum;
 import jakarta.persistence.*;
@@ -46,5 +47,9 @@ public class WeeklySchedule extends BaseEntity {
     @NotNull
     @Column(name = "startOnWeek", nullable = false)
     private int startOnWeek;
+
+    @NotNull
+    @Column(name = "academicActivities", nullable = false)
+    private AcademicActivitiesEnum academicActivities;
 
 }
