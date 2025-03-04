@@ -30,7 +30,7 @@ public class Specialty extends BaseEntity {
     @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL,targetEntity = Group.class)
     private HashSet<Group> groupList;
 
-    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Semester.class)
-    private HashSet<Semester> semesters;
+    @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL,targetEntity = Subject.class)
+    private HashSet<Subject> subjects;
 
 }
