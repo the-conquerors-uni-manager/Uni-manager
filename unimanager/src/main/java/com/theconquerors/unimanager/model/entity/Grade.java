@@ -23,10 +23,6 @@ public class Grade extends BaseEntity {
     @JoinColumn(name = "subject_id", referencedColumnName = "id",nullable = false)
     private Subject subject;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Semester.class)
-    @JoinColumn(name = "semester_id", referencedColumnName = "id",nullable = false)
-    private Semester semester;
-
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Teacher.class)
     @JoinColumn(name = "teacher_id", referencedColumnName = "id",nullable = false)
     private Teacher teacher;
