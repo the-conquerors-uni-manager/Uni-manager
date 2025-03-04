@@ -24,6 +24,14 @@ public class Subject extends BaseEntity{
     @Column(name = "description", nullable = false)
     private String description;
 
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Specialty.class)
+    @JoinColumn(name = "specialty_id", referencedColumnName = "id",nullable = false)
+    private Specialty specialty;
+
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Semester.class)
+    @JoinColumn(name = "semester_id", referencedColumnName = "id",nullable = false)
+    private Semester semester;
+
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Grade.class)
     private HashSet<Grade> grades;
 
