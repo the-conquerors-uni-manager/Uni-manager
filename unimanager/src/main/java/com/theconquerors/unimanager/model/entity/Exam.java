@@ -26,10 +26,6 @@ public class Exam extends BaseEntity{
     @JoinColumn(name = "teacher_id", referencedColumnName = "id",nullable = false)
     private Teacher teacher;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Semester.class)
-    @JoinColumn(name = "semester_id", referencedColumnName = "id",nullable = false)
-    private Semester semester;
-
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
     @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
     private Group group;
