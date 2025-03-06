@@ -9,5 +9,4 @@ public class UnimanagerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UnimanagerApplication.class, args);
 	}
-
 }
