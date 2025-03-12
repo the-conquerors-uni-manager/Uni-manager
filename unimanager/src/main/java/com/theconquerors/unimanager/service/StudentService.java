@@ -1,6 +1,7 @@
 package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.entity.*;
+import com.theconquerors.unimanager.repository.GradeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -11,56 +12,59 @@ import java.util.List;
 public class StudentService {
 
     private static final Logger log = LoggerFactory.getLogger(StudentService.class);
+    private final GradeRepository gradeRepository;
 
+    public StudentService(GradeRepository gradeRepository) {
+        this.gradeRepository = gradeRepository;
+    }
 
-    public Student getInformation(String studentId) {
+    public Student getInformation(Long studentId) {
 
         return new Student();
     }
 
-    public List<Grade> getGrades(String studentId) {
+    public List<Grade> getGrades(Long studentId) {
+        return gradeRepository.findGradesByStudentId(studentId);
+    }
+
+    public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
 
         return null;
     }
 
-    public List<WeeklySchedule> getWeeklySchedule(String studentId) {
+    public List<Exam> getExams(Long studentId) {
 
         return null;
     }
 
-    public List<Exam> getExams(String studentId) {
-
-        return null;
-    }
-
-    public Boolean sendScholarshipApplication(String studentId,ScholarshipApplication scholarshipApplication) {
+    public Boolean sendScholarshipApplication(Long studentId,ScholarshipApplication scholarshipApplication) {
 
         return true;
     }
 
-    public ScholarshipApplication getScholarshipInformation(String studentId) {
+    public ScholarshipApplication getScholarshipInformation(Long studentId) {
 
         return null;
     }
 
-    public List<Payment> getPayments(String studentId) {
+    public List<Payment> getPayments(Long studentId) {
 
         return null;
     }
 
-    public Boolean makePayment(String studentId, Payment payment) {
+    public Boolean makePayment(Long studentId, Payment payment) {
 
         return true;
     }
 
 
-    public List<HealthInsurancePayment> GetHealthInsurancePayments(String studentId) {
+    public List<HealthInsurancePayment> GetHealthInsurancePayments(Long studentId) {
 
         return null;
     }
 
 
-    public DormitoryAssignment getDormitoryInformation(String studentId) {
+    public DormitoryAssignment getDormitoryInformation(Long studentId) {
 
         return null;
     }
