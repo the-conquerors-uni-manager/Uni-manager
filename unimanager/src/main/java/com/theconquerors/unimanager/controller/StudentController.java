@@ -37,4 +37,39 @@ public class StudentController {
         return "";
     }
 
+    @GetMapping("/exams/{studentId}")
+    public String exams(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
+
+    @GetMapping("/payments/scholarship-application/{studentId}")
+    public String scholarshipApplication(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
+
+    @GetMapping("/payments/scholarship/{studentId}")
+    public String scholarship(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
+
+    @GetMapping("/payments/{studentId}")
+    public String payments(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
+
+    @GetMapping("/payments/health-insurance/{studentId}")
+    public String health_insurance(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
+
+    @GetMapping("/dormitory/{studentId}")
+    public String dormitory(@PathVariable("studentId") String studentId,Model model){
+
+        return "";
+    }
 }
