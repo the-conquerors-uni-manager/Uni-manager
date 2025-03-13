@@ -24,7 +24,7 @@ public class Group extends BaseEntity {
     private Specialty specialty;
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Student.class)
-    @JoinColumn(name = "foreman_id", referencedColumnName = "id",nullable = false)
+    @JoinColumn(name = "foreman_id", referencedColumnName = "id",nullable = true)
     private Student foreman;
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Student.class)
