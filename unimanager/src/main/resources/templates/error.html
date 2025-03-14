@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head}">
+</head>
+<body class="animsition">
+
+<!-- Header -->
+<header class="v4">
+    <div>
+        <nav th:replace="~{fragments/navbar}"></nav>
+    </div>
+</header>
+
+<div class="item-slick1" style="background-image: url(/images/page-not-found.webp);">
+    <div class="container h-full">
+        <div class="row h-full align-items-center justify-content-end">
+            <div class="col-auto ml-auto" style="margin-right: 80px;">
+                <div class="card bg-dark text-white" style="border-radius: 1rem; width: 500px;">
+                    <div class="card-body">
+                        <h2 class="fw-bold mb-2 text-uppercase">Page Not Found</h2>
+                        <p>This most likely is an error 404 Maybe you would want to:</p>
+                        <ul>
+                            <li><a href="/" class="btn btn-outline-light btn-lg px-5" style="text-decoration: none; width:100%;">Return to Homepage</a></li>
+                            <li><a href="/shop" class="btn btn-outline-light btn-lg px-5" style="text-decoration: none; width:100%;">Go Straight Back to Shopping</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer th:replace="~{fragments/footer}"></footer>
+
+<!-- Essential Scripts -->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Additional Scripts -->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script>
+  $(".js-select2").each(function(){
+    $(this).select2({
+      minimumResultsForSearch: 20,
+      dropdownParent: $(this).next('.dropDownSelect2')
+    });
+  })
+</script>
+<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script>
+  $('.js-pscroll').each(function(){
+    $(this).css('position','relative');
+    $(this).css('overflow','hidden');
+    var ps = new PerfectScrollbar(this, {
+      wheelSpeed: 1,
+      scrollingThreshold: 1000,
+      wheelPropagation: false,
+    });
+
+    $(window).on('resize', function(){
+      ps.update();
+    })
+  });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+<script src="js/map-custom.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
