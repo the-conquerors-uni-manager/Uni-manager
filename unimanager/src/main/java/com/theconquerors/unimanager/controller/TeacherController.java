@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 @RequestMapping("/teacher")
 public class TeacherController {
 
-    private static final Logger log = LoggerFactory.getLogger(TeacherService.class);
+    private static final Logger log = LoggerFactory.getLogger(TeacherController.class);
     private final TeacherService teacherService;
     private final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
