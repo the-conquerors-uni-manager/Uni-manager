@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("")
-public class AcountControler {
+public class AccountController {
     @GetMapping("")
     public String goToLogin(Model model){
         return "redirect:login";
