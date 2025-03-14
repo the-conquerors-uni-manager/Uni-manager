@@ -29,56 +29,56 @@ public class StudentController {
         return "redirect:login";
     }
 
-    @GetMapping("/{teacherId}")
-    public String information(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/{studentId}")
+    public String information(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/grades/{teacherId}")
-    public String grades(@PathVariable("teacherId") String teacherId, Model model){
+    @GetMapping("/grades/{studentId}")
+    public String grades(@PathVariable("studentId") String studentId, Model model){
 
         return "";
     }
 
-    @GetMapping("/weekly-schedule/{teacherId}")
-    public String weeklySchedule(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/weekly-schedule/{studentId}")
+    public String weeklySchedule(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/exams/{teacherId}")
-    public String exams(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/exams/{studentId}")
+    public String exams(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/payments/scholarship-application/{teacherId}")
-    public String scholarshipApplication(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/payments/scholarship-application/{studentId}")
+    public String scholarshipApplication(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/payments/scholarship/{teacherId}")
-    public String scholarship(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/payments/scholarship/{studentId}")
+    public String scholarship(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/payments/{teacherId}")
-    public String payments(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/payments/{studentId}")
+    public String payments(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/payments/health-insurance/{teacherId}")
-    public String healthInsurance(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/payments/health-insurance/{studentId}")
+    public String healthInsurance(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
 
-    @GetMapping("/dormitory/{teacherId}")
-    public String dormitory(@PathVariable("teacherId") String teacherId,Model model){
+    @GetMapping("/dormitory/{studentId}")
+    public String dormitory(@PathVariable("studentId") String studentId,Model model){
 
         return "";
     }
