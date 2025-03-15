@@ -1,10 +1,7 @@
 package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.entity.*;
-import com.theconquerors.unimanager.repository.ExamRepository;
-import com.theconquerors.unimanager.repository.GradeRepository;
-import com.theconquerors.unimanager.repository.StudentRepository;
-import com.theconquerors.unimanager.repository.WeeklyScheduleRepository;
+import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,16 +17,19 @@ public class StudentService {
     private final StudentRepository studentRepository;
     private final WeeklyScheduleRepository weeklyScheduleRepository;
     private final ExamRepository examRepository;
+    private final PaymentRepository paymentRepository;
 
     public StudentService(
             GradeRepository gradeRepository,
             StudentRepository studentRepository,
             WeeklyScheduleRepository weeklyScheduleRepository,
-            ExamRepository examRepository) {
+            ExamRepository examRepository,
+            PaymentRepository paymentRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
         this.weeklyScheduleRepository=weeklyScheduleRepository;
         this.examRepository = examRepository;
+        this.paymentRepository =paymentRepository;
     }
 
     public Student getInformation(Long studentId) {
@@ -64,8 +64,7 @@ public class StudentService {
     }
 
     public List<Payment> getPayments(Long studentId) {
-
-        return null;
+        return paymentRepository.findPaymentByStudentId((studentId));
     }
 
     public Boolean makePayment(Long studentId, Payment payment) {
