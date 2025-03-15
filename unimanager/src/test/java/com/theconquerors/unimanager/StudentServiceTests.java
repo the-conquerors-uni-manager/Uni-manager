@@ -30,7 +30,7 @@ class StudentServiceTests {
     }
 
     @Test
-    void findStudentsGrades_shouldReturnCorrectStudentInfo() {
+    void findStudentsGrades_shouldReturnGroups() {
         // Arrange
         long studentId = 1L;
 
@@ -42,5 +42,6 @@ class StudentServiceTests {
                 .as("Student with ID 1 should exist return grades", studentId)
                 .isNotNull();
     }
+
 }
 
