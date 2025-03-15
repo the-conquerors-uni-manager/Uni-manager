@@ -20,6 +20,7 @@ public class StudentService {
     private final PaymentRepository paymentRepository;
     private final ScholarshipApplicationRepository scholarshipApplicationRepository;
     private final HealthInsurancePaymentRepository healthInsurancePaymentRepository;
+    private final DormitoryAssignmentRepository dormitoryAssignmentRepository;
 
     public StudentService(
             GradeRepository gradeRepository,
@@ -28,7 +29,8 @@ public class StudentService {
             ExamRepository examRepository,
             PaymentRepository paymentRepository,
             ScholarshipApplicationRepository scholarshipApplicationRepository,
-            HealthInsurancePaymentRepository healthInsurancePaymentRepository) {
+            HealthInsurancePaymentRepository healthInsurancePaymentRepository,
+            DormitoryAssignmentRepository dormitoryAssignmentRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
         this.weeklyScheduleRepository=weeklyScheduleRepository;
@@ -36,6 +38,7 @@ public class StudentService {
         this.paymentRepository =paymentRepository;
         this.scholarshipApplicationRepository=scholarshipApplicationRepository;
         this.healthInsurancePaymentRepository=healthInsurancePaymentRepository;
+        this.dormitoryAssignmentRepository=dormitoryAssignmentRepository;
     }
 
     public Student getInformation(Long studentId) {
@@ -59,9 +62,20 @@ public class StudentService {
         return examRepository.findExamByGroupId(student.getGroup().getId());
     }
 
-    public Boolean sendScholarshipApplication(Long studentId,ScholarshipApplication scholarshipApplication) {
+    public Boolean sendScholarshipApplication(ScholarshipApplication scholarshipApplication) {
+        try {
 
-        return true;
+            if (scholarshipApplication == null) {
+                throw new IllegalArgumentException("Student ID and application must not be null.");
+            }
+
+            scholarshipApplicationRepository.save(scholarshipApplication);
+
+            return true;
+        } catch (Exception e) {
+            log.error("Failed to submit scholarship application!", e);
+            return false;
+        }
     }
 
     public ScholarshipApplication getScholarshipInformation(Long studentId) {
@@ -85,6 +99,6 @@ public class StudentService {
 
     public DormitoryAssignment getDormitoryInformation(Long studentId) {
 
-        return null;
+        return dormitoryAssignmentRepository.findDormitoryAssignmentByStudentId(studentId);
     }
 }

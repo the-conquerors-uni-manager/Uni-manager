@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DormitoryAssignmentRepository extends JpaRepository<DormitoryAssignment,Long> {
+    DormitoryAssignment findDormitoryAssignmentByStudentId(long studentId);
 }
