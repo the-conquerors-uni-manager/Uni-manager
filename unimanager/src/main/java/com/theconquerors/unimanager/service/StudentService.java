@@ -1,6 +1,7 @@
 package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.entity.*;
+import com.theconquerors.unimanager.repository.ExamRepository;
 import com.theconquerors.unimanager.repository.GradeRepository;
 import com.theconquerors.unimanager.repository.StudentRepository;
 import com.theconquerors.unimanager.repository.WeeklyScheduleRepository;
@@ -18,11 +19,17 @@ public class StudentService {
     private final GradeRepository gradeRepository;
     private final StudentRepository studentRepository;
     private final WeeklyScheduleRepository weeklyScheduleRepository;
+    private final ExamRepository examRepository;
 
-    public StudentService(GradeRepository gradeRepository,StudentRepository studentRepository,WeeklyScheduleRepository weeklyScheduleRepository) {
+    public StudentService(
+            GradeRepository gradeRepository,
+            StudentRepository studentRepository,
+            WeeklyScheduleRepository weeklyScheduleRepository,
+            ExamRepository examRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
         this.weeklyScheduleRepository=weeklyScheduleRepository;
+        this.examRepository = examRepository;
     }
 
     public Student getInformation(Long studentId) {
@@ -41,8 +48,9 @@ public class StudentService {
     }
 
     public List<Exam> getExams(Long studentId) {
-
-        return null;
+        var student = getInformation(studentId);
+        Hibernate.initialize(student.getGroup());
+        return examRepository.findExamByGroupId(student.getGroup().getId());
     }
 
     public Boolean sendScholarshipApplication(Long studentId,ScholarshipApplication scholarshipApplication) {
