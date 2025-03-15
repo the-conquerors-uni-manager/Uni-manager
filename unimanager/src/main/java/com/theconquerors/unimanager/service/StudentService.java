@@ -2,6 +2,7 @@ package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.GradeRepository;
+import com.theconquerors.unimanager.repository.StudentRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -13,14 +14,16 @@ public class StudentService {
 
     private static final Logger log = LoggerFactory.getLogger(StudentService.class);
     private final GradeRepository gradeRepository;
+    private final StudentRepository studentRepository;
 
-    public StudentService(GradeRepository gradeRepository) {
+    public StudentService(GradeRepository gradeRepository,StudentRepository studentRepository) {
         this.gradeRepository = gradeRepository;
+        this.studentRepository = studentRepository;
     }
 
     public Student getInformation(Long studentId) {
 
-        return new Student();
+        return studentRepository.getReferenceById(studentId);
     }
 
     public List<Grade> getGrades(Long studentId) {
