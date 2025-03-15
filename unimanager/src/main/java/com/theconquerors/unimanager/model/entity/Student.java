@@ -43,7 +43,7 @@ public class Student extends BaseEntity {
     private String lastName;
 
     @NotBlank
-    @Column(name = "eng", nullable = false,length = 10)
+    @Column(name = "eng", nullable = false, unique = true,length = 10)
     @Size(max = 10)
     private String egn;
 
@@ -55,32 +55,32 @@ public class Student extends BaseEntity {
 
     @Email
     @NotNull
-    @Column(name = "personalEmail", nullable = false, unique = true,length = 320)
+    @Column(name = "personalEmail", nullable = false,length = 320)
     @Size(max = 320)
     private String personalEmail;
 
     @Email
     @NotNull
-    @Column(name = "workEmail", nullable = false, unique = true,length = 320)
+    @Column(name = "workEmail", nullable = false,length = 320)
     @Size(max = 320)
     private String workEmail;
 
     @Email
     @NotNull
-    @Column(name = "phoneNumber", nullable = false, unique = true,length = 15)
+    @Column(name = "phoneNumber", nullable = false,length = 15)
     @Size(max = 15)
     private String phoneNumber;
 
     @NotNull
-    @Column(name = "receptionType", nullable = false, unique = true)
+    @Column(name = "receptionType", nullable = false)
     private ReceptionTypeEnum receptionType;
 
     @NotNull
-    @Column(name = "learningType", nullable = false, unique = true)
+    @Column(name = "learningType", nullable = false)
     private LearningTypeEnum learningType;
 
     @NotNull
-    @Column(name = "birthDate", nullable = false, unique = true)
+    @Column(name = "birthDate", nullable = false)
     private Date birthDate;
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
