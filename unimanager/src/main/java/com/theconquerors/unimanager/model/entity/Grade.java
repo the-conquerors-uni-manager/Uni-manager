@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Table(
         name = "grades",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"student", "subject","semester","teacher"})
+        uniqueConstraints = @UniqueConstraint(columnNames = {"student", "subject","teacher"})
 )
 public class Grade extends BaseEntity {
 
