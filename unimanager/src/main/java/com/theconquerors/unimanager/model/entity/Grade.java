@@ -28,7 +28,7 @@ public class Grade extends BaseEntity {
     private Teacher teacher;
 
     @NotNull
-    @Column(name = "sessionType", nullable = false, unique = true)
+    @Column(name = "sessionType", nullable = false)
     private SessionTypeEnum sessionType;
 
     @NotNull
@@ -36,7 +36,7 @@ public class Grade extends BaseEntity {
     private short examProtocolNumber;
 
     @NotNull
-    @Column(name = "grade", nullable = false, unique = true)
+    @Column(name = "grade", nullable = false)
     private byte grade;
 
 }
