@@ -18,18 +18,21 @@ public class StudentService {
     private final WeeklyScheduleRepository weeklyScheduleRepository;
     private final ExamRepository examRepository;
     private final PaymentRepository paymentRepository;
+    private final ScholarshipApplicationRepository scholarshipApplicationRepository;
 
     public StudentService(
             GradeRepository gradeRepository,
             StudentRepository studentRepository,
             WeeklyScheduleRepository weeklyScheduleRepository,
             ExamRepository examRepository,
-            PaymentRepository paymentRepository) {
+            PaymentRepository paymentRepository,
+            ScholarshipApplicationRepository scholarshipApplicationRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
         this.weeklyScheduleRepository=weeklyScheduleRepository;
         this.examRepository = examRepository;
         this.paymentRepository =paymentRepository;
+        this.scholarshipApplicationRepository=scholarshipApplicationRepository;
     }
 
     public Student getInformation(Long studentId) {
@@ -59,8 +62,7 @@ public class StudentService {
     }
 
     public ScholarshipApplication getScholarshipInformation(Long studentId) {
-
-        return null;
+        return scholarshipApplicationRepository.findScholarshipApplicationByStudentId(studentId);
     }
 
     public List<Payment> getPayments(Long studentId) {
