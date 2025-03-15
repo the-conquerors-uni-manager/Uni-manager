@@ -66,7 +66,7 @@ public class StudentService {
         try {
 
             if (scholarshipApplication == null) {
-                throw new IllegalArgumentException("Student ID and application must not be null.");
+                throw new IllegalArgumentException("Student application must not be null.");
             }
 
             scholarshipApplicationRepository.save(scholarshipApplication);
@@ -86,16 +86,25 @@ public class StudentService {
         return paymentRepository.findPaymentByStudentId((studentId));
     }
 
-    public Boolean makePayment(Long studentId, Payment payment) {
+    public Boolean makePayment(Payment payment) {
+        try {
 
-        return true;
+            if (payment == null) {
+                throw new IllegalArgumentException("Payment must not be null.");
+            }
+
+            paymentRepository.save(payment);
+
+            return true;
+        } catch (Exception e) {
+            log.error("Failed to submit payment!", e);
+            return false;
+        }
     }
-
 
     public List<HealthInsurancePayment> getHealthInsurancePayments(Long studentId) {
         return healthInsurancePaymentRepository.findHealthInsurancePaymentByStudentId(studentId);
     }
-
 
     public DormitoryAssignment getDormitoryInformation(Long studentId) {
 
