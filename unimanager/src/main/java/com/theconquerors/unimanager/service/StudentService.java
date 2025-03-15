@@ -78,7 +78,7 @@ public class StudentService {
     }
 
 
-    public List<HealthInsurancePayment> GetHealthInsurancePayments(Long studentId) {
+    public List<HealthInsurancePayment> getHealthInsurancePayments(Long studentId) {
         return healthInsurancePaymentRepository.findHealthInsurancePaymentByStudentId(studentId);
     }
 
