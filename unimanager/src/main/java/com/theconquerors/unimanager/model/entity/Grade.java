@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Table(
         name = "grades",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"student", "subject","semester","teacher"})
+        uniqueConstraints = @UniqueConstraint(columnNames = {"sessionType","student", "subject","teacher"})
 )
 public class Grade extends BaseEntity {
 
@@ -28,15 +28,15 @@ public class Grade extends BaseEntity {
     private Teacher teacher;
 
     @NotNull
-    @Column(name = "sessionType", nullable = false, unique = true)
+    @Column(name = "sessionType", nullable = false)
     private SessionTypeEnum sessionType;
 
     @NotNull
-    @Column(name = "examProtocolNumber", nullable = false, unique = true)
+    @Column(name = "examProtocolNumber", nullable = false)
     private short examProtocolNumber;
 
     @NotNull
-    @Column(name = "grade", nullable = false, unique = true)
+    @Column(name = "grade", nullable = false)
     private byte grade;
 
 }
