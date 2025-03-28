@@ -11,10 +11,10 @@ import java.util.HashSet;
 @Setter
 @Entity
 @Table(
-        name = "rooms",
+        name = "apartments",
         uniqueConstraints = @UniqueConstraint(columnNames = {"block","floor","number","roomType"})
 )
-public class Room extends BaseEntity{
+public class Apartment extends BaseEntity{
     @NotNull
     @Column(name = "block", nullable = false)
     private long block;
@@ -31,6 +31,6 @@ public class Room extends BaseEntity{
     @Column(name = "capacity", nullable = false)
     private byte capacity;
 
-    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
-    private HashSet<WeeklySchedule> weeklySchedules;
+    @OneToMany(mappedBy = "apartment", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
+    private HashSet<DormitoryAssignment> dormitoryAssignments;
 }

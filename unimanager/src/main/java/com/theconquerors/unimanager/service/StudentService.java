@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.service;
 
+import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
@@ -41,9 +42,8 @@ public class StudentService {
         this.dormitoryAssignmentRepository=dormitoryAssignmentRepository;
     }
 
-    public Student getInformation(Long studentId) {
-
-        return studentRepository.getReferenceById(studentId);
+    public StudentInformationDto getInformation(Long studentId) {
+        return new StudentInformationDto(studentRepository.getReferenceById(studentId));
     }
 
     public List<Grade> getGrades(Long studentId) {
@@ -52,24 +52,26 @@ public class StudentService {
 
     public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
         var student = getInformation(studentId);
-        Hibernate.initialize(student.getGroup());
-        return weeklyScheduleRepository.findWeeklyScheduleByGroupId(student.getGroup().getId());
+      //  Hibernate.initialize(student.getGroup());
+       // return weeklyScheduleRepository.findWeeklyScheduleByGroupId(student.getGroup().getId());
+        return null;
     }
 
     public List<Exam> getExams(Long studentId) {
         var student = getInformation(studentId);
-        Hibernate.initialize(student.getGroup());
-        return examRepository.findExamByGroupId(student.getGroup().getId());
+       // Hibernate.initialize(student.getGroup());
+       // return examRepository.findExamByGroupId(student.getGroup().getId());
+        return  null;
     }
 
-    public Boolean sendScholarshipApplication(ScholarshipApplication scholarshipApplication) {
+    public Boolean sendScholarshipApplication(Scholarship scholarship) {
         try {
 
-            if (scholarshipApplication == null) {
+            if (scholarship == null) {
                 throw new IllegalArgumentException("Student application must not be null.");
             }
 
-            scholarshipApplicationRepository.save(scholarshipApplication);
+            scholarshipApplicationRepository.save(scholarship);
 
             return true;
         } catch (Exception e) {
@@ -78,7 +80,7 @@ public class StudentService {
         }
     }
 
-    public ScholarshipApplication getScholarshipInformation(Long studentId) {
+    public Scholarship getScholarshipInformation(Long studentId) {
         return scholarshipApplicationRepository.findScholarshipApplicationByStudentId(studentId);
     }
 

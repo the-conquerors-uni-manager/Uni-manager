@@ -17,9 +17,9 @@ public class DormitoryAssignment extends BaseEntity{
     @JoinColumn(name = "student_id", referencedColumnName = "id",nullable = false)
     private Student student;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Room.class)
-    @JoinColumn(name = "room_id", referencedColumnName = "id",nullable = false)
-    private Room room;
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Apartment.class)
+    @JoinColumn(name = "apartment_id", referencedColumnName = "id",nullable = false)
+    private Apartment apartment;
 
     @NotBlank
     @Column(name = "date", nullable = true)

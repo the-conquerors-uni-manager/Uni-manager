@@ -12,8 +12,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "scholarshipApplications")
-public class ScholarshipApplication extends BaseEntity {
+@Table(name = "scholarship")
+public class Scholarship extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Student.class)
     @JoinColumn(name = "student_id", referencedColumnName = "id",nullable = false)
