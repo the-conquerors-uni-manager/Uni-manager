@@ -1,6 +1,7 @@
 package com.theconquerors.unimanager.controller;
 
 import com.theconquerors.unimanager.service.StudentService;
+import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+
+import static java.lang.Long.parseLong;
 
 @Controller
 @RequestMapping("/student")
@@ -31,8 +34,11 @@ public class StudentController {
 
     @GetMapping("/{studentId}")
     public String information(@PathVariable("studentId") String studentId,Model model){
+        var student = studentService.getInformation(parseLong(studentId));
+        //Hibernate.initialize(student.getDormitoryAssignments());
+        //model.addAttribute("Name",(student.getFirstName() + " " + student.getMiddleName() + " " + student.getLastName()));
 
-        return "";
+        return "information";
     }
 
     @GetMapping("/grades/{studentId}")

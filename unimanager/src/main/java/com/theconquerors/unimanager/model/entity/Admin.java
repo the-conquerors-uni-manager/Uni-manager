@@ -14,8 +14,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "administrators")
-public class Administrator extends BaseEntity {
+@Table(name = "admins")
+public class Admin extends BaseEntity {
 
     @NotBlank
     @Column(name = "firstName", nullable = false,length = 50)

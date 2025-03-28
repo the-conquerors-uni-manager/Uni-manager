@@ -37,12 +37,12 @@ public class TeacherService {
         return null;
     }
 
-    public Boolean sendScholarshipApplication(Long studentId, ScholarshipApplication scholarshipApplication) {
+    public Boolean sendScholarships(Long studentId, Scholarship scholarship) {
 
         return true;
     }
 
-    public ScholarshipApplication getScholarshipInformation(Long studentId) {
+    public Scholarship getScholarshipInformation(Long studentId) {
 
         return null;
     }

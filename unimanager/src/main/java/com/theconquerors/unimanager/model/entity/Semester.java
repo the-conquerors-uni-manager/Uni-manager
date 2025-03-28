@@ -26,8 +26,8 @@ public class Semester extends BaseEntity {
     @Column(name = "endDate", nullable = false)
     private Date endDate;
 
-    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = ScholarshipApplication.class)
-    private HashSet<ScholarshipApplication> scholarshipApplications;
+    @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Scholarship.class)
+   private HashSet<Scholarship> scholarships;
 
     @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Subject.class)
     private HashSet<Subject> subjects;
