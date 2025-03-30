@@ -82,15 +82,13 @@
 <body>
 
 <div class="container">
-  <caption><h1>Student Grades</h1></caption>
+  <caption><h1>Student payments for health</h1></caption>
   <table id="myTable">
     <thead>
     <tr>
-      <th>Grade</th>
-      <th>Teacher</th>
-      <th>Subject</th>
-      <th>Grade</th>
-      <th>sessionType</th>
+      <th>Period</th>
+      <th>Date</th>
+      <th>Amound</th>
     </tr>
     </thead>
     <tbody>
@@ -101,21 +99,17 @@
 
 <script>
         //test values
-        let grade1 = new Object();
-        grade1.examProtocolNumber = "12345";
-        grade1.teacher = "John Doe";
-        grade1.subject = "Math";
-        grade1.grade = "3";
-        grade1.sessionType = "Reqular";
+        let payment1 = new Object();
+        payment1.period = "02 --> 06";
+        payment1.date = "25.06";
+        payment1.amount = "560";
 
-        let grade2 = new Object();
-        grade2.examProtocolNumber = "12346";
-        grade2.teacher = "John Doe";
-        grade2.subject = "Physic";
-        grade2.grade = "4";
-        grade2.sessionType = "Late";
+        let payment2 = new Object();
+        payment2.period = "01 --> 04";
+        payment2.date = "03.03";
+        payment2.amount = "400";
 
-        let listItems = [grade1, grade2];
+        let listItems = [payment1, payment2];
 
         //function for display values into table
         function showValuesIntoPage(list) {

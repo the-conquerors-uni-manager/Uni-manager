@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Information</title>
 </head>
 <body>
-$END$
-</body>
-</html>
+    <h1>Student Details</h1>
+    <p>First name: <span th:text="${student.firstName}"></span></p>
+    <p>Second name: <span th:text="${student.middleName}"></span></p>
+    <p>Third name: <span th:text="${student.lastName}"></span></p>
+    <p>Birth date: <span th:text="${student.birthDate}"></span></p>
+    <p>Egn: <span th:text="${student.egn}"></span></p>
+    <p>Personal email: <span th:text="${student.personalEmail}"></span></p>
+    <p>Phone number: <span th:text="${student.phoneNumber}"></span></p>
+    <p>Learning type: <span th:text="${student.receptionType}"></span></p>
+    <p>Students email: <span th:text="${student.workEmail}"></span></p>
+    <p>Students number: <span th:text="${student.studentNumber}"></span></p>
+ </body>
+ </html>

@@ -82,15 +82,16 @@
 <body>
 
 <div class="container">
-  <caption><h1>Student Grades</h1></caption>
+  <caption><h1>Student Exams</h1></caption>
   <table id="myTable">
     <thead>
     <tr>
-      <th>Grade</th>
       <th>Teacher</th>
       <th>Subject</th>
-      <th>Grade</th>
-      <th>sessionType</th>
+      <th>Group</th>
+      <th>Date</th>
+      <th>Start time</th>
+      <th>End time</th>
     </tr>
     </thead>
     <tbody>
@@ -101,21 +102,23 @@
 
 <script>
         //test values
-        let grade1 = new Object();
-        grade1.examProtocolNumber = "12345";
-        grade1.teacher = "John Doe";
-        grade1.subject = "Math";
-        grade1.grade = "3";
-        grade1.sessionType = "Reqular";
+        let exam1 = new Object();
+        exam1.teacher = "John Doe";
+        exam1.subject = "Math";
+        exam1.group = "39";
+        exam1.date = "30.06";
+        exam1.startTime = "9:30";
+        exam1.endTime = "12:00";
 
-        let grade2 = new Object();
-        grade2.examProtocolNumber = "12346";
-        grade2.teacher = "John Doe";
-        grade2.subject = "Physic";
-        grade2.grade = "4";
-        grade2.sessionType = "Late";
+        let exam2 = new Object();
+        exam2.teacher = "John Doe";
+        exam2.subject = "Physic";
+        exam2.grade = "40";
+        exam2.date = "26.06";
+        exam2.startTime = "15:45";
+        exam2.endTime = "17:15";
 
-        let listItems = [grade1, grade2];
+        let listItems = [exam1, exam2];
 
         //function for display values into table
         function showValuesIntoPage(list) {
