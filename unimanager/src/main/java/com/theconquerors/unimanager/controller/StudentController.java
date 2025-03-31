@@ -43,62 +43,62 @@ public class StudentController {
         return "redirect:login";
     }
 
-    @GetMapping("/{studentId}")
-    public String information(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/information")
+    public String information(Model model){     //@PathVariable("studentId") String studentId,Model model){
         //var student = studentService.getInformation(parseLong(studentId));
         //Hibernate.initialize(student.getDormitoryAssignments());
-        //model.addAttribute("Name",(user.getFirstName() + " " + user.getMiddleName() + " " + user.getLastName()));
+        //model.addAttribute("Name",(student.getFirstName() + " " + student.getMiddleName() + " " + student.getLastName()));
 
         //Test values
         model.addAttribute("student", user);
         return "student_information";
     }
 
-    @GetMapping("/grades/{studentId}")
-    public String grades(@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/grades")
+    public String grades(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_grades";
     }
 
-    @GetMapping("/weekly-schedule/{studentId}")
-    public String weeklySchedule(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/weekly-schedule")
+    public String weeklySchedule(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_weeklySchedule";
     }
 
-    @GetMapping("/exams/{studentId}")
-    public String exams(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/exams")
+    public String exams(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_exams";
     }
 
-    @GetMapping("/payments/scholarship-application/{studentId}")
-    public String scholarshipApplication(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/payments/scholarship-application")
+    public String scholarshipApplication(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_payments_scholarshipApplication";
     }
 
-    @GetMapping("/payments/scholarship/{studentId}")
-    public String scholarship(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/payments/scholarship")
+    public String scholarship(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_payments_scholarship";
     }
 
-    @GetMapping("/payments/{studentId}")
-    public String payments(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/payments")
+    public String payments(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_payments";
     }
 
-    @GetMapping("/payments/health-insurance/{studentId}")
-    public String healthInsurance(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/payments/health-insurance")
+    public String healthInsurance(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_payments_health";
     }
 
-    @GetMapping("/dormitory/{studentId}")
-    public String dormitory(@PathVariable("studentId") String studentId,Model model){
+    @GetMapping("/dormitory")
+    public String dormitory(Model model){ //@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        return "student_dormitory";
     }
 }
