@@ -4,9 +4,13 @@ import com.theconquerors.unimanager.model.entity.BaseEntity;
 import com.theconquerors.unimanager.model.entity.Student;
 import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
 import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Getter
+@Setter
 public class StudentInformationDto extends BaseEntity {
 
     private String studentNumber;
