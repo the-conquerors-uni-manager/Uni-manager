@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table Rows from List</title>
+  <style>
+        /* Page background with gradient */
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light white background with transparency */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        /* Stylish Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Table header style */
+        th {
+            background-color: #00f2fe;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #4facfe;
+        }
+
+        /* Table row style */
+        td {
+            padding: 10px;
+            background-color: #f4f7fc;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Alternate row background color for better readability */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Hover effect for rows */
+        tr:hover {
+            background-color: #d1f1fe;
+        }
+
+        /* Add a rounded border to the table */
+        table, th, td {
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Style for table caption */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+  <caption><h1>Student Grades</h1></caption>
+  <table id="myTable">
+    <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Teacher</th>
+      <th>Subject</th>
+      <th>Grade</th>
+      <th>sessionType</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Dynamic rows will be inserted here -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+        //test values
+        let grade1 = new Object();
+        grade1.examProtocolNumber = "12345";
+        grade1.teacher = "John Doe";
+        grade1.subject = "Math";
+        grade1.grade = "3";
+        grade1.sessionType = "Reqular";
+
+        let grade2 = new Object();
+        grade2.examProtocolNumber = "12346";
+        grade2.teacher = "John Doe";
+        grade2.subject = "Physic";
+        grade2.grade = "4";
+        grade2.sessionType = "Late";
+
+        let listItems = [grade1, grade2];
+
+        //function for display values into table
+        function showValuesIntoPage(list) {
+
+            // Get the table body where rows will be inserted
+            let tableBody = document.querySelector("#myTable tbody");
+
+            // Clear the existing rows in case the list has changed
+            tableBody.innerHTML = '';
+
+            // Loop through the list items and create rows dynamically
+            list.forEach(item => {
+
+                let row = document.createElement("tr");
+
+                // Loop through the items property and create cells dynamically
+                Object.values(item).forEach(prop => {
+
+                    let cell = document.createElement("td");
+                    cell.textContent = prop;
+                    row.appendChild(cell);
+              });
+
+              tableBody.appendChild(row);
+            });
+        }
+
+        showValuesIntoPage(listItems);
+    </script>
+
+</body>
+</html>

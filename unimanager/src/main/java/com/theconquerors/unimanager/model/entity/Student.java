@@ -43,7 +43,7 @@ public class Student extends BaseEntity {
     private String lastName;
 
     @NotBlank
-    @Column(name = "eng", nullable = false, unique = true,length = 10)
+    @Column(name = "egn", nullable = false, unique = true,length = 10)
     @Size(max = 10)
     private String egn;
 
@@ -82,6 +82,72 @@ public class Student extends BaseEntity {
     @NotNull
     @Column(name = "birthDate", nullable = false)
     private Date birthDate;
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEgn() {
+        return egn;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getPersonalEmail() {
+        return personalEmail;
+    }
+
+    public String getWorkEmail() {
+        return workEmail;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public ReceptionTypeEnum getReceptionType() {
+        return receptionType;
+    }
+
+    public LearningTypeEnum getLearningType() {
+        return learningType;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+
+
+    public Student(){}
+    //Constructor for test views
+    public Student(String studentNumber, String firstName, String middleName, String lastName, String egn, String personalEmail, String workEmail, String phoneNumber, ReceptionTypeEnum receptionType, LearningTypeEnum learningType, Date birthDate) {
+        this.studentNumber = studentNumber;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.egn = egn;
+        this.personalEmail = personalEmail;
+        this.workEmail = workEmail;
+        this.phoneNumber = phoneNumber;
+        this.receptionType = receptionType;
+        this.learningType = learningType;
+        this.birthDate = birthDate;
+    }
 
     @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
     @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
