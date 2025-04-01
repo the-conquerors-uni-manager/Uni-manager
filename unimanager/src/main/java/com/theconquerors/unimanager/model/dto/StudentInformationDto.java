@@ -1,6 +1,5 @@
 package com.theconquerors.unimanager.model.dto;
 
-import com.theconquerors.unimanager.model.entity.BaseEntity;
 import com.theconquerors.unimanager.model.entity.Student;
 import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
 import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class StudentInformationDto extends BaseEntity {
+public class StudentInformationDto {
 
     private String studentNumber;
 
@@ -20,6 +19,10 @@ public class StudentInformationDto extends BaseEntity {
     private String middleName;
 
     private String lastName;
+
+    private String groupName;
+
+    private Date birthDate;
 
     private String egn;
 
@@ -33,22 +36,19 @@ public class StudentInformationDto extends BaseEntity {
 
     private LearningTypeEnum learningType;
 
-    private Date birthDate;
-
-    private String groupName;
-
     public StudentInformationDto(Student student) {
-        this.studentNumber = student.getStudentNumber();
-        this.firstName = student.getFirstName();
-        this.lastName = student.getLastName();
-        this.middleName = student.getMiddleName();
-        this. egn= student.getEgn();
-        this.personalEmail= student.getPersonalEmail();
-        this.workEmail= student.getWorkEmail();
-        this.phoneNumber= student.getPhoneNumber();
-        this.receptionType= student.getReceptionType();
-        this.learningType= student.getLearningType();
-        this.birthDate= student.getBirthDate();
-        this.groupName = student.getGroup().getName();
+        setStudentNumber(student.getStudentNumber());
+        setFirstName(student.getFirstName());
+        setLastName(student.getLastName());
+        setMiddleName(student.getMiddleName());
+        setEgn(student.getEgn());
+        setPersonalEmail(student.getPersonalEmail());
+        setWorkEmail(student.getWorkEmail());
+        setPhoneNumber(student.getPhoneNumber());
+        setReceptionType(student.getReceptionType());
+        setLearningType(student.getLearningType());
+        setBirthDate(student.getBirthDate());
+        setGroupName(student.getGroup().toString());
     }
+
 }
