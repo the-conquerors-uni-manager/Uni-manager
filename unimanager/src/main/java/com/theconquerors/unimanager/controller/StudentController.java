@@ -35,7 +35,7 @@ public class StudentController {
     }
     @GetMapping({"","/","/grades","/grades/","/weekly-schedule","/weekly-schedule/","/exams","/exams/","/payments/scholarship-application","/payments/scholarship-application/","/payments/scholarship","/payments/scholarship/","/payments","/payments/","/payments/health-insurance","/payments/health-insurance/","/dormitory", "/dormitory/"})
     public String login(Model model){
-        return "login";
+        return "redirect:/login";
     }
 
     @GetMapping("/{studentId}")
@@ -60,7 +60,8 @@ public class StudentController {
 
     @GetMapping("/weekly-schedule/{studentId}")
     public String weeklySchedule(@PathVariable("studentId") String studentId,Model model){
-
+        //var weeklyScheduleForStudent = studentService.getWeeklySchedule(parseLong(studentId));
+        //log.warn(Long.toString(weeklyScheduleForStudent.size()));
         return "student_weeklySchedule";
     }
 

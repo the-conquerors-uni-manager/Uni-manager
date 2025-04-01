@@ -52,9 +52,9 @@ public class StudentService {
 
     public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
         var student = getInformation(studentId);
-      //  Hibernate.initialize(student.getGroup());
-       // return weeklyScheduleRepository.findWeeklyScheduleByGroupId(student.getGroup().getId());
-        return null;
+        Hibernate.initialize(student.getGroup());
+        var group = student.getGroup();
+        return weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());
     }
 
     public List<Exam> getExams(Long studentId) {
