@@ -42,8 +42,8 @@ public class StudentService {
         this.dormitoryAssignmentRepository=dormitoryAssignmentRepository;
     }
 
-    public StudentInformationDto getInformation(Long studentId) {
-        return new StudentInformationDto(studentRepository.getReferenceById(studentId));
+    public Student getInformation(Long studentId) {
+        return studentRepository.getReferenceById(studentId);
     }
 
     public List<Grade> getGrades(Long studentId) {

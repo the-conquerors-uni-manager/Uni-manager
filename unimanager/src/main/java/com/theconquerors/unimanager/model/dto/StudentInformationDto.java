@@ -35,6 +35,8 @@ public class StudentInformationDto extends BaseEntity {
 
     private Date birthDate;
 
+    private String groupName;
+
     public StudentInformationDto(Student student) {
         this.studentNumber = student.getStudentNumber();
         this.firstName = student.getFirstName();
@@ -47,5 +49,6 @@ public class StudentInformationDto extends BaseEntity {
         this.receptionType= student.getReceptionType();
         this.learningType= student.getLearningType();
         this.birthDate= student.getBirthDate();
+        this.groupName = student.getGroup().getName();
     }
 }

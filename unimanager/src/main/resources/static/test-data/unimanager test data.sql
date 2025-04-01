@@ -1,1696 +1,2080 @@
-use unimanager;
+#
+# TABLE STRUCTURE FOR: admins
+#
 
-LOCK TABLES `administrators` WRITE;
+DROP TABLE IF EXISTS `admins`;
 
-INSERT INTO `administrators` VALUES
-(1,'2023-01-24 00:00:00.000000','08:57:40.000000','4048690056','Roosevelt','Baumbach','Smith','02:30:48.000000','dfc50bbfeb4dc724cb41144de88ee2131e4056de','marilou.stracke@example.net','1-806-477-1555x','medhurst.vivian@example.com'),
-(2,'2017-09-27 00:00:00.000000','15:17:06.000000','2610418533','Marilou','Bogan','McDermott','14:28:38.000000','401e0fb388a303ab66f64ebf4fdd9a4877c7d3aa','boyle.easter@example.org','00182403400','berry.stanton@example.net'),
-(3,'2021-12-18 00:00:00.000000','20:19:58.000000','1319524171','Hollis','Schmeler','Luettgen','07:59:32.000000','9bede8fae3cdefeea860a4715bf4d1fb54869c20','feil.cristobal@example.net','298-033-1833x01','jast.alia@example.net'),
-(4,'2009-01-12 00:00:00.000000','11:42:51.000000','9358446050','Weston','Spinka','Greenfelder','10:42:55.000000','e20782ac96ef55e60b33587f9d12b0f69d347a1a','dillon.schmidt@example.net','1-916-827-9580','mckenzie.narciso@example.com'),
-(5,'1988-11-11 00:00:00.000000','13:19:39.000000','5104552958','Lester','Gulgowski','Nienow','01:22:52.000000','61aecb6d1c01dc46c3c0d9c14b0e18da1f21bac5','crystal70@example.net','216.765.9219x52','koepp.halie@example.com'),
-(6,'1982-01-15 00:00:00.000000','01:01:32.000000','1643578100','Gladys','Schmeler','Fisher','03:19:20.000000','3dc3289cd21a3249d374299d08fa919554112a2c','nschuppe@example.com','+87(9)506550426','sheridan.auer@example.org'),
-(7,'2010-03-14 00:00:00.000000','15:08:46.000000','4534375652','Deon','Runte','Champlin','22:49:01.000000','bf69346d371281578717102a04f3795bc8f4185e','darrell.ryan@example.org','135-972-0343x06','lenna98@example.com'),
-(8,'2014-06-14 00:00:00.000000','22:31:56.000000','9701202252','Cindy','Gerhold','Rogahn','03:13:22.000000','00bbd2bb21ea74307ae6fb67da81f40b1b69c5f0','vcollins@example.org','1-491-484-4852x','medhurst.cedrick@example.org'),
-(9,'1970-08-01 00:00:00.000000','12:37:25.000000','3674011484','Vito','Lueilwitz','Pagac','09:22:45.000000','249fba6314fae8017c88b74974bf94b1e6c4ce9e','leopold54@example.net','433.136.5320','twehner@example.net'),
-(10,'2024-12-24 00:00:00.000000','07:05:01.000000','1785057698','Nigel','Senger','Erdman','02:26:04.000000','431faf929cf2f767821c035fb437575cff9e78d8','kasey40@example.org','112-107-4773','claire29@example.net'),
-(11,'2007-11-12 00:00:00.000000','03:42:30.000000','1848391417','Margie','Mohr','Koepp','14:34:01.000000','4b1a8000b28e24f4c3fe671391cd069965d6ca40','mclaughlin.tristin@example.net','1-412-650-6615','holly66@example.net'),
-(12,'2010-07-27 00:00:00.000000','17:44:54.000000','4457722650','Icie','Koss','Watsica','08:24:52.000000','77c21b082ff2959483430ba2458f24e6d7775433','abigail00@example.net','(441)697-4946x8','ycasper@example.net'),
-(13,'1986-09-27 00:00:00.000000','03:56:55.000000','6917832767','Rogelio','King','Reilly','06:15:06.000000','2336e4cdd155184a5cb43a3fb75a649a60bf7d9e','emmitt.weimann@example.org','1-215-660-0659x','john99@example.org'),
-(14,'2009-12-05 00:00:00.000000','10:22:17.000000','3142414978','Gus','Corkery','Fay','20:45:01.000000','bcfbe03d776eacadd6c9ef8584e7222bc47349dc','jarvis36@example.org','031.095.1737x47','enrico79@example.org'),
-(15,'1995-08-08 00:00:00.000000','14:10:12.000000','5237298909','Lois','Becker','Ritchie','05:16:27.000000','c1fe52e0f160037ccc985f1acd1f60295b79b769','parisian.lynn@example.net','+53(2)559731012','schoen.tobin@example.com'),
-(16,'2010-11-30 00:00:00.000000','17:52:24.000000','3403988167','Jaunita','Cummings','Cronin','18:07:41.000000','e7b6fed1ba90607e76989b75fec9ae43c1301601','iauer@example.org','(571)213-9647x4','bertram88@example.net'),
-(17,'2007-03-05 00:00:00.000000','14:31:42.000000','9901342107','Margarett','Huel','Corwin','04:02:29.000000','065932480a8ccfea6aa87f74080cfdbdf84703c3','oda70@example.net','427.573.3486','qondricka@example.net'),
-(18,'1972-02-13 00:00:00.000000','11:37:33.000000','6488237966','Elisha','Terry','Hansen','15:11:25.000000','6f1d8b8352be4346942b76f6c1988b9c0d684910','rhianna.kerluke@example.net','160.036.6293','leannon.raphael@example.org'),
-(19,'1982-04-26 00:00:00.000000','01:22:56.000000','1932066714','Katelyn','Hagenes','Hauck','10:38:30.000000','d0d8255f68f91c68c4d0acc657b67f7ccd90130b','ksanford@example.net','(767)303-0325x4','fnikolaus@example.org'),
-(20,'2011-03-01 00:00:00.000000','03:18:49.000000','1225780479','Stephany','Hauck','Gorczany','23:49:55.000000','d412a29b2e6c239f75e49f42ef2dca6456b45a30','nkshlerin@example.org','05538239959','sarina.wintheiser@example.org'),
-(21,'1977-02-24 00:00:00.000000','05:15:14.000000','4843537838','Oral','Treutel','Hartmann','10:20:34.000000','b413f58702e8bf6175f309eb1f6f63aecc3c6c00','ulegros@example.org','983-632-7355x91','terrell34@example.com'),
-(22,'2015-11-29 00:00:00.000000','22:44:00.000000','8869507207','Hunter','Huel','O\'Keefe','14:10:13.000000','a5c8a85dd317975cc1ff7c6a1968ce066f8599f6','lhettinger@example.net','1-336-253-2076','awaters@example.com'),
-(23,'1993-11-14 00:00:00.000000','02:42:39.000000','8955805961','Brandon','Botsford','Kshlerin','10:02:46.000000','4763d743b0c8ca5f814a7cf26616bbacad181a8b','sporer.leonard@example.com','(111)548-0542x0','dpaucek@example.net'),
-(24,'2025-01-06 00:00:00.000000','17:59:18.000000','8312365094','Antonette','McClure','Lebsack','23:43:04.000000','ad577e498988d5c68cd77b3d71e540b66dad354d','justine48@example.net','389-746-7851x62','beau33@example.org'),
-(25,'2010-02-13 00:00:00.000000','11:41:32.000000','5123559957','Danika','Jacobs','Gerlach','22:04:57.000000','4f39beb211476d7714d440e349657099170256f3','kian.rutherford@example.org','598.578.7155','garland03@example.net'),
-(26,'1977-04-25 00:00:00.000000','12:29:21.000000','8864384969','Margarett','Schumm','Stiedemann','12:55:50.000000','428d596ff8338a307766266c8490e014eca76613','juliet.botsford@example.org','(243)698-7267','stanley.koss@example.net'),
-(27,'2006-04-27 00:00:00.000000','07:38:28.000000','6370344618','Norene','Vandervort','Balistreri','04:21:09.000000','f413a004164997160e8d525eed19a0d5a6bcee9b','mwintheiser@example.net','(145)955-3865x1','julianne.hackett@example.org'),
-(28,'1992-06-19 00:00:00.000000','13:56:32.000000','2335721635','Ceasar','Wuckert','Grant','06:18:56.000000','ca938df3773d4c5ec84a50c330859ea462db0b16','malika.konopelski@example.com','(130)620-3274x2','federico.rath@example.org'),
-(29,'2020-11-01 00:00:00.000000','10:11:26.000000','4066053084','Cale','Luettgen','Lynch','12:45:30.000000','a1ebec6da6106820b4d2af9de4e18cd05a7c9c2a','mathilde80@example.com','1-738-406-7216','grimes.kaleigh@example.net'),
-(30,'2002-02-03 00:00:00.000000','10:13:21.000000','8942168325','April','Rempel','Frami','13:23:20.000000','cd0aa5d33806d45782099ebd0bd4f2e60526fd43','hbartoletti@example.org','960.447.9745','schinner.roselyn@example.org'),
-(31,'1982-01-07 00:00:00.000000','05:16:28.000000','1650315341','Otto','Shields','Predovic','06:59:38.000000','30cda391cefa4f1f58e6ea2bff8ce4b7731349e5','tyshawn.donnelly@example.org','898-392-9486x62','cora58@example.com'),
-(32,'2024-11-06 00:00:00.000000','17:50:31.000000','1762361900','Keyshawn','Kuphal','Maggio','09:37:46.000000','647a4283a883ed36ed66b73561d53db7e17c0031','tvonrueden@example.net','1-652-761-4993x','bosco.hosea@example.net'),
-(33,'2011-10-22 00:00:00.000000','16:50:15.000000','3757247220','Evangeline','Hegmann','Ritchie','04:37:07.000000','2216575b06393e334bd8dfb3d5b92ec29133e947','kkuhlman@example.com','(882)512-3176','mathew24@example.org'),
-(34,'1972-10-04 00:00:00.000000','09:30:00.000000','4443193939','Harold','Koss','Davis','10:43:01.000000','f4fda72b4e8d43483e51dc122018cfb4f2cc8e4b','cmcglynn@example.net','1-943-083-6298x','marietta.blanda@example.com'),
-(35,'1980-05-20 00:00:00.000000','19:23:00.000000','2911772379','Camren','Murray','Kassulke','14:34:58.000000','93920205ea30f834c2cb65800007b3a9997e92f0','aurelia64@example.net','813-180-4996x68','alycia86@example.org'),
-(36,'2000-01-07 00:00:00.000000','10:54:42.000000','6951965541','Nick','Stroman','Reinger','04:59:07.000000','a5be7ed4dbfff46f5de7942568909dea511455ac','sammie.kunde@example.com','+50(1)787168227','gustave41@example.net'),
-(37,'1999-02-21 00:00:00.000000','09:55:02.000000','9002258485','Norberto','Hackett','King','07:06:30.000000','2af6c13f81c1303ecef88cf778b23d1cc38fcc5f','osinski.lyric@example.org','(024)856-1609','cartwright.isidro@example.org'),
-(38,'2005-12-27 00:00:00.000000','17:57:24.000000','3544509695','Tito','Larson','Monahan','00:28:34.000000','b8428fbe4d8f566cd779382d4d5a682e59e6fee8','keshaun76@example.net','1-397-737-3540x','wsawayn@example.org'),
-(39,'1982-05-19 00:00:00.000000','11:11:53.000000','4709100313','Sandy','Purdy','Cartwright','07:01:43.000000','b3d4dd9776e7fb916edc52bfe765f396dec1731d','lavern05@example.org','1-700-765-7930','johnny01@example.net'),
-(40,'1973-12-27 00:00:00.000000','12:36:17.000000','5746252562','Saige','Nienow','Ankunding','04:39:55.000000','5d2f31f33ac5c79190e4ad76a58f905ee7245511','morar.lia@example.org','1-794-234-7341x','armand02@example.com'),
-(41,'1980-10-04 00:00:00.000000','05:38:47.000000','5462544683','Damian','Nolan','Simonis','17:47:17.000000','f35c20808f1b53601719f001381e56ac34ae6331','mallie.connelly@example.com','(690)052-5437','colleen.mclaughlin@example.net'),
-(42,'2019-06-19 00:00:00.000000','09:50:51.000000','8075091590','Rachelle','Schamberger','Collins','06:57:29.000000','629e2c915501a59979caf18ba5278d325d7d137a','berge.tommie@example.org','(233)985-0589x4','ojacobi@example.org'),
-(43,'1985-08-28 00:00:00.000000','07:50:33.000000','1711819196','Cathrine','Zemlak','Prosacco','13:09:25.000000','ee9ba8cf9ee8156cae4e7c2c365a5dad6876a57f','kyle67@example.com','298.145.3945','alba14@example.com'),
-(44,'2024-04-11 00:00:00.000000','02:50:08.000000','7519977246','Lily','Dach','Beatty','14:00:37.000000','d9ce7c2c0e0fdad3a4ca2b75282f00358aa571b8','eveline.crona@example.net','(598)023-7520x7','nwhite@example.com'),
-(45,'1974-09-21 00:00:00.000000','22:18:38.000000','4140046149','Lindsey','Roberts','Miller','03:02:51.000000','6c17f403954b23ea6e6802d0355568543da7adc1','hessel.bennie@example.org','913-044-5754x57','svon@example.net'),
-(46,'1999-04-22 00:00:00.000000','06:31:18.000000','9101356426','Elody','Donnelly','Jacobs','05:56:32.000000','7bd1722ae9be4b69b4ee421037f47b09067fa67f','augustus12@example.org','1-761-815-2072x','mary40@example.org'),
-(47,'2006-03-22 00:00:00.000000','08:13:47.000000','1988090703','Rita','Jones','Hilll','17:28:08.000000','4408792609bda607220365e63bc5624eecde1eec','selina39@example.net','1-809-996-7722','eileen.gutkowski@example.com'),
-(48,'1975-03-10 00:00:00.000000','19:05:47.000000','3581187744','Jeffrey','Boyer','Cassin','04:33:23.000000','fb8cb865d6606eb7cccb32029f21e285d0c7fe25','zaria77@example.net','802-446-3349x88','sbecker@example.com'),
-(49,'2023-01-17 00:00:00.000000','06:47:31.000000','1945435609','Agnes','Metz','O\'Connell','08:58:17.000000','25819532aaf541ce69d65d133cbc09c13f5925a0','felipe96@example.com','1-103-280-2586','west.leonie@example.com'),
-(50,'2001-05-12 00:00:00.000000','09:20:04.000000','6078928038','Kailee','Kunde','Upton','18:21:02.000000','05c91ac0a7a9c332e565aded332a0ea49c201050','rebekah12@example.org','1-775-240-3400x','harris.lew@example.net'),
-(51,'1987-07-15 00:00:00.000000','14:37:25.000000','2354815285','Lea','Feest','Kilback','03:43:27.000000','eedcd2dbb73e81c7fc601c8af4130a1a7f215f4d','hickle.glenda@example.net','+11(7)683279521','mclaughlin.sylvester@example.net'),
-(52,'2010-06-20 00:00:00.000000','07:42:20.000000','7251418844','Rubye','Klocko','Schmeler','19:56:25.000000','27ef31090d1f4ea8f9188954b6d0021b29fb125d','weber.monserrate@example.org','678.704.9787x30','mossie68@example.org'),
-(53,'1983-07-10 00:00:00.000000','18:37:33.000000','8211192891','Jena','Jakubowski','Schimmel','10:16:33.000000','e30836a5d0584ae8e163bf7175fd06aabb42ab98','julia.mayer@example.com','(335)895-5426x8','brent.raynor@example.net'),
-(54,'2010-06-30 00:00:00.000000','03:38:26.000000','8502978226','Ludwig','Ebert','Hansen','07:01:16.000000','56c27cb523ac9637f73352f80857a7941cf6481d','casper.velma@example.com','(003)878-6539','kunze.kasandra@example.org'),
-(55,'2010-12-10 00:00:00.000000','14:04:13.000000','1984402710','Krystel','Nader','Wintheiser','11:27:50.000000','0fb8df3d465411460fb2b56180a9bfad4d0e48fc','tdicki@example.com','400-059-0293','dicki.frances@example.net'),
-(56,'1988-12-17 00:00:00.000000','05:59:59.000000','6817088883','Eladio','Miller','Ullrich','11:53:20.000000','6e4b445a722e38a5a9dd80fd48ca9a2947b1a393','katharina60@example.net','(304)420-3490x5','pearline.kutch@example.com'),
-(57,'1997-04-22 00:00:00.000000','04:59:23.000000','9792878049','Vivianne','Casper','Hand','14:37:24.000000','f82ff8f28dd2b6ab67fe037277a9a0f493ad7d1c','fgreenfelder@example.com','600-214-1167','pollich.emile@example.net'),
-(58,'2004-09-26 00:00:00.000000','04:31:57.000000','3626361808','Jazmyne','Schoen','Douglas','15:50:00.000000','08ac21b1080c1d98e224a568d3a105413e15ab06','delia.moore@example.com','1-378-689-0331','borer.irma@example.net'),
-(59,'1994-07-27 00:00:00.000000','01:28:53.000000','5407998290','Houston','Jacobson','Koepp','13:59:19.000000','a97a3df64304fb4d9deced597e8f80ca8b7901bd','rice.carmella@example.com','491-823-4299','rsporer@example.net'),
-(60,'2010-04-08 00:00:00.000000','13:43:41.000000','6263062847','Eloise','West','Kirlin','20:41:48.000000','3afbe9a2fd3a95b4f9524db253b367cf2d7e1183','hermiston.janie@example.org','927.936.0913x00','rschumm@example.net'),
-(61,'1980-08-21 00:00:00.000000','17:58:27.000000','9485731703','Annie','Powlowski','Quitzon','03:00:38.000000','78c68afa34059c653cb5142816cc83da8587afcf','tremblay.jaren@example.com','1-543-148-6397x','jeanie.runolfsson@example.org'),
-(62,'2015-10-28 00:00:00.000000','07:54:38.000000','9130110931','Wilma','Thompson','Kshlerin','21:12:19.000000','46f4d0de59ac99326c3eea91534eb24c66f036d4','rachel.wolff@example.net','+78(0)943320624','pgaylord@example.net'),
-(63,'2000-11-08 00:00:00.000000','16:07:57.000000','1635566941','Favian','Yost','Eichmann','16:25:48.000000','8d67dc23cece67d044ba9d49a373a0d74da11071','uharvey@example.net','(045)460-1286','anissa50@example.net'),
-(64,'1998-05-30 00:00:00.000000','13:43:16.000000','1252408156','Caitlyn','Bechtelar','Stiedemann','01:05:03.000000','9a14e005e8cbc8a1103f6db8aff2dbb3912a581a','pritchie@example.org','06429196223','hollie92@example.org'),
-(65,'1989-05-14 00:00:00.000000','15:36:02.000000','3928495788','Priscilla','Hackett','Dare','00:12:16.000000','9034ccf9bb575a3861036be0b90b3a56939bf7a2','jayden78@example.org','(482)688-2714x3','schaden.elmore@example.org'),
-(66,'2019-07-10 00:00:00.000000','16:18:39.000000','1503243772','Salvador','Champlin','Beer','13:58:58.000000','52bebdbfa6400492d30f3a7b4796df9a3c49290a','parisian.myra@example.org','1-603-677-7917x','ywillms@example.com'),
-(67,'2014-08-21 00:00:00.000000','22:56:21.000000','9908143613','Claire','Fadel','Ankunding','05:47:26.000000','c41a0feb8ec4cd2f214fdd71838f3368cc36f678','reinger.ronaldo@example.com','413-252-6204x63','fcrona@example.net'),
-(68,'1992-09-24 00:00:00.000000','10:32:02.000000','2209931941','Hal','Stracke','Jakubowski','12:49:18.000000','a3b81a725182bc61ab703edbbd9fef3448352088','stamm.kolby@example.org','(233)494-2016x0','abbigail11@example.com'),
-(69,'1987-04-27 00:00:00.000000','06:33:37.000000','6241219860','Madonna','Stamm','Roob','15:51:21.000000','bb6da26f9277018d39c4e5c899886f353cfa342b','mbailey@example.com','050.427.0641x64','kreiger.orval@example.net'),
-(70,'1984-04-04 00:00:00.000000','21:11:54.000000','8192270167','Guillermo','Tremblay','Thiel','14:09:03.000000','c4f7c9589b5d2bf897d8591d9a49a8478d7c3d02','price.verlie@example.com','1-844-740-3139x','nienow.alena@example.com'),
-(71,'1972-08-01 00:00:00.000000','13:04:24.000000','1883579145','Cale','Pollich','Runolfsdottir','04:01:20.000000','065037bb61cfe1b76cb3e8686fac77e8db75c2bd','elinor94@example.net','456.716.5675x41','bianka72@example.net'),
-(72,'1976-07-08 00:00:00.000000','11:18:25.000000','3603802210','Payton','Yundt','Graham','17:04:21.000000','cd394d464d5536d246d48c33606ecbccc4d709a7','carlee.mclaughlin@example.net','297-464-5304x26','kaelyn.mills@example.org'),
-(73,'2008-12-01 00:00:00.000000','00:04:09.000000','6144195606','Kole','Wiegand','Schamberger','11:38:45.000000','5b8ec13c1af132ecd66586e9ee5964a615a682e9','napoleon.sporer@example.com','707-240-8283x68','tremblay.ahmad@example.org'),
-(74,'2012-09-24 00:00:00.000000','11:49:30.000000','3721416788','Crawford','Hilpert','Ebert','07:52:28.000000','cbad600220e77170977a65abfc6ed439d644cc5e','aufderhar.nia@example.com','595.571.5741','ereynolds@example.net'),
-(75,'2006-09-21 00:00:00.000000','00:47:26.000000','8285180658','Marshall','Renner','Parisian','14:23:21.000000','fabe656f6ebb813737908310d8d60f88963a8c15','sidney03@example.org','630-988-3459','thowell@example.net'),
-(76,'2015-04-25 00:00:00.000000','23:56:34.000000','2210643806','Lambert','Schneider','Kiehn','23:32:30.000000','99fb5402f90ea0f0be04ae93787f757d1bdb7b6a','jamir63@example.net','(777)616-1130','tbergnaum@example.net'),
-(77,'2009-07-24 00:00:00.000000','07:18:02.000000','6762808422','Elvis','Block','Ritchie','05:07:16.000000','099d27c52d48a960a809e18e3c07b6e24e994562','juana.pollich@example.net','1-400-426-7035','kohler.johann@example.com'),
-(78,'1996-04-04 00:00:00.000000','04:26:28.000000','2200983129','Oswald','Block','Spinka','06:04:17.000000','c3b1dbc8316dfcc204399744d9f8a718742d2c62','fbeatty@example.org','1-105-701-8844','hilpert.manley@example.net'),
-(79,'2000-01-31 00:00:00.000000','05:56:43.000000','8245566577','Colten','Pfeffer','Satterfield','17:38:43.000000','98315e90fd391caae267eb74deb36ab98b464efb','boyer.kiera@example.com','1-540-952-9779','klocko.ernesto@example.net'),
-(80,'2024-07-11 00:00:00.000000','07:19:49.000000','7943665938','Rusty','Cartwright','Oberbrunner','09:29:41.000000','abf7f42634360ccac65d5ca6726e5def14a913b1','elyssa93@example.net','09515716965','anabelle59@example.net'),
-(81,'1994-10-02 00:00:00.000000','18:50:58.000000','2273179425','Mariah','Deckow','Ernser','21:32:45.000000','eeff0916c4001b1e0c7d49d27ee5a5998d9e26d7','nolan.nia@example.org','(911)832-9389','hhand@example.org'),
-(82,'2024-06-02 00:00:00.000000','22:33:21.000000','7916256305','Mack','Satterfield','Ledner','08:57:44.000000','bcf83e514f6ca521c439b90bdc152e1b85a462a0','anastasia.emard@example.net','1-032-008-2024x','oturner@example.net'),
-(83,'2023-07-13 00:00:00.000000','23:32:33.000000','2801245141','Dejon','Balistreri','Rice','01:47:03.000000','3b74224e3bb5d7955a820d8708e4532692c273be','jerel.ebert@example.org','05926957047','schulist.leland@example.com'),
-(84,'1998-11-12 00:00:00.000000','06:07:08.000000','7031752438','Darby','Turner','DuBuque','04:47:54.000000','70bd13ab06bd0da6caf645bcde71855983a4ac52','hertha.koelpin@example.org','802-838-6817x69','vfeest@example.com'),
-(85,'1991-11-18 00:00:00.000000','07:31:27.000000','2505694666','Rick','Goldner','Ward','12:23:30.000000','843506e494f1d86e24dc300a6e3d2bfaa15ec119','verlie.lehner@example.com','081-961-0049x44','filomena29@example.net'),
-(86,'2003-09-20 00:00:00.000000','12:41:29.000000','8590313959','Jorge','Doyle','Feest','15:49:29.000000','bb5697b9a67b2797a4f3c5af748c43cd363be938','bode.letha@example.org','353.379.1940x32','sconsidine@example.org'),
-(87,'2006-06-06 00:00:00.000000','12:20:19.000000','3823206253','Maida','Turner','Schmeler','17:34:07.000000','1d0e0bea1368f92f1a3c6789744baceae58fb700','maci04@example.org','486-224-1627x83','wwunsch@example.net'),
-(88,'2005-06-25 00:00:00.000000','11:04:02.000000','9474833540','Jules','Jacobi','Orn','05:53:17.000000','18c6c2ee4eab13225296cca97edca080417eff7e','amoen@example.org','458-085-6184x44','andreane65@example.org'),
-(89,'2009-12-17 00:00:00.000000','05:31:24.000000','8840836528','Viva','Hintz','Stamm','14:36:42.000000','9a8c1845736bc4cd40a0eaf9e6759603c671fa6b','jovan.ankunding@example.com','08009533213','lynch.harrison@example.net'),
-(90,'2021-03-10 00:00:00.000000','06:19:45.000000','3494341793','Dejah','Bernier','Pfeffer','09:08:40.000000','936c8248a3eab2c0abbb6a92d4d33fb48022ebba','ukozey@example.net','+84(8)550088774','mattie05@example.net'),
-(91,'1974-06-07 00:00:00.000000','15:09:04.000000','6062651870','Delia','Gottlieb','Klein','00:16:09.000000','a5c1fc342477336aad41613148c9eaa54901cb52','anthony45@example.net','1-834-252-9380x','marilyne.gerlach@example.com'),
-(92,'1971-03-18 00:00:00.000000','07:50:29.000000','4342652922','Brandi','Keeling','Brakus','04:49:05.000000','efec67a24a8a9605084cdf6fada1d1a00eab65f0','romaguera.kiera@example.org','(468)380-7608x0','msanford@example.net'),
-(93,'2008-03-16 00:00:00.000000','04:58:11.000000','3824640196','Cassidy','Nolan','Schuster','21:45:52.000000','2c1f5a772247b50520240d6178ba8164bb42d545','emraz@example.net','1-542-315-3937x','reyes63@example.org'),
-(94,'2021-04-19 00:00:00.000000','23:11:59.000000','7021993342','Wava','Gottlieb','Bartoletti','22:00:26.000000','f22ec402278d243cea38ee8c76afed9754f4eea5','ystiedemann@example.com','1-306-899-1050x','krystal44@example.net'),
-(95,'1972-08-12 00:00:00.000000','05:55:21.000000','9737305191','Alexandra','Hayes','Kreiger','06:18:18.000000','bbaae84ee5c9e58c8bc8d33bca8312d7426b90d7','camila.deckow@example.org','(947)883-8229','carter.oliver@example.com'),
-(96,'2013-06-14 00:00:00.000000','12:47:31.000000','1352720602','Preston','Borer','Wintheiser','03:49:54.000000','32dbf19199a57c21ccb6c0787edd9fa7c7781447','xjenkins@example.net','+06(2)705312841','walker.camylle@example.net'),
-(97,'2020-12-23 00:00:00.000000','04:52:58.000000','5683607152','Kaitlin','Jacobs','Kovacek','02:15:46.000000','d03c9285f8ca9b27dfae3e5b19ccc67ec9944d23','lvolkman@example.net','871-052-1176x53','jazmin.crooks@example.net'),
-(98,'1998-10-22 00:00:00.000000','21:28:58.000000','7921401617','Bernice','Rosenbaum','Wilkinson','13:35:23.000000','d0ff9ccac2a5158fa83466635f86a57144f49b3a','willis15@example.org','1-262-547-2079','gerald20@example.org'),
-(99,'1977-12-09 00:00:00.000000','00:04:56.000000','8417855798','Jarrell','Mann','Batz','04:09:45.000000','08348fa6e327a54f74a56fa8aaf324386cae659a','hilpert.brennan@example.net','1-464-179-8909','zane.daniel@example.org'),
-(100,'2001-02-10 00:00:00.000000','11:23:59.000000','3680805445','Donato','Kirlin','Cassin','02:55:00.000000','3c7df61b63d2fecdcfe321807e09d96e55989bf8','ufay@example.net','1-900-316-9262x','fdicki@example.com');
+CREATE TABLE `admins` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `birth_date` datetime(6) NOT NULL,
+  `close` time(6) NOT NULL,
+  `eng` varchar(10) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `middle_name` varchar(50) NOT NULL,
+  `opens` time(6) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `personal_email` varchar(320) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
+  `work_email` varchar(320) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UKpcxnfgt80w38lk5o7rg6s8dyo` (`birth_date`),
+  UNIQUE KEY `UKepojkx9hoigjcquk2x6aqmnhj` (`personal_email`),
+  UNIQUE KEY `UKjld98mhubn4q39ac763tdb8oh` (`phone_number`),
+  UNIQUE KEY `UKghx1roe2og2gl6xyjqsr1pyqr` (`work_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
-UNLOCK TABLES;
-
-LOCK TABLES `teachers` WRITE;
-
-INSERT INTO `teachers` VALUES
-(1,'1976-07-24 00:00:00.000000','9169630560','Jayson','Emmerich','Lehner','f46fffcd4cbb7c08434a16a741c2f24212379ce2','vgreenfelder@example.net','074.818.0642x41','quitzon.isadore@example.org'),
-(2,'1999-09-13 00:00:00.000000','8612439135','Rosendo','Dickinson','Heller','0a300d209184d08e01da663c0d41c50f88d9c6c7','bins.mozell@example.com','695.644.5188','veronica32@example.net'),
-(3,'1990-02-11 00:00:00.000000','4689013706','Bernice','Ankunding','Bayer','9b39c6a1e13dc18d02bb6348e1ae54a56ce61425','erich.veum@example.org','(306)129-1111x6','eldora41@example.net'),
-(4,'2019-04-04 00:00:00.000000','9361201389','Ashlee','Dibbert','Daugherty','c15334bd7964fb09dbd71ba745b5fd76789441af','dagmar.runte@example.org','+49(7)207284450','ebernhard@example.org'),
-(5,'2020-08-18 00:00:00.000000','5635839399','Kim','Hane','Legros','46497fe9edfa8753f5d70dfb7959dd26deaa9839','monique23@example.org','1-739-089-5593x','gtremblay@example.org'),
-(6,'1992-07-11 00:00:00.000000','9703928789','Jeffery','Hodkiewicz','Littel','1deb79c7a0434248c305756a6cc24010bb7a8384','uschmitt@example.net','843.310.7720x08','mccullough.deion@example.net'),
-(7,'1977-09-12 00:00:00.000000','2517151239','Eriberto','Hegmann','Powlowski','2e9b3ec25b525b3adfd3f0238201fdf1071e32f5','caleb51@example.net','076.048.8942x50','qbartoletti@example.org'),
-(8,'2024-06-30 00:00:00.000000','6879311810','Kristofer','Hermann','Grant','5c4fe173722c955fb73f786a847d11a8f53f16c9','mupton@example.net','251-215-7888','javier29@example.net'),
-(9,'2023-12-25 00:00:00.000000','9040653039','Judy','Reilly','Watsica','67a7a2b37721927c740d2733bc5a6655fffa23d0','arno70@example.org','564-529-7586','trey93@example.org'),
-(10,'1972-02-10 00:00:00.000000','5592849816','Ford','Raynor','Frami','3b407338523f604c258010f49dc8b97e858ca4e6','ekris@example.org','+50(8)776481943','ohintz@example.org'),
-(11,'2017-05-14 00:00:00.000000','7798983174','Percy','Turner','Douglas','afee51c0a56fa321823adf7ed42fa14667e7d260','ksimonis@example.org','08535452908','kole67@example.org'),
-(12,'1975-09-28 00:00:00.000000','4538294891','Jerome','Lubowitz','Nicolas','8db6fb2132d065c5b6c92adda10d23cd2c6f6620','eschuster@example.net','04992452729','prutherford@example.com'),
-(13,'1978-05-12 00:00:00.000000','5529695333','Mauricio','Bashirian','Barrows','a18ac5a056064fcec1c383511f2503401de20c93','humberto80@example.net','1-223-607-9028x','jkuhn@example.org'),
-(14,'2018-07-05 00:00:00.000000','9270385235','Emerson','O\'Connell','Weber','d42ce16eaaf6ad31eda020acf25e4f77e4c189f6','cwuckert@example.com','1-096-359-4338x','pearline.effertz@example.net'),
-(15,'2002-11-23 00:00:00.000000','9987440958','Lelia','Lind','Conn','b37aa5c740dbcbfafe23a6046c03ea94830250f2','swift.ruby@example.com','162.266.9882x64','delores85@example.org'),
-(16,'1993-07-20 00:00:00.000000','8072320986','Jenifer','Stoltenberg','Bauch','5611dac488cdc47794253c9064c609d877947dee','feest.nyasia@example.org','1-590-285-4168x','brigitte.cummings@example.com'),
-(17,'1977-09-30 00:00:00.000000','7895898036','Letitia','Wisozk','Little','84836a90a8739554098de957d1a1795378080c3c','mathias.bayer@example.com','(178)233-9784','jovan44@example.org'),
-(18,'1972-04-13 00:00:00.000000','7535820722','Aurelie','McGlynn','Langosh','725187bcc5d37729cadaef611a1529905e0e23eb','jcorwin@example.net','144-790-8715','ariane60@example.com'),
-(19,'2017-06-07 00:00:00.000000','3351572382','Judson','Yundt','Kling','2ec24fb0698a72be86317961ae214e99211119df','oscar88@example.org','498-642-0136','dzulauf@example.org'),
-(20,'1997-11-21 00:00:00.000000','4208935951','Niko','Botsford','Nienow','3f410dd7e92274f199d68fec93659e06ff56109d','tlindgren@example.org','170-166-2194','eladio17@example.com'),
-(21,'1971-08-12 00:00:00.000000','2905915357','Elda','Murray','Lakin','d6204daf7583c46dc9aa7e945074d6c8261077fc','geovanni.rodriguez@example.net','+70(7)670714583','shessel@example.org'),
-(22,'1981-09-02 00:00:00.000000','2320984532','America','Mills','Stanton','e7d15f2eecf450c8e9924bea3ee6ff053e93b2cd','ojenkins@example.com','1-597-306-6784','xbalistreri@example.net'),
-(23,'2019-07-18 00:00:00.000000','7232670374','Tad','Pouros','Waters','b5f8582c74af67055dcf291c7697d61a08a79aae','dayton69@example.net','1-288-021-1491','icasper@example.com'),
-(24,'1987-04-09 00:00:00.000000','7074958426','Gust','Glover','Reilly','381b8d3564ed5b9deef69ae2848992f218bdad3b','wleffler@example.com','1-068-376-0469x','pacocha.toni@example.com'),
-(25,'1987-09-17 00:00:00.000000','9495315563','Mohamed','Cronin','Gerhold','b078e82b4c8f754be8bdbef3d5731e2803f0de9c','barton.viviane@example.org','769.966.4267x17','dschiller@example.net'),
-(26,'2024-08-16 00:00:00.000000','4793387875','Aiden','Marvin','Hermiston','47cdf27eeecfac209483ed71263fdf68d099bb86','kaia.walker@example.com','130-787-8427x66','sam72@example.org'),
-(27,'2000-10-05 00:00:00.000000','5812306257','Roslyn','Moen','Jaskolski','d5d3d0bc728249558f9e82eec6a5cf4145053e6e','rlowe@example.com','390-486-0956x02','jzboncak@example.org'),
-(28,'1999-12-24 00:00:00.000000','3433262262','Braulio','Kris','Fritsch','d91eefefa46ce4b96e7b927a76814721f5d4254d','botsford.gunner@example.org','(521)325-8897x7','skessler@example.net'),
-(29,'1975-02-01 00:00:00.000000','7469036897','Percy','Abernathy','Predovic','1a4492f62cb9b9350198a47416183cfc250fe6f6','clifford.adams@example.com','09795275914','aliya.kunze@example.net'),
-(30,'1980-04-08 00:00:00.000000','3779617147','Damaris','Marquardt','Bruen','4a182729707747df7ebc941ef678624a291b6778','zoie00@example.net','(649)335-8105','owen.hahn@example.com'),
-(31,'1974-02-28 00:00:00.000000','8333339968','Kraig','Morissette','Jenkins','78362050ace9a5530c55ba6121ff75c9f093b1c2','colin61@example.net','(342)299-6653','davonte.stroman@example.net'),
-(32,'2000-04-20 00:00:00.000000','6300370419','Estevan','Grant','Block','044f8903c9b401dab20bb876e9a80552f3b08549','flavie53@example.com','331.494.7093','predovic.austin@example.net'),
-(33,'2000-09-13 00:00:00.000000','8201754214','Julie','Shanahan','Parker','e2fee3be487cda11a7efd5656657e421e1576356','jalen.sanford@example.com','013.094.0826x32','leffler.clifton@example.net'),
-(34,'1990-01-02 00:00:00.000000','3539538972','Mervin','O\'Keefe','Denesik','538a1b2c445a857c31317edaf16818bc76926573','mose.cummings@example.com','740-908-8844','rosa.dibbert@example.net'),
-(35,'1990-04-10 00:00:00.000000','7623085363','Chesley','McCullough','Feeney','14af23be1f0f6d69cf732cdd9e07e3e1428b70e8','ebartoletti@example.org','1-137-480-1163','thompson.elsa@example.org'),
-(36,'2024-09-01 00:00:00.000000','1352988881','Brooke','Reichel','Nienow','d27c2b15dc4c3b0fbbb9d318223414bea68f6b0f','barton.fanny@example.org','1-977-649-3025x','jed.lubowitz@example.net'),
-(37,'2007-11-05 00:00:00.000000','2964315093','Patsy','Gusikowski','Russel','09adc3ff039bce2eaa03efd53885a893df11a1fe','rhea03@example.net','1-778-738-1408','bernhard32@example.org'),
-(38,'1994-12-04 00:00:00.000000','2697078300','Alexys','King','Lesch','fbbe5bad8391f043b416e81ad456d71cc7246c13','bailey.hilario@example.com','265-925-7610x56','clovis.flatley@example.net'),
-(39,'2001-11-16 00:00:00.000000','3591919823','Ebony','Dicki','Reinger','7a377e6ff339b6ae8707ebd5b9426edd273df1c3','bernhard.karen@example.org','657-152-8725','odonnelly@example.org'),
-(40,'1989-03-02 00:00:00.000000','7559920440','Nat','Mayer','Cole','c5dd1d64b83bd7f8008686e95af1926b4fa40b8e','eldon.cronin@example.net','942-162-7962x30','ewell.miller@example.com'),
-(41,'1991-08-14 00:00:00.000000','3710009373','Else','Dickinson','Champlin','2510310483954dc4607e3c72860449d7cb3124bb','lola90@example.net','09093435158','weimann.salvatore@example.com'),
-(42,'2023-12-15 00:00:00.000000','2128237721','Wyatt','Carroll','Hartmann','93ad992d72cf293ee2a56c9b23f964a53063e267','monserrat85@example.net','1-458-465-5044','maynard.gottlieb@example.org'),
-(43,'1971-08-04 00:00:00.000000','7753312756','Franco','Mraz','Huel','1ac2b614c91f027bba96c065a9a81cfdd1809ebc','veum.alden@example.org','01096145782','ledner.jayda@example.org'),
-(44,'1972-04-09 00:00:00.000000','8840396406','Lavern','Spencer','Eichmann','2fc6ff6b3438840f040755698b04e725d3226896','hamill.oliver@example.net','1-176-585-3986x','hhansen@example.com'),
-(45,'1994-03-13 00:00:00.000000','8416913770','Danny','Raynor','Tremblay','13f0d0d02f72f871f633d1b78753eee3fdec13a9','taya.moore@example.org','134-650-2865x74','dorcas.howell@example.net'),
-(46,'1993-10-06 00:00:00.000000','9847649253','Teresa','Beier','Kshlerin','917495110ec21b21b2991a93fa6e646f71b3ad03','blick.vincent@example.org','590.288.2147x18','jan.huel@example.org'),
-(47,'1999-05-02 00:00:00.000000','3477367440','Priscilla','Kozey','Conn','53c65cb253b9cd2ddc434d06b1e90ddc12d9d2d9','clotilde61@example.com','06430741744','qrodriguez@example.org'),
-(48,'1996-12-15 00:00:00.000000','8125584313','Mckayla','Spinka','Botsford','62c5bac133b8152a73b46eef2861110dd03c4a85','kaleb.hahn@example.org','07590181047','burdette.grant@example.com'),
-(49,'1973-01-27 00:00:00.000000','7032126723','Rocio','Romaguera','Murphy','fcb7f66a5ddfb6399eb279b82284159136ab336c','jazmyne18@example.org','549.986.2060x87','vito.hodkiewicz@example.net'),
-(50,'1972-12-20 00:00:00.000000','3698813861','Jabari','Schoen','Wilkinson','4ef0d8ead4c510ced2c5fdef0860ab76c88f4369','keeling.kylee@example.net','310.909.5939x03','sawayn.christopher@example.net'),
-(51,'1981-01-24 00:00:00.000000','2153115036','Carleton','Koss','Gorczany','2d98bb4c6a90be00d7b3e8de4fc38aa2fbf56dac','ross.thompson@example.net','1-195-986-8481','orville43@example.net'),
-(52,'1990-11-19 00:00:00.000000','5916955796','Alejandra','Swift','Grant','ba1156bcbf5aa87062e0ade599416bdda885afdc','ngislason@example.org','125.103.8351x78','hannah.conn@example.net'),
-(53,'2021-10-01 00:00:00.000000','2012538507','Adelbert','Glover','Bogan','853fa569d36ec5eb42bec2bae3b0987e7fef75dc','legros.brandi@example.net','346.903.4093x21','medhurst.merlin@example.org'),
-(54,'1982-11-09 00:00:00.000000','9386307843','Suzanne','Kovacek','Schaefer','8bd61bf1372026e3056bdd3b77bf5960b8fa6a0e','rollin.bartoletti@example.net','1-030-456-9717','phickle@example.org'),
-(55,'1988-09-26 00:00:00.000000','5143911988','Sherwood','Kunde','Monahan','eed4ec5d9fe60ca6162fdc874e0a7e1ffe27bd72','francesco.aufderhar@example.com','(645)029-8756x4','matilda.schamberger@example.com'),
-(56,'2020-03-27 00:00:00.000000','8952335578','Rosemary','Halvorson','Maggio','3590a1ded875fd2edd75c9db33738298280864cd','macejkovic.hiram@example.com','+52(9)464986116','khomenick@example.net'),
-(57,'1997-08-14 00:00:00.000000','8010480700','Santina','Kiehn','Schneider','7f8c5da75e9b06d38f9e616fe8f74cd6141378c7','okemmer@example.org','882-936-0645x54','udenesik@example.org'),
-(58,'1970-11-30 00:00:00.000000','8800061660','Royce','Wilkinson','Waelchi','010ea483c0ff885b15c4c7dc7a73fcac13ff4f89','jacobs.cristobal@example.org','1-839-138-4212x','terry.fahey@example.net'),
-(59,'1974-12-02 00:00:00.000000','9518111610','Daniella','Purdy','Larson','1903a5b74a1ec5deee847c6b709e76bb7bf9c0eb','lueilwitz.kristofer@example.org','1-197-879-3076','claire82@example.com'),
-(60,'2009-02-24 00:00:00.000000','9588709001','Moriah','McCullough','Bashirian','ade7e4cfedc478147fb31cc48bb6cd0818c5f903','imante@example.com','(189)914-6864','ernser.sharon@example.org'),
-(61,'2007-05-29 00:00:00.000000','6563472949','Camden','Bogisich','Stark','56adbcc6c92406316c17c6e7ea1de13a43ee596f','buckridge.riley@example.com','597-842-8191x24','tromp.megane@example.net'),
-(62,'1983-01-23 00:00:00.000000','7521245617','Tabitha','Mohr','Okuneva','a123a716702de3cf0a1c3d20c8bc07279ec736ec','jacquelyn62@example.com','(722)250-7443x5','jakob69@example.com'),
-(63,'2013-12-23 00:00:00.000000','6219116239','Kenny','Nitzsche','Auer','ed52a2513f02dd84d85704ce7ad4b3db9af6628d','carlie12@example.org','938-138-9406x79','ernie11@example.com'),
-(64,'2013-01-12 00:00:00.000000','9821512964','Brigitte','Roob','Hirthe','f99a070f753bfbce8cca7604ee16fb872145edec','fortiz@example.net','+82(1)437920754','uo\'reilly@example.com'),
-(65,'1970-09-01 00:00:00.000000','7952660950','Liana','Kirlin','Kulas','f444a062782f098795465c13c669daf4d1f7e3df','purdy.rod@example.org','688-511-8737x21','macejkovic.theo@example.org'),
-(66,'1979-04-10 00:00:00.000000','6666952765','Khalil','Dickinson','Cartwright','c35407488b9273814114d140b17ef842c7701edc','vemmerich@example.org','665.417.9105x94','o\'keefe.herta@example.com'),
-(67,'1986-11-08 00:00:00.000000','7922884327','Elisha','Bartoletti','Macejkovic','430e6adf0931eeb029af130dbe37ee5402c06831','angelita.greenholt@example.net','610-078-4715','cleve41@example.com'),
-(68,'2000-07-13 00:00:00.000000','2144023474','Kevin','Kris','Fadel','156c720a30bcaaaa0cc64f1c8f7076c4cb434bfe','deondre.ziemann@example.net','(741)003-6100','nia57@example.net'),
-(69,'1982-07-11 00:00:00.000000','3642960349','Devon','Yost','Barrows','2a01adea7d17fcf2114503c588a89ee5c514e8ce','ctorp@example.com','(290)299-5620','russ91@example.com'),
-(70,'1987-10-01 00:00:00.000000','5382800246','Kade','Considine','Herman','6887ad52683678d2a003c4ec77d6b75d24603c3d','brandi.crona@example.org','(045)596-6520','kris.nigel@example.com'),
-(71,'2023-03-21 00:00:00.000000','1759604742','Althea','Pfeffer','Bartoletti','ef6922c850b9c4e18a73a6fd4a8ed80c0d2b7913','homenick.nels@example.com','255-665-7437x63','kobe.rogahn@example.org'),
-(72,'1990-10-13 00:00:00.000000','6468582228','Aleen','Hamill','Stoltenberg','64fd7c5dd151b2579f4b162f6f44f886375be6a7','rodriguez.garrick@example.net','056-393-6299','schimmel.guadalupe@example.net'),
-(73,'2010-01-29 00:00:00.000000','1114012557','Otilia','Krajcik','Little','c68ededa7b147cbec38da387cda0931ef5137e3e','powlowski.yesenia@example.net','116.289.1062x87','norwood27@example.com'),
-(74,'2010-08-08 00:00:00.000000','5823635493','Raina','Dickinson','Hessel','6947a0fc3f60086f97a500e3420408384440d67e','jettie.mraz@example.org','1-734-444-1820x','wuckert.shane@example.org'),
-(75,'1983-03-16 00:00:00.000000','9612872746','Daphney','Smith','Schoen','b1b37f16631a44b09e33dcab9b148251765f62a2','ahilll@example.org','(289)629-0688x6','sylvester84@example.org'),
-(76,'1987-03-24 00:00:00.000000','6153613822','Agustina','Harber','Altenwerth','51dc7cdd5ab8159058bf72b1f138720c930ed546','rosemarie.schmeler@example.org','(846)346-0498x1','reymundo41@example.net'),
-(77,'1984-11-01 00:00:00.000000','1135942999','Casper','Balistreri','Nitzsche','5c022435fb0bd67e0cd654eaed83a4de1e24ef73','abby.funk@example.net','08401234229','heidi.cole@example.net'),
-(78,'1991-11-15 00:00:00.000000','1826506388','Briana','Wilderman','Wiegand','f46e25bc9fd9dac5177980b6910c7043c39e5d6f','bertrand81@example.net','1-286-209-3069x','cassie66@example.org'),
-(79,'1980-08-15 00:00:00.000000','1302499677','Ernest','Oberbrunner','Grant','f7a2e43bf66763c8e8a806c4a7d19ac41cc699dc','ewell79@example.com','00106542781','bjones@example.net'),
-(80,'1985-10-06 00:00:00.000000','8960745757','Pamela','Simonis','Tromp','3bc13e5702275479f34793c96e1cc3182373fdd0','jcorkery@example.net','1-423-084-6602x','ikassulke@example.org'),
-(81,'1990-12-20 00:00:00.000000','5674101920','Emmanuel','Moen','Will','67a3f4653293e5ee5641906f3be58de8e59562c1','bernhard24@example.org','(716)017-5090','senger.pete@example.org'),
-(82,'2006-11-28 00:00:00.000000','8276804908','Darrion','Koss','Dicki','5219c3e0b311d6471e2dba86e821eabeacf6e521','margaretta.olson@example.net','585.804.7288x99','hagenes.terence@example.net'),
-(83,'2011-09-16 00:00:00.000000','2147250069','Anya','Brown','Padberg','52860eb2fd979d157d3e8b1736512989c8e141b5','walter79@example.net','696-249-9323','cullen.thompson@example.org'),
-(84,'1977-04-14 00:00:00.000000','3193243403','William','Muller','Carter','17556bda3162c25008af5ff7847df04eb3b03596','kaelyn.sanford@example.com','1-683-939-0321x','marilyne.erdman@example.com'),
-(85,'1991-08-10 00:00:00.000000','8018601444','Vivian','Jenkins','Dickinson','a992ffc65c8acb1e6962f843c36d3fd8e24878b6','domenic.kuvalis@example.com','086-662-1281','thayes@example.com'),
-(86,'2003-03-15 00:00:00.000000','9293855645','Percy','Ledner','Smitham','b225365ba5a6a21e5edcc863fc376c59c31780e4','leatha71@example.org','891.370.2110x70','andrew.huel@example.net'),
-(87,'1992-06-14 00:00:00.000000','3101597953','Moriah','Renner','Gusikowski','bdb7aedbdc450e07ed070ba22707fb51be5385cd','tremblay.laurine@example.org','029.344.7290','umueller@example.com'),
-(88,'1993-04-04 00:00:00.000000','6964263669','Kian','Kunde','Kautzer','2033558d5338b6e46c1be6526d4705ac9a3224f3','feest.ana@example.net','053-912-2505x41','ygoodwin@example.com'),
-(89,'2004-06-10 00:00:00.000000','3848016289','Violet','Hahn','Ward','b416153ae5bd4dff642e1ad410f65160524c79d9','wyman.johan@example.com','05029969018','dfritsch@example.org'),
-(90,'1980-10-28 00:00:00.000000','6245340629','Milford','Kulas','Von','2d983cb0c62f394f06b8ceb4e27a5ba995d9bdfb','witting.lowell@example.org','01062162892','camille.bechtelar@example.com'),
-(91,'2012-02-06 00:00:00.000000','4590549240','Ibrahim','Stanton','Skiles','ba02d56b15d83a1366a9a52d261e5f9be569051c','sydnie.dare@example.org','1-184-896-4083x','mable.hills@example.com'),
-(92,'2019-06-14 00:00:00.000000','8846097082','Jonathon','Abbott','Stark','0d896d7c09b143f747ab50a2b37017ae208dec73','rmacejkovic@example.net','1-654-880-3463','lorenza24@example.org'),
-(93,'1986-09-09 00:00:00.000000','1628885542','Sydnie','Schulist','Oberbrunner','2d0c3f9de863b135d933e55d6f2c8242c50cefc5','crooks.ashley@example.org','771.206.7076x80','stracke.valentina@example.com'),
-(94,'1992-08-04 00:00:00.000000','9576591913','Fredy','Pfeffer','Zulauf','d99d5b0ae458d9aeb9ab389f169c3ccc67346e3a','adriel52@example.net','1-152-214-5481','robbie.cole@example.com'),
-(95,'2001-01-10 00:00:00.000000','2976988339','Stone','Thiel','Renner','8bb364c661337e07cbc5bf6ca076c7056bffc5f5','sigmund22@example.org','1-042-240-3777x','jevon.treutel@example.org'),
-(96,'1992-06-13 00:00:00.000000','3343257143','Dean','Witting','Pagac','015bb9c638c8e8c365da8a0fbbfdb13edaff634c','fprice@example.net','+05(4)771713268','marvin.lonie@example.com'),
-(97,'1976-02-23 00:00:00.000000','2254184524','Mathilde','Larson','Bergstrom','c7b83cd9922988ff24733539057a7d07174bb041','ocremin@example.com','469.390.7256x61','bcummings@example.net'),
-(98,'1988-09-14 00:00:00.000000','5461020430','Chester','Brown','Hyatt','f49e9fc70fe53240f7a36f6b4cf154be866d6027','gchamplin@example.net','+50(4)524873513','koepp.amani@example.net'),
-(99,'1975-11-12 00:00:00.000000','8147299619','Keshaun','Zboncak','VonRueden','936bad67267e6aaeb6931fb0ee2f9fb4af5bc5f9','lbailey@example.org','1-205-455-0598x','monserrate.swaniawski@example.com'),
-(100,'2005-10-05 00:00:00.000000','7118048491','Margarett','Ondricka','Klein','53f7009b275ad9a65c52b336beadce0eb6e881e5','orrin.leuschke@example.org','1-873-258-9198x','nspencer@example.org');
-
-UNLOCK TABLES;
-
-LOCK TABLES `faculties` WRITE;
-
-INSERT INTO `faculties` VALUES
-(1,'Ea inventore mollitia voluptas ut aut. A natus ut quas suscipit. Impedit optio id minus veniam libero. Omnis quam sit architecto odit autem quia.','fuga'),
-(2,'Aperiam consequatur occaecati in aut ipsa. Voluptates architecto et ut voluptas.','fuga'),
-(3,'Quae non harum atque enim non quasi alias. Aut placeat sint itaque repudiandae dolor dignissimos adipisci. Distinctio asperiores quisquam eaque quisquam magnam eaque. Aliquam in soluta cupiditate eos autem praesentium qui veritatis.','voluptate'),
-(4,'Voluptas velit eos eligendi consequatur quia quo animi voluptas. Ratione magnam odit repudiandae et asperiores recusandae et. Excepturi quis quidem et illum dolorum. Ab omnis placeat sit dolores voluptatem autem exercitationem quis.','vitae'),
-(5,'Voluptatem recusandae quas sapiente veniam perferendis nesciunt. Perferendis totam quis natus expedita. Ipsa consequatur repellendus fuga molestias inventore. A voluptatem omnis illo qui commodi. Architecto dolores autem omnis natus excepturi.','rerum'),
-(6,'Sint non commodi vel illum deserunt. Consectetur magni impedit nostrum suscipit tempore minus. Consequatur eos corporis sunt nobis numquam repellendus. Aut et rem aliquam minus quis qui ex.','est'),
-(7,'Voluptatem quis consectetur assumenda qui velit iste et officia. A soluta hic inventore blanditiis pariatur culpa aut. Consequatur praesentium corporis et. Dolorem illum quibusdam similique autem quis qui ut.','voluptatum'),
-(8,'Eaque eos voluptatem possimus velit. Reiciendis in veritatis sint in perferendis perspiciatis. Sint sapiente rerum ad quod.','vero'),
-(9,'Quas dolore dicta alias. Pariatur voluptates rem est molestiae. Ea dolorem eveniet rem. Perspiciatis quia consectetur dolorem non a debitis neque.','debitis'),
-(10,'Dolore dolorem dolorem est aut eos occaecati autem. Ipsam illum molestiae ut rerum aliquam.','iusto'),
-(11,'Esse error ratione qui veniam accusantium. Ratione voluptatibus suscipit perspiciatis aspernatur. A et ut tenetur molestiae aut quia consequatur.','repellendus'),
-(12,'Quia eum soluta totam numquam est. Impedit cumque quo quia est tempora alias qui. Consectetur quo porro laudantium odio.','consectetur'),
-(13,'Quo ab laudantium blanditiis in consequatur vel. Quia et fugiat nemo qui tenetur sit. Qui unde perferendis delectus atque voluptatem qui voluptatum.','inventore'),
-(14,'Quasi non non voluptatem esse. Sed quis sit porro libero eaque nihil eius. Ducimus fuga illum consequatur assumenda at enim illum.','laborum'),
-(15,'Ut iste architecto et excepturi est et. Voluptas molestiae accusamus eum eius et. Aut esse dolor accusamus laudantium autem explicabo ullam.','suscipit'),
-(16,'Totam in reiciendis repellendus necessitatibus expedita assumenda dicta. Qui non delectus perferendis. Quas reiciendis fugit expedita dolorum natus.','doloribus'),
-(17,'Ea neque beatae corporis quibusdam recusandae laudantium qui. Est eius praesentium est aliquam aliquid autem corporis. Repellendus nemo accusantium similique unde explicabo autem et.','nisi'),
-(18,'Excepturi eaque perspiciatis est fugiat quam perspiciatis. Et quo illo labore et. Aut voluptatem qui occaecati possimus. Quia quidem earum quia magnam quasi beatae dolores.','voluptatem'),
-(19,'Velit sed vitae eum sunt nostrum nisi natus. Nisi earum itaque ex et dicta. Et et aperiam ab hic est. Et rerum voluptatem molestiae facere.','corrupti'),
-(20,'Numquam cum tempore sed et rem optio. Distinctio est porro molestiae eos. Occaecati dolorem qui ut ullam reprehenderit quia voluptatibus.','ut'),
-(21,'Voluptatibus aut suscipit accusantium sit id. Sunt alias et consequatur. Sunt et id delectus possimus est.','quaerat'),
-(22,'Dolorum qui distinctio saepe impedit excepturi impedit perferendis. Aut delectus similique dolore dicta rerum illo temporibus. Aliquam at odio harum necessitatibus quia. Necessitatibus incidunt dolorem ad at. Dolorem corporis harum qui ut eius atque.','pariatur'),
-(23,'Laudantium quidem autem quis et. Perferendis doloremque soluta consectetur harum est ut dolore. Eveniet ea eos reiciendis enim.','deleniti'),
-(24,'Nihil sunt id illum voluptates in rem. Doloribus qui porro omnis itaque. Consectetur incidunt dicta voluptates quia voluptate beatae.','voluptas'),
-(25,'Possimus eos voluptatibus et quia. Doloribus error incidunt rerum voluptatem laboriosam. Voluptatem id sed ullam facilis eum.','inventore'),
-(26,'Expedita maxime quas repudiandae. Ipsa dolor voluptatum officia aut ex vitae voluptatibus.','repudiandae'),
-(27,'Quo maiores cum autem nihil. Laborum tenetur nisi quidem consequatur asperiores consequatur. Ut voluptatem rerum provident omnis repellat nesciunt.','hic'),
-(28,'Tenetur exercitationem earum est aut aut aut. Reprehenderit voluptatem sed ut. Laborum dolor eum necessitatibus dignissimos.','ut'),
-(29,'Fuga explicabo molestias tenetur vero quis. In nihil autem labore velit. Error rerum ipsum dolorem velit et. Provident et necessitatibus eos voluptates rerum eum.','architecto'),
-(30,'Voluptatem quis hic eius vel. Quia eaque adipisci et quis. A quaerat incidunt sint quam deserunt. Harum veritatis quam porro eveniet harum.','aliquid'),
-(31,'Pariatur velit aut corrupti accusantium culpa natus. Non facilis tempora aperiam. Qui quasi repellat hic accusantium accusantium.','repudiandae'),
-(32,'Eveniet consequatur quia aliquam ut est. Eum non sunt possimus iure non doloribus. Qui suscipit qui nostrum ad iure quibusdam illum. Veniam consequatur eligendi id ut ut.','dolores'),
-(33,'Et nam et porro ipsam repellendus. Iure quia a voluptatem. Cupiditate nisi et aliquid aliquam quae.','sunt'),
-(34,'Deserunt et in incidunt et reprehenderit totam. Est rerum dicta quae. Et omnis expedita earum eos velit porro itaque quidem.','perferendis'),
-(35,'Tempora quia in voluptas praesentium quo itaque. Eum non tenetur repellendus rerum.','iusto'),
-(36,'Sed sit id velit et occaecati quo repellendus. Numquam natus magni in veniam minima. Magni earum et accusantium dolore quo voluptatem. Et delectus possimus soluta occaecati illum aliquid.','quisquam'),
-(37,'Repellendus ut dolor asperiores. Mollitia sunt cum consequatur non. Quia provident aut atque quasi ut reiciendis modi. Aut accusantium veniam voluptatem nulla quasi.','harum'),
-(38,'Tempore est assumenda voluptatem eius. Impedit quos repellat nisi dolore ut est. Nesciunt debitis et vero ipsum quae porro.','voluptatem'),
-(39,'Illo quia beatae incidunt rerum magnam voluptatem asperiores. Voluptate dolorem veniam ab. Sit accusantium laudantium eveniet numquam autem repudiandae. Perferendis omnis eos perferendis. Voluptatibus maxime ea molestiae est harum est molestiae.','et'),
-(40,'Qui eligendi tempora nisi temporibus. Enim deserunt molestiae voluptatem ex laboriosam autem. Aliquam quam odit ut et sunt.','dolorem'),
-(41,'Qui ab laborum deserunt sit dolor inventore. Fuga vel perferendis nesciunt quia quam accusantium. Autem magni dignissimos nulla maiores incidunt autem nemo.','voluptatem'),
-(42,'Molestiae dolor dolor sint recusandae. Dolores aperiam provident officiis impedit doloremque fuga vel porro. Aut sint sequi ut itaque alias. Voluptatum sit ut reprehenderit. Maxime voluptas velit dolorem.','itaque'),
-(43,'Consequatur facere tempora dolorem quia numquam iure architecto. Aut qui eveniet quod dolores est exercitationem dolore magni. Repellat qui qui cumque dolore accusamus aut non. Laboriosam nihil deleniti maiores maiores sed pariatur. Sequi quos itaque vel.','autem'),
-(44,'Alias fugiat libero accusantium itaque. Quae iste neque architecto. Esse animi iure ut praesentium eveniet. Odit quos sed corporis est dolores voluptatum.','consequuntur'),
-(45,'Aut nesciunt quidem iure in enim tempore. Illo corrupti neque ipsam voluptate aut. Qui ab tempore odit earum nobis sit. Pariatur ea eligendi in natus voluptatibus minus voluptatem.','in'),
-(46,'Eum ut ullam commodi quos animi. Dicta molestias exercitationem eum iste dicta et fugiat et. Sint consectetur ratione id tempore. Quia dignissimos aut quis tenetur sint impedit voluptas sunt.','voluptatem'),
-(47,'Praesentium et quod neque consequatur. Autem sequi voluptatibus natus quis fuga quaerat explicabo. Consequatur et consectetur dolorum et ratione dolor nam.','perferendis'),
-(48,'Eligendi porro nulla architecto accusantium in magni. Blanditiis officia modi dolorem quia vero. Sunt unde sed nam minus minus minima voluptatem. Accusamus perspiciatis consectetur quibusdam nesciunt inventore qui natus pariatur.','in'),
-(49,'Provident mollitia deserunt sed et voluptas. Illo cupiditate dolor libero alias eaque voluptatum. Autem dicta ab ut ab a maiores nobis.','reiciendis'),
-(50,'Laborum id cumque voluptate doloremque accusantium quisquam. Esse quam dolore dolores enim sed esse. Et rerum inventore quidem in voluptatem. Quo quos laborum et culpa recusandae harum.','quam'),
-(51,'Aliquid et ullam quidem porro repudiandae. Tenetur nisi accusantium et et ea autem soluta. Amet possimus velit qui est expedita asperiores dolores est. Non commodi et nihil explicabo numquam a.','sit'),
-(52,'Aut itaque et sint fugiat similique laboriosam praesentium distinctio. Tempore ut aut voluptate doloribus qui quia culpa. Quidem ut amet qui recusandae voluptatem nobis. Nemo molestiae suscipit maxime quibusdam. Eum occaecati ab vitae nihil sequi rerum.','officiis'),
-(53,'Impedit voluptatem dolorem quo et reiciendis et quisquam. Et autem accusantium qui hic rerum qui animi. Cum perspiciatis tempora quia esse est dicta. Ipsam voluptas similique dolor alias eligendi doloremque voluptas quisquam.','quos'),
-(54,'Quod laudantium voluptatum minima fuga in suscipit laboriosam. Dolorum asperiores et aut voluptatem aperiam accusamus ipsa aut. Ut sit minima ipsam beatae qui perspiciatis ipsum consectetur. Et autem porro enim cupiditate cumque sit in.','qui'),
-(55,'Veniam voluptatibus et culpa sint ut eum ratione. Beatae tenetur aspernatur excepturi qui itaque omnis. Eum magni molestias ea ipsum et aspernatur.','eum'),
-(56,'Molestiae voluptatibus modi corrupti iste eos rem accusamus modi. Perspiciatis necessitatibus dolor occaecati veritatis aut ullam facere. Dolor fuga dolorem voluptate consequatur neque dolorum qui.','quia'),
-(57,'Iure provident sapiente earum natus fugiat dolor. Voluptatum numquam ut qui accusamus nihil. Voluptate omnis illum qui aut consectetur. Qui incidunt earum officia delectus. Ducimus aut excepturi id ut dignissimos dolorum.','dolor'),
-(58,'Cum aut aut et omnis. Optio odio perspiciatis dolorem explicabo amet neque et quia. Rem deleniti non magnam earum occaecati. Nisi deserunt explicabo rem qui delectus et.','repellat'),
-(59,'Iure tempore nihil commodi velit fugit et. Placeat fugiat vero architecto laboriosam aut consequatur in laboriosam. Excepturi veritatis eos natus ipsam. Eligendi voluptates culpa recusandae adipisci quibusdam vel cum suscipit.','aut'),
-(60,'Quia vero officiis similique itaque autem quae est odio. Repellendus culpa officia laudantium ipsam tempora.','non'),
-(61,'Sint voluptatem voluptas aut. Dolores modi suscipit est et distinctio delectus. Qui quo deleniti facilis vel non distinctio soluta.','vel'),
-(62,'Rerum repellat sapiente repellat ad. Sit est reiciendis mollitia nisi. Incidunt voluptas tenetur ipsa ut consectetur. Ut cum qui nihil ab.','beatae'),
-(63,'Vero voluptas nihil nobis nam nulla voluptas et. Qui ut eos ullam molestiae assumenda. Architecto et quis facere modi dolorem vel necessitatibus. Ullam enim et maiores nihil aut delectus.','distinctio'),
-(64,'Fugit autem maiores placeat dolor laborum. Incidunt quod eos temporibus saepe dolorem sint placeat. Neque voluptatem id sit quia ut. Occaecati facilis eveniet et nemo.','natus'),
-(65,'Minus eum voluptates voluptatem nisi. Aut nesciunt libero dolorum asperiores. Voluptatum dignissimos ipsum quas qui.','cupiditate'),
-(66,'Commodi nulla impedit dolorem rerum dolores officia praesentium. Doloremque sint praesentium vel ea. Dolor adipisci repudiandae atque.','sit'),
-(67,'Autem maiores molestiae in repellendus officia quis sit. Qui nisi officia accusantium quis laboriosam tempora inventore. Dolorem libero magnam rerum mollitia dolorum laudantium fugiat.','voluptas'),
-(68,'Quia ut aspernatur fugit non. Exercitationem temporibus alias nesciunt nihil fugit quisquam ullam. Aut quo omnis id cumque voluptatum quo.','qui'),
-(69,'Est officia neque et ea quia culpa. Minima quo optio autem consectetur aut sed. Sed sit soluta itaque voluptatibus est sit.','mollitia'),
-(70,'Voluptas qui accusantium porro necessitatibus. In numquam ipsam voluptatem reprehenderit. Cumque consectetur harum qui sint ut amet est.','quisquam'),
-(71,'Incidunt ratione tenetur itaque et sunt non. Nisi est facere quo voluptatem. Nesciunt quae aspernatur inventore est enim et. Incidunt eveniet quae minima ut.','officiis'),
-(72,'Est nostrum incidunt similique quod. Unde laudantium et eum soluta minima similique atque. Blanditiis magnam vel sed et eum minima harum. Fugit magnam vitae quae.','et'),
-(73,'Dicta sequi qui tempora aliquid. Aut quae tempora maiores accusantium omnis odit eveniet. Quis veritatis sit quam dignissimos beatae dolorum.','molestiae'),
-(74,'Ullam inventore perspiciatis dignissimos fugiat occaecati. Maiores ea tenetur consequatur et qui sit et. Ullam reiciendis ea suscipit temporibus.','itaque'),
-(75,'Possimus eaque consequatur ut velit dolorem sunt. Et repudiandae animi rerum ut nobis odio deleniti explicabo. Tempore voluptas optio accusamus aut ea quia.','fugiat'),
-(76,'Occaecati quidem voluptatum laudantium consequatur accusantium animi et. Necessitatibus earum eos accusantium quisquam recusandae. Assumenda consectetur aut fuga laboriosam.','aut'),
-(77,'Et quo omnis eius aliquam. Quisquam quidem in est. Iusto minus eius dolorem atque maxime natus cupiditate. Qui beatae quibusdam deleniti facere nihil et quo.','sapiente'),
-(78,'Perspiciatis nam eveniet possimus sit et tempore blanditiis non. Quos sed sit praesentium numquam doloribus nobis. Aut voluptate et ex ipsam exercitationem sequi nobis.','aut'),
-(79,'Et voluptatem accusantium velit omnis. Numquam dolorem nobis consequatur minus labore voluptas. Laborum deleniti at quas qui.','similique'),
-(80,'Aut corrupti repellat et est. Quibusdam quod nam et modi consectetur sint. Qui dolorem repellat perferendis quaerat et.','itaque'),
-(81,'Voluptas repellendus assumenda quis excepturi molestiae. Nulla eos molestias aut repellendus enim repellat fugit reprehenderit. Facilis rerum minus voluptates aliquid dolorem cupiditate.','quis'),
-(82,'Fugiat commodi laborum repudiandae. Repellendus non maiores dolores itaque cumque. Vitae corrupti laborum in ab magnam a voluptates.','voluptas'),
-(83,'Est quas enim eaque labore maiores rerum et. Perferendis eos doloribus sit nemo non ab officia. Labore inventore hic soluta asperiores provident architecto.','consequatur'),
-(84,'Tenetur accusamus minus facilis placeat minus dolores. Et blanditiis nemo sint ipsa est. Consequatur est molestiae et eos.','aperiam'),
-(85,'Et nihil quos exercitationem magni ab quisquam. Dolorem facilis ad velit asperiores dolorum harum. Et dignissimos dicta iure et occaecati non. Ut cupiditate rerum sunt blanditiis.','et'),
-(86,'Eligendi harum qui recusandae ipsam. Molestiae velit totam rerum. Unde in est vel nisi nisi tempora voluptatum.','eius'),
-(87,'Est odio alias omnis voluptatem. Debitis voluptatibus ullam architecto sit alias. Sed voluptatem nobis iusto rerum et a dolor occaecati. Ipsum debitis ea laudantium maiores.','eos'),
-(88,'Incidunt odio repellat qui voluptatibus vel sequi facilis alias. Sunt aspernatur numquam autem optio. Voluptas itaque id iusto velit quo. Et in voluptas natus ut.','debitis'),
-(89,'Reprehenderit illo et eum delectus magnam. Ut qui corrupti necessitatibus sequi nemo culpa facilis aut. Explicabo similique iusto ut neque impedit. Ut quisquam earum ipsa ea eos.','quod'),
-(90,'Officia repellendus dicta nemo porro fugiat est fugiat. Optio ad ratione ut velit. Quisquam quidem est ab eaque. Quis cupiditate rem consequatur minus consequuntur explicabo. Dignissimos ad ab et beatae alias culpa id cumque.','et'),
-(91,'Tempora nulla ut laudantium. Perferendis repellendus illum et et sunt. Amet sit suscipit unde voluptas numquam. Optio sint voluptas quae sapiente voluptatem reiciendis quis.','adipisci'),
-(92,'Sed est quam ad omnis cumque architecto eos facere. Dignissimos vero ab est praesentium fugiat aspernatur commodi praesentium. Delectus dicta ut consequuntur dignissimos quibusdam.','illum'),
-(93,'Nostrum recusandae quidem saepe ut officiis voluptatem. Odio enim adipisci rerum amet ut cumque maxime. Suscipit architecto culpa eveniet eum neque sequi ut. Consequatur est veritatis praesentium.','aliquid'),
-(94,'Sint tenetur fugiat cupiditate recusandae blanditiis. Excepturi ut ut distinctio id officiis. Architecto quis totam quam est recusandae.','voluptate'),
-(95,'Magnam sunt voluptatum omnis ex minima non occaecati. Qui eveniet nihil architecto sint possimus. Quod magnam et quaerat ut recusandae. Deserunt sit ad et minus.','ea'),
-(96,'Autem porro dolores labore similique voluptate deserunt quia. Accusantium magni aliquam et mollitia omnis adipisci aut. Quos enim aut consequatur.','temporibus'),
-(97,'Quis nobis accusantium rem optio et nulla. Ex eos quia rerum et veritatis ut eius. Doloremque ratione beatae id.','veritatis'),
-(98,'Modi molestiae accusantium totam ea itaque atque. Et deserunt quasi consequuntur rerum amet.','dolore'),
-(99,'Dolorem ea dolores velit voluptatum dolor ut a necessitatibus. Non voluptatem provident tempore odio. Reprehenderit odit dolores est reiciendis facere libero quisquam.','mollitia'),
-(100,'Commodi tempora asperiores vero quidem neque molestiae velit. Eveniet quia quas debitis magnam impedit velit. Ea et excepturi voluptas facere placeat quasi doloremque. Et voluptate temporibus ullam sit cumque quia.','esse');
-
-UNLOCK TABLES;
-
-LOCK TABLES `semesters` WRITE;
-
-INSERT INTO `semesters` VALUES
-(1,'1999-07-26 00:00:00.000000',42618,'2016-11-08 00:00:00.000000'),
-(2,'1998-02-04 00:00:00.000000',42,'1971-09-18 00:00:00.000000'),
-(3,'1976-10-12 00:00:00.000000',758307,'1986-09-22 00:00:00.000000'),
-(4,'2009-09-09 00:00:00.000000',3506,'2022-12-30 00:00:00.000000'),
-(5,'2024-07-21 00:00:00.000000',1,'1999-08-02 00:00:00.000000'),
-(6,'1975-03-15 00:00:00.000000',0,'1990-05-21 00:00:00.000000'),
-(7,'2021-05-22 00:00:00.000000',7752,'2019-11-16 00:00:00.000000'),
-(8,'2013-12-19 00:00:00.000000',845792076,'1995-06-14 00:00:00.000000'),
-(9,'1989-03-09 00:00:00.000000',67,'1994-03-13 00:00:00.000000'),
-(10,'2012-01-20 00:00:00.000000',257,'2022-04-14 00:00:00.000000'),
-(11,'2024-06-25 00:00:00.000000',8887,'2009-05-07 00:00:00.000000'),
-(12,'1975-11-16 00:00:00.000000',0,'2007-02-10 00:00:00.000000'),
-(13,'2012-11-20 00:00:00.000000',30616,'2016-10-09 00:00:00.000000'),
-(14,'1984-09-29 00:00:00.000000',253535,'1977-09-19 00:00:00.000000'),
-(15,'1997-06-17 00:00:00.000000',0,'1987-11-22 00:00:00.000000'),
-(16,'2004-03-06 00:00:00.000000',28820052,'2023-06-29 00:00:00.000000'),
-(17,'1970-07-23 00:00:00.000000',4808,'2025-01-29 00:00:00.000000'),
-(18,'1986-05-03 00:00:00.000000',1813,'2014-06-03 00:00:00.000000'),
-(19,'2018-05-27 00:00:00.000000',34,'2016-07-06 00:00:00.000000'),
-(20,'2017-03-15 00:00:00.000000',14,'2018-06-28 00:00:00.000000'),
-(21,'1984-03-30 00:00:00.000000',4409,'1970-09-22 00:00:00.000000'),
-(22,'2006-09-09 00:00:00.000000',0,'2006-03-26 00:00:00.000000'),
-(23,'2010-10-16 00:00:00.000000',83,'1987-04-20 00:00:00.000000'),
-(24,'1990-05-28 00:00:00.000000',785,'2003-05-07 00:00:00.000000'),
-(25,'2018-03-19 00:00:00.000000',60,'2019-12-25 00:00:00.000000'),
-(26,'2015-08-08 00:00:00.000000',24,'2006-02-16 00:00:00.000000'),
-(27,'1991-07-03 00:00:00.000000',0,'1974-06-17 00:00:00.000000'),
-(28,'1998-08-09 00:00:00.000000',7555,'1998-04-14 00:00:00.000000'),
-(29,'1982-05-03 00:00:00.000000',536236,'1990-05-04 00:00:00.000000'),
-(30,'1976-02-23 00:00:00.000000',2680,'1980-09-08 00:00:00.000000'),
-(31,'1984-01-08 00:00:00.000000',0,'2016-05-01 00:00:00.000000'),
-(32,'1991-03-05 00:00:00.000000',8444,'2014-12-14 00:00:00.000000'),
-(33,'1996-05-06 00:00:00.000000',81290222,'2020-04-27 00:00:00.000000'),
-(34,'1989-11-14 00:00:00.000000',2,'2020-07-16 00:00:00.000000'),
-(35,'1995-07-11 00:00:00.000000',752718,'2004-08-13 00:00:00.000000'),
-(36,'2006-10-05 00:00:00.000000',90841,'1970-08-27 00:00:00.000000'),
-(37,'2015-05-21 00:00:00.000000',0,'2004-11-04 00:00:00.000000'),
-(38,'2006-11-12 00:00:00.000000',6013,'2017-12-30 00:00:00.000000'),
-(39,'1982-10-15 00:00:00.000000',17554088,'1976-08-09 00:00:00.000000'),
-(40,'2002-03-10 00:00:00.000000',66474,'1976-02-07 00:00:00.000000'),
-(41,'2016-02-16 00:00:00.000000',791363816,'1979-08-18 00:00:00.000000'),
-(42,'1990-04-30 00:00:00.000000',47,'2010-08-01 00:00:00.000000'),
-(43,'1987-11-25 00:00:00.000000',92827,'1970-12-25 00:00:00.000000'),
-(44,'1971-09-18 00:00:00.000000',553166675,'1972-11-09 00:00:00.000000'),
-(45,'2004-03-03 00:00:00.000000',56473,'2024-01-09 00:00:00.000000'),
-(46,'1998-10-28 00:00:00.000000',488703,'2004-10-07 00:00:00.000000'),
-(47,'1993-12-18 00:00:00.000000',4,'1987-03-01 00:00:00.000000'),
-(48,'2024-01-18 00:00:00.000000',4311,'1973-04-28 00:00:00.000000'),
-(49,'1986-05-05 00:00:00.000000',1126,'2007-03-25 00:00:00.000000'),
-(50,'1992-03-17 00:00:00.000000',7,'1986-07-26 00:00:00.000000'),
-(51,'2003-02-26 00:00:00.000000',0,'1981-04-09 00:00:00.000000'),
-(52,'2003-04-22 00:00:00.000000',268778791,'2022-02-19 00:00:00.000000'),
-(53,'2002-12-22 00:00:00.000000',746,'1989-02-26 00:00:00.000000'),
-(54,'1985-03-05 00:00:00.000000',96420,'1979-09-01 00:00:00.000000'),
-(55,'1971-03-30 00:00:00.000000',19365,'1982-05-08 00:00:00.000000'),
-(56,'2016-04-23 00:00:00.000000',58405600,'1987-02-03 00:00:00.000000'),
-(57,'2002-09-20 00:00:00.000000',340,'1979-03-24 00:00:00.000000'),
-(58,'2004-03-04 00:00:00.000000',2236422,'1984-12-04 00:00:00.000000'),
-(59,'1988-03-13 00:00:00.000000',91,'2017-02-07 00:00:00.000000'),
-(60,'1970-08-23 00:00:00.000000',2,'1976-09-05 00:00:00.000000'),
-(61,'2020-01-26 00:00:00.000000',4035,'2007-09-09 00:00:00.000000'),
-(62,'2000-08-08 00:00:00.000000',0,'1978-05-27 00:00:00.000000'),
-(63,'2001-10-23 00:00:00.000000',6848798,'2013-12-29 00:00:00.000000'),
-(64,'2000-10-20 00:00:00.000000',91975,'2010-01-05 00:00:00.000000'),
-(65,'1980-07-12 00:00:00.000000',6867,'2009-07-14 00:00:00.000000'),
-(66,'1999-05-12 00:00:00.000000',585243301,'1985-02-17 00:00:00.000000'),
-(67,'2000-12-16 00:00:00.000000',8590,'1977-08-25 00:00:00.000000'),
-(68,'2002-05-13 00:00:00.000000',43,'2004-03-03 00:00:00.000000'),
-(69,'1993-08-10 00:00:00.000000',2,'2021-11-07 00:00:00.000000'),
-(70,'1977-06-04 00:00:00.000000',754284604,'1973-09-09 00:00:00.000000'),
-(71,'2001-01-06 00:00:00.000000',5970,'1999-07-08 00:00:00.000000'),
-(72,'1980-09-02 00:00:00.000000',1,'2014-10-21 00:00:00.000000'),
-(73,'2022-12-29 00:00:00.000000',203913626,'1973-04-11 00:00:00.000000'),
-(74,'2018-04-21 00:00:00.000000',277404198,'2017-02-23 00:00:00.000000'),
-(75,'2022-08-31 00:00:00.000000',30548,'1981-11-20 00:00:00.000000'),
-(76,'1998-11-15 00:00:00.000000',0,'1981-03-27 00:00:00.000000'),
-(77,'1984-09-30 00:00:00.000000',90,'1981-02-09 00:00:00.000000'),
-(78,'2005-11-08 00:00:00.000000',2086,'1992-01-09 00:00:00.000000'),
-(79,'1978-10-04 00:00:00.000000',0,'1978-05-24 00:00:00.000000'),
-(80,'1984-04-08 00:00:00.000000',607429,'2014-06-02 00:00:00.000000'),
-(81,'1975-04-24 00:00:00.000000',9575205,'1993-07-13 00:00:00.000000'),
-(82,'2004-02-14 00:00:00.000000',492837,'1988-07-07 00:00:00.000000'),
-(83,'1973-12-10 00:00:00.000000',5921360,'1992-03-08 00:00:00.000000'),
-(84,'1992-03-02 00:00:00.000000',0,'2008-05-11 00:00:00.000000'),
-(85,'1998-03-14 00:00:00.000000',544,'2006-11-17 00:00:00.000000'),
-(86,'1977-11-19 00:00:00.000000',55679,'1986-11-03 00:00:00.000000'),
-(87,'2005-12-01 00:00:00.000000',3,'1973-07-25 00:00:00.000000'),
-(88,'2002-05-02 00:00:00.000000',455939934,'1998-03-20 00:00:00.000000'),
-(89,'1987-05-29 00:00:00.000000',0,'2010-11-18 00:00:00.000000'),
-(90,'1986-03-25 00:00:00.000000',66564138,'2010-10-14 00:00:00.000000'),
-(91,'2006-12-13 00:00:00.000000',946,'2016-12-03 00:00:00.000000'),
-(92,'2023-11-27 00:00:00.000000',0,'1992-08-02 00:00:00.000000'),
-(93,'2001-06-14 00:00:00.000000',0,'1984-08-09 00:00:00.000000'),
-(94,'1974-04-09 00:00:00.000000',8,'2023-12-21 00:00:00.000000'),
-(95,'2003-11-14 00:00:00.000000',862503,'1982-12-30 00:00:00.000000'),
-(96,'2013-09-24 00:00:00.000000',763,'1988-02-27 00:00:00.000000'),
-(97,'1982-02-17 00:00:00.000000',20,'1973-12-19 00:00:00.000000'),
-(98,'1994-08-29 00:00:00.000000',629,'1981-10-09 00:00:00.000000'),
-(99,'1978-03-22 00:00:00.000000',64714,'1973-04-08 00:00:00.000000'),
-(100,'2005-07-02 00:00:00.000000',1912,'2001-06-12 00:00:00.000000');
-
-UNLOCK TABLES;
-
-LOCK TABLES `specialties` WRITE;
-
-INSERT INTO `specialties` (id,description,name,faculty_id,study_stage) VALUES
-(1,'Nemo maiores ut a laborum est molestiae. Sed nemo id perspiciatis voluptatum. Dolorem neque et consequatur itaque rerum.','saepe',1,2),
-(2,'Aut expedita et a corporis ullam quae voluptatem vel. Delectus eum magni eum ut autem tenetur. Pariatur quisquam maiores optio odio ipsum laudantium quisquam.','dolorem',2,1),
-(3,'Voluptas dolorem debitis ut nulla error non totam. Fuga cupiditate eveniet iste itaque et. Sed voluptatum quia ut sunt quasi quibusdam. Quia ipsa dolorum saepe ipsam architecto dolore.','reprehenderit',3,1),
-(4,'Consequuntur minima necessitatibus quo eos vel ut velit. Ut reprehenderit voluptatibus iure delectus dolorum. Et aut ducimus accusantium ducimus. Molestiae ut non expedita dolor.','laborum',4,1),
-(5,'Magni aut ullam dicta culpa. Dolor quia provident dolorem. Consequuntur saepe repellat officiis.','laboriosam',5,0),
-(6,'Aliquam minima hic magni excepturi vero laboriosam quia. Voluptatem dolores ea ut unde. Deleniti temporibus qui id modi cupiditate animi quidem.','dolorem',6,0),
-(7,'Inventore non saepe deleniti quibusdam provident explicabo consequatur in. Velit esse voluptatem voluptatem expedita. Autem minima ullam voluptatum vel non voluptatem. Sunt error ut mollitia doloremque facere sed. Labore earum non non sit occaecati et et.','quod',7,1),
-(8,'Iure soluta nihil nisi qui vitae sequi. Quos nisi facere aut aut quaerat consequuntur deserunt. Qui sit dolor quo qui occaecati aspernatur nam. Molestiae dolorem earum tempore nemo dolor earum eum.','veniam',8,0),
-(9,'Illo aliquam vel exercitationem voluptatem qui autem ut ullam. Voluptate corrupti excepturi qui minus sit ut voluptatem. Quibusdam quibusdam velit aut ut impedit et.','non',9,0),
-(10,'Pariatur minus eum impedit ut. Ipsum nisi et beatae accusantium. Amet nihil non qui voluptatibus nemo. Incidunt voluptatibus est iure maiores nisi quo.','eos',10,0),
-(11,'Dignissimos et accusamus dignissimos voluptatem dignissimos. Laborum et aut omnis vel. Consequuntur nesciunt sunt sequi et error doloribus velit. Distinctio et vel quia quaerat tenetur qui. Animi earum est iusto itaque est deleniti.','omnis',11,1),
-(12,'Nostrum et nemo sunt et eum. Laboriosam cum sint quia illum. Et accusamus quae dolore rerum deleniti. Omnis consequuntur qui dolor quisquam qui saepe.','consequatur',12,1),
-(13,'Delectus distinctio rem laudantium id. Suscipit consequatur odit occaecati qui. Consectetur reprehenderit esse velit voluptates. Ut et placeat distinctio animi ratione.','recusandae',13,1),
-(14,'Repudiandae esse consequatur suscipit a illum placeat rerum. Reprehenderit natus ut suscipit dolore atque voluptates nesciunt beatae. Incidunt dolores sed velit voluptates minima. Animi aut est aut eligendi accusantium aut. Quibusdam possimus eum eum dolor perferendis.','molestiae',14,2),
-(15,'Est quas repellendus omnis distinctio quae ab non. Accusamus vel non voluptatum ad quidem hic. Quis eum sed repellat non architecto vel.','et',15,0),
-(16,'Id deleniti qui est numquam nemo nesciunt asperiores. Cumque enim est optio. Aliquid pariatur repellendus et aut rerum ad tempora. Necessitatibus molestias debitis ad est commodi minima.','nemo',16,1),
-(17,'Id ut consectetur deserunt et beatae voluptas. Voluptas necessitatibus ipsa velit consequatur molestias explicabo. Et ut aliquid consequatur harum ipsam nobis amet. Distinctio omnis accusamus totam id provident placeat quaerat velit.','omnis',17,0),
-(18,'Maiores praesentium eos soluta eveniet. Modi dignissimos quam error. Explicabo quo et ea iusto quis.','quis',18,1),
-(19,'Laborum exercitationem magni consequatur voluptatem. Magni recusandae inventore voluptatem voluptatem consequatur ex ex aut. Fugit qui rerum est. Libero sit nihil officia assumenda nobis officia sint eius. Necessitatibus quod deserunt quia assumenda.','aut',19,2),
-(20,'Et voluptas eum autem quos quae a minus. Consequuntur nihil quo in asperiores. Quae rerum animi ullam vel.','blanditiis',20,0),
-(21,'Quas est est fuga sequi. Quibusdam dolor quas non quas. Qui fuga consequatur dolor itaque. Reprehenderit reprehenderit magnam reprehenderit nam voluptatem reprehenderit voluptatum voluptatum.','quibusdam',21,0),
-(22,'Velit velit aliquam saepe commodi adipisci rerum id. Voluptates exercitationem aut voluptates. Incidunt omnis delectus id dignissimos nostrum alias. Itaque aut nisi voluptas dolores asperiores modi.','voluptas',22,0),
-(23,'Illo minus voluptatem iste quasi qui. Voluptatem odit ducimus unde enim. Doloribus pariatur saepe et.','amet',23,0),
-(24,'Repellendus nihil a itaque error rem. Ullam ipsa eos aut. Quia ut accusantium omnis odit. Odio sed corporis repellat et consectetur aut.','temporibus',24,2),
-(25,'Sapiente quo eius error ea et. Sed non quia dolorem voluptatem ut sint est. Et et consectetur eaque. Quidem voluptatem quo sit corrupti.','omnis',25,0),
-(26,'Eveniet quod autem ut harum molestias et accusantium consequatur. Et ea nemo id ipsam.','aliquid',26,2),
-(27,'Nihil et ratione porro voluptatum beatae necessitatibus. Molestiae ea libero aut nihil. Sint odit enim dolorem ut dolor aut architecto.','vel',27,1),
-(28,'Consequuntur corporis est atque ipsa aspernatur. Officia quas molestiae molestias minima quo et. Deleniti consequatur ut reprehenderit natus maxime qui corporis commodi.','quia',28,1),
-(29,'Est magnam omnis beatae consectetur ut odio neque. Id sunt ea cupiditate doloremque est. Doloribus est nisi laborum aut officiis. Quis saepe nihil similique animi quas omnis fugiat.','maiores',29,2),
-(30,'Mollitia ex facilis ex natus distinctio numquam saepe. Ab ut soluta omnis nostrum. Ducimus quibusdam beatae autem. Qui fugiat consequatur quia.','dignissimos',30,0),
-(31,'Voluptate dolore adipisci vel aut iusto aspernatur. Pariatur exercitationem quis qui voluptas quas. Necessitatibus distinctio optio molestiae omnis.','beatae',31,1),
-(32,'Ut omnis esse amet sunt. Est laudantium voluptate eveniet nostrum dolor quam neque veritatis. Est laudantium unde qui ducimus delectus voluptas in. Eligendi labore rerum incidunt.','voluptas',32,2),
-(33,'Sequi assumenda nostrum minima corrupti nulla facilis sed. Et ullam nostrum vero unde possimus consectetur. Exercitationem aut consequuntur animi qui similique fugiat. Maiores beatae sint asperiores ipsa qui distinctio.','adipisci',33,0),
-(34,'Est id repudiandae eveniet illum. Culpa tempora eos adipisci est ut doloremque at adipisci. Nihil quidem rerum voluptatem libero molestias. Voluptatem et culpa dolor ipsa.','optio',34,2),
-(35,'Optio recusandae maxime ad distinctio ut est. Nobis aut labore qui laboriosam tempore. Accusantium impedit placeat et harum.','pariatur',35,1),
-(36,'Quos dolor officia optio occaecati. Expedita placeat voluptatum aliquam totam. Fuga a et numquam voluptates tempore ipsum ex quas.','magni',36,1),
-(37,'Blanditiis id accusamus voluptatibus quo dolor. In ut fuga impedit eveniet dolore. Ipsa quidem nemo unde sint vero.','officia',37,2),
-(38,'Facilis aliquam delectus omnis maiores commodi consequatur repellat. Voluptates vitae ducimus molestiae ad ea. Aut cumque tempore veniam vero magnam eligendi. Iste reprehenderit dolor accusamus placeat. Repudiandae laborum dolor sapiente eligendi quia.','ut',38,0),
-(39,'Enim inventore necessitatibus eius voluptas qui distinctio quae et. Reprehenderit mollitia sunt reiciendis molestiae blanditiis laborum. Labore eius cum nulla asperiores tempora. Quia est vel libero velit quisquam recusandae nemo aliquam.','praesentium',39,1),
-(40,'Commodi non provident laboriosam sequi incidunt magnam ut sunt. Earum et aut reiciendis sint. Nobis dignissimos ab ipsa et dolor quia sit.','iure',40,1),
-(41,'Atque labore ut numquam aut nisi. Corporis qui voluptatibus quasi facere itaque sint non. Soluta dolores ipsa aut aut quo hic et. Totam veritatis nobis voluptatum quibusdam quibusdam aut praesentium.','similique',41,2),
-(42,'Quis in et atque est id. Tempore sed eum atque maxime occaecati. Qui iste et neque ut soluta.','non',42,1),
-(43,'Cupiditate ipsa cumque quidem porro quaerat repudiandae ratione. Qui est repellendus atque fugiat ut in. Nemo iure quasi voluptatem dolorum.','officia',43,0),
-(44,'Modi earum tempora ab minima. Molestiae dignissimos cum illum est quia perspiciatis. Vel quasi eius quis quod repellendus recusandae temporibus.','debitis',44,2),
-(45,'In eos repellendus eligendi reiciendis ipsa quia est. Occaecati debitis non repellat exercitationem vel neque libero. Modi rerum neque blanditiis maxime cum. Debitis maxime voluptas molestias velit excepturi eius.','molestias',45,1),
-(46,'Error repellendus dolorum numquam reiciendis rerum praesentium. Quia non laudantium facilis non. Aliquam debitis sunt facilis est.','eos',46,2),
-(47,'Vitae aut pariatur laborum assumenda. Saepe aut delectus qui vitae eum temporibus. Facere dolor earum nesciunt quam quia reprehenderit voluptatem. Voluptatem et dolor atque.','placeat',47,1),
-(48,'Sint repellendus aut autem error consequatur qui blanditiis. Sunt voluptas ut atque maiores iure odio. Quis nihil non quod ea aliquam. Qui ex hic et nobis.','corporis',48,0),
-(49,'Earum laboriosam vel repellendus. Repellat illo dicta ab consequatur illo repellat asperiores. Nam quo occaecati voluptas ut animi sed. Culpa unde modi non repellendus ipsam et.','quidem',49,1),
-(50,'Numquam ea consectetur dicta omnis veritatis deserunt dicta. Sint itaque cupiditate facere dolorem quae. Blanditiis ut et consequatur. Sint ut ut ut praesentium.','ut',50,1),
-(51,'Est doloribus fuga accusantium sit voluptatibus aspernatur autem. Et est et ducimus voluptas. Maiores sit officia tenetur asperiores.','quia',51,1),
-(52,'Pariatur quas praesentium et sint dolores dicta. Voluptatum et et rem dolor.','placeat',52,2),
-(53,'Beatae velit accusamus minus cum. Est qui quis doloribus. Ut occaecati et rerum officiis ut. Asperiores ad et deserunt modi voluptas consequatur nam.','vero',53,2),
-(54,'Possimus deleniti voluptas aut omnis eligendi unde. Ducimus odit rerum asperiores quisquam consequuntur doloribus. Nihil non et aut rerum praesentium id quo.','quae',54,2),
-(55,'Accusantium reprehenderit sed nam vel et quibusdam. Quaerat voluptatem ut voluptatibus temporibus odit.','qui',55,0),
-(56,'Optio voluptatibus aut est est voluptas. Non esse vel voluptas et quia ratione. Veniam laborum incidunt non aut.','aut',56,1),
-(57,'Consequatur praesentium fuga possimus. Voluptas nobis velit quo consequatur. Temporibus amet provident consectetur amet.','velit',57,2),
-(58,'Ipsum libero vitae sit natus officia magni aliquam. At quam pariatur esse vel ullam qui. Incidunt omnis sint qui ducimus qui sit.','eaque',58,0),
-(59,'Ut quia culpa nobis quaerat ipsam dolores. Consectetur ut est rerum aut molestiae et blanditiis. Magni quia dicta sequi sit officia voluptatem voluptatum est. Amet architecto et mollitia ea rem.','nihil',59,2),
-(60,'Nam beatae dolores voluptas esse itaque quia. Quam modi iste aut neque. Est dignissimos id sed accusamus non. Delectus quis expedita consequatur ipsum voluptas maxime quae. Non aspernatur et numquam fugiat vitae aut.','corporis',60,0),
-(61,'Dolor doloribus voluptas a officia ut aut laborum. Expedita sunt eius eum sapiente error. Sit iure maxime provident libero dolorem minus. Quaerat non doloribus aut natus. Aut non voluptas et modi facere error.','quam',61,2),
-(62,'Rerum in ipsam minima. Eos id nostrum et et. Qui quae occaecati accusamus aut magnam asperiores exercitationem.','fugiat',62,1),
-(63,'Est alias error rerum quis. Commodi eos et voluptatibus nostrum quisquam vero. Modi dolor omnis expedita tenetur. Culpa et et fugiat cum et.','adipisci',63,2),
-(64,'Perferendis voluptates iure repudiandae autem delectus non. Molestiae quam nostrum repellat ipsa eos. Repellendus maxime aut natus impedit et possimus sunt ex. Quo sint debitis ut repudiandae tempora consequatur.','quis',64,0),
-(65,'Quisquam exercitationem alias totam est. Qui pariatur porro sunt similique voluptas itaque eos est. Adipisci corrupti consequuntur ut delectus. Consectetur excepturi quo tempora tempore suscipit nam modi.','incidunt',65,0),
-(66,'Accusamus est omnis quos non incidunt voluptatem. Sunt dolorem magni cum necessitatibus. Maxime minus ut occaecati. Ab repudiandae eveniet voluptas et molestias est eos et.','sequi',66,1),
-(67,'Molestias rerum officia veritatis iusto consequatur. Maiores voluptate et molestias. Non est quaerat vero accusantium quos recusandae aut. Cum possimus animi quis ut sit consequatur in.','doloribus',67,1),
-(68,'Sunt quis sapiente qui natus fugiat veritatis at ut. Quaerat voluptates aperiam voluptas pariatur esse inventore harum ut. Dicta enim non qui occaecati deleniti est.','nulla',68,0),
-(69,'Quasi accusamus repellendus animi exercitationem at labore. Et suscipit in provident omnis nesciunt molestiae.','molestiae',69,2),
-(70,'Laboriosam distinctio aut occaecati quia. Ab quia totam tempore aperiam. Porro nostrum corrupti a asperiores deserunt. Illo fugit aliquam consectetur est illo.','inventore',70,2),
-(71,'Inventore sed et porro ea. Quis rem ea sed tempore quia eius non. Voluptates dolorem tempore tenetur recusandae distinctio ipsa deserunt accusantium. Dignissimos quis sed molestias amet quae.','autem',71,0),
-(72,'Maiores fugit in veniam deserunt consequatur possimus mollitia. Delectus iste nihil voluptatem id molestiae et ipsam. Molestias ipsam voluptatum nihil dignissimos est repellat reiciendis.','quos',72,2),
-(73,'Enim suscipit ut et eos voluptas. Dignissimos fugiat accusamus rerum facilis quisquam. Rerum quo esse quis.','omnis',73,1),
-(74,'Debitis vero quod repudiandae quae. Earum cumque similique commodi incidunt quia tempora aut. Esse fugit harum assumenda blanditiis maiores qui.','ut',74,2),
-(75,'Cum non aut quasi laborum eum vitae et. Magni natus consectetur nulla incidunt. Soluta nulla omnis velit reiciendis.','iure',75,2),
-(76,'Sunt sit magnam et maxime laborum sint. Amet ut sunt inventore expedita veniam voluptas laboriosam maiores.','quisquam',76,2),
-(77,'Aliquam vel possimus similique. Similique et cupiditate voluptatem incidunt velit voluptatem eos. Et non consectetur voluptas ut voluptatem explicabo.','illo',77,1),
-(78,'Temporibus saepe fugit earum voluptatem. Iure id doloribus asperiores voluptate. Occaecati atque ex omnis qui temporibus dicta.','placeat',78,2),
-(79,'Repellat vero maxime explicabo omnis molestias. Eligendi eum ducimus non nam adipisci odit.','saepe',79,2),
-(80,'Eos similique maiores eligendi ipsum aut omnis neque. Officia aut voluptas possimus et. Ipsum possimus rerum debitis iste voluptatem nam quas et. Quidem dolor harum inventore illo qui sed.','et',80,0),
-(81,'Necessitatibus quos sunt eveniet. Illum ea cupiditate alias et recusandae blanditiis aperiam quos. Ut voluptas est perferendis recusandae corporis. Ratione aut eum eaque animi asperiores optio nulla.','dicta',81,0),
-(82,'Tempore fuga quia qui consequatur. Modi nam ad praesentium omnis minus natus. Quis minus aut quo ut qui eligendi similique. Veritatis nobis et dolor.','odio',82,1),
-(83,'Tempore porro et qui maiores quae aut quisquam. Eligendi sit nulla consequatur laudantium. Autem et in voluptates porro necessitatibus officiis ipsum.','vel',83,2),
-(84,'Eveniet repellat accusamus exercitationem et sit aspernatur. Delectus tempore non fugiat et. Ut cum possimus quasi non ut sed voluptatem. Pariatur reiciendis aut ut.','modi',84,2),
-(85,'Explicabo iusto tenetur accusantium iusto officia asperiores architecto. Autem minima vero dolor nulla numquam nam tempora. Non voluptatem esse magni. Accusantium nostrum et quo qui odio.','vitae',85,1),
-(86,'Qui consectetur aut quo voluptas recusandae et soluta. Quaerat sunt perspiciatis excepturi qui asperiores molestiae. At vero quo est in doloremque neque.','et',86,1),
-(87,'Et qui optio dolore est sunt est vitae. Maxime ut sed dicta ut earum tenetur nisi. In architecto et aut.','natus',87,1),
-(88,'Modi aut odit velit voluptates blanditiis. Ut libero veniam fugit nemo non iste. Et voluptatem eveniet libero aut illo a. Officia sed placeat aut commodi. Distinctio amet recusandae distinctio dicta veritatis deserunt rerum.','blanditiis',88,1),
-(89,'Sunt optio explicabo exercitationem facilis ex pariatur eius perferendis. Nobis suscipit nesciunt dolor velit quod. Velit eveniet quis veniam deserunt enim recusandae.','minus',89,0),
-(90,'Rerum a voluptatem accusantium quae numquam sit. Quo et nostrum nam explicabo aut ipsam quis aliquam. Temporibus temporibus consequatur magni ad quo. Repellat enim quis nisi rerum necessitatibus suscipit non dolorem.','sit',90,2),
-(91,'Sed ut necessitatibus dolor rerum ad quis. Natus ipsum repellendus aut fuga libero nisi. Facilis ab voluptas quasi voluptas minima.','quibusdam',91,2),
-(92,'Consequatur nihil est dignissimos labore. Expedita voluptates voluptas sint omnis consequatur quam repellendus. Reprehenderit ducimus pariatur esse. Recusandae distinctio distinctio rerum cum.','inventore',92,2),
-(93,'Amet nam voluptatum et ullam qui. Non et voluptates vero inventore quo corrupti dolorem. Repudiandae rerum maiores et sed. Corporis libero nostrum sunt voluptas necessitatibus.','facere',93,1),
-(94,'Dignissimos at et rerum aut nostrum. Id dolor exercitationem facere mollitia placeat. At et rem magnam facere aut et. Ipsa quos odio modi dicta eius laboriosam repellat. Sed quidem amet quo distinctio dicta aperiam non.','est',94,2),
-(95,'Totam non nihil assumenda aut fugiat. Ut inventore sit iste eos veritatis doloribus eum. Aut quis officia ab aliquam quaerat. Officiis odio eligendi sint qui eum hic dolores et.','quia',95,0),
-(96,'Quo ut quibusdam at fuga doloribus fugit excepturi sed. Ratione nesciunt laudantium et id. Quis quia eum et adipisci autem delectus.','dicta',96,1),
-(97,'Voluptatem at dicta non corporis dolor vitae voluptas. Alias dolorem omnis id aperiam maiores nemo. Neque amet architecto tempore saepe ut libero occaecati quisquam.','non',97,2),
-(98,'Consequatur impedit totam sapiente voluptatem mollitia enim. Officia dolores tempora modi et harum. Ex rerum ad quis adipisci aliquid nihil in. Autem voluptas cum totam dolorem pariatur sed iste maxime.','omnis',98,0),
-(99,'Sit et vitae qui animi officia harum et. Quidem expedita distinctio eaque ullam est. Perspiciatis dolor voluptatem expedita odio. Sequi enim magnam hic ut provident nostrum.','voluptas',99,2),
-(100,'Sed rerum et repudiandae ipsa laboriosam tenetur facere. Hic aliquid quam perferendis et et corporis. Repellendus delectus quia quis doloribus.','qui',100,1);
-
-UNLOCK TABLES;
-
-LOCK TABLES `rooms` WRITE;
-
-INSERT INTO `rooms` VALUES
-(101,10,0,2,20,1),
-(102,14,0,1,1,0),
-(103,10,0,5,20,0),
-(104,11,0,2,29,0),
-(105,10,0,3,2,0),
-(106,2,0,5,13,1),
-(107,7,0,5,14,0),
-(108,11,0,4,25,1),
-(109,10,0,2,21,1),
-(110,11,0,5,27,0),
-(111,12,0,5,6,0),
-(112,5,0,4,7,1),
-(113,14,0,3,18,0),
-(114,1,0,2,1,1),
-(115,9,0,1,12,0),
-(116,2,0,5,17,1),
-(117,3,0,5,12,1),
-(118,4,0,1,9,0),
-(119,12,0,4,29,1),
-(120,9,0,1,30,0),
-(121,8,0,2,28,0),
-(122,14,0,2,23,0),
-(123,15,0,1,1,1),
-(124,5,0,4,5,0),
-(125,13,0,2,8,0),
-(126,11,0,5,17,1),
-(127,15,0,5,29,0),
-(128,5,0,2,8,0),
-(129,1,0,3,15,0),
-(130,10,0,5,10,1),
-(131,4,0,5,3,1),
-(132,5,0,2,29,0),
-(133,2,0,4,13,1),
-(134,3,0,5,29,1),
-(135,1,0,4,18,1),
-(136,2,0,1,19,1),
-(137,4,0,5,17,0),
-(138,6,0,2,20,0),
-(139,14,0,5,15,1),
-(140,6,0,1,15,0),
-(141,10,0,3,9,0),
-(142,9,0,3,12,0),
-(143,15,0,2,30,1),
-(144,10,0,1,16,0),
-(145,2,0,5,12,0),
-(146,8,0,1,10,0),
-(147,4,0,3,26,0),
-(148,6,0,5,1,1),
-(149,8,0,2,6,0),
-(150,3,0,2,30,0),
-(151,6,0,1,30,0),
-(152,2,0,2,3,1),
-(153,6,0,2,10,1),
-(154,3,0,5,21,1),
-(155,5,0,4,11,0),
-(156,14,0,2,11,1),
-(157,2,0,5,21,1),
-(158,15,0,1,24,0),
-(159,6,0,1,11,0),
-(160,12,0,3,9,0),
-(161,9,0,4,19,1),
-(162,4,0,5,3,0),
-(163,4,0,3,14,0),
-(164,10,0,1,19,0),
-(165,8,0,3,15,0),
-(166,3,0,5,20,0),
-(167,12,0,2,21,0),
-(168,12,0,4,2,0),
-(169,2,0,5,6,0),
-(170,9,0,5,15,0),
-(171,4,0,2,12,0),
-(172,15,0,4,7,1),
-(173,11,0,1,2,0),
-(174,13,0,5,20,0),
-(175,10,0,3,23,1),
-(176,12,0,1,24,1),
-(177,4,0,5,5,1),
-(178,8,0,1,9,0),
-(179,1,0,3,8,0),
-(180,7,0,1,24,1),
-(181,13,0,4,13,1),
-(182,3,0,3,13,1),
-(184,7,0,3,25,1),
-(185,4,0,1,29,0),
-(186,1,0,4,6,1),
-(187,14,0,1,11,1),
-(188,12,0,4,3,0),
-(189,11,0,3,11,0),
-(190,1,0,4,20,0),
-(191,5,0,4,27,0),
-(192,2,0,3,4,0),
-(193,8,0,4,18,0),
-(194,14,0,3,19,1),
-(195,13,0,3,11,0),
-(196,2,0,2,24,0),
-(197,5,0,3,8,0),
-(198,15,0,1,26,1),
-(199,15,0,3,8,1),
-(200,13,0,5,10,1);
-
-UNLOCK TABLES;
-
-LOCK TABLES `students_groups` WRITE;
-
-INSERT INTO `students_groups` (id,name,specialty_id,foreman_id) VALUES
-(1,'labor',1,null),
-(2,'cum',2,null),
-(3,'aut',3,null),
-(4,'verit',4,null),
-(5,'qui',5,null),
-(6,'perfe',6,null),
-(7,'nihil',7,null),
-(8,'quasi',8,null),
-(9,'id',9,null),
-(10,'quis',10,null),
-(11,'illum',11,null),
-(12,'cupid',12,null),
-(13,'iure',13,null),
-(14,'ratio',14,null),
-(15,'archi',15,null),
-(16,'aut',16,null),
-(17,'nisi',17,null),
-(18,'volup',18,null),
-(19,'quaer',19,null),
-(20,'modi',20,null),
-(21,'facil',21,null),
-(22,'itaqu',22,null),
-(23,'corpo',23,null),
-(24,'ab',24,null),
-(25,'quo',25,null),
-(26,'quia',26,null),
-(27,'error',27,null),
-(28,'labor',28,null),
-(29,'vero',29,null),
-(30,'corpo',30,null),
-(31,'volup',31,null),
-(32,'reici',32,null),
-(33,'nam',33,null),
-(34,'eos',34,null),
-(35,'aut',35,null),
-(36,'aut',36,null),
-(37,'culpa',37,null),
-(38,'accus',38,null),
-(39,'vel',39,null),
-(40,'qui',40,null),
-(41,'est',41,null),
-(42,'et',42,null),
-(43,'enim',43,null),
-(44,'a',44,null),
-(45,'esse',45,null),
-(46,'est',46,null),
-(47,'et',47,null),
-(48,'ratio',48,null),
-(49,'verit',49,null),
-(50,'ratio',50,null),
-(51,'dolor',51,null),
-(52,'qui',52,null),
-(53,'dolor',53,null),
-(54,'dolor',54,null),
-(55,'sed',55,null),
-(56,'quisq',56,null),
-(57,'eos',57,null),
-(58,'non',58,null),
-(59,'id',59,null),
-(60,'ipsa',60,null),
-(61,'qui',61,null),
-(62,'conse',62,null),
-(63,'tempo',63,null),
-(64,'perfe',64,null),
-(65,'dolor',65,null),
-(66,'labor',66,null),
-(67,'debit',67,null),
-(68,'volup',68,null),
-(69,'dolor',69,null),
-(70,'archi',70,null),
-(71,'nobis',71,null),
-(72,'et',72,null),
-(73,'quo',73,null),
-(74,'adipi',74,null),
-(75,'quia',75,null),
-(76,'maior',76,null),
-(77,'provi',77,null),
-(78,'exped',78,null),
-(79,'volup',79,null),
-(80,'asper',80,null),
-(81,'volup',81,null),
-(82,'neces',82,null),
-(83,'bland',83,null),
-(84,'imped',84,null),
-(85,'sit',85,null),
-(86,'exerc',86,null),
-(87,'dicta',87,null),
-(88,'fugit',88,null),
-(89,'quibu',89,null),
-(90,'tempo',90,null),
-(91,'sed',91,null),
-(92,'tempo',92,null),
-(93,'volup',93,null),
-(94,'dolor',94,null),
-(95,'omnis',95,null),
-(96,'qui',96,null),
-(97,'neque',97,null),
-(98,'nihil',98,null),
-(99,'offic',99,null),
-(100,'enim',100,null);
-
-UNLOCK TABLES;
-
-LOCK TABLES `students` WRITE;
-
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (1, '2007-06-12', 9160406133, 'Daffi', 'Davidman', 'Arnaut', 3, '$2a$04$vAHmuxRgLYWuva/MMfLkx.qsqoWTg54HduzrMngapzmR1zAoGrPUe', 'darnaut0@pen.io', '570-960-1745', 1, 123333380, 'darnaut0@tripadvisor.com', 81);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (2, '2017-10-31', 9081293529, 'Cissy', 'Charle', 'Geaveny', 1, '$2a$04$dT26e2TO.l4S9VZKl2t2T.FJJkGA82zY.4Tik0a8PLsSnh0f7o.vi', 'cgeaveny1@blogs.com', '948-557-0638', 0, 399739840, 'cgeaveny1@elpais.com', 37);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (3, '1988-05-05', 9820048649, 'Ellwood', 'Priditt', 'Culshaw', 0, '$2a$04$qVyAzrRi8Ozzzf5cE1sHF.UJ4WRjFjy4JPtae4s2HqNnyxIlFiNCe', 'eculshaw2@so-net.ne.jp', '748-130-0369', 1, 649267470, 'eculshaw2@blog.com', 15);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (4, '2002-02-08', 1386928361, 'Gusty', 'Favey', 'Veel', 1, '$2a$04$ktWh8.ArZdrNghKXsICbi..BFuVp8UXuQkt9e7aZ8cFBm4DJS0fom', 'gveel3@discovery.com', '191-901-0559', 1, 548564400, 'gveel3@networkadvertising.org', 78);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (5, '2015-04-02', 1870405609, 'Viviyan', 'Hucker', 'Stillman', 1, '$2a$04$HIfWbhzHvKfJZAe1khRdhu/I0S38Mwb4QRy56gmA1WMeZw21GWvHS', 'vstillman4@columbia.edu', '276-347-4711', 1, 822859492, 'vstillman4@apache.org', 46);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (6, '1995-03-30', 7912584167, 'Candide', 'Teggin', 'Brinkley', 3, '$2a$04$w7ZhNHMiMyP4xA54mLjQV.Qe8NYG8Qy5HnrxPktn9MVjhTxyeF03O', 'cbrinkley5@alexa.com', '808-516-4943', 0, 432396762, 'cbrinkley5@xing.com', 86);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (7, '2007-10-05', 5955707747, 'Ulises', 'Gunby', 'Carolan', 3, '$2a$04$fBbblwN.wCJYLT6Xhs17Ne9/XhYk05dl7/T8w0TnY5JIwz1B1X5gC', 'ucarolan6@washington.edu', '318-702-4286', 0, 812286765, 'ucarolan6@wikia.com', 7);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (8, '2002-09-30', 5284397767, 'Sophey', 'Kosel', 'Walrond', 2, '$2a$04$XL2vX5AzY1mAg02FDbt7JuuWjyPHv1hpzFwdFBNIBuy12AFczfQMe', 'swalrond7@stumbleupon.com', '700-326-8901', 1, 403176426, 'swalrond7@blogs.com', 93);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (9, '2000-10-24', 6131822006, 'Sophronia', 'Roby', 'Chell', 3, '$2a$04$LZ7I8gJ.63yxiETc9GxaQ.0j9L1K.YzvALe.yICG3qxWBhvARVaPy', 'schell8@stanford.edu', '655-305-9094', 0, 961705095, 'schell8@google.nl', 51);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (10, '2002-06-14', 7898232523, 'Sunny', 'Palffy', 'Thireau', 1, '$2a$04$3rH1V6/6qPwgQptPvGb0GuxJ2/7LyBReEzjJ/JonGPfBA.e8CCurq', 'sthireau9@zdnet.com', '476-954-8935', 1, 186539368, 'sthireau9@jigsy.com', 88);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (11, '2011-06-21', 2204704855, 'Jared', 'Klempke', 'Chenery', 3, '$2a$04$AEb9BnYeCoZz4Ke5mXKhQexxBoJPtmzxOCkPyw39gGOLYSttfBDKe', 'jchenerya@yandex.ru', '967-240-9679', 1, 181073012, 'jchenerya@wordpress.org', 80);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (12, '2001-02-06', 7771557764, 'Nerte', 'Gallegos', 'Iannello', 0, '$2a$04$/SsdPFOHETUhhkwHFvv5A.v8jXXsLtoDlisD7GdIPmxRlM85vQjuG', 'niannellob@e-recht24.de', '834-856-8722', 0, 228349281, 'niannellob@netscape.com', 84);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (13, '1987-03-03', 3612984974, 'Alidia', 'Scutts', 'Paulucci', 3, '$2a$04$qbtg0uKELO1agemk1Ph9iu6dwcZzAkNgGMdaog51bV/U5dvQ7UCqy', 'apauluccic@php.net', '118-421-2719', 0, 625276307, 'apauluccic@indiegogo.com', 82);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (14, '2009-05-18', 8815384567, 'Craggie', 'Beswick', 'Brickett', 2, '$2a$04$ZjqjHEQ7wmM.LMjQQYm.gu5UB4bxZG2/lFFR/cs/iX8SrsmQqgg4O', 'cbrickettd@163.com', '637-221-2524', 0, 482018807, 'cbrickettd@livejournal.com', 66);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (15, '2017-09-06', 9531612809, 'Granthem', 'Schaffler', 'Giacaponi', 3, '$2a$04$iNKUBuNxLgBtoxvlA6zNtuZc13Ih1gww7HpSOa0bS41uxEAn1FEX6', 'ggiacaponie@blogspot.com', '258-302-4189', 1, 146513687, 'ggiacaponie@weibo.com', 26);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (16, '1997-06-23', 3332648732, 'Mord', 'O''Spellissey', 'Sultana', 2, '$2a$04$5k5Oh7UbjSb4D25DydmQ8.pga4j9TkMEfsSsXRBVSc/44PyBlvhk6', 'msultanaf@senate.gov', '915-863-4184', 1, 856441973, 'msultanaf@google.it', 36);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (17, '2019-02-04', 3679390647, 'Clareta', 'Standley', 'Killingsworth', 1, '$2a$04$i6nzdq56hnz102gfIyS..OHLFPGnokvnDo0tmXT5xG/6xSsSmcePi', 'ckillingsworthg@pbs.org', '420-694-6330', 1, 216407559, 'ckillingsworthg@opera.com', 53);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (18, '2016-07-19', 1690747376, 'Lezlie', 'Maple', 'Espinho', 2, '$2a$04$25c5nAFUUaMb7QZLEpFb9eRShlYwVCBAagungQhN1ek0/XTt/sFJe', 'lespinhoh@arizona.edu', '144-999-2152', 0, 952416767, 'lespinhoh@usa.gov', 53);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (19, '2015-04-15', 3227268672, 'Ellie', 'Baggaley', 'Hazle', 1, '$2a$04$ReXT046l2Z2wo4WWSQ.Qb.DEh.g5y3mrjUGf7uI7ScVY1fk2n7dmm', 'ehazlei@umn.edu', '703-184-9561', 0, 364953135, 'ehazlei@ebay.com', 36);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (20, '2017-05-16', 5075423347, 'Ignazio', 'Gauntley', 'McKinnon', 3, '$2a$04$JqHlfAdZ8pqrAFdBdjCUYOfWlKCXCEoAotZBMpRhkvrhw/wqLh2Rq', 'imckinnonj@nifty.com', '509-595-8658', 1, 449928775, 'imckinnonj@google.cn', 77);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (21, '1995-02-03', 4279400503, 'Celene', 'Guerrin', 'Bulch', 3, '$2a$04$jRgtcm9I9hu6U95SNvnWv.eoaHjjFEhVFvC1QGG/Twh88mdg7taey', 'cbulchk@ebay.co.uk', '723-867-8052', 1, 476220803, 'cbulchk@google.es', 98);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (22, '1985-02-12', 3240380781, 'Anallise', 'Leupoldt', 'Woollard', 3, '$2a$04$ypXEOoulnHUO8dQoqKp.5enoKtrRZGMshydzxv0eu7vz7qe5Z2RX.', 'awoollardl@google.cn', '715-683-0751', 1, 135208674, 'awoollardl@miitbeian.gov.cn', 40);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (23, '2015-04-03', 6958526279, 'Neil', 'MacMickan', 'Mebius', 1, '$2a$04$FuHQll73w9FRv4L5F.K3feB1H0XpzEwYMBJXRaCiYJqI2QSEdYRby', 'nmebiusm@fda.gov', '643-559-7325', 0, 773328455, 'nmebiusm@ft.com', 19);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (24, '1991-08-14', 5450149939, 'Lory', 'Boddis', 'Ellis', 3, '$2a$04$Tuvyi.e9E9nan5AbcSbY0elXR9LSyU/SumoWqAC2uPYRHmE/7E3ay', 'lellisn@telegraph.co.uk', '247-468-5483', 1, 103313569, 'lellisn@yahoo.com', 66);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (25, '2015-10-15', 9814939204, 'Bertie', 'Huddart', 'Winchurch', 2, '$2a$04$27z7Jt4skIEkdlgToyf78OxeYi4UQSc.R76rbEIJQ8Bu45R4U1iSO', 'bwinchurcho@ning.com', '236-959-8208', 1, 988634705, 'bwinchurcho@ow.ly', 5);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (26, '1992-02-16', 6693907044, 'Jobi', 'Gavagan', 'Moffatt', 3, '$2a$04$1QVdePumvlFTm32m1ndpweZTFhvJJ/.YjTkIfNWecL6h6io8wILLW', 'jmoffattp@buzzfeed.com', '721-856-9338', 0, 647499834, 'jmoffattp@example.com', 36);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (27, '2009-01-19', 7089275217, 'Laughton', 'Klimczak', 'Dalinder', 1, '$2a$04$gzmKIvkGFEHJmDzy0ShpxO0ShwVkGwtU5yhPV3iVTmJPlU2Ry.fmi', 'ldalinderq@unc.edu', '528-907-3575', 0, 904161756, 'ldalinderq@independent.co.uk', 11);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (28, '1999-03-20', 8938166102, 'Galina', 'Baldassi', 'Borman', 2, '$2a$04$gpRAIHO2ddjnlayPMpZige2guy3haTdMWqsDn8gwzdbq8xeqM28p.', 'gbormanr@yahoo.co.jp', '450-612-9789', 1, 210225310, 'gbormanr@telegraph.co.uk', 55);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (29, '2007-11-19', 4766732940, 'Nicki', 'Kaman', 'Segrave', 0, '$2a$04$UfrBvzLEyhSFbx6SIQbvOuRba/5TtXnSISVc.uNPsm6bdgEl5gKkO', 'nsegraves@buzzfeed.com', '270-259-1266', 1, 463800192, 'nsegraves@ycombinator.com', 26);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (30, '2011-04-13', 9054830749, 'Auberta', 'Biskup', 'Ashling', 0, '$2a$04$nXQRfwKVPhqXnD7dYLnfyu8Vc4uyu8M7x7yTmk0h3K2IXpIPf5L1.', 'aashlingt@unesco.org', '502-864-5070', 1, 898063488, 'aashlingt@scientificamerican.com', 32);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (31, '2002-11-20', 5850007163, 'Petronia', 'Pear', 'Podd', 3, '$2a$04$6CjIyo1b9HrVx8UmEJzD4.gzYqVNyPWqwRHpjpCixF2keOlJOg.IW', 'ppoddu@free.fr', '448-544-8629', 1, 359573329, 'ppoddu@t-online.de', 30);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (32, '2012-04-18', 4240331766, 'Selinda', 'Fenning', 'Dellenbroker', 1, '$2a$04$vpziFZno9WIjmT1c7fmK9.Pq4Pgz6iNzO5BMz5LRt7RI2freZK8-e', 'sdellenbrokerv@sun.com', '243-398-0170', 0, 341843120, 'sdellenbrokerv@redcross.org', 63);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (33, '1985-04-27', 3878141133, 'Shelagh', 'Lottrington', 'Smithin', 1, '$2a$04$3WwS8toOyTUk/Zk04.pxieT7nU0DQzr6nfO3vbkazsWkANYyOcpIa', 'ssmithinw@webeden.co.uk', '707-760-0955', 1, 640091442, 'ssmithinw@illinois.edu', 59);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (34, '2005-12-22', 6024198493, 'Jess', 'Andrzej', 'McKendry', 0, '$2a$04$PwPzzX0qX054wKEe7nNsZ.pV/dsRiTP.SM43GxKLLnwkZJ/l2Qdf6', 'jmckendryx@ovh.net', '315-774-5896', 0, 444298631, 'jmckendryx@apple.com', 63);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (35, '2017-04-05', 8116076992, 'Danette', 'Madle', 'Esberger', 1, '$2a$04$8jCay2h.fM7R.m.COmh7Web1w63r0pM08bAAyBy0EFb.YvpvjiyOG', 'desbergery@etsy.com', '124-893-9628', 0, 669729091, 'desbergery@census.gov', 16);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (36, '1989-11-02', 3149006726, 'Ignatius', 'Kelle', 'Shurey', 0, '$2a$04$H6b2QoByA.FA/j3.01mf.uqOiLD21gbPtkDUav5u.cQ7tVZ0RGyTG', 'ishureyz@salon.com', '480-666-6662', 0, 691438486, 'ishureyz@themeforest.net', 33);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (37, '1995-09-14', 9678747745, 'Frasquito', 'Urry', 'Burrage', 2, '$2a$04$TydZLxymlFlFkIcsIemUZOSpFZw5.jRHIGsTMULJ/KqpARdvRP8UO', 'fburrage10@msn.com', '718-118-5994', 1, 849691310, 'fburrage10@wikia.com', 74);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (38, '1985-10-02', 6650898680, 'Lynette', 'Babbs', 'Stockdale', 3, '$2a$04$bA8vGpwMzcapHp08IFcv0OmpGl/zWZzX/tdWbWcEHCmkJ4M4drOTO', 'lstockdale11@artisteer.com', '484-132-4764', 0, 934976770, 'lstockdale11@purevolume.com', 19);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (39, '1997-11-20', 9724922862, 'Robin', 'Trask', 'Job', 3, '$2a$04$kb9cIDypesalNspUSW.nZ.2wdgM1ZjxZ6N6pWmO32.rjFSvB4Ux2.', 'rjob12@newsvine.com', '612-356-5056', 0, 324511685, 'rjob12@free.fr', 83);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (40, '2001-04-16', 1818898736, 'Mitzi', 'Tackley', 'Trahair', 0, '$2a$04$br4emC6k3.xCJ.CfOVLE6.54BsdR4JVxV4cqZFN16BlwUDafdmqO6', 'mtrahair13@opensource.org', '351-491-4972', 0, 175565672, 'mtrahair13@imageshack.us', 72);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (41, '2015-01-14', 6165034960, 'Khalil', 'Salliss', 'Bailie', 1, '$2a$04$L8vOo9rZZokJqsuN5crQhOfPKud8cagKe7AgPm.L/M/EdQB0j9PNG', 'kbailie14@prlog.org', '803-102-5559', 1, 974759070, 'kbailie14@naver.com', 2);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (42, '2007-02-21', 7026228560, 'Josephina', 'Worsnup', 'McAlindon', 3, '$2a$04$D29fX/LJr97EIAmLuac3L.Wzrw/OxUC6OrL6IX2b2G4iAs6GyIIa.', 'jmcalindon15@google.com.br', '374-724-5270', 1, 320215633, 'jmcalindon15@zimbio.com', 91);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (43, '2018-06-26', 8440395167, 'Pippy', 'Cheson', 'Grayer', 3, '$2a$04$hBGsPtQlHf2kaN2R30tEvOtlCDBwus0fTWIecTkg0VYzCK8xOnFSW', 'pgrayer16@blogs.com', '147-387-6942', 1, 594272749, 'pgrayer16@bandcamp.com', 80);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (44, '1999-09-18', 9760252876, 'Ailyn', 'Wormald', 'Lawry', 3, '$2a$04$Zsmkx9yloDINgiLYYuALPu/wNyZdoq10XKDTKm.cwkjOxtMOHQmKW', 'alawry17@comsenz.com', '793-609-7294', 1, 738386569, 'alawry17@google.it', 41);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (45, '2004-02-11', 8447958662, 'Carita', 'Braban', 'Charnock', 1, '$2a$04$oA1v5gmahypdNFbJmYQQEu.QkwSqbHrl5MD2JMpJgptXcwOM5RJ9.', 'ccharnock18@behance.net', '878-777-7078', 1, 549877426, 'ccharnock18@huffingtonpost.com', 27);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (46, '2018-04-12', 5811348926, 'Brucie', 'Lieber', 'Clues', 1, '$2a$04$xD2RgcvXcNeldRuRXrsDOuDeS7yGcTDrKLyAffaBYxHuazTrW.2iu', 'bclues19@acquirethisname.com', '195-248-4370', 1, 328982483, 'bclues19@blogspot.com', 60);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (47, '2004-04-11', 5695331017, 'Lothaire', 'Lipp', 'Seary', 1, '$2a$04$bK5v0DJ49E/yDdtf0W2n3OiSAUq6o5zgPQ6ngkmX605vuWP5H.QxS', 'lseary1a@behance.net', '745-272-8885', 0, 669896580, 'lseary1a@bloomberg.com', 72);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (48, '2011-02-21', 8109253200, 'Gaylord', 'Rivaland', 'Gillanders', 2, '$2a$04$mcG6Rr6XWO95i1LZVyKvb.iK5yUU5QTod3hscXGoRv9r0yP0p8bmS', 'ggillanders1b@example.com', '197-824-9720', 1, 297231412, 'ggillanders1b@ocn.ne.jp', 55);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (49, '2012-07-15', 3970620269, 'Bruce', 'Crennell', 'Whatling', 3, '$2a$04$DurL5xmwsWTBCPK3iIgV6OD6WDKwKsGq/WvbAEUJ-JvS3k0j4SNMO', 'bwhatling1c@yellowpages.com', '472-107-1881', 1, 891247060, 'bwhatling1c@icio.us', 46);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (50, '1999-08-20', 5114282461, 'Biddie', 'Scutching', 'Hutson', 1, '$2a$04$9ARsyDiw7Bh1lDSUTJaqdO6.vxWY4DmPmwT0qD4tioWbQnICNIvEK', 'bhutson1d@scribd.com', '406-143-3316', 1, 797358900, 'bhutson1d@disqus.com', 23);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (51, '1986-11-04', 9460310331, 'Florida', 'Creffield', 'Cheeney', 3, '$2a$04$gIolPPe4OjOzahAyIVGzHekRyb5wCe0.jV9/U6tk0JdB.HXcjYAsS', 'fcheeney1e@scientificamerican.com', '188-292-0839', 1, 544690244, 'fcheeney1e@people.com.cn', 97);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (52, '2003-04-21', 6849034298, 'Napoleon', 'Fuentez', 'O''Day', 3, '$2a$04$qK9pnPJvLnBajNMu6nKky.yUC5q1S5hcGZKaPYLdAMd3BqKTFVyxe', 'noday1f@360.cn', '395-680-1452', 1, 938145515, 'noday1f@google.nl', 71);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (53, '2018-06-20', 1098772881, 'Dena', 'Stower', 'Skamal', 2, '$2a$04$uE5YGd6TERYzCoBQknzDKeXhqvRB6k23v4q2FjTTahrAzwuErUUCC', 'dskamal1g@nps.gov', '682-386-9068', 1, 170845471, 'dskamal1g@blogger.com', 12);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (54, '2007-05-27', 9642352204, 'Adrianna', 'Butler-Bowdon', 'Edgar', 2, '$2a$04$v2nuXPsYIqr7x/zzQJkJnu5fkZ2ZNDSfkAA6YggeKWPDDJrk9gwva', 'aedgar1h@tripod.com', '449-721-5826', 1, 498360467, 'aedgar1h@imageshack.us', 72);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (55, '2015-03-25', 8587508124, 'Gan', 'MacNeillie', 'MacMakin', 0, '$2a$04$o3KlTcbbJ/1vMvcf1sHLt.nzQweAD0lO/cRgkTq/RfnH6GmCAU8Ei', 'gmacmakin1i@wisc.edu', '820-798-5388', 0, 284664976, 'gmacmakin1i@yahoo.co.jp', 9);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (56, '2005-04-15', 7059654727, 'Lianne', 'Keming', 'Maffione', 3, '$2a$04$F3rj6ZxBDz57GfikTzzhGuwIMVQakfPp2j2dDiPVAqRKZAGCcIVw6', 'lmaffione1j@acquirethisname.com', '319-342-1316', 0, 445020505, 'lmaffione1j@nih.gov', 2);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (57, '1990-05-06', 3922055348, 'Jeanne', 'Chaddock', 'Bransdon', 3, '$2a$04$fnl.0paW7CwYYd/01CLqJ.tcrYc.Z4PF9r8zoiyj6sEHgFIhJ/fxO', 'jbransdon1k@cdbaby.com', '322-613-5991', 0, 374876019, 'jbransdon1k@cdbaby.com', 48);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (58, '1988-08-30', 8042041308, 'Carroll', 'Flintuff', 'Roddie', 2, '$2a$04$YZQt.cXCpNesAVP7Y3Gsm.hJAduuywIwskXqwxB.WMfBaNdY34RIe', 'croddie1l@liveinternet.ru', '525-299-1965', 0, 911264090, 'croddie1l@squidoo.com', 12);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (59, '1996-05-25', 1459642730, 'Joell', 'Kidgell', 'Fieller', 3, '$2a$04$3SmpU7V2gH53Ut/Epw/NquVS1TcOKI8gJsYACIFbSWyYXr7qFv5s6', 'jfieller1m@google.ru', '105-111-8310', 1, 665209437, 'jfieller1m@purevolume.com', 60);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (60, '1993-08-21', 2793191846, 'Pauly', 'Rasp', 'Clinch', 2, '$2a$04$ULT.FAqODQEf575T1NwSTu1LfjQ5jSOb5nrtfZKGz1Rl7Zg17YDz2', 'pclinch1n@oracle.com', '611-741-8941', 1, 757877789, 'pclinch1n@zdnet.com', 33);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (61, '1996-09-26', 3386896343, 'Shayla', 'Corlett', 'Lowne', 1, '$2a$04$pbIc9Ke296Ou4r0aRJiBKeRn71JTGnOK9Jr5VirybpsXHusz.btzS', 'slowne1o@free.fr', '954-395-2756', 0, 750743697, 'slowne1o@google.fr', 6);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (62, '2019-01-18', 7572708504, 'Gwen', 'Whightman', 'Waterson', 1, '$2a$04$L6glX4.f0Ks2g1bYbm2lNOXC1Vu9Z6s8VaVM8mVFYVH5lyJBR9nb2', 'gwaterson1p@nbcnews.com', '482-518-7503', 1, 827212155, 'gwaterson1p@google.nl', 88);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (63, '2003-06-16', 5988650381, 'Seymour', 'Bodesson', 'McMillan', 3, '$2a$04$fFv/maVr6mbHQRPTW1ei3urX7jKqlBFWSY0uvSTItQ2VmvUcnzENK', 'smcmillan1q@columbia.edu', '313-718-6353', 0, 967986457, 'smcmillan1q@earthlink.net', 74);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (64, '1994-10-19', 9771215960, 'Phil', 'Graham', 'Alsobrook', 3, '$2a$04$KtCR2SEUfy2D.3sUn3P5eOshIqAt5/HuIGT.A0jXrMy.Wx9JPwcH2', 'palsobrook1r@techcrunch.com', '259-665-4469', 1, 469537144, 'palsobrook1r@weather.com', 10);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (65, '2016-04-08', 6750933996, 'Deny', 'Reece', 'Blankman', 0, '$2a$04$6Ovzev.0VqmOS5sMHLKL5OGH86lkU/Ppw7urv5JHH0g8fU670dC.G', 'dblankman1s@nsw.gov.au', '419-372-5767', 0, 694543833, 'dblankman1s@devhub.com', 36);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (66, '2006-10-02', 9892074104, 'Theresina', 'Synan', 'Guiton', 3, '$2a$04$gBJqSjZAXrucbgVYJXEVvurOao2Im8s2q/LG3.R2yFhA4lu96d-hS', 'tguiton1t@answers.com', '687-727-4961', 0, 646930089, 'tguiton1t@bravesites.com', 26);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (67, '1993-11-26', 9290609941, 'Armstrong', 'Scanlon', 'Reinger', 2, '$2a$04$ORs2GOW9yA/TmhatCo/hOOyhy0WHoyMlDimUhMegTvjaYTtDw8e16', 'areinger1u@aol.com', '831-604-9939', 1, 998014138, 'areinger1u@sciencedaily.com', 60);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (68, '2010-10-29', 8070087939, 'Meredithe', 'Lishmund', 'Haste', 3, '$2a$04$rqcjlnJd7psJf7RMENgDhOOEbFKgL61wg61KvQ/ZFEGNZRvIY4oVK', 'mhaste1v@plala.or.jp', '647-671-9544', 1, 366594734, 'mhaste1v@mozilla.org', 15);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (69, '2006-01-25', 4652847721, 'Donnamarie', 'Kissell', 'Carloni', 1, '$2a$04$LDVKidNUwex4.1vPvflkk.ZtQk2s/229oMsAvnF9CTJDfI7fpFQju', 'dcarloni1w@si.edu', '889-407-7956', 0, 251781216, 'dcarloni1w@mapquest.com', 96);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (70, '2011-01-12', 4534241688, 'Mendel', 'Dibbin', 'Willmetts', 0, '$2a$04$hjjgHzTj8.iXat0pZLxlaebAEWrLF4P0hg6JjsG2yNdwqwp9k68tu', 'mwillmetts1x@sun.com', '723-645-1889', 1, 605478116, 'mwillmetts1x@earthlink.net', 56);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (71, '2001-12-11', 4553770381, 'Tobiah', 'Loder', 'Barabich', 0, '$2a$04$Wmt9G62HlfxWe1qwkDMNPO3fYV8ow5I2/IYVaXh/GHihXUMuvLHXO', 'tbarabich1y@yahoo.com', '644-586-7952', 1, 611022334, 'tbarabich1y@amazon.co.uk', 6);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (72, '2000-03-09', 6826859733, 'Marianne', 'Hanne', 'Koopman', 3, '$2a$04$yncHLy1WpmEKSz/C5waUE.SKV8I3TLNKxGkH0u0ntYRIjrPuPyUYK', 'mkoopman1z@webs.com', '716-708-4028', 0, 968358588, 'mkoopman1z@blog.com', 27);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (73, '2001-01-17', 3576063579, 'Padget', 'Pardon', 'Domini', 0, '$2a$04$tocbmR6soqdHwNzrCKe80eiv/2jkFImpXEHUCmXgnkmnq68rEolxW', 'pdomini20@360.cn', '675-219-3728', 0, 244133428, 'pdomini20@ezinearticles.com', 22);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (74, '1990-04-05', 5264252147, 'Orin', 'Wasbrough', 'Nelane', 3, '$2a$04$mRAVbuDtZmARIzVhkqz8Uurf8jElZ9Fb8QnCbPbLGA0fH0RtlQsC2', 'onelane21@zdnet.com', '468-686-6599', 0, 932033149, 'onelane21@blogger.com', 10);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (75, '1997-09-25', 8217919441, 'Andy', 'Tiplady', 'Edward', 0, '$2a$04$aQT87BZH.i7sGktfDogETuJSPi8basem5.A9/YpHf61LxHoYsYpO2', 'aedward22@4shared.com', '753-103-2460', 1, 784950324, 'aedward22@com.com', 1);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (76, '1985-12-14', 7187103295, 'Korie', 'Catt', 'Curling', 3, '$2a$04$cQoQAOod4ft0QLWgCJecyebC7WJB9g3SPU5VgLZoCR4TO3tdZ5G6S', 'kcurling23@columbia.edu', '125-286-2658', 0, 368484425, 'kcurling23@guardian.co.uk', 61);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (77, '1986-08-23', 1400957250, 'Guilbert', 'Habbon', 'Cullen', 0, '$2a$04$v71jNCrTO76g7pdkIsyPjOKf72UvDdEF5fP6CyYMjBilRrbWEmkOe', 'gcullen24@printfriendly.com', '250-280-2250', 0, 839842653, 'gcullen24@comcast.net', 97);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (78, '1993-06-22', 1842210682, 'Godfree', 'Keggins', 'Smee', 2, '$2a$04$Mr7VKWxco9DY7Q0vvHn4w.b91HOhbajFm5sXUhL.dGEPfydFds9FW', 'gsmee25@google.com.hk', '946-485-2083', 0, 568656439, 'gsmee25@sogou.com', 5);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (79, '2010-07-24', 9958446689, 'Isabelle', 'Ewles', 'O'' Byrne', 0, '$2a$04$wuF3pJ1hq8ZijzhSUeL74.srmFgDjrTzzojmg/J4XC.16WpC3D8Gi', 'iobyrne26@tumblr.com', '367-457-0694', 1, 696000062, 'iobyrne26@apple.com', 27);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (80, '1993-05-26', 5318845991, 'Ogdan', 'Wolver', 'O''Kieran', 3, '$2a$04$7DLM65xAdAEknmyDTITmxOyCJLBePF7TBO46CIl7J66uH.E/5R1pS', 'ookieran27@eventbrite.com', '867-166-2530', 0, 831590027, 'ookieran27@delicious.com', 31);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (81, '2018-04-27', 6349669150, 'Gabbey', 'Duffie', 'Komorowski', 3, '$2a$04$fQhjngPLfArQzz.bUP0wEuVgDfGFy2ZzjSqd9opar4znxEOG6J3xm', 'gkomorowski28@upenn.edu', '886-672-8702', 1, 575293557, 'gkomorowski28@mit.edu', 49);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (82, '1999-06-24', 8622801499, 'Evangelina', 'Orrocks', 'Borles', 1, '$2a$04$htMBhYBdZtFr53wLHI0wZea0HnlrRflQ/0vLTxdrI74QOky-rBTie', 'eborles29@scribd.com', '422-293-4055', 1, 438962762, 'eborles29@aboutads.info', 55);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (83, '2005-07-19', 7731965339, 'Cornell', 'Gaskal', 'Bestar', 1, '$2a$04$enRJyLpCRE77gd3paaj2T.845ccCr6g4OPhJJQguSF9QhlueKJj86', 'cbestar2a@opera.com', '307-113-9858', 0, 201415103, 'cbestar2a@weather.com', 39);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (84, '1989-03-19', 7028483247, 'Ajay', 'Presland', 'Brammer', 1, '$2a$04$cvKBTyeuYUwsXRxZ7sMDBuaj/5gpji6Zz2SMpy5JP3UQOIJ9JZYQO', 'abrammer2b@comsenz.com', '651-452-0115', 0, 742492133, 'abrammer2b@miibeian.gov.cn', 30);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (85, '2008-06-17', 7293894466, 'Thekla', 'Mackness', 'Adnet', 2, '$2a$04$vNeDLFba224U/R3bjdaE2OxqSbXyzYXPPkzjdkluVhZYk/Rm3M89i', 'tadnet2c@joomla.org', '835-166-8696', 1, 879088733, 'tadnet2c@newsvine.com', 1);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (86, '2008-05-17', 4341882240, 'Carlene', 'Hawkings', 'Pischoff', 2, '$2a$04$hg62BHj0UKdtk7w4fBLWp.PFVkrjCoeFNOGVydJjcxwGpjYV1zz4e', 'cpischoff2d@soundcloud.com', '192-890-9187', 0, 418623089, 'cpischoff2d@timesonline.co.uk', 36);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (87, '2001-01-28', 8424820356, 'Murry', 'Cardow', 'Shoard', 3, '$2a$04$Ed.YLnFYzY4B7Rw5PqkBr.B7eHCdWZbjzfNfEumz9tqCgzL.ihBdG', 'mshoard2e@washingtonpost.com', '491-802-6972', 1, 763000237, 'mshoard2e@yahoo.co.jp', 24);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (88, '2005-11-10', 5458336193, 'Caryl', 'Jeste', 'Gutowski', 0, '$2a$04$S0OnppZ8R2l5xFgF.txUHu4Ug634gUs/3X8TA/wm0Wvds3g94RAhe', 'cgutowski2f@wikipedia.org', '826-336-0698', 1, 782659662, 'cgutowski2f@adobe.com', 59);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (89, '2002-01-27', 8185136353, 'Gregor', 'Brewerton', 'Syce', 1, '$2a$04$eV5xXNufl8ciKCe2gsPsYOhKjhf7t4QB3H7N60g/fgbtkmR0Lu61K', 'gsyce2g@friendfeed.com', '114-756-9452', 0, 280998160, 'gsyce2g@hatena.ne.jp', 59);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (90, '2017-07-12', 6400612443, 'Mersey', 'Allred', 'Puzey', 3, '$2a$04$wiNM.Ek4/e/jAwmyrxJt3esT9dRT0ML9PPvBsz3vZI2d1TnZGQK6u', 'mpuzey2h@tuttocitta.it', '645-308-3885', 1, 291803387, 'mpuzey2h@home.pl', 66);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (91, '1996-01-07', 2878673789, 'Fiorenze', 'Rouch', 'Dugdale', 0, '$2a$04$iz0LyHTW9A7PD2lMFgWrLe2FCTvIWfu6QcQ24CNrvBgLDtdu4N1pq', 'fdugdale2i@sogou.com', '802-212-6552', 0, 233132985, 'fdugdale2i@instagram.com', 63);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (92, '2018-04-05', 1404580092, 'Gaby', 'Coode', 'Grzes', 0, '$2a$04$xJLqWe5QFNsH0kmNEu6ts.uUBgNRHejCpJC3z2dcJ2AFRKOpgDcY2', 'ggrzes2j@hostgator.com', '193-112-6511', 1, 592470518, 'ggrzes2j@acquirethisname.com', 45);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (93, '1992-08-02', 3490002765, 'Nora', 'Marjoribanks', 'Cunnow', 2, '$2a$04$Wr560LHFaphCffGtCV.FAORHACYjXIcwpWGn2dSwCJvTVGkxdH6Uu', 'ncunnow2k@sohu.com', '862-963-8347', 1, 998155874, 'ncunnow2k@abc.net.au', 28);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (94, '1995-04-27', 6228076232, 'Grace', 'Pearlman', 'Pickin', 0, '$2a$04$e1d6ABpRjS77Rl8v3I4FHOa/IG5voks84GUVhuwHB2ZW8/iqmYoaq', 'gpickin2l@soup.io', '437-467-3649', 0, 334023484, 'gpickin2l@nhs.uk', 99);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (95, '1997-06-19', 6305150927, 'Flory', 'Eates', 'Collins', 3, '$2a$04$2oofvHENYorROv6677VZRuBdjZ9d1UyjoQs3fyuyeqLYlaMIk8yXG', 'fcollins2m@cpanel.net', '467-868-0057', 0, 524919806, 'fcollins2m@businessweek.com', 35);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (96, '2009-12-16', 8578823372, 'Svend', 'MacParland', 'Habard', 0, '$2a$04$HTE30UHdSAv6H26A/gI8t.KOgx8ckpkVlj2F31T7RXbKfjqoL/xIi', 'shabard2n@springer.com', '546-141-0434', 1, 750185905, 'shabard2n@ovh.net', 41);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (97, '1993-02-09', 5966613994, 'Bethena', 'Searchwell', 'Duiged', 2, '$2a$04$NAPeYGzRbOBrcGs/xgattuSTaCP0vceD1vBgKAZv.QvXUTd7Haw.G', 'bduiged2o@sohu.com', '796-815-5564', 0, 369891642, 'bduiged2o@goo.gl', 99);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (98, '2006-06-02', 3701497522, 'Shay', 'Fernehough', 'McKelvie', 3, '$2a$04$yyZZmFMshMSO5w2fsxF5dOJ9reKaya0d4oMnh.QlJAVN7TZGdgqCm', 'smckelvie2p@wikipedia.org', '450-541-3004', 1, 789072190, 'smckelvie2p@theglobeandmail.com', 38);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (99, '2017-03-17', 3133185580, 'Jillana', 'Tutsell', 'Bollon', 0, '$2a$04$Id4jPcU.0UoV./3MK35I7.XIKywi7JNFTBL2FuXwFpgjiFAdlu-3i', 'jbollon2q@oaic.gov.au', '407-493-2914', 1, 411763878, 'jbollon2q@odnoklassniki.ru', 1);
-insert into students (id, birth_date, eng, first_name, last_name, middle_name, learning_type, password, personal_email, phone_number, reception_type, student_number, work_email, group_id) values (100, '1990-12-30', 3782061830, 'Ardenia', 'Becaris', 'Goman', 3, '$2a$04$xj3tutqBcq3jEysWNI6e..MoIZqtpspqNlrbLNh.WfKUh5846Q2.G', 'agoman2r@cpanel.net', '249-969-5852', 1, 964033873, 'agoman2r@elpais.com', 60);
-
-UNLOCK TABLES;
-
-LOCK TABLES `subjects` WRITE;
-
-INSERT INTO `subjects` VALUES
-(1,'Aut qui odio ex omnis. Sit quasi soluta et ipsa veniam. Rerum quam in veniam necessitatibus quam voluptates. Quis sit et voluptatem sed. Iste aut quia suscipit commodi.','est',1,1),
-(2,'Aliquam officia est quia voluptatibus aut dolorem nobis. Sed corrupti magnam dolor officia. Rerum omnis rerum magnam necessitatibus maxime quo minus.','veniam',2,2),
-(3,'Vitae facilis natus incidunt ratione. Ea excepturi in beatae est quidem laboriosam fugiat. Omnis aut quia voluptatem ea aliquid atque. Officiis culpa quibusdam ab quis dolorum.','voluptatem',3,3),
-(4,'Ipsa occaecati veniam dolorem numquam. Eum magni dolore modi et libero asperiores vero at. Quis enim at enim voluptatem. Eligendi sint numquam nulla et reiciendis consequatur et. Dolor ducimus mollitia repellendus eveniet velit cumque sapiente quia.','dolores',4,4),
-(5,'Sit ipsum minus ipsam. Laborum architecto quod et in. Odit magni ut magni dolores aut praesentium. Ipsam quia sed natus velit qui dolore corrupti. Ad consequatur vel qui.','consequuntur',5,5),
-(6,'Dolor id voluptatum dicta explicabo expedita. Reiciendis aperiam aliquam animi dolorum itaque ab sint. Accusamus vero fuga et id.','optio',6,6),
-(7,'Cumque odio quo suscipit. Fugiat aliquid velit eos est illum error sit maiores. Enim nulla deserunt sint aut consequuntur reprehenderit molestiae. Occaecati occaecati et at eum inventore ut corporis id.','dolor',7,7),
-(8,'Quibusdam non maxime sunt non suscipit. Perspiciatis sed saepe et quae dolorem ut incidunt.','ut',8,8),
-(9,'Nobis nisi possimus optio exercitationem. Velit delectus autem illum aut.','a',9,9),
-(10,'Eveniet cupiditate consequatur quia ut. Quia dolor voluptatibus dolorum totam earum illum libero perspiciatis.','recusandae',10,10),
-(11,'Saepe sunt quo repudiandae qui. Sit aspernatur odit id ut. Est sed adipisci vel facere veritatis dolorem.','ea',11,11),
-(12,'Dolorum dolorum molestiae dolores voluptatibus ex quidem fuga. Nam dignissimos in tempore. Non hic voluptatem quibusdam mollitia eius sapiente est. Sequi fugiat iusto minima ipsum animi iure debitis.','qui',12,12),
-(13,'Omnis dolorum sequi cum. Earum totam nobis assumenda sint facilis sint. Voluptatem itaque optio soluta qui laudantium ut dignissimos. Fuga molestias nobis aut consequuntur veritatis quo magnam.','optio',13,13),
-(14,'Aliquam quod quibusdam accusamus. Quia fugit reiciendis debitis. Sit temporibus autem et eligendi. Impedit optio molestiae totam voluptatem cupiditate eum.','sed',14,14),
-(15,'Quasi est pariatur delectus optio dolor eos. Accusantium a vel ut suscipit exercitationem iusto. Dolorem ad itaque aliquid aut repudiandae. Rerum perferendis ut dolores asperiores.','qui',15,15),
-(16,'Suscipit cumque quo repellendus. Doloremque libero dolores aspernatur architecto totam laboriosam facere non. Fugit et iure unde veritatis voluptate alias in sapiente. Quia expedita quidem placeat ipsa nam reprehenderit porro quo. Qui dolor dolorem quo au','velit',16,16),
-(17,'Et molestiae facilis vel accusantium fugiat. Quo impedit nisi minima qui. Molestiae nulla cumque voluptates corporis.','est',17,17),
-(18,'Recusandae quibusdam magnam non dolores earum enim et. Adipisci eius laudantium ea voluptate optio totam officia sed. Dicta molestiae occaecati dolore.','et',18,18),
-(19,'Dolores suscipit placeat voluptas ea. Nihil ipsa ea doloribus unde et ratione perspiciatis. Numquam voluptatem tempora aut rem.','quidem',19,19),
-(20,'Sit ut voluptatibus ex debitis. Magnam eligendi et corrupti placeat nobis amet ullam deleniti. Rerum molestias aliquam aperiam qui molestiae modi. Magni sit qui et.','dolore',20,20),
-(21,'Recusandae cumque tempore at totam consequuntur explicabo voluptatibus. Vel facilis ad saepe enim quae quasi provident. Eos incidunt a aut aut debitis tempora ea. Placeat vel dolore fugiat et.','dicta',21,21),
-(22,'Nesciunt debitis et dolorem eos. Et sed magnam earum facere error. In in ratione excepturi eum aut commodi ut enim.','nemo',22,22),
-(23,'Excepturi neque magnam saepe fuga nostrum soluta. Eaque voluptate non totam. Quaerat voluptas ut numquam iusto. Error eos qui atque et. Adipisci eum earum iste possimus.','harum',23,23),
-(24,'Voluptatibus rem saepe suscipit unde dolorem saepe. Ab est sunt minima. Dolorem nobis quia perferendis suscipit. Impedit dignissimos eum ut et esse aut.','eos',24,24),
-(25,'Sunt ut id accusamus facilis voluptatum sed. Neque nostrum ex unde autem. Praesentium deleniti corporis quam.','provident',25,25),
-(26,'Sed et et ducimus est laudantium et. Soluta sit sint nulla sunt. Est molestiae doloremque nostrum in qui. Corrupti ullam sint odit eaque ipsam dolorem.','quae',26,26),
-(27,'Aut quis cumque qui doloribus. Aliquid totam enim minima. Ipsam quidem eum aut expedita magnam.','est',27,27),
-(28,'Aperiam temporibus sit velit ut architecto et quasi. Assumenda ducimus quia rerum fugit soluta vel necessitatibus. Earum nobis quia sed nostrum. Praesentium error quaerat tempore occaecati omnis.','amet',28,28),
-(29,'Saepe quod quia quos aut repudiandae aliquid. Et cumque itaque quia facere ducimus quia. Id veniam velit perspiciatis optio aliquid sed perferendis.','sint',29,29),
-(30,'Occaecati et voluptatem sit autem. Officiis totam consequatur et. Magni consequatur ipsum atque et eum voluptatum. Cum provident quisquam non vel laborum iste rem.','qui',30,30),
-(31,'Et non ipsum ut doloremque fuga inventore. Commodi iure esse laudantium ab dolores. Quidem placeat dolores architecto nisi est harum.','quo',31,31),
-(32,'Quod pariatur dignissimos iste similique sit. Hic omnis at enim dolores aut. Quaerat quia magnam quia magnam iure voluptates.','est',32,32),
-(33,'Aliquam facere aut numquam sequi commodi. Eligendi nostrum mollitia esse laborum laborum. Quisquam autem voluptates rem repellat sunt.','qui',33,33),
-(34,'In modi est fugiat. Ab quidem possimus ex vitae repellat. Nam suscipit similique similique earum.','qui',34,34),
-(35,'Odio commodi dolorem aperiam sit. Illum recusandae et optio ab repellendus quidem non. Adipisci dicta unde qui consectetur quaerat reiciendis.','voluptatum',35,35),
-(36,'Vero quo est totam dolores. Fuga et vel facilis magnam similique blanditiis et. Et quam hic officia enim quia. Ut voluptates architecto ex eius.','earum',36,36),
-(37,'Consectetur vel ipsum architecto. Sed ab sed enim rerum necessitatibus voluptates consectetur. Quos commodi accusantium ex cumque non.','et',37,37),
-(38,'Harum aliquam facilis repudiandae sapiente dolores aut non. Nam rerum numquam et et explicabo perspiciatis.','placeat',38,38),
-(39,'Quasi nihil quia quia delectus veniam eos sequi. Quidem nobis quis et autem eaque dolores occaecati. Repudiandae id accusantium error adipisci vel sint et neque. Esse qui nam error ipsa.','ea',39,39),
-(40,'Voluptates quisquam non ea vel aut aut. Ex repudiandae ut dolorem impedit vel iure. Odio incidunt aspernatur ipsa voluptatum cumque sint inventore est. Quia aut iusto voluptas quo. Soluta ducimus dolorum doloribus iure.','numquam',40,40),
-(41,'Autem neque facere non vero sit enim aut. Nostrum facilis sed voluptatem aut suscipit ducimus voluptas. Quae alias nam voluptates voluptatum.','consequuntur',41,41),
-(42,'Tempora voluptas nulla et sunt. Dolor deleniti earum quo sunt tenetur et molestias sed. Atque corporis molestias ut cumque sint. Deleniti quibusdam atque ea in non sit.','quidem',42,42),
-(43,'Maxime et aut soluta sit quod deserunt reiciendis. Voluptas delectus mollitia est deserunt cupiditate neque mollitia. Optio perspiciatis iusto in necessitatibus adipisci veritatis voluptatem. Eos non nihil et. Et odio perferendis excepturi illum.','et',43,43),
-(44,'Alias quam numquam quas sed. Repellat voluptatem qui repudiandae possimus animi error itaque. Ut suscipit magnam itaque libero. Quisquam placeat nemo enim perferendis ea eveniet labore id. Quidem iusto sed praesentium aut ut qui.','rerum',44,44),
-(45,'Aspernatur velit quaerat nisi illo aut omnis amet quidem. Blanditiis consectetur quisquam delectus incidunt. Possimus nobis repellat rerum eum. Cumque animi ratione ipsa modi in eos.','animi',45,45),
-(46,'Quia ducimus consequatur sunt veniam id iste animi tempore. Quia quia minima culpa est. Vero et voluptas et vel. Fugit provident est sint.','aperiam',46,46),
-(47,'Alias soluta modi quam est rerum voluptas perspiciatis. Eveniet a nemo et adipisci. Commodi vel aliquid quis autem. Aperiam quaerat sunt voluptate voluptatem accusantium labore.','doloribus',47,47),
-(48,'Placeat fugit recusandae quia cumque ad accusamus quas. Ut perferendis voluptas dolor facere qui. Dolores error itaque et sint quidem nobis at.','consequatur',48,48),
-(49,'Qui repellat ipsam provident ducimus quo. Illo accusantium ea optio quia rerum eligendi voluptatum. Qui occaecati reiciendis rem sunt qui nesciunt quam.','provident',49,49),
-(50,'Quas ut laboriosam doloribus quibusdam quia. Officia aut et ratione. Exercitationem repellendus qui ipsa aut atque.','neque',50,50),
-(51,'Nulla dolorem natus aut libero iure et laboriosam. Sit occaecati id sint aut repellat sit. Asperiores rem voluptatem ut necessitatibus deleniti.','dolorem',51,51),
-(52,'Et omnis cupiditate architecto unde hic vel. Et delectus quia et tempore maxime tempore. Omnis qui et voluptatibus assumenda assumenda. Minima perferendis quibusdam expedita quia non quam animi occaecati.','in',52,52),
-(53,'Et et occaecati at eos. Eligendi voluptatem eum vel est provident. Aut quibusdam accusantium quia reiciendis. Temporibus autem sint praesentium voluptatem reiciendis et qui.','officiis',53,53),
-(54,'Et recusandae assumenda delectus est. Id placeat magni voluptas quasi voluptate quia. Tempora enim officia consectetur est doloremque rerum quaerat. Voluptatem eaque quo tempore culpa illo quia.','quos',54,54),
-(55,'Et quo perferendis dolores ut. Nemo sed officiis veniam animi eum. Dolores earum ex ipsum qui nulla occaecati. Temporibus laboriosam illum ut eaque. Consequatur deleniti vero minus molestiae.','veritatis',55,55),
-(56,'Rerum eos molestiae eaque velit officiis cumque molestiae distinctio. Earum id numquam qui eum.','omnis',56,56),
-(57,'Qui est at tempore qui laboriosam. Esse qui modi dolor nobis. Sit ipsam ratione occaecati molestiae ipsa natus eligendi. Est enim quia asperiores officiis possimus et distinctio dolores.','fugiat',57,57),
-(58,'Consequatur quidem rem doloribus excepturi officiis et. Quisquam minima aliquam voluptatem et natus sunt illum.','perferendis',58,58),
-(59,'Tenetur repudiandae et illo provident. Quod quia quidem voluptatem impedit occaecati libero. Deleniti est accusamus sint ut est minima.','et',59,59),
-(60,'Enim est ea earum veritatis nesciunt id deleniti. Dignissimos quidem praesentium et praesentium.','fugit',60,60),
-(61,'Incidunt omnis aut neque quo. Vel omnis blanditiis et consectetur odit. Sed autem reprehenderit quia itaque. Sapiente est quisquam autem reprehenderit ut fuga nihil.','aut',61,61),
-(62,'Vel vitae quas qui accusantium aut fugiat quia. Sed magnam omnis atque. Omnis veritatis suscipit consectetur voluptatem molestiae ad hic. Non quis officia aut expedita vel quod autem.','voluptatem',62,62),
-(63,'Et dolores illo vitae fuga pariatur et inventore ratione. Mollitia enim quam cum temporibus est eius nihil. Rem et consequuntur rem odit rerum sequi. Iure et et eaque ipsum eos vel laudantium temporibus.','voluptatem',63,63),
-(64,'Repellendus eos numquam id. Et laudantium dolor voluptatibus veritatis. Asperiores voluptas voluptatibus mollitia voluptas voluptatem aliquid officiis. Sed est dicta recusandae nihil repudiandae nesciunt consequatur.','doloremque',64,64),
-(65,'Dolores et aut aperiam vel. Ullam enim eaque quibusdam aspernatur ullam quaerat id. Ipsam praesentium sint hic. Dolorem omnis et quia illo molestiae corporis.','mollitia',65,65),
-(66,'Qui velit assumenda voluptate voluptatem minus. Et est hic aut ab doloremque cum. Aut sunt voluptatem ea sunt.','quos',66,66),
-(67,'Et officiis ut sit est repudiandae vel. Earum ut temporibus quisquam quam omnis omnis. Omnis ea in voluptas dolores cum omnis consequatur. Molestiae autem qui libero doloremque sunt voluptas.','illum',67,67),
-(68,'Quidem sit dolor impedit odit nihil praesentium. Facilis reprehenderit et tenetur vitae. Debitis laborum qui tempora libero.','molestiae',68,68),
-(69,'Consequuntur voluptas deleniti optio sed doloribus reiciendis excepturi ab. In tempore laboriosam ullam et debitis. Sint hic fugit qui dolor quia adipisci.','maxime',69,69),
-(70,'Occaecati nihil ut perspiciatis adipisci. Id delectus cumque ut sit dolore voluptas occaecati. Porro aliquid assumenda possimus rerum voluptate perspiciatis consequatur. Praesentium iure esse perspiciatis et eaque dignissimos.','corporis',70,70),
-(71,'Est aut et et quaerat saepe dolores voluptatem assumenda. Est doloremque totam qui fuga dolore adipisci porro. Molestiae qui numquam voluptatem explicabo voluptatem sint.','quos',71,71),
-(72,'Earum officiis beatae odit et recusandae. Ex voluptas nihil est aliquid et libero error aspernatur. Qui est aliquid vel aliquam. Eligendi consequuntur dolores ratione deleniti rem illo iste ex. Dolor consequuntur autem et tempora sit sunt.','sed',72,72),
-(73,'Expedita qui laudantium explicabo error nostrum voluptatibus inventore. Praesentium esse harum autem in. Asperiores ex voluptates sunt quia dicta quos dolores qui. Omnis voluptate consequatur eos aut. Soluta autem enim officiis delectus.','facere',73,73),
-(74,'Vero sed tenetur necessitatibus harum eveniet culpa. Voluptas omnis nulla amet. Id at ipsa sed. Aut et ut dolor.','quam',74,74),
-(75,'Consequatur ducimus voluptate ab qui beatae hic. Harum sed et in. Nihil odio in at maiores eveniet optio.','facere',75,75),
-(76,'Quia libero cumque voluptatem vitae quaerat sed dolore eligendi. Deserunt neque libero debitis dolore dolor perferendis ut. Temporibus debitis quaerat sequi quo accusantium vel omnis numquam.','quibusdam',76,76),
-(77,'Repudiandae laboriosam nam suscipit eos iste voluptates. Dolor ratione qui ad ipsum omnis aliquid mollitia. Accusamus quae assumenda mollitia voluptas error. At nemo tempore velit iste minus voluptatum.','nostrum',77,77),
-(78,'Optio quia perspiciatis animi ea id repellat. Dolorem et quod quod mollitia quidem accusantium.','earum',78,78),
-(79,'Maxime est quia voluptates repellendus quis distinctio necessitatibus. Provident quo libero quis non nisi excepturi. Quam autem est soluta consequatur. Enim similique reprehenderit voluptatum.','in',79,79),
-(80,'Quia harum maiores quia maxime ut. Et temporibus quia nihil alias sit inventore dolorum. Consequuntur deserunt quia sed veritatis. Quod non repellendus placeat aliquam.','facere',80,80),
-(81,'Ut vero quos quia quia. Quia placeat ut est quibusdam blanditiis asperiores. Et optio rerum iste consequatur.','reprehenderit',81,81),
-(82,'Temporibus qui et quae in expedita. Et quidem illo officiis perferendis quaerat et. Similique sunt quod sunt est et. Voluptatum ut et optio modi animi hic.','natus',82,82),
-(83,'Provident non dolorem eligendi nemo velit sed. Quia id repudiandae occaecati aspernatur ea. Natus similique ut voluptatibus quaerat.','illo',83,83),
-(84,'Minus omnis pariatur rerum incidunt quibusdam. Et ut in fuga vel unde sit. Mollitia facilis corporis excepturi et quam omnis eius.','illum',84,84),
-(85,'Ipsam possimus doloremque quae mollitia. Dolorem aliquid ut unde eum doloribus autem. Fugit at unde autem vitae omnis voluptas. Consequuntur eum voluptatum quia dolore ea dignissimos iusto.','perspiciatis',85,85),
-(86,'Voluptates adipisci delectus perferendis error et quia aut. Dolor sequi iste voluptatem qui. Optio sed in dolor et sapiente. Reiciendis soluta dolorem animi.','sint',86,86),
-(87,'Praesentium nulla cupiditate sequi corrupti. Cum aliquam cum nihil explicabo vel. Praesentium provident ut qui qui veniam voluptatem.','consequatur',87,87),
-(88,'Laboriosam necessitatibus est blanditiis excepturi facilis. Maiores est aut eum sunt quis voluptates quasi. Quidem sed error quisquam corrupti aspernatur consequatur. Quia porro ut soluta ex ut nihil dolor.','voluptas',88,88),
-(89,'Velit ratione officiis quia blanditiis in. Rerum ipsa veritatis sunt facilis.','modi',89,89),
-(90,'Aut ea aliquid nemo ipsum autem iure qui suscipit. Vitae nesciunt eius quis pariatur. Fuga ex autem optio laboriosam adipisci iste. Dolores eos blanditiis tempore cupiditate.','dolorem',90,90),
-(91,'Suscipit ut numquam veritatis possimus. Eligendi non ut error repudiandae vero facere magni. Et et qui mollitia earum expedita. Consectetur cumque ab sint aliquid et hic.','vitae',91,91),
-(92,'Et quam temporibus repellat est. Et rerum et sed quibusdam ut et natus. Occaecati quas illum non iusto non. Voluptatibus consequuntur a quia temporibus sunt ipsa enim facilis.','ipsam',92,92),
-(93,'Et dolorem vero laboriosam consequatur tempora asperiores aut ratione. Distinctio error sunt esse sunt occaecati. Hic voluptas aut eligendi excepturi. Sequi molestiae id accusamus quo sint amet.','ea',93,93),
-(94,'Perferendis earum omnis accusamus laborum consectetur ipsum. Deserunt laboriosam beatae corrupti maxime dolorem voluptas. Voluptatem voluptas quae sed consequatur et. Corrupti ut numquam rem voluptatem dolorum.','et',94,94),
-(95,'Quo incidunt est et enim. Commodi perspiciatis suscipit vel nobis atque et est. Delectus quis nesciunt dolor praesentium aliquid minus facere cum. Dolore atque tenetur odio qui.','rerum',95,95),
-(96,'Qui et est in autem unde exercitationem occaecati aliquam. In et dolorem est asperiores non. Perspiciatis ipsam occaecati nihil vel alias eligendi quo. Ad ratione qui voluptatem incidunt odit.','corporis',96,96),
-(97,'Minima ipsa voluptates magnam sed sunt. Et odio enim repellat. Consequuntur ut voluptas praesentium qui cum qui culpa.','aut',97,97),
-(98,'Quae in rerum consequuntur qui voluptatem eveniet. Hic omnis natus officia voluptatum eaque. Architecto quis quae sit ad.','sapiente',98,98),
-(99,'Culpa cumque et itaque asperiores dolorem consequuntur ut omnis. Culpa error et enim voluptates. Sed voluptatem suscipit voluptatem tenetur ea.','commodi',99,99),
-(100,'Aut commodi eum illo omnis est rerum est. Autem et laborum error officia aliquid tenetur. Sit officiis error totam non magni quae. Consequatur nam corporis tempore doloremque occaecati enim et.','velit',100,100);
-
-UNLOCK TABLES;
-
-LOCK TABLES `weekly_schedules` WRITE;
-
-INSERT INTO `weekly_schedules` (id,day_of_week,start_on_week,start_time,week_repeating,group_id,room_id,subject_id,teacher_id,academic_activities) VALUES
-(1,5,4,'13:47:10.000000',0,1,101,1,1,1),
-(2,2,1,'08:54:35.000000',0,2,102,2,2,0),
-(3,4,4,'10:51:50.000000',1,3,103,3,3,0),
-(4,6,1,'03:15:15.000000',1,4,104,4,4,2),
-(5,4,3,'02:11:08.000000',1,5,105,5,5,0),
-(6,0,5,'21:22:34.000000',1,6,106,6,6,0),
-(7,3,4,'20:37:35.000000',2,7,107,7,7,1),
-(8,5,5,'12:49:44.000000',0,8,108,8,8,0),
-(9,4,3,'14:22:32.000000',0,9,109,9,9,0),
-(10,3,2,'23:55:13.000000',1,10,110,10,10,2),
-(11,2,1,'19:18:01.000000',1,11,111,11,11,1),
-(12,1,1,'13:48:18.000000',0,12,112,12,12,0),
-(13,0,4,'05:03:34.000000',1,13,113,13,13,1),
-(14,0,1,'18:08:49.000000',0,14,114,14,14,1),
-(15,4,3,'05:27:38.000000',2,15,115,15,15,0),
-(16,5,4,'06:28:06.000000',1,16,116,16,16,2),
-(17,0,3,'00:31:16.000000',2,17,117,17,17,0),
-(18,1,1,'21:58:40.000000',1,18,118,18,18,1),
-(19,5,4,'01:53:19.000000',0,19,119,19,19,1),
-(20,6,4,'23:04:13.000000',0,20,120,20,20,2),
-(21,0,4,'02:18:29.000000',1,21,121,21,21,1),
-(22,5,4,'05:29:18.000000',0,22,122,22,22,1),
-(23,1,4,'00:05:55.000000',1,23,123,23,23,0),
-(24,2,4,'03:57:51.000000',1,24,124,24,24,0),
-(25,2,3,'11:30:16.000000',0,25,125,25,25,1),
-(26,2,3,'09:07:45.000000',0,26,126,26,26,2),
-(27,0,1,'12:50:24.000000',1,27,127,27,27,0),
-(28,1,1,'20:15:00.000000',1,28,128,28,28,1),
-(29,1,2,'00:14:00.000000',0,29,129,29,29,0),
-(30,4,3,'10:54:06.000000',2,30,130,30,30,1),
-(31,3,2,'16:50:00.000000',0,31,131,31,31,0),
-(32,6,4,'16:44:23.000000',0,32,132,32,32,0),
-(33,6,3,'21:51:10.000000',2,33,133,33,33,2),
-(34,6,5,'15:00:43.000000',1,34,134,34,34,2),
-(35,0,4,'01:41:57.000000',1,35,135,35,35,1),
-(36,5,4,'23:16:35.000000',2,36,136,36,36,0),
-(37,1,2,'04:51:32.000000',2,37,137,37,37,0),
-(38,0,5,'01:13:46.000000',2,38,138,38,38,0),
-(39,2,1,'02:07:43.000000',2,39,139,39,39,1),
-(40,3,3,'14:43:07.000000',2,40,140,40,40,2),
-(41,5,4,'11:02:45.000000',2,41,141,41,41,1),
-(42,4,4,'11:13:50.000000',0,42,142,42,42,0),
-(43,2,5,'12:48:26.000000',1,43,143,43,43,0),
-(44,0,2,'07:49:35.000000',0,44,144,44,44,0),
-(45,0,1,'14:18:50.000000',0,45,145,45,45,2),
-(46,6,1,'09:34:34.000000',0,46,146,46,46,0),
-(47,0,5,'19:36:30.000000',1,47,147,47,47,0),
-(48,3,3,'08:42:17.000000',2,48,148,48,48,2),
-(49,2,5,'19:28:45.000000',1,49,149,49,49,1),
-(50,5,2,'13:41:43.000000',0,50,150,50,50,0),
-(51,4,4,'15:31:16.000000',1,51,151,51,51,0),
-(52,0,3,'01:19:39.000000',1,52,152,52,52,1),
-(53,0,2,'12:40:17.000000',1,53,153,53,53,2),
-(54,0,3,'14:09:13.000000',0,54,154,54,54,2),
-(55,0,3,'15:50:11.000000',1,55,155,55,55,0),
-(56,0,3,'15:31:18.000000',1,56,156,56,56,2),
-(57,3,3,'14:09:51.000000',1,57,157,57,57,1),
-(58,1,3,'03:18:19.000000',0,58,158,58,58,1),
-(59,4,2,'13:04:42.000000',0,59,159,59,59,1),
-(60,4,1,'00:46:34.000000',2,60,160,60,60,2),
-(61,4,3,'00:16:22.000000',0,61,161,61,61,0),
-(62,2,1,'16:41:42.000000',1,62,162,62,62,1),
-(63,6,1,'00:45:11.000000',2,63,163,63,63,0),
-(64,4,4,'18:22:06.000000',2,64,164,64,64,0),
-(65,4,1,'14:06:04.000000',0,65,165,65,65,2),
-(66,0,4,'21:46:14.000000',0,66,166,66,66,2),
-(67,4,2,'04:13:02.000000',2,67,167,67,67,2),
-(68,5,4,'09:05:42.000000',0,68,168,68,68,1),
-(69,2,3,'09:34:04.000000',0,69,169,69,69,0),
-(70,4,3,'13:35:20.000000',0,70,170,70,70,2),
-(71,5,5,'16:20:21.000000',1,71,171,71,71,1),
-(72,6,3,'11:17:43.000000',0,72,172,72,72,1),
-(73,0,4,'17:33:11.000000',0,73,173,73,73,1),
-(74,6,3,'17:07:54.000000',2,74,174,74,74,0),
-(75,4,5,'07:44:38.000000',2,75,175,75,75,2),
-(76,1,1,'13:27:19.000000',0,76,176,76,76,0),
-(77,2,3,'04:35:34.000000',2,77,177,77,77,1),
-(78,6,2,'04:11:57.000000',1,78,178,78,78,2),
-(79,6,3,'15:50:02.000000',2,79,179,79,79,1),
-(80,2,1,'07:49:38.000000',0,80,180,80,80,2),
-(81,4,3,'05:33:17.000000',0,81,181,81,81,2),
-(82,5,1,'08:46:53.000000',1,82,182,82,82,2),
-(83,0,5,'10:16:46.000000',0,83,184,83,83,1),
-(84,1,4,'14:50:52.000000',0,84,185,84,84,1),
-(85,1,4,'12:58:51.000000',2,85,186,85,85,2),
-(86,4,4,'22:56:33.000000',0,86,187,86,86,1),
-(87,5,1,'10:49:31.000000',0,87,188,87,87,1),
-(88,5,5,'22:33:36.000000',2,88,189,88,88,2),
-(89,1,1,'08:02:41.000000',1,89,190,89,89,0),
-(90,2,4,'19:59:19.000000',2,90,191,90,90,0),
-(91,4,5,'08:41:56.000000',2,91,192,91,91,1),
-(92,4,4,'11:55:07.000000',0,92,193,92,92,2),
-(93,1,2,'18:48:32.000000',2,93,194,93,93,1),
-(94,6,4,'00:31:42.000000',2,94,195,94,94,0),
-(95,6,3,'18:50:30.000000',0,95,196,95,95,1),
-(96,0,3,'13:40:03.000000',0,96,197,96,96,1),
-(97,6,1,'15:32:39.000000',0,97,198,97,97,0),
-(98,5,3,'01:46:58.000000',0,98,199,98,98,0),
-(99,2,2,'09:05:10.000000',0,99,200,99,99,1),
-(100,2,2,'14:21:16.000000',1,100,101,100,100,1);
-
-UNLOCK TABLES;
-
-LOCK TABLES `dormitory_assignments` WRITE;
-
-INSERT INTO `dormitory_assignments` VALUES
-(1,'2009-01-15 00:00:00.000000',1,101,1),
-(2,'2025-01-28 00:00:00.000000',1,102,6),
-(3,'1977-03-31 00:00:00.000000',0,103,1),
-(4,'2018-11-01 00:00:00.000000',0,104,6),
-(5,'2011-05-10 00:00:00.000000',0,105,1),
-(6,'1979-08-25 00:00:00.000000',1,106,6),
-(7,'2003-04-14 00:00:00.000000',0,107,1),
-(8,'2014-01-13 00:00:00.000000',1,108,6),
-(9,'2001-10-02 00:00:00.000000',0,109,1),
-(10,'1977-02-19 00:00:00.000000',1,110,6),
-(11,'1989-06-22 00:00:00.000000',0,111,1),
-(12,'1994-10-17 00:00:00.000000',0,112,6),
-(13,'2011-10-02 00:00:00.000000',0,113,1),
-(14,'1987-08-15 00:00:00.000000',1,114,6),
-(15,'2022-05-08 00:00:00.000000',0,115,1),
-(16,'1993-06-21 00:00:00.000000',0,116,6),
-(17,'2010-11-13 00:00:00.000000',0,117,1),
-(18,'1985-08-25 00:00:00.000000',1,118,6),
-(19,'2022-10-27 00:00:00.000000',0,119,1),
-(20,'2020-02-23 00:00:00.000000',0,120,6),
-(21,'2021-09-04 00:00:00.000000',1,121,1),
-(22,'2008-04-28 00:00:00.000000',1,122,6),
-(23,'1989-06-19 00:00:00.000000',1,123,1),
-(24,'1975-01-25 00:00:00.000000',1,124,6),
-(25,'1991-12-27 00:00:00.000000',1,125,1),
-(26,'1979-11-12 00:00:00.000000',0,126,6),
-(27,'1982-01-11 00:00:00.000000',1,127,1),
-(28,'1999-11-11 00:00:00.000000',1,128,6),
-(29,'1999-06-05 00:00:00.000000',1,129,1),
-(30,'2005-05-21 00:00:00.000000',0,130,6),
-(31,'1991-12-25 00:00:00.000000',1,131,1),
-(32,'1996-03-13 00:00:00.000000',0,132,6),
-(33,'1992-07-15 00:00:00.000000',1,133,1),
-(34,'2010-08-18 00:00:00.000000',1,134,6),
-(35,'2019-11-16 00:00:00.000000',1,135,1),
-(36,'1996-08-09 00:00:00.000000',0,136,6),
-(37,'2004-03-15 00:00:00.000000',0,137,1),
-(38,'2018-10-22 00:00:00.000000',1,138,6),
-(39,'2015-01-02 00:00:00.000000',0,139,1),
-(40,'1975-09-30 00:00:00.000000',1,140,6),
-(41,'1989-07-29 00:00:00.000000',0,141,1),
-(42,'2014-02-22 00:00:00.000000',1,142,6),
-(43,'1983-06-14 00:00:00.000000',1,143,1),
-(44,'1991-08-16 00:00:00.000000',1,144,6),
-(45,'1974-11-28 00:00:00.000000',1,145,1),
-(46,'2012-01-15 00:00:00.000000',1,146,6),
-(47,'2003-04-16 00:00:00.000000',0,147,1),
-(48,'1990-01-12 00:00:00.000000',0,148,6),
-(49,'2016-11-08 00:00:00.000000',0,149,1),
-(50,'2011-05-16 00:00:00.000000',1,150,6),
-(51,'2014-10-17 00:00:00.000000',0,151,1),
-(52,'2019-11-05 00:00:00.000000',1,152,6),
-(53,'2015-02-25 00:00:00.000000',1,153,1),
-(54,'2008-12-13 00:00:00.000000',1,154,6),
-(55,'1974-10-10 00:00:00.000000',0,155,1),
-(56,'2020-12-29 00:00:00.000000',1,156,6),
-(57,'1970-02-22 00:00:00.000000',1,157,1),
-(58,'1987-08-08 00:00:00.000000',0,158,6),
-(59,'1992-05-13 00:00:00.000000',0,159,1),
-(60,'1981-05-05 00:00:00.000000',0,160,6),
-(61,'1971-12-17 00:00:00.000000',1,161,1),
-(62,'2000-09-01 00:00:00.000000',0,162,6),
-(63,'1996-05-16 00:00:00.000000',1,163,1),
-(64,'1974-05-08 00:00:00.000000',1,164,6),
-(65,'1993-12-07 00:00:00.000000',0,165,1),
-(66,'1991-04-08 00:00:00.000000',1,166,6),
-(67,'2005-09-29 00:00:00.000000',0,167,1),
-(68,'1982-12-02 00:00:00.000000',1,168,6),
-(69,'2003-01-19 00:00:00.000000',1,169,1),
-(70,'1994-07-18 00:00:00.000000',0,170,6),
-(71,'2016-12-22 00:00:00.000000',1,171,1),
-(72,'2000-09-27 00:00:00.000000',0,172,6),
-(73,'1981-08-28 00:00:00.000000',0,173,1),
-(74,'1978-09-14 00:00:00.000000',1,174,6),
-(75,'1982-07-15 00:00:00.000000',0,175,1),
-(76,'2023-09-19 00:00:00.000000',0,176,6),
-(77,'1975-07-19 00:00:00.000000',0,177,1),
-(78,'2021-10-21 00:00:00.000000',1,178,6),
-(79,'2004-09-01 00:00:00.000000',0,179,1),
-(80,'1986-07-07 00:00:00.000000',0,180,6),
-(81,'2000-02-02 00:00:00.000000',0,181,1),
-(82,'2006-04-21 00:00:00.000000',1,182,6),
-(83,'2017-12-31 00:00:00.000000',1,184,1),
-(84,'1975-12-30 00:00:00.000000',0,185,6),
-(85,'1974-02-03 00:00:00.000000',0,186,1),
-(86,'1980-03-11 00:00:00.000000',1,187,6),
-(87,'2019-08-06 00:00:00.000000',0,188,1),
-(88,'1983-05-07 00:00:00.000000',0,189,6),
-(89,'1985-08-23 00:00:00.000000',0,190,1),
-(90,'1987-09-17 00:00:00.000000',1,191,6),
-(91,'1999-11-04 00:00:00.000000',1,192,1),
-(92,'2015-08-21 00:00:00.000000',0,193,6),
-(93,'2016-05-10 00:00:00.000000',1,194,1),
-(94,'1981-11-12 00:00:00.000000',0,195,6),
-(95,'1998-06-24 00:00:00.000000',1,196,1),
-(96,'1989-06-02 00:00:00.000000',1,197,6),
-(97,'1996-05-27 00:00:00.000000',0,198,1),
-(98,'1995-11-21 00:00:00.000000',1,199,6),
-(99,'2016-06-05 00:00:00.000000',0,200,1),
-(100,'1990-01-31 00:00:00.000000',1,101,6);
-
-UNLOCK TABLES;
-
-LOCK TABLES `exams` WRITE;
-
-INSERT INTO `exams` (id,date,end_time,start_time,group_id,subject_id,teacher_id) VALUES
-(1,'2013-12-05 00:00:00.000000','06:21:59.000000','13:03:17.000000',1,1,1),
-(2,'1973-10-20 00:00:00.000000','12:57:56.000000','04:32:03.000000',2,2,2),
-(3,'2002-11-13 00:00:00.000000','14:16:03.000000','05:29:12.000000',3,3,3),
-(4,'2002-06-28 00:00:00.000000','16:51:44.000000','14:38:45.000000',4,4,4),
-(5,'2024-11-04 00:00:00.000000','18:05:04.000000','20:52:12.000000',5,5,5),
-(6,'1988-04-19 00:00:00.000000','21:17:39.000000','06:01:13.000000',6,6,6),
-(7,'2005-06-22 00:00:00.000000','08:59:58.000000','16:03:14.000000',7,7,7),
-(8,'2018-12-13 00:00:00.000000','05:54:46.000000','05:07:42.000000',8,8,8),
-(9,'2002-04-17 00:00:00.000000','23:59:31.000000','23:59:01.000000',9,9,9),
-(10,'1989-01-14 00:00:00.000000','09:14:46.000000','15:28:09.000000',10,10,10),
-(11,'1984-04-26 00:00:00.000000','02:26:52.000000','17:41:58.000000',11,11,11),
-(12,'2006-04-11 00:00:00.000000','08:54:04.000000','09:32:36.000000',12,12,12),
-(13,'1983-04-02 00:00:00.000000','03:19:52.000000','01:07:30.000000',13,13,13),
-(14,'2008-10-20 00:00:00.000000','18:18:31.000000','17:27:20.000000',14,14,14),
-(15,'2008-04-16 00:00:00.000000','12:52:11.000000','17:04:57.000000',15,15,15),
-(16,'2020-02-12 00:00:00.000000','14:36:14.000000','02:54:55.000000',16,16,16),
-(17,'2018-01-17 00:00:00.000000','05:08:41.000000','15:04:36.000000',17,17,17),
-(18,'1977-05-26 00:00:00.000000','19:43:49.000000','06:39:47.000000',18,18,18),
-(19,'1975-04-01 00:00:00.000000','04:43:37.000000','12:55:30.000000',19,19,19),
-(20,'1992-04-11 00:00:00.000000','19:24:41.000000','07:51:49.000000',20,20,20),
-(21,'1985-03-20 00:00:00.000000','14:22:15.000000','09:47:11.000000',21,21,21),
-(22,'1992-09-27 00:00:00.000000','03:39:24.000000','06:09:53.000000',22,22,22),
-(23,'1976-06-24 00:00:00.000000','20:02:14.000000','00:08:56.000000',23,23,23),
-(24,'2004-05-31 00:00:00.000000','12:45:23.000000','09:47:32.000000',24,24,24),
-(25,'1993-02-25 00:00:00.000000','22:22:59.000000','06:48:16.000000',25,25,25),
-(26,'2001-04-23 00:00:00.000000','06:54:35.000000','15:43:15.000000',26,26,26),
-(27,'1993-06-28 00:00:00.000000','05:06:36.000000','10:49:56.000000',27,27,27),
-(28,'2012-06-20 00:00:00.000000','08:40:34.000000','07:37:58.000000',28,28,28),
-(29,'2018-06-27 00:00:00.000000','10:38:01.000000','12:44:13.000000',29,29,29),
-(30,'1972-07-25 00:00:00.000000','01:18:28.000000','06:31:37.000000',30,30,30),
-(31,'1986-04-02 00:00:00.000000','04:13:43.000000','05:28:37.000000',31,31,31),
-(32,'1973-01-01 00:00:00.000000','13:59:42.000000','13:25:11.000000',32,32,32),
-(33,'1977-12-30 00:00:00.000000','12:42:37.000000','13:27:18.000000',33,33,33),
-(34,'1980-04-19 00:00:00.000000','13:45:39.000000','17:55:23.000000',34,34,34),
-(35,'1994-06-09 00:00:00.000000','12:59:48.000000','09:34:41.000000',35,35,35),
-(36,'2000-06-10 00:00:00.000000','03:09:17.000000','12:34:11.000000',36,36,36),
-(37,'2007-01-08 00:00:00.000000','14:25:05.000000','19:39:37.000000',37,37,37),
-(38,'1972-06-28 00:00:00.000000','19:24:22.000000','02:16:18.000000',38,38,38),
-(39,'1997-12-21 00:00:00.000000','09:41:41.000000','14:19:00.000000',39,39,39),
-(40,'2011-11-15 00:00:00.000000','17:57:41.000000','12:10:05.000000',40,40,40),
-(41,'1991-05-27 00:00:00.000000','16:23:10.000000','18:59:56.000000',41,41,41),
-(42,'1972-04-10 00:00:00.000000','06:21:03.000000','01:32:15.000000',42,42,42),
-(43,'1975-11-09 00:00:00.000000','14:49:30.000000','00:28:21.000000',43,43,43),
-(44,'1983-06-06 00:00:00.000000','04:33:35.000000','02:55:27.000000',44,44,44),
-(45,'1993-12-15 00:00:00.000000','06:33:23.000000','18:03:49.000000',45,45,45),
-(46,'1971-07-12 00:00:00.000000','10:03:15.000000','23:21:02.000000',46,46,46),
-(47,'2001-12-13 00:00:00.000000','22:08:58.000000','13:26:49.000000',47,47,47),
-(48,'2021-03-06 00:00:00.000000','00:11:46.000000','06:02:50.000000',48,48,48),
-(49,'2013-07-11 00:00:00.000000','07:18:42.000000','23:58:05.000000',49,49,49),
-(50,'1994-12-07 00:00:00.000000','15:24:03.000000','08:16:25.000000',50,50,50),
-(51,'1973-04-05 00:00:00.000000','13:15:40.000000','04:34:35.000000',51,51,51),
-(52,'2016-04-21 00:00:00.000000','13:58:25.000000','01:37:02.000000',52,52,52),
-(53,'1972-02-07 00:00:00.000000','13:52:33.000000','15:40:05.000000',53,53,53),
-(54,'1998-01-07 00:00:00.000000','15:03:31.000000','04:12:56.000000',54,54,54),
-(55,'2010-02-10 00:00:00.000000','04:26:56.000000','20:35:10.000000',55,55,55),
-(56,'2019-07-12 00:00:00.000000','06:31:58.000000','04:56:42.000000',56,56,56),
-(57,'2024-07-14 00:00:00.000000','17:18:39.000000','12:51:18.000000',57,57,57),
-(58,'2004-04-10 00:00:00.000000','19:24:18.000000','16:57:47.000000',58,58,58),
-(59,'1998-06-19 00:00:00.000000','08:07:00.000000','08:50:38.000000',59,59,59),
-(60,'2011-01-10 00:00:00.000000','00:43:41.000000','08:39:24.000000',60,60,60),
-(61,'1970-05-26 00:00:00.000000','22:45:11.000000','15:26:39.000000',61,61,61),
-(62,'2016-10-12 00:00:00.000000','05:34:33.000000','06:34:27.000000',62,62,62),
-(63,'2011-08-29 00:00:00.000000','16:44:27.000000','06:37:30.000000',63,63,63),
-(64,'1998-08-05 00:00:00.000000','03:19:06.000000','03:04:38.000000',64,64,64),
-(65,'1983-12-15 00:00:00.000000','17:15:06.000000','17:08:36.000000',65,65,65),
-(66,'1984-12-06 00:00:00.000000','13:41:34.000000','16:29:45.000000',66,66,66),
-(67,'2014-10-17 00:00:00.000000','00:03:57.000000','18:24:03.000000',67,67,67),
-(68,'2004-05-06 00:00:00.000000','05:06:18.000000','16:57:58.000000',68,68,68),
-(69,'1979-03-07 00:00:00.000000','01:48:48.000000','10:39:55.000000',69,69,69),
-(70,'1975-12-01 00:00:00.000000','09:56:40.000000','18:56:43.000000',70,70,70),
-(71,'1995-01-26 00:00:00.000000','15:29:35.000000','09:49:02.000000',71,71,71),
-(72,'2022-07-30 00:00:00.000000','05:42:47.000000','19:26:10.000000',72,72,72),
-(73,'1999-05-08 00:00:00.000000','04:35:39.000000','18:14:47.000000',73,73,73),
-(74,'1997-07-17 00:00:00.000000','02:17:26.000000','13:58:19.000000',74,74,74),
-(75,'1972-03-25 00:00:00.000000','02:44:19.000000','05:46:04.000000',75,75,75),
-(76,'2017-08-23 00:00:00.000000','23:45:26.000000','07:22:22.000000',76,76,76),
-(77,'1970-06-18 00:00:00.000000','11:30:36.000000','21:59:30.000000',77,77,77),
-(78,'1985-07-08 00:00:00.000000','19:00:46.000000','10:58:56.000000',78,78,78),
-(79,'1983-11-24 00:00:00.000000','15:41:29.000000','07:30:29.000000',79,79,79),
-(80,'1975-07-24 00:00:00.000000','01:18:29.000000','10:06:39.000000',80,80,80),
-(81,'1979-04-08 00:00:00.000000','16:31:39.000000','03:17:10.000000',81,81,81),
-(82,'1987-01-07 00:00:00.000000','14:18:49.000000','19:25:21.000000',82,82,82),
-(83,'1970-07-25 00:00:00.000000','00:14:32.000000','17:35:51.000000',83,83,83),
-(84,'2004-02-07 00:00:00.000000','14:55:49.000000','23:05:22.000000',84,84,84),
-(85,'1993-05-13 00:00:00.000000','09:34:04.000000','13:40:42.000000',85,85,85),
-(86,'2010-08-05 00:00:00.000000','04:40:29.000000','01:57:10.000000',86,86,86),
-(87,'1979-06-19 00:00:00.000000','12:57:27.000000','06:07:31.000000',87,87,87),
-(88,'1999-08-01 00:00:00.000000','18:57:33.000000','21:56:14.000000',88,88,88),
-(89,'2007-05-26 00:00:00.000000','17:19:56.000000','07:26:58.000000',89,89,89),
-(90,'2020-04-17 00:00:00.000000','08:37:00.000000','17:11:24.000000',90,90,90),
-(91,'2007-03-18 00:00:00.000000','12:24:18.000000','13:42:27.000000',91,91,91),
-(92,'2012-03-31 00:00:00.000000','11:11:13.000000','21:10:18.000000',92,92,92),
-(93,'2008-09-27 00:00:00.000000','20:08:00.000000','06:18:47.000000',93,93,93),
-(94,'1990-01-21 00:00:00.000000','16:18:12.000000','19:25:03.000000',94,94,94),
-(95,'1973-03-01 00:00:00.000000','18:59:42.000000','22:23:27.000000',95,95,95),
-(96,'1981-12-25 00:00:00.000000','14:56:32.000000','12:08:32.000000',96,96,96),
-(97,'2017-11-09 00:00:00.000000','06:02:42.000000','10:35:12.000000',97,97,97),
-(98,'2001-09-29 00:00:00.000000','23:45:28.000000','23:03:42.000000',98,98,98),
-(99,'1989-05-02 00:00:00.000000','14:44:34.000000','08:32:12.000000',99,99,99),
-(100,'2012-11-20 00:00:00.000000','13:42:01.000000','00:24:01.000000',100,100,100);
-
-UNLOCK TABLES;
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('1', '2004-03-27 00:00:00.000000', '09:08:34.000000', '438350722', 'Melvina', 'McGlynn', 'Jenkins', '22:59:05.000000', '77fa67a22e914b97eccd36709d0e54650b61660b', 'okuneva.julius@example.net', '976.953.2033x42', 'terrill.tremblay@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('2', '2008-10-19 00:00:00.000000', '23:21:40.000000', '843453131', 'Solon', 'Schmidt', 'Runolfsson', '18:21:12.000000', 'fdc69041b301e8430082c5b6adfedba0709ec356', 'gonzalo.murazik@example.com', '181-201-2462', 'dannie.lind@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('3', '2018-06-28 00:00:00.000000', '00:07:29.000000', '764045603', 'Freddy', 'Okuneva', 'Leuschke', '16:21:41.000000', 'f3d0772f83c44a40f35e8cb0a37919b42e11e461', 'freichert@example.com', '(689)037-2540x5', 'trystan.gibson@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('4', '1989-04-02 00:00:00.000000', '11:36:10.000000', '972836429', 'Louisa', 'Herzog', 'Grimes', '22:19:11.000000', 'a440e5bd002a9a93333b1968d1b3c04658b75f82', 'brett91@example.net', '1-985-673-7613', 'ekling@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('5', '2009-10-14 00:00:00.000000', '06:51:47.000000', '372551484', 'Lucinda', 'Johns', 'Stracke', '19:33:06.000000', '1efaa56becec6e466e78175f81ca2029e6eb67d6', 'norval.raynor@example.com', '1-883-679-0998x', 'ybruen@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('6', '1991-07-18 00:00:00.000000', '01:34:46.000000', '803606172', 'Leanna', 'Fadel', 'Klocko', '19:17:09.000000', '8618a2abfde39ad2ca49d40b1a758302f075daef', 'hfunk@example.com', '613.318.1580', 'ykoepp@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('7', '1986-07-11 00:00:00.000000', '05:40:12.000000', '467121396', 'Winston', 'Zulauf', 'Bins', '01:00:50.000000', '44fdd8e3439c6bb4e450436ca6a145d94d7be758', 'waelchi.justice@example.net', '(769)809-8010', 'dayna89@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('8', '1990-11-15 00:00:00.000000', '18:45:16.000000', '377722350', 'Dolly', 'Jakubowski', 'Bednar', '14:58:55.000000', 'eb995c5d109db9ed2537bd3ed82d63d221c643ce', 'zdach@example.com', '477.324.8691x68', 'ilehner@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('9', '1980-12-16 00:00:00.000000', '17:17:10.000000', '803631879', 'Lauriane', 'Cronin', 'O\'Hara', '20:12:29.000000', 'db6e8ba88d455da3a549c24165b7a20bb01873b6', 'chance.gusikowski@example.org', '034-748-0036x18', 'ashlee.hauck@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('10', '2010-04-23 00:00:00.000000', '07:20:27.000000', '709837174', 'Malachi', 'Leffler', 'Gerhold', '07:47:01.000000', '8e5284dc0dc2f0b939f7a314011f58f09aedc271', 'talon99@example.net', '933-893-2274x13', 'lebsack.dakota@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('11', '2005-11-22 00:00:00.000000', '17:01:30.000000', '750337102', 'Jordon', 'Breitenberg', 'Mante', '03:01:43.000000', '6bf62274775c6096194442d598634817a7fcec60', 'pfeffer.jermey@example.com', '616-518-9163x99', 'clemens73@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('12', '2014-03-15 00:00:00.000000', '03:23:56.000000', '458890279', 'Lera', 'Swift', 'Daugherty', '01:44:36.000000', 'da058c8ace486a257e4960ce00964fc226ff86df', 'prohaska.adrain@example.net', '1-324-004-0711x', 'willa31@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('13', '1976-09-16 00:00:00.000000', '05:26:42.000000', '886606033', 'Willy', 'Weber', 'Gislason', '16:56:26.000000', '269408aa9a46e2cf910eab13186ba150c8b05495', 'mazie.kshlerin@example.org', '1-939-660-3541x', 'hauck.aracely@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('14', '2005-04-27 00:00:00.000000', '16:35:07.000000', '507631926', 'Samson', 'Murphy', 'Terry', '20:39:23.000000', 'c79303c351fa661c630c654013fea170bc7822f9', 'rutherford.luigi@example.net', '(133)701-2351x3', 'west.germaine@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('15', '2003-04-18 00:00:00.000000', '03:07:57.000000', '869304690', 'Oliver', 'Jerde', 'Gaylord', '05:07:43.000000', '85fffcf6584b9cc1b9621fa2caf178f15126c336', 'thiel.ernie@example.net', '156.145.7637', 'yfarrell@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('16', '1973-07-11 00:00:00.000000', '03:19:51.000000', '603161419', 'Ila', 'O\'Conner', 'Blanda', '17:29:20.000000', '0c5554a6d04f3d7af7fa4478ddc7eff81a8f314c', 'kub.leonard@example.org', '956-776-6726x06', 'grimes.sydney@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('17', '2005-02-12 00:00:00.000000', '07:53:07.000000', '250094914', 'Kristina', 'Predovic', 'Kozey', '07:24:03.000000', '98b86cf0539444dfe38db484e439142276772b9c', 'solon86@example.com', '(555)696-5697', 'qbayer@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('18', '1991-09-29 00:00:00.000000', '06:31:39.000000', '543681764', 'Floyd', 'Kunze', 'Anderson', '05:44:42.000000', '7fd4620208ab88671015bbab93b0dd3aeea3ad64', 'yemard@example.com', '544-708-4196x06', 'bud71@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('19', '2003-02-03 00:00:00.000000', '02:55:07.000000', '499970670', 'Mallory', 'Becker', 'Veum', '19:41:35.000000', 'c60dd5739eb6dbc58015365f81ccad584297360d', 'keenan24@example.com', '(628)010-3530x9', 'turcotte.benjamin@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('20', '2018-03-27 00:00:00.000000', '00:02:31.000000', '536439735', 'Brandi', 'Balistreri', 'Mayer', '18:58:46.000000', '749fd6c6ae64efd58c325aa20353d01e4dc5fc7c', 'rosenbaum.lemuel@example.net', '(843)423-8743x6', 'bbeier@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('21', '2000-04-02 00:00:00.000000', '15:00:26.000000', '833936166', 'Roy', 'Macejkovic', 'Crist', '03:44:41.000000', '8e03a6dd93190426c06253593fd53dede2b85082', 'prosacco.jaycee@example.com', '1-126-375-5810', 'sheidenreich@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('22', '2024-12-04 00:00:00.000000', '23:31:58.000000', '354521406', 'Sandra', 'Johns', 'Rosenbaum', '19:11:31.000000', 'bb6e0183614e9cb62f14d6dcef9d6cdd159bf979', 'ukovacek@example.com', '(930)499-7832x7', 'walker.halvorson@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('23', '2019-03-24 00:00:00.000000', '00:34:10.000000', '738451728', 'Kailee', 'Nicolas', 'Boehm', '13:46:49.000000', '15c574adf27382e593989be19328c17faf36f303', 'fmorar@example.net', '615-610-3455', 'emile07@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('24', '2001-06-18 00:00:00.000000', '12:32:27.000000', '562375275', 'Garth', 'Kirlin', 'Rogahn', '03:28:09.000000', '6f218e47147833a076b50c84a8536ff6495a39b6', 'iprice@example.com', '1-941-654-1545', 'dallas.skiles@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('25', '1971-07-23 00:00:00.000000', '13:13:51.000000', '142635702', 'Marcella', 'Ankunding', 'Koss', '01:10:25.000000', '1e24a3e9c6c240993f78c808a08de71abe3b5e07', 'mclaughlin.chasity@example.org', '174-894-9071x24', 'elmo79@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('26', '1975-03-07 00:00:00.000000', '02:15:37.000000', '316566117', 'Ray', 'Hills', 'Balistreri', '21:56:35.000000', '2045507f75d8791c939e707ef7e8ef8a0a6541b2', 'wkozey@example.org', '(280)863-0694x4', 'hiram64@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('27', '1974-08-14 00:00:00.000000', '04:47:40.000000', '894682769', 'Candelario', 'Cummings', 'Wiegand', '11:23:09.000000', '27a17a81d655cbc55f81626d592413a12c5e2e37', 'gerda.kihn@example.org', '455-017-9407', 'lenny.brakus@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('28', '2022-11-21 00:00:00.000000', '10:30:57.000000', '779395186', 'Elfrieda', 'Shields', 'Schneider', '08:39:33.000000', '1b1c73232e6ca167628a2bae2639e31c50688942', 'karli.king@example.com', '(922)609-8773', 'josh.roob@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('29', '1998-02-15 00:00:00.000000', '09:48:02.000000', '333841426', 'Jack', 'Wolff', 'Muller', '10:58:15.000000', 'bd5317000b7ed6ae1d2a9ef5fd78f6f68115bb6d', 'fwillms@example.org', '1-572-903-5555', 'pnienow@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('30', '1997-04-19 00:00:00.000000', '08:33:56.000000', '527033811', 'Sincere', 'Ritchie', 'Kassulke', '20:48:06.000000', '4cc8a48c412bf575916373f841e878d6e0063f9d', 'marquardt.marcelino@example.net', '(301)717-9171', 'sigmund83@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('31', '1979-07-08 00:00:00.000000', '04:19:38.000000', '351551264', 'Durward', 'Lemke', 'Williamson', '00:45:59.000000', '8df859fa1fd6f8877e97a68b46573a57c4ba34a7', 'arogahn@example.net', '1-284-247-2306', 'erika.ortiz@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('32', '1992-09-06 00:00:00.000000', '18:02:50.000000', '140399080', 'Tiana', 'Bahringer', 'Graham', '11:29:50.000000', '3da4a334aad952a4b56091c1b41219d783debbc5', 'alexandra83@example.com', '06835044286', 'kgrant@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('33', '2022-03-28 00:00:00.000000', '17:43:25.000000', '341215691', 'Hadley', 'King', 'Emmerich', '02:24:43.000000', 'bc349ff3e03c35e40a178c154f32bcd287b51fcb', 'kareem.cormier@example.org', '097-236-9272x44', 'stanford.deckow@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('34', '2014-03-31 00:00:00.000000', '12:46:45.000000', '712955440', 'Christa', 'Ratke', 'DuBuque', '06:11:19.000000', '7ab0f0b2613aad64585aa6617599a474edc7ba1a', 'nyundt@example.net', '+41(1)435416453', 'stracke.lilyan@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('35', '1971-08-17 00:00:00.000000', '10:34:45.000000', '450686057', 'Delia', 'Stokes', 'Kovacek', '16:03:37.000000', '2936e9e011ec13fdfaac3c5953149ee11a52fc2f', 'qpagac@example.net', '444-315-6450x57', 'heather.kassulke@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('36', '2004-03-12 00:00:00.000000', '16:10:20.000000', '179773992', 'Hazle', 'Ferry', 'Bahringer', '08:51:45.000000', 'c6936cbf7ffc98456f572b2c1de74dd1885bd892', 'granville.leffler@example.net', '(301)052-7935', 'moshe59@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('37', '1995-10-20 00:00:00.000000', '09:01:55.000000', '951419904', 'Eric', 'Feil', 'Medhurst', '06:11:40.000000', '5cb02fed7af4edb78648acb0f3a5436866295981', 'ldietrich@example.net', '+21(5)125267988', 'maverick.orn@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('38', '2023-01-01 00:00:00.000000', '22:37:34.000000', '698406158', 'Gladys', 'McGlynn', 'Moore', '09:39:22.000000', '8904f1317fbdf30ccdd0494285c39519da472fdd', 'julio07@example.com', '06158629752', 'destini.mckenzie@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('39', '1989-05-14 00:00:00.000000', '18:26:33.000000', '101219340', 'Jack', 'Wilkinson', 'Monahan', '18:44:21.000000', '8954385a3ce66e436131ce7ab927455d48832d0b', 'meggie.mills@example.net', '1-121-028-3243x', 'lorenz.barton@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('40', '2016-01-06 00:00:00.000000', '22:48:50.000000', '123061665', 'Alice', 'Wunsch', 'Goyette', '09:56:14.000000', '25393ab4211bd9652ec21e188fba427231eac90c', 'gorczany.kendra@example.org', '(144)813-7948x3', 'esteban60@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('41', '2005-12-10 00:00:00.000000', '02:48:25.000000', '321025150', 'Mylene', 'Goyette', 'Johnson', '23:00:53.000000', 'b7b58ef437fa9e07b384db3cf5da6ba1b87d312e', 'hilton93@example.net', '318-285-3645', 'tamia.johns@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('42', '1998-06-09 00:00:00.000000', '21:59:43.000000', '839920100', 'Shayne', 'Kuhlman', 'O\'Kon', '11:57:42.000000', '56b8dfe40266caf5d6a994d36d7c9be52e0ecb51', 'fschaefer@example.net', '(341)461-5806x6', 'loyce.considine@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('43', '2004-02-15 00:00:00.000000', '08:15:14.000000', '449340705', 'Nelle', 'Lindgren', 'Howe', '04:32:42.000000', '15954fd3ff747c1abea9d57ff7ec3c81959a6028', 'mina.kunde@example.com', '740-114-0038x94', 'nroberts@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('44', '2006-07-27 00:00:00.000000', '01:59:47.000000', '319710155', 'Dianna', 'Wunsch', 'Zboncak', '14:21:28.000000', '7baa6429ec817bbd8a7e32191640212c86a3154e', 'maurice.o\'keefe@example.com', '(862)824-0736', 'birdie49@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('45', '2006-08-07 00:00:00.000000', '03:39:42.000000', '402645218', 'Luella', 'Sporer', 'Walsh', '21:28:20.000000', '72280d6d558168fb6f00247e4e3f9cdee86f713b', 'orpha93@example.net', '898-815-4128', 'ctremblay@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('46', '1971-05-22 00:00:00.000000', '07:20:00.000000', '511134174', 'Audie', 'Dibbert', 'Schowalter', '06:50:48.000000', '45ce84765d4f72fb164969ac7aed1d3d506b330b', 'manuela.mcglynn@example.org', '342-792-0729x57', 'bjaskolski@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('47', '2005-11-15 00:00:00.000000', '13:10:44.000000', '668791087', 'Jevon', 'Abbott', 'Kozey', '02:15:38.000000', 'd6826a8e601e86ed7267f53107d5d086f716305f', 'ocie.bergnaum@example.org', '214.659.6024', 'mertz.merl@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('48', '1993-07-31 00:00:00.000000', '09:11:57.000000', '898399928', 'Nickolas', 'Stehr', 'Schultz', '07:21:02.000000', 'f2533d2b7a0fcd9d2ea3b9bd8aab8ad48a8f15fa', 'ashly58@example.com', '181-706-6824', 'conner.hills@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('49', '2003-05-17 00:00:00.000000', '20:54:47.000000', '991620238', 'Antonina', 'Ullrich', 'Schuppe', '02:12:13.000000', 'fd122665a602aa06a119769ed02aa5561489ad53', 'johanna75@example.com', '429.206.1329x15', 'janie50@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('50', '1991-10-04 00:00:00.000000', '00:41:47.000000', '645944210', 'Weston', 'Zieme', 'Collier', '07:27:48.000000', 'fac2b9d795a2c0555148b66161862391615c1f6f', 'alessandra.torphy@example.net', '762-789-2317x81', 'blick.marta@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('51', '1975-06-11 00:00:00.000000', '16:28:16.000000', '226431990', 'Isabel', 'Mitchell', 'Klein', '16:44:22.000000', 'e5d3a48beaa19b1d1578dd09519042a99999bb3b', 'seamus03@example.org', '224-436-1614x54', 'terry.danial@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('52', '1980-05-27 00:00:00.000000', '23:00:06.000000', '161821697', 'Zakary', 'Armstrong', 'McDermott', '06:40:54.000000', '18a6ff0a7fd39c83da1aa9cc33fc04c21e8c2341', 'dbarrows@example.com', '386.968.8845', 'kole.gaylord@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('53', '2017-07-11 00:00:00.000000', '03:38:05.000000', '365148756', 'Ward', 'King', 'Bode', '23:37:32.000000', 'a6d518043d02d90ebf0a8f36c70615a1e75a903f', 'oo\'reilly@example.org', '(900)241-4297', 'ykeeling@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('54', '1972-06-24 00:00:00.000000', '16:58:41.000000', '535779596', 'Kraig', 'Ruecker', 'Marquardt', '09:34:15.000000', 'da741f4595890ea85d9df4f10e2a9b51bab44b7a', 'emmerich.shemar@example.com', '+96(0)598787797', 'philip91@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('55', '1993-10-04 00:00:00.000000', '00:37:00.000000', '327413489', 'Ryan', 'Lind', 'Lowe', '20:47:14.000000', 'cd54c0783c35907113f4e9356868200b4aed73e9', 'crona.elsie@example.org', '(979)613-6305x3', 'ernser.blake@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('56', '2003-04-26 00:00:00.000000', '12:46:59.000000', '451453640', 'Hassan', 'Quigley', 'Walker', '07:17:32.000000', '3bdb6c235f0a4dca15a2a337433ee6d18d4014b0', 'keebler.janiya@example.net', '432.128.7737x85', 'dabshire@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('57', '1988-01-24 00:00:00.000000', '04:46:16.000000', '670656884', 'Diana', 'Auer', 'Pacocha', '19:43:51.000000', '4c843439301f13121fe5cc22e8dbd394c7e7ac58', 'deanna.hahn@example.net', '1-423-629-3554x', 'ehagenes@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('58', '1994-02-23 00:00:00.000000', '04:00:40.000000', '682046652', 'Claudie', 'Stoltenberg', 'Stracke', '14:14:17.000000', 'f64c0acd1d0bcca148d6df5e1fb6d2bbc2edf63c', 'santa.kuphal@example.net', '153-500-9849x75', 'jkemmer@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('59', '1989-07-05 00:00:00.000000', '02:26:01.000000', '619022369', 'Mark', 'Keeling', 'Ritchie', '19:17:26.000000', '2744361353bf7675a88e214725f0ac057640e0d0', 'afeeney@example.com', '008.047.8822x15', 'franecki.marcelle@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('60', '1980-11-07 00:00:00.000000', '13:01:50.000000', '221781392', 'Emile', 'Schneider', 'Stroman', '12:31:08.000000', '347c0f764a9534acda67305d3d5e86356e98c6e1', 'bernier.cali@example.com', '408-005-9608', 'jacobi.sandra@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('61', '1986-02-22 00:00:00.000000', '17:48:17.000000', '974319749', 'Lisandro', 'Gottlieb', 'Anderson', '03:08:25.000000', '5f276e1653d22cf20f1a613ebbed1e4c1e50bec8', 'gretchen.parisian@example.org', '09819107297', 'pagac.judson@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('62', '1979-04-02 00:00:00.000000', '00:12:00.000000', '824532783', 'Titus', 'Hessel', 'Kulas', '21:27:22.000000', '32a102c5511f65fb52d7df1f89a56f6bf4322b71', 'leonie.cummings@example.net', '02717965673', 'omer.lesch@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('63', '2006-06-07 00:00:00.000000', '12:42:23.000000', '947167013', 'Damaris', 'McKenzie', 'Halvorson', '19:58:37.000000', '6185c20d1ac7871bd52efb7a0f23f77a2562dcae', 'fern29@example.net', '1-112-644-0943x', 'mkohler@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('64', '2022-03-12 00:00:00.000000', '22:47:03.000000', '993137636', 'Mary', 'Berge', 'Keebler', '00:27:25.000000', '241663df1b1956e6c14e55355c12ef61aebefafb', 'cyril87@example.com', '522.856.9810x53', 'watson26@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('65', '1980-07-22 00:00:00.000000', '10:27:13.000000', '732268959', 'Stephania', 'Walter', 'Tromp', '19:22:01.000000', '4ae512a1731964912080d86898fc12b0d6de37f5', 'jadon.kozey@example.net', '1-603-891-1213', 'leda02@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('66', '1987-11-29 00:00:00.000000', '13:14:06.000000', '645334132', 'Toby', 'Tremblay', 'Blanda', '17:43:25.000000', '1f63f13df4b0ed871f2c9b9828b3fa163c8452cc', 'jakayla81@example.com', '(927)982-7329x4', 'williamson.norma@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('67', '1998-02-26 00:00:00.000000', '17:58:07.000000', '159699612', 'Francisco', 'King', 'Doyle', '03:05:14.000000', 'fefb8710b369aab6f3a49ce68b40451cd7229460', 'kenneth87@example.org', '(140)781-6123', 'shane@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('68', '1974-06-06 00:00:00.000000', '09:53:43.000000', '547629822', 'Magdalen', 'Nikolaus', 'Douglas', '03:23:28.000000', '9896e909ec03dcee3399e5f5df17f35fbe261a2c', 'beatty.lela@example.com', '154.126.2392', 'ihomenick@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('69', '1985-07-27 00:00:00.000000', '19:28:23.000000', '767334643', 'Delia', 'Zieme', 'Labadie', '12:04:34.000000', '0a97e6e80363df3b51d20b3ac6383b669fb4b02e', 'block.bernice@example.net', '909.775.5169x73', 'lleuschke@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('70', '1992-07-26 00:00:00.000000', '10:01:12.000000', '703466227', 'Rosa', 'Pouros', 'Ryan', '06:47:33.000000', '532ba1becfb21e6bff6928606696346f428c8406', 'nova.hermann@example.net', '(000)743-1774x2', 'tillman.ida@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('71', '1995-12-21 00:00:00.000000', '15:19:04.000000', '574957564', 'Cloyd', 'Ullrich', 'Russel', '18:24:44.000000', 'd930eaed8ca0c180aa90a3778d40e628c90da9f8', 'satterfield.obie@example.com', '1-694-802-5608x', 'vivien.kuphal@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('72', '1973-08-15 00:00:00.000000', '08:58:58.000000', '745376832', 'Courtney', 'Bergnaum', 'Boyer', '06:36:05.000000', 'b48bfbe85f4054e24790d4de445fa6f8dc9b816a', 'mccullough.kelly@example.org', '527-838-3468', 'geovanny.haag@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('73', '1992-05-11 00:00:00.000000', '01:40:52.000000', '663173121', 'Weldon', 'Emard', 'Casper', '06:35:14.000000', 'ce2567bf13b221899b83b5daff7d217b0363255e', 'ariel30@example.net', '790-363-7606', 'daron98@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('74', '1987-05-23 00:00:00.000000', '18:09:25.000000', '992460595', 'Elian', 'Mohr', 'Schaden', '00:14:44.000000', '8f936d804511113661d508f977c46f3c67307894', 'zemlak.aisha@example.com', '598.384.2048', 'barrows.bernadine@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('75', '1973-07-22 00:00:00.000000', '09:41:44.000000', '892288638', 'Brady', 'Herzog', 'Davis', '01:27:00.000000', 'fa78cd5e567c32c543122b1a28880c56dd5923ce', 'wolff.ricky@example.net', '1-428-472-7359', 'marvin.elvis@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('76', '1986-07-24 00:00:00.000000', '19:41:42.000000', '861033780', 'Casimir', 'Waters', 'Mosciski', '23:03:12.000000', 'f4be276420a63e3dce285507e72491afa8e2292e', 'maria87@example.org', '416-086-3544', 'hegmann.efrain@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('77', '2011-04-18 00:00:00.000000', '19:47:10.000000', '453217732', 'Melba', 'Harris', 'Krajcik', '23:45:30.000000', 'd0ab0eb11fb3cfc6dabd089b627c407c8f0c9b03', 'renner.alberta@example.com', '+03(6)857826239', 'aurelie.gutmann@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('78', '2002-01-19 00:00:00.000000', '05:23:09.000000', '891223774', 'Roscoe', 'Swaniawski', 'Hane', '05:04:34.000000', '9eebac41636d55c12067e9520cbcb6ed172321d7', 'rebecca.barton@example.com', '782.556.2824x81', 'moriah.smitham@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('79', '1994-02-18 00:00:00.000000', '18:17:40.000000', '823201845', 'Omari', 'Carter', 'Effertz', '13:14:00.000000', '723cc5dc0da401c84a4ae802a0088d24cb7985a4', 'aileen.dickinson@example.org', '+35(8)651652154', 'kobe.wintheiser@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('80', '1988-04-10 00:00:00.000000', '12:42:17.000000', '197045512', 'Donavon', 'Dooley', 'Metz', '01:39:05.000000', '083e86690895fce7bdfa8bb850537e55f161a3ce', 'justine43@example.com', '+79(5)355015659', 'stracke.odessa@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('81', '1985-05-01 00:00:00.000000', '03:22:21.000000', '329236499', 'Felicity', 'Heidenreich', 'Brakus', '18:44:19.000000', 'b965e64599a301e675b50786ded2b49029bdc8da', 'clara.howe@example.org', '495.756.8463x03', 'co\'keefe@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('82', '1991-06-16 00:00:00.000000', '16:17:52.000000', '654994554', 'Annalise', 'Robel', 'Schumm', '07:40:08.000000', '722d6aa83a915d99fe957861dd394a9fa9ed78d4', 'johann45@example.com', '109.579.0346', 'dickens.adriel@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('83', '1973-12-21 00:00:00.000000', '13:22:27.000000', '659070682', 'Freddy', 'Christiansen', 'Jakubowski', '09:32:07.000000', '9d281cea2f009eaabbf1893804c681fa7c66d450', 'elynch@example.org', '1-105-181-8083x', 'orn.annie@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('84', '1971-05-08 00:00:00.000000', '09:42:29.000000', '129212062', 'Demario', 'Schaden', 'Ullrich', '05:17:13.000000', 'b5e8a39fa01565ccdd747251fdc94cf42a1ac10a', 'elmo67@example.com', '157-805-1736', 'carlie45@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('85', '1982-01-06 00:00:00.000000', '14:05:46.000000', '775963575', 'Laverne', 'Nienow', 'Osinski', '22:12:54.000000', '9da7250401be98fa1cb751d835f02d31f023ef70', 'miller.henderson@example.net', '(254)946-7903', 'maddison90@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('86', '1978-06-11 00:00:00.000000', '09:09:25.000000', '842090386', 'Noah', 'Ledner', 'Jaskolski', '17:45:00.000000', 'd41e5278d382fe0adcec2fbf72538ce1aa0d5a73', 'giuseppe54@example.net', '505-774-1144x18', 'juwan.spinka@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('87', '1980-08-13 00:00:00.000000', '12:27:24.000000', '131357069', 'Javon', 'Hettinger', 'Paucek', '21:05:33.000000', '8a5da343ea7b97b9a1d841c6a37690437eca6f62', 'tfeil@example.com', '429-070-3684x62', 'gerlach.hoyt@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('88', '2005-04-12 00:00:00.000000', '03:49:38.000000', '499437562', 'Zoe', 'Doyle', 'Bartell', '13:07:36.000000', 'ddcfb8398548393cb0c17afd145b3850f6c64d27', 'cornelius37@example.net', '07953510682', 'manuel98@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('89', '2000-08-09 00:00:00.000000', '23:00:14.000000', '432186292', 'Fern', 'Yost', 'Mann', '11:57:49.000000', 'd94dc3ff60b59973ca1821341a2dc0604cc1026c', 'xpadberg@example.net', '(950)079-3893x9', 'minnie32@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('90', '2010-04-30 00:00:00.000000', '21:51:30.000000', '112378694', 'Duncan', 'Lang', 'Funk', '17:56:01.000000', '632246c5900f3ffb4b09c2095d7ac71e9badb92a', 'leuschke.una@example.net', '05721348753', 'stiedemann.kelvin@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('91', '2017-12-11 00:00:00.000000', '10:44:41.000000', '660698587', 'Ruby', 'Price', 'Cole', '10:04:49.000000', '4a8f74209833a5ac6fa773424a3c834d276eead1', 'elza.ziemann@example.com', '992.796.6010', 'vernie.jacobi@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('92', '1989-09-07 00:00:00.000000', '15:31:35.000000', '832155963', 'Newton', 'Jerde', 'Hettinger', '08:46:04.000000', '6a29df6027994a6dbc9a58b766952edb328bcb00', 'marjolaine.effertz@example.net', '+56(1)187941406', 'muller.dovie@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('93', '1994-01-05 00:00:00.000000', '14:22:14.000000', '118810193', 'Marjolaine', 'Boyle', 'King', '08:22:53.000000', '926c639e05f7d6ee6877c431fc541da356664466', 'xrice@example.org', '753-826-4815x12', 'cromaguera@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('94', '1998-05-24 00:00:00.000000', '08:09:40.000000', '567763315', 'Madyson', 'Mayert', 'Kuphal', '23:10:11.000000', 'cedab01101c330c9f9c6b365a8324ddbe14363af', 'kuvalis.dortha@example.com', '1-168-073-4640x', 'gibson.ena@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('95', '2013-03-07 00:00:00.000000', '14:45:14.000000', '468463698', 'Nora', 'Lang', 'Bruen', '10:46:21.000000', 'e9e07984ffef4290a9fb23c99c5e3e1bde94e0e4', 'domingo.pfannerstill@example.org', '559-174-3572x39', 'nschamberger@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('96', '2009-10-24 00:00:00.000000', '12:03:42.000000', '904085604', 'Natalie', 'Funk', 'Spinka', '19:36:08.000000', '9d49ae9d77efce7bfbd4eda24bf22ed4d58a0738', 'mbartell@example.com', '518-136-6900x11', 'isabell.brakus@example.org');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('97', '1991-05-21 00:00:00.000000', '07:41:59.000000', '132146136', 'Darion', 'Anderson', 'Wisoky', '13:59:10.000000', 'ec560b86bb9603c76768f4a3c6a778181ea3d28d', 'kilback.elsa@example.org', '(801)573-1513x9', 'smith.rusty@example.com');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('98', '2001-06-15 00:00:00.000000', '04:11:24.000000', '119209538', 'Terence', 'Sauer', 'Runte', '09:15:47.000000', '69fcef0fe764463aa9369e31d51a5d3e19477f65', 'naomie36@example.net', '331.918.4635x51', 'zhaag@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('99', '2007-04-07 00:00:00.000000', '19:09:18.000000', '999102225', 'Adam', 'Kulas', 'Anderson', '17:09:56.000000', '91aec938f21f70c9551daa2ee265293740e503ad', 'iblick@example.net', '326.784.3819', 'alessandro.roob@example.net');
+INSERT INTO `admins` (`id`, `birth_date`, `close`, `eng`, `first_name`, `last_name`, `middle_name`, `opens`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('100', '2013-12-30 00:00:00.000000', '17:54:28.000000', '293912991', 'Brent', 'Strosin', 'Ward', '18:11:07.000000', 'd9359144649ad96adbc90797049b8efb708cf57e', 'emelia90@example.org', '523-378-8844x63', 'loren.mayer@example.org');
 
 
-LOCK TABLES `grades` WRITE;
+#
+# TABLE STRUCTURE FOR: apartments
+#
 
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (1, '7366', 5, 1, 67, 9, 61);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (2, '453', 4, 1, 12, 90, 54);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (3, '13', 2, 0, 74, 2, 39);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (4, '2', 2, 0, 41, 19, 8);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (5, '70', 2, 2, 21, 15, 92);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (6, '867', 5, 1, 38, 28, 33);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (7, '76', 5, 1, 17, 100, 74);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (8, '8534', 3, 0, 11, 75, 8);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (9, '2941', 5, 1, 67, 12, 89);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (10, '0623', 4, 2, 59, 4, 53);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (11, '71', 5, 1, 64, 98, 92);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (12, '26572', 4, 1, 70, 46, 51);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (13, '778', 6, 2, 39, 19, 85);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (14, '89', 3, 1, 16, 33, 83);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (15, '18877', 4, 1, 1, 4, 95);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (16, '836', 4, 2, 34,  88, 16);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (17, '5076', 3, 2, 80,  69, 93);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (18, '766', 2, 1, 70, 21, 27);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (19, '006', 4, 0, 22, 93, 50);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (20, '96', 4, 2, 70, 43, 78);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (21, '9', 3, 0, 15, 40, 56);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (22, '3766', 4, 1, 11, 37, 1);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (23, '1', 6, 2,  45, 19, 89);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (24, '58', 2, 0,  54, 53, 76);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (25, '101', 6, 2,  40, 84, 54);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (26, '944', 2, 0,  97, 22, 87);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (27, '890', 2, 2,  92, 39, 76);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (28, '715', 5, 1,  80, 64, 40);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (29, '102', 2, 0,  33, 61, 22);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (30, '6802', 5, 0,  77, 67, 1);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (31, '202', 6, 1,  98, 97, 86);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (32, '85', 2, 2,  90, 17, 32);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (33, '685', 4, 2,  9, 22, 79);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (34, '3584', 4, 1,  39, 17, 84);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (35, '8', 3, 1, 53,  36, 36);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (36, '853', 6, 2,  21, 55, 82);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (37, '8265', 6, 2,  75, 55, 69);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (38, '5804', 4, 0,  71, 98, 46);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (39, '0601', 3, 0,  85, 41, 78);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (40, '757', 5, 1,  72, 9, 11);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (41, '203', 2, 0,  7, 50, 75);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (42, '120', 6, 2, 62, 7, 45);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (43, '00', 6, 2,  71, 87, 45);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (44, '25', 4, 0,  81, 46, 76);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (45, '9', 3, 0, 61, 62, 35);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (46, '103', 4, 1, 51, 98, 49);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (47, '2674', 2, 2, 60, 25, 44);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (48, '787', 4, 1,  10, 28, 66);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (49, '7656', 6, 2, 37, 88, 9);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (50, '7', 5, 2, 10,  74, 58);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (51, '283', 6, 0,  38, 28, 96);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (52, '676', 4, 1,  26, 43, 57);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (53, '3', 2, 2, 20,  47, 25);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (54, '274', 5, 2, 26,  74, 59);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (55, '9470', 5, 2,  77, 14, 53);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (56, '0', 5, 1, 38,  83, 20);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (57, '5394', 6, 1,  25, 51, 59);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (58, '488', 4, 2,  28, 1, 33);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (59, '5286', 4, 1,  90, 12, 94);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (60, '5888', 4, 0,  95, 26, 68);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (61, '699', 6, 1, 86, 96, 23);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (62, '067', 5, 1,  66, 88, 15);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (63, '40', 2, 2,  40, 62, 32);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (64, '4', 4, 0, 47,  37, 1);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (65, '604', 4, 0,  3, 73, 77);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (66, '3', 6, 1, 34,  79, 54);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (67, '9666', 2, 1,  46, 25, 85);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (68, '2798', 2, 0,  25, 77, 88);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (69, '9370', 5, 1,  37, 70, 87);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (70, '3086', 3, 2,  44, 39, 93);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (71, '423', 6, 1,  33, 78, 36);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (72, '248', 2, 0,  1, 79, 88);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (73, '174', 4, 2,  15, 41, 51);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (74, '8', 5, 0, 2,  61, 25);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (75, '5179', 5, 2,  36, 98, 21);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (76, '351', 6, 2,  37, 3, 9);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (77, '34', 3, 2,  13, 100, 82);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (78, '467', 4,  2, 79, 21, 89);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (79, '7183', 6,  1, 14, 64, 83);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (80, '47', 4, 1,  6, 91, 60);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (81, '0', 5, 1,  14, 62, 40);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (82, '0424', 2, 0,  95, 58, 25);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (83, '5707', 6, 2,  2, 20, 5);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (84, '429', 2, 0,  56, 35, 65);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (85, '657', 4, 0,  15, 98, 49);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (86, '2186', 2, 1,  81, 80, 15);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (87, '932', 4, 2, 2,  35, 69);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (88, '5', 6, 2, 11,  1, 71);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (89, '184', 5, 1,  97, 74, 28);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (90, '6183', 6, 2,  13, 47, 18);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (91, '255', 2, 2,  86, 1, 78);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (92, '10', 4, 2,  59, 45, 50);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (93, '09', 3, 1, 11, 25, 52);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (94, '14', 3, 0,  4, 89, 9);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (95, '0123', 5, 2, 63, 2, 86);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (96, '68', 4, 1, 55, 76, 22);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (97, '114', 5, 0,  50, 42, 64);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (98, '450', 3, 0, 39, 83, 93);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (99, '99', 6, 0, 3, 91, 57);
-insert into `grades` (id, exam_protocol_number, grade, session_type, student_id, subject_id, teacher_id) values (100, '5940', 2, 0,  76, 57, 52);
+DROP TABLE IF EXISTS `apartments`;
 
-UNLOCK TABLES;
+CREATE TABLE `apartments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `block` bigint(20) NOT NULL,
+  `capacity` tinyint(4) NOT NULL,
+  `floor` smallint(6) NOT NULL,
+  `number` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('1', '89', 3, 9, 41);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('2', '100', 3, 3, 32);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('3', '42', 4, 6, 16);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('4', '33', 3, 5, 21);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('5', '73', 2, 9, 24);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('6', '65', 2, 9, 22);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('7', '61', 3, 7, 41);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('8', '25', 4, 6, 19);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('9', '15', 2, 10, 32);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('10', '66', 3, 6, 34);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('11', '12', 4, 5, 32);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('12', '12', 3, 9, 48);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('13', '84', 2, 7, 43);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('14', '24', 2, 6, 25);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('15', '78', 2, 3, 25);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('16', '55', 3, 10, 33);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('17', '57', 2, 6, 47);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('18', '68', 3, 4, 5);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('19', '26', 2, 4, 12);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('20', '88', 4, 4, 47);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('21', '6', 3, 9, 33);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('22', '38', 4, 9, 3);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('23', '39', 4, 6, 8);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('24', '3', 4, 9, 23);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('25', '71', 2, 10, 28);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('26', '36', 3, 7, 5);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('27', '64', 4, 7, 44);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('28', '92', 2, 1, 9);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('29', '46', 4, 8, 17);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('30', '33', 2, 3, 45);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('31', '56', 4, 5, 46);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('32', '24', 2, 4, 12);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('33', '73', 2, 8, 2);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('34', '85', 4, 9, 42);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('35', '49', 2, 3, 49);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('36', '90', 3, 7, 29);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('37', '32', 3, 2, 28);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('38', '38', 3, 4, 18);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('39', '41', 3, 8, 40);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('40', '92', 2, 7, 10);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('41', '33', 3, 7, 12);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('42', '33', 4, 8, 33);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('43', '93', 2, 1, 7);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('44', '13', 3, 10, 21);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('45', '10', 3, 7, 39);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('46', '84', 3, 7, 13);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('47', '63', 4, 10, 10);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('48', '85', 4, 7, 44);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('49', '89', 2, 2, 38);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('50', '20', 4, 9, 26);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('51', '15', 2, 1, 48);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('52', '42', 3, 3, 22);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('53', '64', 3, 6, 49);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('54', '89', 2, 5, 28);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('55', '56', 4, 10, 15);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('56', '83', 2, 10, 10);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('57', '33', 4, 3, 26);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('58', '29', 4, 1, 15);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('59', '39', 3, 7, 11);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('60', '78', 3, 6, 38);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('61', '31', 3, 7, 27);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('62', '19', 3, 2, 11);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('63', '94', 3, 8, 45);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('64', '63', 4, 10, 39);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('65', '75', 2, 7, 43);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('66', '93', 4, 4, 25);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('67', '86', 3, 1, 7);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('68', '16', 3, 3, 10);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('69', '78', 2, 10, 8);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('70', '57', 3, 6, 12);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('71', '81', 3, 10, 11);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('72', '14', 4, 8, 10);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('73', '47', 3, 6, 22);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('74', '75', 3, 3, 49);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('75', '92', 2, 4, 7);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('76', '79', 3, 1, 20);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('77', '58', 3, 1, 41);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('78', '52', 2, 2, 23);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('79', '58', 2, 4, 6);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('80', '96', 4, 5, 44);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('81', '100', 3, 6, 5);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('82', '4', 4, 7, 42);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('83', '100', 2, 2, 37);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('84', '11', 4, 6, 50);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('85', '71', 3, 8, 1);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('86', '28', 2, 10, 23);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('87', '92', 3, 2, 24);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('88', '30', 2, 1, 45);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('89', '87', 2, 4, 25);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('90', '21', 3, 6, 50);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('91', '65', 3, 4, 11);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('92', '56', 2, 10, 35);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('93', '50', 2, 7, 45);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('94', '85', 2, 2, 28);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('95', '56', 2, 6, 40);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('96', '85', 2, 8, 7);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('97', '61', 2, 5, 34);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('98', '2', 4, 7, 48);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('99', '23', 4, 8, 26);
+INSERT INTO `apartments` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('100', '21', 3, 10, 47);
+
+#
+# TABLE STRUCTURE FOR: dormitory_assignments
+#
+
+DROP TABLE IF EXISTS `dormitory_assignments`;
+
+CREATE TABLE `dormitory_assignments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `date` datetime(6) DEFAULT NULL,
+  `is_living` bit(1) DEFAULT NULL,
+  `apartment_id` bigint(20) NOT NULL,
+  `student_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK3lpx3xw0imycxuks4rqk6kdfj` (`apartment_id`),
+  KEY `FKn3e6j3swsuw6cginyrd0y0w4g` (`student_id`),
+  CONSTRAINT `FK3lpx3xw0imycxuks4rqk6kdfj` FOREIGN KEY (`apartment_id`) REFERENCES `apartments` (`id`),
+  CONSTRAINT `FKn3e6j3swsuw6cginyrd0y0w4g` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('1', '1998-11-05 00:00:00.000000', '0', '1', '1');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('2', '1976-12-31 00:00:00.000000', '0', '2', '2');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('3', '2008-09-08 00:00:00.000000', '1', '3', '3');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('4', '2020-05-31 00:00:00.000000', '0', '4', '4');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('5', '1985-05-01 00:00:00.000000', '0', '5', '5');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('6', '2015-10-10 00:00:00.000000', '0', '6', '6');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('7', '2020-09-17 00:00:00.000000', '0', '7', '7');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('8', '1986-10-14 00:00:00.000000', '1', '8', '8');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('9', '1974-10-17 00:00:00.000000', '0', '9', '9');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('10', '1971-06-24 00:00:00.000000', '1', '10', '10');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('11', '2002-08-04 00:00:00.000000', '0', '11', '11');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('12', '1996-07-13 00:00:00.000000', '1', '12', '12');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('13', '1972-12-27 00:00:00.000000', '1', '13', '13');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('14', '1991-02-18 00:00:00.000000', '0', '14', '14');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('15', '2007-06-30 00:00:00.000000', '1', '15', '15');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('16', '1977-12-19 00:00:00.000000', '0', '16', '16');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('17', '2010-07-18 00:00:00.000000', '0', '17', '17');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('18', '1984-06-28 00:00:00.000000', '1', '18', '18');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('19', '1979-07-07 00:00:00.000000', '1', '19', '19');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('20', '1992-05-14 00:00:00.000000', '1', '20', '20');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('21', '1985-02-02 00:00:00.000000', '0', '21', '21');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('22', '1987-05-29 00:00:00.000000', '1', '22', '22');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('23', '2002-09-08 00:00:00.000000', '0', '23', '23');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('24', '2016-08-13 00:00:00.000000', '0', '24', '24');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('25', '2016-01-06 00:00:00.000000', '0', '25', '25');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('26', '1980-01-12 00:00:00.000000', '1', '26', '26');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('27', '2019-04-23 00:00:00.000000', '1', '27', '27');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('28', '1997-11-09 00:00:00.000000', '0', '28', '28');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('29', '2001-04-11 00:00:00.000000', '1', '29', '29');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('30', '1993-05-20 00:00:00.000000', '0', '30', '30');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('31', '1988-05-30 00:00:00.000000', '1', '31', '31');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('32', '2015-10-18 00:00:00.000000', '0', '32', '32');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('33', '1988-11-17 00:00:00.000000', '1', '33', '33');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('34', '2002-02-07 00:00:00.000000', '1', '34', '34');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('35', '2009-04-30 00:00:00.000000', '1', '35', '35');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('36', '2009-03-24 00:00:00.000000', '1', '36', '36');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('37', '1990-02-17 00:00:00.000000', '1', '37', '37');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('38', '1993-10-08 00:00:00.000000', '0', '38', '38');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('39', '1986-10-07 00:00:00.000000', '1', '39', '39');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('40', '2003-09-15 00:00:00.000000', '0', '40', '40');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('41', '2004-01-03 00:00:00.000000', '0', '41', '41');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('42', '1973-03-22 00:00:00.000000', '0', '42', '42');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('43', '2012-11-26 00:00:00.000000', '1', '43', '43');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('44', '2013-12-27 00:00:00.000000', '0', '44', '44');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('45', '2018-11-30 00:00:00.000000', '0', '45', '45');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('46', '1987-09-03 00:00:00.000000', '1', '46', '46');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('47', '1999-05-30 00:00:00.000000', '0', '47', '47');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('48', '1982-09-10 00:00:00.000000', '0', '48', '48');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('49', '2014-07-14 00:00:00.000000', '0', '49', '49');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('50', '2013-05-06 00:00:00.000000', '0', '50', '50');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('51', '2019-12-01 00:00:00.000000', '1', '51', '51');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('52', '1997-03-04 00:00:00.000000', '0', '52', '52');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('53', '1999-02-01 00:00:00.000000', '1', '53', '53');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('54', '1971-01-06 00:00:00.000000', '0', '54', '54');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('55', '2014-12-30 00:00:00.000000', '0', '55', '55');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('56', '2004-09-11 00:00:00.000000', '1', '56', '56');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('57', '1975-08-11 00:00:00.000000', '0', '57', '57');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('58', '1977-01-24 00:00:00.000000', '1', '58', '58');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('59', '1982-05-22 00:00:00.000000', '1', '59', '59');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('60', '2016-01-22 00:00:00.000000', '0', '60', '60');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('61', '1990-04-27 00:00:00.000000', '1', '61', '61');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('62', '2013-12-16 00:00:00.000000', '1', '62', '62');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('63', '1978-06-18 00:00:00.000000', '1', '63', '63');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('64', '1987-09-22 00:00:00.000000', '0', '64', '64');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('65', '2007-11-27 00:00:00.000000', '0', '65', '65');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('66', '2004-12-25 00:00:00.000000', '1', '66', '66');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('67', '2003-04-30 00:00:00.000000', '1', '67', '67');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('68', '2010-04-28 00:00:00.000000', '1', '68', '68');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('69', '1971-01-12 00:00:00.000000', '0', '69', '69');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('70', '1976-08-23 00:00:00.000000', '0', '70', '70');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('71', '2024-08-16 00:00:00.000000', '0', '71', '71');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('72', '2020-09-21 00:00:00.000000', '0', '72', '72');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('73', '1987-12-31 00:00:00.000000', '1', '73', '73');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('74', '2010-09-01 00:00:00.000000', '0', '74', '74');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('75', '1989-11-14 00:00:00.000000', '1', '75', '75');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('76', '2010-03-16 00:00:00.000000', '0', '76', '76');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('77', '1977-11-04 00:00:00.000000', '0', '77', '77');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('78', '2020-01-06 00:00:00.000000', '1', '78', '78');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('79', '1992-06-29 00:00:00.000000', '1', '79', '79');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('80', '2010-05-29 00:00:00.000000', '0', '80', '80');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('81', '1978-04-28 00:00:00.000000', '0', '81', '81');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('82', '1991-05-07 00:00:00.000000', '0', '82', '82');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('83', '2013-08-21 00:00:00.000000', '1', '83', '83');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('84', '2004-07-24 00:00:00.000000', '1', '84', '84');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('85', '1981-09-06 00:00:00.000000', '1', '85', '85');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('86', '1995-05-25 00:00:00.000000', '1', '86', '86');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('87', '1971-09-04 00:00:00.000000', '0', '87', '87');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('88', '1989-03-19 00:00:00.000000', '0', '88', '88');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('89', '1992-11-04 00:00:00.000000', '0', '89', '89');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('90', '1985-08-10 00:00:00.000000', '0', '90', '90');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('91', '1980-12-16 00:00:00.000000', '0', '91', '91');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('92', '1987-12-24 00:00:00.000000', '1', '92', '92');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('93', '2018-11-10 00:00:00.000000', '0', '93', '93');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('94', '1982-06-28 00:00:00.000000', '0', '94', '94');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('95', '2003-04-28 00:00:00.000000', '1', '95', '95');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('96', '1977-12-08 00:00:00.000000', '0', '96', '96');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('97', '2023-03-28 00:00:00.000000', '0', '97', '97');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('98', '1977-02-20 00:00:00.000000', '0', '98', '98');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('99', '2007-05-06 00:00:00.000000', '1', '99', '99');
+INSERT INTO `dormitory_assignments` (`id`, `date`, `is_living`, `apartment_id`, `student_id`) VALUES ('100', '2018-04-20 00:00:00.000000', '1', '100', '100');
 
 
-LOCK TABLES `health_insurance_payments` WRITE;
+#
+# TABLE STRUCTURE FOR: exams
+#
 
-INSERT INTO `health_insurance_payments` VALUES
-(1,3033344.55,'1979-10-30 00:00:00.000000','1987-05-05 00:00:00.000000',1),
-(2,18050940.21,'1979-12-22 00:00:00.000000','2013-04-12 00:00:00.000000',6),
-(3,0.00,'2019-04-06 00:00:00.000000','2014-09-13 00:00:00.000000',1),
-(4,1877978.16,'2021-04-10 00:00:00.000000','2024-05-27 00:00:00.000000',6),
-(5,6.74,'2009-08-12 00:00:00.000000','1978-08-01 00:00:00.000000',1),
-(6,14073327.74,'2004-10-22 00:00:00.000000','1990-01-22 00:00:00.000000',6),
-(7,3.11,'2020-02-11 00:00:00.000000','1993-01-08 00:00:00.000000',1),
-(8,3.00,'1978-03-28 00:00:00.000000','2015-04-27 00:00:00.000000',6),
-(9,0.91,'2000-07-12 00:00:00.000000','1979-09-23 00:00:00.000000',1),
-(10,466.37,'1976-11-01 00:00:00.000000','2018-10-07 00:00:00.000000',6),
-(11,35376.14,'1989-06-25 00:00:00.000000','2012-09-06 00:00:00.000000',1),
-(12,1466.46,'1997-02-21 00:00:00.000000','2020-03-14 00:00:00.000000',6),
-(13,28.33,'2002-06-23 00:00:00.000000','1992-11-02 00:00:00.000000',1),
-(14,218576095.00,'1978-07-01 00:00:00.000000','1984-12-18 00:00:00.000000',6),
-(15,23.36,'1971-09-25 00:00:00.000000','2022-03-03 00:00:00.000000',1),
-(16,7779.40,'1977-05-22 00:00:00.000000','2023-10-20 00:00:00.000000',6),
-(17,146.52,'1998-11-28 00:00:00.000000','2016-01-22 00:00:00.000000',1),
-(18,33.73,'1986-08-23 00:00:00.000000','2013-07-14 00:00:00.000000',6),
-(19,63821.45,'2007-06-07 00:00:00.000000','1981-03-10 00:00:00.000000',1),
-(20,42549.20,'1971-07-02 00:00:00.000000','2019-09-18 00:00:00.000000',6),
-(21,701146376.53,'1972-02-01 00:00:00.000000','1990-01-09 00:00:00.000000',1),
-(22,31.54,'1980-12-13 00:00:00.000000','1994-03-02 00:00:00.000000',6),
-(23,0.00,'1972-04-06 00:00:00.000000','1997-03-13 00:00:00.000000',1),
-(24,0.00,'1995-02-06 00:00:00.000000','2018-08-18 00:00:00.000000',6),
-(25,216461588.59,'2011-05-28 00:00:00.000000','2018-09-12 00:00:00.000000',1),
-(26,29.99,'1974-11-03 00:00:00.000000','1995-07-05 00:00:00.000000',6),
-(27,20368119.00,'1997-07-01 00:00:00.000000','1988-02-18 00:00:00.000000',1),
-(28,0.00,'1987-07-17 00:00:00.000000','1988-06-11 00:00:00.000000',6),
-(29,2077.29,'1989-01-31 00:00:00.000000','2005-09-13 00:00:00.000000',1),
-(30,38.34,'1971-10-16 00:00:00.000000','1972-06-26 00:00:00.000000',6),
-(31,152.09,'1976-05-07 00:00:00.000000','2004-09-05 00:00:00.000000',1),
-(32,3.45,'2002-09-05 00:00:00.000000','2022-10-01 00:00:00.000000',6),
-(33,10214.86,'1981-02-08 00:00:00.000000','2004-05-03 00:00:00.000000',1),
-(34,20694331.71,'1985-05-23 00:00:00.000000','2023-03-31 00:00:00.000000',6),
-(35,1.00,'1986-08-18 00:00:00.000000','1974-12-26 00:00:00.000000',1),
-(36,57821961.17,'1989-01-24 00:00:00.000000','1972-11-29 00:00:00.000000',6),
-(37,113568.00,'1992-09-07 00:00:00.000000','1978-07-17 00:00:00.000000',1),
-(38,3055115.01,'1978-03-22 00:00:00.000000','1971-09-10 00:00:00.000000',6),
-(39,22.36,'1984-10-23 00:00:00.000000','1986-04-14 00:00:00.000000',1),
-(40,206846.59,'1983-08-24 00:00:00.000000','2007-10-10 00:00:00.000000',6),
-(41,3183.95,'2006-10-16 00:00:00.000000','1973-12-26 00:00:00.000000',1),
-(42,51560151.60,'2017-05-12 00:00:00.000000','1984-12-12 00:00:00.000000',6),
-(43,21161981.54,'2017-09-24 00:00:00.000000','1986-06-04 00:00:00.000000',1),
-(44,37.52,'1998-04-07 00:00:00.000000','2012-07-16 00:00:00.000000',6),
-(45,1525050.23,'1973-09-10 00:00:00.000000','1986-09-22 00:00:00.000000',1),
-(46,4440466.45,'2024-01-12 00:00:00.000000','2013-11-09 00:00:00.000000',6),
-(47,21.97,'1995-03-31 00:00:00.000000','1994-11-21 00:00:00.000000',1),
-(48,5483.00,'1978-04-17 00:00:00.000000','1980-01-20 00:00:00.000000',6),
-(49,87959.36,'1977-10-15 00:00:00.000000','1985-11-10 00:00:00.000000',1),
-(50,0.00,'2000-12-24 00:00:00.000000','2020-10-28 00:00:00.000000',6),
-(51,72253552.96,'1979-10-21 00:00:00.000000','1988-12-20 00:00:00.000000',1),
-(52,18913404.55,'1989-03-02 00:00:00.000000','2019-01-03 00:00:00.000000',6),
-(53,2535.90,'2025-03-07 00:00:00.000000','1988-02-23 00:00:00.000000',1),
-(54,271611560.39,'1978-01-02 00:00:00.000000','2018-03-02 00:00:00.000000',6),
-(55,154495.10,'2020-07-14 00:00:00.000000','1987-02-18 00:00:00.000000',1),
-(56,175.84,'1985-09-14 00:00:00.000000','1990-08-13 00:00:00.000000',6),
-(57,0.00,'2008-04-15 00:00:00.000000','2006-04-24 00:00:00.000000',1),
-(58,1.38,'2004-02-15 00:00:00.000000','1999-08-19 00:00:00.000000',6),
-(59,0.00,'1977-03-22 00:00:00.000000','1992-11-01 00:00:00.000000',1),
-(60,0.00,'1997-01-20 00:00:00.000000','2014-03-03 00:00:00.000000',6),
-(61,464.81,'2009-03-21 00:00:00.000000','1992-03-12 00:00:00.000000',1),
-(62,799764.50,'1970-11-11 00:00:00.000000','1986-05-29 00:00:00.000000',6),
-(63,876.78,'2001-09-23 00:00:00.000000','1982-12-23 00:00:00.000000',1),
-(64,18.82,'1994-10-03 00:00:00.000000','2003-06-27 00:00:00.000000',6),
-(65,318.52,'2001-04-02 00:00:00.000000','2004-04-13 00:00:00.000000',1),
-(66,28831643.00,'2024-10-19 00:00:00.000000','2015-08-29 00:00:00.000000',6),
-(67,2959402.00,'1983-02-01 00:00:00.000000','2024-08-26 00:00:00.000000',1),
-(68,637983374.24,'2016-09-23 00:00:00.000000','1993-03-03 00:00:00.000000',6),
-(69,3.62,'1973-10-30 00:00:00.000000','2013-09-01 00:00:00.000000',1),
-(70,1246342.81,'2016-06-19 00:00:00.000000','1979-08-29 00:00:00.000000',6),
-(71,81245.40,'2019-01-26 00:00:00.000000','1970-05-30 00:00:00.000000',1),
-(72,293.28,'1991-03-27 00:00:00.000000','1988-07-30 00:00:00.000000',6),
-(73,6897434.61,'1995-10-29 00:00:00.000000','1974-02-07 00:00:00.000000',1),
-(74,1262407.90,'2004-09-08 00:00:00.000000','2018-11-20 00:00:00.000000',6),
-(75,5531.42,'1988-07-28 00:00:00.000000','2009-09-03 00:00:00.000000',1),
-(76,943332.48,'2009-07-16 00:00:00.000000','2011-09-05 00:00:00.000000',6),
-(77,34.00,'2012-11-11 00:00:00.000000','1988-02-19 00:00:00.000000',1),
-(78,1233.00,'2016-11-02 00:00:00.000000','2010-10-21 00:00:00.000000',6),
-(79,1342.36,'2000-01-14 00:00:00.000000','2022-06-11 00:00:00.000000',1),
-(80,0.70,'2021-06-01 00:00:00.000000','1972-10-21 00:00:00.000000',6),
-(81,301.00,'1993-06-22 00:00:00.000000','1971-07-05 00:00:00.000000',1),
-(82,16339589.00,'2019-12-12 00:00:00.000000','2008-07-27 00:00:00.000000',6),
-(83,2180419.33,'2012-03-24 00:00:00.000000','2018-10-20 00:00:00.000000',1),
-(84,3112059.10,'2018-06-13 00:00:00.000000','2001-07-14 00:00:00.000000',6),
-(85,0.00,'1994-04-21 00:00:00.000000','1974-12-13 00:00:00.000000',1),
-(86,41849926.30,'1990-01-02 00:00:00.000000','1989-03-25 00:00:00.000000',6),
-(87,219469.00,'1983-08-31 00:00:00.000000','1973-04-03 00:00:00.000000',1),
-(88,663157.70,'1988-09-03 00:00:00.000000','2010-01-22 00:00:00.000000',6),
-(89,206102.71,'1982-10-15 00:00:00.000000','1996-08-15 00:00:00.000000',1),
-(90,144.47,'2018-04-18 00:00:00.000000','2002-06-20 00:00:00.000000',6),
-(91,0.00,'1994-09-09 00:00:00.000000','2024-11-08 00:00:00.000000',1),
-(92,23512.67,'2023-06-16 00:00:00.000000','1970-11-24 00:00:00.000000',6),
-(93,823014.46,'2008-09-20 00:00:00.000000','2004-04-30 00:00:00.000000',1),
-(94,804456.98,'2021-06-30 00:00:00.000000','2005-02-26 00:00:00.000000',6),
-(95,1.08,'2015-08-02 00:00:00.000000','1987-11-25 00:00:00.000000',1),
-(96,3322.00,'2015-12-02 00:00:00.000000','2020-06-05 00:00:00.000000',6),
-(97,0.00,'1981-10-13 00:00:00.000000','1970-07-12 00:00:00.000000',1),
-(98,3.38,'1998-08-05 00:00:00.000000','1971-02-14 00:00:00.000000',6),
-(99,1.38,'2024-05-06 00:00:00.000000','1971-08-08 00:00:00.000000',1),
-(100,88.81,'1993-10-27 00:00:00.000000','1997-09-19 00:00:00.000000',6);
+DROP TABLE IF EXISTS `exams`;
 
-UNLOCK TABLES;
+CREATE TABLE `exams` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `date` datetime(6) NOT NULL,
+  `end_time` time(6) NOT NULL,
+  `start_time` time(6) NOT NULL,
+  `group_id` bigint(20) NOT NULL,
+  `subject_id` bigint(20) NOT NULL,
+  `teacher_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKmb06v0g1mwabmkfg9mrj8bkve` (`group_id`),
+  KEY `FKopre4n7j7fpxqbtbwpv8ywn1y` (`subject_id`),
+  KEY `FK30l48uv97ky27chgwh2prxphc` (`teacher_id`),
+  CONSTRAINT `FK30l48uv97ky27chgwh2prxphc` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`),
+  CONSTRAINT `FKmb06v0g1mwabmkfg9mrj8bkve` FOREIGN KEY (`group_id`) REFERENCES `students_groups` (`id`),
+  CONSTRAINT `FKopre4n7j7fpxqbtbwpv8ywn1y` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
-LOCK TABLES `payments` WRITE;
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('1', '1980-01-13 00:00:00.000000', '00:20:07.000000', '07:20:20.000000', '1', '1', '1');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('2', '2005-08-31 00:00:00.000000', '00:00:00.000000', '17:22:53.000000', '2', '2', '2');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('3', '1987-01-28 00:00:00.000000', '00:00:00.000000', '09:27:41.000000', '3', '3', '3');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('4', '1979-10-18 00:00:00.000000', '00:00:00.000000', '06:23:39.000000', '4', '4', '4');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('5', '2002-05-09 00:00:00.000000', '00:00:00.000000', '16:14:06.000000', '5', '5', '5');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('6', '1993-10-22 00:00:00.000000', '00:00:00.000000', '10:07:40.000000', '6', '6', '6');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('7', '1976-12-22 00:00:00.000000', '00:00:00.000000', '08:36:25.000000', '7', '7', '7');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('8', '2019-07-05 00:00:00.000000', '00:00:00.000000', '03:49:16.000000', '8', '8', '8');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('9', '2005-12-03 00:00:00.000000', '00:00:00.000000', '06:11:29.000000', '9', '9', '9');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('10', '1988-02-18 00:00:00.000000', '00:00:00.000000', '08:13:31.000000', '10', '10', '10');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('11', '1987-11-16 00:00:00.000000', '00:20:22.000000', '21:25:59.000000', '11', '11', '11');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('12', '1986-05-28 00:00:00.000000', '00:00:00.000000', '12:15:37.000000', '12', '12', '12');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('13', '1973-05-10 00:00:00.000000', '00:00:00.000000', '07:34:18.000000', '13', '13', '13');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('14', '1991-04-27 00:00:00.000000', '00:00:00.000000', '19:36:50.000000', '14', '14', '14');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('15', '1974-05-06 00:00:00.000000', '00:20:13.000000', '22:16:36.000000', '15', '15', '15');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('16', '1998-04-28 00:00:00.000000', '00:20:08.000000', '14:34:27.000000', '16', '16', '16');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('17', '1975-12-24 00:00:00.000000', '00:00:00.000000', '07:28:09.000000', '17', '17', '17');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('18', '2009-09-22 00:00:00.000000', '00:00:00.000000', '21:01:48.000000', '18', '18', '18');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('19', '1983-03-30 00:00:00.000000', '00:20:04.000000', '12:06:51.000000', '19', '19', '19');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('20', '1994-12-26 00:00:00.000000', '00:20:00.000000', '05:41:39.000000', '20', '20', '20');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('21', '2020-06-11 00:00:00.000000', '00:20:19.000000', '23:02:18.000000', '21', '21', '21');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('22', '2002-12-15 00:00:00.000000', '00:20:06.000000', '13:33:15.000000', '22', '22', '22');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('23', '1978-11-10 00:00:00.000000', '00:20:03.000000', '04:18:24.000000', '23', '23', '23');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('24', '1994-07-29 00:00:00.000000', '00:00:00.000000', '05:14:41.000000', '24', '24', '24');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('25', '2013-06-29 00:00:00.000000', '00:20:09.000000', '23:15:39.000000', '25', '25', '25');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('26', '2007-09-17 00:00:00.000000', '00:20:18.000000', '23:32:42.000000', '26', '26', '26');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('27', '1970-05-18 00:00:00.000000', '00:20:20.000000', '03:25:50.000000', '27', '27', '27');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('28', '1993-04-17 00:00:00.000000', '00:20:01.000000', '09:50:12.000000', '28', '28', '28');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('29', '1993-02-17 00:00:00.000000', '00:00:00.000000', '06:06:29.000000', '29', '29', '29');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('30', '2022-11-12 00:00:00.000000', '00:20:13.000000', '20:00:03.000000', '30', '30', '30');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('31', '2011-05-09 00:00:00.000000', '00:00:00.000000', '06:42:47.000000', '31', '31', '31');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('32', '2008-03-18 00:00:00.000000', '00:00:00.000000', '19:41:16.000000', '32', '32', '32');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('33', '2001-01-24 00:00:00.000000', '00:00:00.000000', '16:00:38.000000', '33', '33', '33');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('34', '2016-02-02 00:00:00.000000', '00:20:22.000000', '04:10:46.000000', '34', '34', '34');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('35', '2000-11-01 00:00:00.000000', '00:20:17.000000', '05:45:58.000000', '35', '35', '35');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('36', '2003-01-28 00:00:00.000000', '00:00:00.000000', '12:44:04.000000', '36', '36', '36');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('37', '1985-02-17 00:00:00.000000', '00:20:15.000000', '04:34:26.000000', '37', '37', '37');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('38', '1971-12-16 00:00:00.000000', '00:00:00.000000', '03:37:06.000000', '38', '38', '38');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('39', '2018-09-25 00:00:00.000000', '00:00:00.000000', '03:52:30.000000', '39', '39', '39');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('40', '1996-10-09 00:00:00.000000', '00:20:03.000000', '18:39:09.000000', '40', '40', '40');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('41', '2009-04-30 00:00:00.000000', '00:00:00.000000', '10:45:52.000000', '41', '41', '41');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('42', '1990-12-15 00:00:00.000000', '00:00:00.000000', '22:34:58.000000', '42', '42', '42');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('43', '1988-10-26 00:00:00.000000', '00:00:00.000000', '23:10:44.000000', '43', '43', '43');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('44', '2003-09-13 00:00:00.000000', '00:20:04.000000', '01:03:11.000000', '44', '44', '44');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('45', '2003-06-14 00:00:00.000000', '00:20:16.000000', '12:04:43.000000', '45', '45', '45');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('46', '1979-07-26 00:00:00.000000', '00:00:00.000000', '01:37:38.000000', '46', '46', '46');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('47', '1989-12-10 00:00:00.000000', '00:00:00.000000', '17:25:53.000000', '47', '47', '47');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('48', '2006-03-15 00:00:00.000000', '00:20:25.000000', '01:42:19.000000', '48', '48', '48');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('49', '2006-02-28 00:00:00.000000', '00:00:00.000000', '23:50:44.000000', '49', '49', '49');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('50', '1985-12-03 00:00:00.000000', '00:00:00.000000', '16:44:41.000000', '50', '50', '50');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('51', '1991-08-28 00:00:00.000000', '00:00:00.000000', '07:10:24.000000', '51', '51', '51');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('52', '1989-12-16 00:00:00.000000', '00:20:14.000000', '01:10:24.000000', '52', '52', '52');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('53', '1982-11-15 00:00:00.000000', '00:20:25.000000', '08:17:41.000000', '53', '53', '53');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('54', '2002-10-22 00:00:00.000000', '00:00:00.000000', '14:48:13.000000', '54', '54', '54');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('55', '2016-12-01 00:00:00.000000', '00:20:02.000000', '05:34:32.000000', '55', '55', '55');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('56', '2016-08-12 00:00:00.000000', '00:20:25.000000', '09:44:59.000000', '56', '56', '56');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('57', '2015-04-01 00:00:00.000000', '00:00:00.000000', '23:36:19.000000', '57', '57', '57');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('58', '1978-03-14 00:00:00.000000', '00:00:00.000000', '07:51:09.000000', '58', '58', '58');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('59', '1974-06-02 00:00:00.000000', '00:20:01.000000', '21:06:28.000000', '59', '59', '59');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('60', '2011-04-08 00:00:00.000000', '00:20:11.000000', '15:46:09.000000', '60', '60', '60');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('61', '1986-08-18 00:00:00.000000', '00:00:00.000000', '08:42:44.000000', '61', '61', '61');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('62', '1984-04-23 00:00:00.000000', '00:00:00.000000', '20:19:33.000000', '62', '62', '62');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('63', '1977-08-10 00:00:00.000000', '00:00:00.000000', '05:07:18.000000', '63', '63', '63');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('64', '2008-06-11 00:00:00.000000', '00:20:04.000000', '06:03:58.000000', '64', '64', '64');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('65', '1986-02-24 00:00:00.000000', '00:00:00.000000', '14:59:07.000000', '65', '65', '65');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('66', '1974-08-08 00:00:00.000000', '00:20:07.000000', '20:51:53.000000', '66', '66', '66');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('67', '1999-10-17 00:00:00.000000', '00:00:00.000000', '00:23:25.000000', '67', '67', '67');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('68', '2023-03-19 00:00:00.000000', '00:00:00.000000', '14:33:54.000000', '68', '68', '68');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('69', '1994-04-18 00:00:00.000000', '00:00:00.000000', '00:12:32.000000', '69', '69', '69');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('70', '1998-11-03 00:00:00.000000', '00:20:01.000000', '05:09:41.000000', '70', '70', '70');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('71', '1978-05-27 00:00:00.000000', '00:20:18.000000', '15:49:06.000000', '71', '71', '71');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('72', '2022-12-21 00:00:00.000000', '00:20:11.000000', '06:23:29.000000', '72', '72', '72');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('73', '1999-07-15 00:00:00.000000', '00:00:00.000000', '02:47:15.000000', '73', '73', '73');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('74', '2020-03-04 00:00:00.000000', '00:20:12.000000', '18:56:41.000000', '74', '74', '74');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('75', '1987-08-30 00:00:00.000000', '00:20:20.000000', '10:40:27.000000', '75', '75', '75');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('76', '1981-06-24 00:00:00.000000', '00:20:11.000000', '19:53:30.000000', '76', '76', '76');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('77', '1989-12-19 00:00:00.000000', '00:20:24.000000', '10:55:59.000000', '77', '77', '77');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('78', '2002-02-05 00:00:00.000000', '00:20:04.000000', '15:54:15.000000', '78', '78', '78');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('79', '1996-09-10 00:00:00.000000', '00:20:05.000000', '20:49:35.000000', '79', '79', '79');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('80', '2019-06-09 00:00:00.000000', '00:00:00.000000', '05:38:31.000000', '80', '80', '80');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('81', '1981-01-17 00:00:00.000000', '00:20:24.000000', '17:48:20.000000', '81', '81', '81');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('82', '1975-05-08 00:00:00.000000', '00:00:00.000000', '05:32:41.000000', '82', '82', '82');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('83', '1970-05-31 00:00:00.000000', '00:00:00.000000', '22:29:15.000000', '83', '83', '83');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('84', '1995-07-28 00:00:00.000000', '00:00:00.000000', '07:25:27.000000', '84', '84', '84');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('85', '1981-11-18 00:00:00.000000', '00:00:00.000000', '22:23:42.000000', '85', '85', '85');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('86', '1989-03-12 00:00:00.000000', '00:20:14.000000', '08:02:24.000000', '86', '86', '86');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('87', '2020-01-06 00:00:00.000000', '00:00:00.000000', '15:02:51.000000', '87', '87', '87');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('88', '1995-08-15 00:00:00.000000', '00:20:05.000000', '16:11:11.000000', '88', '88', '88');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('89', '1989-04-06 00:00:00.000000', '00:00:00.000000', '21:52:42.000000', '89', '89', '89');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('90', '2008-03-09 00:00:00.000000', '00:00:00.000000', '14:32:54.000000', '90', '90', '90');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('91', '1973-07-11 00:00:00.000000', '00:20:03.000000', '16:05:32.000000', '91', '91', '91');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('92', '1971-05-04 00:00:00.000000', '00:00:00.000000', '06:36:46.000000', '92', '92', '92');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('93', '1991-02-13 00:00:00.000000', '00:20:18.000000', '02:46:59.000000', '93', '93', '93');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('94', '2014-11-08 00:00:00.000000', '00:00:00.000000', '01:50:03.000000', '94', '94', '94');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('95', '2007-06-17 00:00:00.000000', '00:20:21.000000', '09:19:19.000000', '95', '95', '95');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('96', '1992-01-01 00:00:00.000000', '00:20:11.000000', '13:17:47.000000', '96', '96', '96');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('97', '2022-05-03 00:00:00.000000', '00:20:14.000000', '21:23:21.000000', '97', '97', '97');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('98', '2021-02-10 00:00:00.000000', '00:20:21.000000', '18:12:23.000000', '98', '98', '98');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('99', '1990-08-19 00:00:00.000000', '00:20:00.000000', '05:08:10.000000', '99', '99', '99');
+INSERT INTO `exams` (`id`, `date`, `end_time`, `start_time`, `group_id`, `subject_id`, `teacher_id`) VALUES ('100', '1975-05-22 00:00:00.000000', '00:00:00.000000', '00:41:28.000000', '100', '100', '100');
 
-INSERT INTO `payments` VALUES
-(1,0.00,'2005-12-29 00:00:00.000000',2,2,1),
-(2,0.00,'2000-05-18 00:00:00.000000',2,2,6),
-(3,0.00,'1973-10-21 00:00:00.000000',2,1,1),
-(4,0.00,'1970-12-16 00:00:00.000000',2,1,6),
-(5,2689.36,'2024-12-16 00:00:00.000000',2,1,1),
-(6,49779305.35,'2024-05-20 00:00:00.000000',0,0,6),
-(7,5112.00,'1999-01-14 00:00:00.000000',1,3,1),
-(8,9284.60,'1999-03-09 00:00:00.000000',2,1,6),
-(9,573628.40,'1996-12-13 00:00:00.000000',0,2,1),
-(10,17464.00,'1980-12-20 00:00:00.000000',1,0,6),
-(11,347637488.92,'2000-12-19 00:00:00.000000',2,0,1),
-(12,5025.27,'2022-06-13 00:00:00.000000',1,2,6),
-(13,6.28,'1999-11-08 00:00:00.000000',2,1,1),
-(14,954075.73,'1986-09-04 00:00:00.000000',1,1,6),
-(15,48.34,'1979-08-18 00:00:00.000000',2,0,1),
-(16,952370771.96,'2014-11-10 00:00:00.000000',1,1,6),
-(17,64.38,'2006-11-15 00:00:00.000000',1,3,1),
-(18,825213728.88,'2024-12-15 00:00:00.000000',1,2,6),
-(19,1806.54,'1984-09-23 00:00:00.000000',2,3,1),
-(20,63444223.00,'2001-09-04 00:00:00.000000',2,2,6),
-(21,165.17,'2012-10-25 00:00:00.000000',2,0,1),
-(22,20089.75,'2014-04-22 00:00:00.000000',0,1,6),
-(23,36661914.26,'1992-03-23 00:00:00.000000',0,3,1),
-(24,20295863.25,'1986-02-23 00:00:00.000000',0,2,6),
-(25,25688284.38,'1986-01-17 00:00:00.000000',0,2,1),
-(26,229.00,'2024-07-13 00:00:00.000000',0,2,6),
-(27,19.40,'2018-05-11 00:00:00.000000',2,1,1),
-(28,35838036.20,'1993-08-26 00:00:00.000000',0,2,6),
-(29,2.83,'1983-12-14 00:00:00.000000',0,0,1),
-(30,10.53,'1997-10-06 00:00:00.000000',0,1,6),
-(31,156.04,'2003-01-23 00:00:00.000000',1,3,1),
-(32,18479396.82,'2003-02-23 00:00:00.000000',1,0,6),
-(33,74.49,'1981-09-22 00:00:00.000000',2,0,1),
-(34,8.62,'2018-12-01 00:00:00.000000',0,0,6),
-(35,670.11,'2019-10-12 00:00:00.000000',1,0,1),
-(36,7022599.09,'1980-09-18 00:00:00.000000',2,2,6),
-(37,29.31,'1978-11-16 00:00:00.000000',1,2,1),
-(38,231022958.87,'2011-04-19 00:00:00.000000',2,3,6),
-(39,0.00,'2018-12-25 00:00:00.000000',2,1,1),
-(40,31600.00,'1996-06-20 00:00:00.000000',2,1,6),
-(41,194.26,'2012-01-24 00:00:00.000000',0,1,1),
-(42,1367.66,'2007-04-05 00:00:00.000000',1,0,6),
-(43,0.00,'1988-12-24 00:00:00.000000',0,3,1),
-(44,288.44,'1996-06-24 00:00:00.000000',1,3,6),
-(45,1.51,'1988-11-15 00:00:00.000000',2,1,1),
-(46,1144.00,'2002-07-28 00:00:00.000000',0,0,6),
-(47,58254780.97,'1989-09-05 00:00:00.000000',1,3,1),
-(48,646759.56,'1976-06-09 00:00:00.000000',2,3,6),
-(49,16223.68,'1997-04-03 00:00:00.000000',0,2,1),
-(50,2495611.28,'1979-01-31 00:00:00.000000',0,2,6),
-(51,21638.74,'2009-10-31 00:00:00.000000',1,0,1),
-(52,3355.00,'2014-09-13 00:00:00.000000',1,2,6),
-(53,211.80,'2012-02-12 00:00:00.000000',0,0,1),
-(54,12046.65,'2015-12-28 00:00:00.000000',0,1,6),
-(55,67176995.30,'2016-07-08 00:00:00.000000',2,3,1),
-(56,27476.00,'1987-12-19 00:00:00.000000',2,0,6),
-(57,3786.00,'1994-11-17 00:00:00.000000',1,1,1),
-(58,0.00,'2002-11-28 00:00:00.000000',1,2,6),
-(59,688643126.76,'1973-10-01 00:00:00.000000',0,0,1),
-(60,2.35,'2023-05-22 00:00:00.000000',1,3,6),
-(61,3.70,'2006-06-15 00:00:00.000000',0,3,1),
-(62,66630.92,'2022-06-30 00:00:00.000000',0,0,6),
-(63,5663322.78,'1994-12-17 00:00:00.000000',0,1,1),
-(64,179490.40,'1970-06-08 00:00:00.000000',2,2,6),
-(65,0.00,'1984-05-13 00:00:00.000000',2,0,1),
-(66,79.00,'1998-08-07 00:00:00.000000',1,0,6),
-(67,50978841.25,'2022-03-26 00:00:00.000000',2,3,1),
-(68,8942.43,'1976-02-22 00:00:00.000000',2,2,6),
-(69,6.11,'2010-03-16 00:00:00.000000',0,1,1),
-(70,21.55,'2014-09-19 00:00:00.000000',2,3,6),
-(71,6131.00,'2007-08-22 00:00:00.000000',0,3,1),
-(72,1886051.00,'1991-07-27 00:00:00.000000',2,2,6),
-(73,2419.45,'2009-01-24 00:00:00.000000',0,1,1),
-(74,45.00,'1984-01-13 00:00:00.000000',0,0,6),
-(75,721100.37,'2010-11-11 00:00:00.000000',0,1,1),
-(76,1313246.40,'2024-09-30 00:00:00.000000',1,2,6),
-(77,1609.29,'1976-12-20 00:00:00.000000',1,1,1),
-(78,0.00,'1992-06-11 00:00:00.000000',0,0,6),
-(79,393642.66,'1971-09-26 00:00:00.000000',0,1,1),
-(80,0.00,'2001-03-26 00:00:00.000000',1,1,6),
-(81,22.31,'1973-02-18 00:00:00.000000',1,2,1),
-(82,0.76,'1990-12-07 00:00:00.000000',2,1,6),
-(83,2.15,'1975-02-14 00:00:00.000000',0,2,1),
-(84,1957.92,'2007-02-10 00:00:00.000000',2,1,6),
-(85,43.53,'2017-02-03 00:00:00.000000',0,3,1),
-(86,56053.02,'1989-05-17 00:00:00.000000',0,1,6),
-(87,3489629.10,'1981-04-21 00:00:00.000000',2,3,1),
-(88,149825984.87,'1986-07-01 00:00:00.000000',1,0,6),
-(89,0.00,'1981-06-24 00:00:00.000000',2,2,1),
-(90,542.56,'1993-03-08 00:00:00.000000',2,2,6),
-(91,0.00,'1989-05-10 00:00:00.000000',2,3,1),
-(92,566.00,'2015-07-26 00:00:00.000000',2,2,6),
-(93,4433.35,'1988-09-22 00:00:00.000000',2,2,1),
-(94,19.97,'1992-01-03 00:00:00.000000',2,3,6),
-(95,6410945.65,'2018-04-19 00:00:00.000000',2,0,1),
-(96,300172459.90,'1984-11-11 00:00:00.000000',1,1,6),
-(97,0.18,'2005-11-15 00:00:00.000000',2,0,1),
-(98,27.00,'1991-02-12 00:00:00.000000',1,3,6),
-(99,1.89,'2004-01-30 00:00:00.000000',0,1,1),
-(100,26.82,'2005-07-01 00:00:00.000000',0,2,6);
 
-UNLOCK TABLES;
+#
+# TABLE STRUCTURE FOR: faculties
+#
 
-LOCK TABLES `scholarship_applications` WRITE;
+DROP TABLE IF EXISTS `faculties`;
 
-INSERT INTO `scholarship_applications` VALUES
-(1,35.00,1,'2020-02-13 00:00:00.000000',1,1),
-(2,5.00,0,'2011-01-13 00:00:00.000000',2,6),
-(3,36.00,1,'1975-11-12 00:00:00.000000',3,1),
-(4,6.07,1,'1999-05-30 00:00:00.000000',4,6),
-(5,157366.44,1,'2008-06-20 00:00:00.000000',5,1),
-(6,0.00,0,'2007-11-24 00:00:00.000000',6,6),
-(7,599.40,2,'1990-06-21 00:00:00.000000',7,1),
-(8,39151.52,0,'1996-01-18 00:00:00.000000',8,6),
-(9,4952288.90,2,'2025-02-21 00:00:00.000000',9,1),
-(10,73420.49,0,'2005-04-01 00:00:00.000000',10,6),
-(11,256447.40,1,'1973-12-18 00:00:00.000000',11,1),
-(12,56458883.07,2,'2022-03-09 00:00:00.000000',12,6),
-(13,99999999.99,0,'2005-10-07 00:00:00.000000',13,1),
-(14,0.00,0,'1973-10-03 00:00:00.000000',14,6),
-(15,296498.00,0,'2014-06-27 00:00:00.000000',15,1),
-(16,2197817.09,2,'2010-09-09 00:00:00.000000',16,6),
-(17,604.55,2,'2020-03-24 00:00:00.000000',17,1),
-(18,244.06,0,'2016-11-05 00:00:00.000000',18,6),
-(19,29390.95,1,'1998-03-23 00:00:00.000000',19,1),
-(20,449561.62,1,'2008-05-06 00:00:00.000000',20,6),
-(21,63424684.31,1,'2000-06-27 00:00:00.000000',21,1),
-(22,0.83,0,'1985-03-26 00:00:00.000000',22,6),
-(23,446.80,2,'1996-01-22 00:00:00.000000',23,1),
-(24,16447957.19,1,'1977-06-15 00:00:00.000000',24,6),
-(25,99999999.99,0,'1989-07-28 00:00:00.000000',25,1),
-(26,0.00,0,'2019-06-26 00:00:00.000000',26,6),
-(27,1.37,0,'2001-08-27 00:00:00.000000',27,1),
-(28,221843.88,2,'1978-09-30 00:00:00.000000',28,6),
-(29,75283.99,0,'2012-04-27 00:00:00.000000',29,1),
-(30,96248657.29,0,'1984-01-31 00:00:00.000000',30,6),
-(31,34098.42,0,'1981-10-10 00:00:00.000000',31,1),
-(32,16.06,1,'1975-12-28 00:00:00.000000',32,6),
-(33,1209.28,1,'2003-05-07 00:00:00.000000',33,1),
-(34,655361.15,0,'1989-08-27 00:00:00.000000',34,6),
-(35,0.00,2,'1992-06-27 00:00:00.000000',35,1),
-(36,11.53,1,'2022-09-15 00:00:00.000000',36,6),
-(37,76.27,2,'1973-08-12 00:00:00.000000',37,1),
-(38,6943529.09,2,'2007-07-16 00:00:00.000000',38,6),
-(39,0.00,2,'2007-07-26 00:00:00.000000',39,1),
-(40,922.64,0,'1981-04-09 00:00:00.000000',40,6),
-(41,99999999.99,1,'2000-02-27 00:00:00.000000',41,1),
-(42,185.69,0,'2006-04-19 00:00:00.000000',42,6),
-(43,6157.69,2,'1994-08-06 00:00:00.000000',43,1),
-(44,0.00,2,'2024-08-01 00:00:00.000000',44,6),
-(45,99999999.99,1,'2009-08-13 00:00:00.000000',45,1),
-(46,93.60,2,'2006-02-28 00:00:00.000000',46,6),
-(47,3193.02,2,'1999-01-14 00:00:00.000000',47,1),
-(48,4355766.10,2,'2005-01-19 00:00:00.000000',48,6),
-(49,61.00,1,'2012-10-21 00:00:00.000000',49,1),
-(50,485669.49,0,'1984-02-13 00:00:00.000000',50,6),
-(51,664.21,1,'2018-06-17 00:00:00.000000',51,1),
-(52,0.00,2,'2013-09-16 00:00:00.000000',52,6),
-(53,129.80,1,'1973-07-11 00:00:00.000000',53,1),
-(54,35313.67,0,'1994-04-19 00:00:00.000000',54,6),
-(55,99999999.99,0,'1974-05-13 00:00:00.000000',55,1),
-(56,49276079.60,2,'2017-01-19 00:00:00.000000',56,6),
-(57,99999999.99,2,'1983-08-07 00:00:00.000000',57,1),
-(58,4864234.74,1,'1983-10-28 00:00:00.000000',58,6),
-(59,1941823.03,0,'2006-05-01 00:00:00.000000',59,1),
-(60,8056.69,0,'1973-07-24 00:00:00.000000',60,6),
-(61,19439.01,0,'2001-09-11 00:00:00.000000',61,1),
-(62,4612.03,2,'2011-03-19 00:00:00.000000',62,6),
-(63,18.98,0,'1990-12-27 00:00:00.000000',63,1),
-(64,5439.59,0,'2012-01-03 00:00:00.000000',64,6),
-(65,47687.80,2,'1995-05-06 00:00:00.000000',65,1),
-(66,8.98,0,'1978-11-21 00:00:00.000000',66,6),
-(67,6374821.40,2,'1984-05-05 00:00:00.000000',67,1),
-(68,3225.00,0,'2017-10-06 00:00:00.000000',68,6),
-(69,6976498.69,1,'2022-03-20 00:00:00.000000',69,1),
-(70,7853179.65,2,'1986-06-25 00:00:00.000000',70,6),
-(71,0.00,2,'2018-07-28 00:00:00.000000',71,1),
-(72,11.23,0,'2011-03-29 00:00:00.000000',72,6),
-(73,707.36,0,'2015-03-07 00:00:00.000000',73,1),
-(74,963135.69,2,'1994-02-16 00:00:00.000000',74,6),
-(75,1181.55,2,'2011-07-06 00:00:00.000000',75,1),
-(76,2.40,2,'2019-07-03 00:00:00.000000',76,6),
-(77,2.84,1,'2021-10-23 00:00:00.000000',77,1),
-(78,244343.22,0,'1984-10-24 00:00:00.000000',78,6),
-(79,99999999.99,2,'2004-08-04 00:00:00.000000',79,1),
-(80,0.00,0,'1985-02-28 00:00:00.000000',80,6),
-(81,0.00,1,'1996-07-18 00:00:00.000000',81,1),
-(82,0.00,2,'2021-01-27 00:00:00.000000',82,6),
-(83,77017561.30,1,'2012-03-02 00:00:00.000000',83,1),
-(84,28988.00,2,'1979-04-10 00:00:00.000000',84,6),
-(85,52818439.12,2,'1971-09-21 00:00:00.000000',85,1),
-(86,191633.36,1,'1985-08-10 00:00:00.000000',86,6),
-(87,850.00,0,'1984-02-20 00:00:00.000000',87,1),
-(88,0.00,0,'2020-08-12 00:00:00.000000',88,6),
-(89,222565.25,0,'2022-06-19 00:00:00.000000',89,1),
-(90,174759.15,0,'1979-07-03 00:00:00.000000',90,6),
-(91,1552.12,2,'1983-11-29 00:00:00.000000',91,1),
-(92,329056.78,1,'2019-08-28 00:00:00.000000',92,6),
-(93,0.79,2,'2018-09-17 00:00:00.000000',93,1),
-(94,40.30,0,'1970-11-04 00:00:00.000000',94,6),
-(95,4331.56,0,'2006-12-01 00:00:00.000000',95,1),
-(96,394.54,1,'1983-08-22 00:00:00.000000',96,6),
-(97,1698894.93,0,'1997-06-30 00:00:00.000000',97,1),
-(98,0.82,1,'2016-03-28 00:00:00.000000',98,6),
-(99,506.16,1,'2009-08-20 00:00:00.000000',99,1),
-(100,49.56,1,'2003-12-06 00:00:00.000000',100,6);
+CREATE TABLE `faculties` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `description` text DEFAULT NULL,
+  `name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
-UNLOCK TABLES;
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('1', 'At deleniti et ea numquam dolor. Maiores voluptas nostrum laudantium at. Quis at modi corrupti est consequatur consequatur mollitia eveniet. Ipsa omnis et neque et sit quae. Fugiat et magnam cupiditate sint cumque fuga.', 'exercitationem');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('2', 'Aut recusandae rem expedita vero accusantium quo qui ipsa. Molestias vel voluptatibus minima deleniti dolorem non optio facilis.', 'omnis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('3', 'Est eligendi consectetur debitis qui perferendis ut exercitationem. Consectetur enim tempore repudiandae illum cupiditate optio natus. Delectus maxime vel qui qui hic possimus. Nemo placeat earum vel. Facere odio et quisquam magnam.', 'dolor');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('4', 'Et praesentium iste dolorem dolores tempora. Nam ut praesentium recusandae omnis dolorum omnis est. Nemo sunt reiciendis sunt harum vero sint aut.', 'officia');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('5', 'Magnam quia recusandae molestias nihil. Labore et natus voluptate. Iusto voluptatibus officiis et quae sint cumque. Nulla aut nemo quis vero facere.', 'quidem');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('6', 'Qui unde omnis est eaque cumque tempore. Laborum atque atque quaerat veritatis consequuntur est. Eveniet repellat rerum et. Optio magni sequi quis ipsa.', 'occaecati');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('7', 'Commodi blanditiis vitae nesciunt eos et dolorem culpa. Minima sit perspiciatis cum cupiditate.', 'animi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('8', 'Soluta porro error quia perspiciatis. Nam aut aut dignissimos laudantium maxime veniam sit. Repudiandae accusamus delectus laboriosam qui repellat provident laboriosam aspernatur.', 'perferendis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('9', 'Molestiae omnis eveniet sed ea. Quae vitae necessitatibus doloremque incidunt nesciunt et suscipit. Modi aliquid asperiores aspernatur perspiciatis consectetur eum consequatur. Omnis quam voluptate ut numquam.', 'hic');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('10', 'Possimus est vitae hic quo. Voluptas non aliquid quia ad. Ratione voluptas porro voluptatem sunt animi velit culpa rerum. Sed sint ut sapiente voluptatibus consequuntur consectetur reprehenderit quasi.', 'ut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('11', 'Sed reprehenderit ullam adipisci omnis. Magni consequatur ea sunt expedita nesciunt perferendis eligendi. Laboriosam repellat voluptas deserunt nihil non voluptas et sequi. Et veniam corporis voluptas.', 'possimus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('12', 'Facilis ipsum perferendis debitis odit. Dicta voluptates aut et voluptatem sit nihil. Architecto iusto et nam ut numquam soluta.', 'quas');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('13', 'Laborum ad doloremque laboriosam. Eveniet minus nesciunt corporis accusantium. Voluptas consequatur perferendis nesciunt rerum sapiente.', 'minus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('14', 'Non expedita rerum corporis dolorem in. Eveniet vel qui quia cupiditate qui inventore saepe. Nobis sit debitis dolores ut molestiae.', 'iure');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('15', 'Aut in cumque sit ipsa qui ut perspiciatis. Ipsum odit perspiciatis omnis voluptatem aspernatur. Aperiam impedit nihil sit dolore aut omnis sed corporis.', 'et');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('16', 'Beatae et libero et animi saepe nobis rerum. Qui voluptatem rerum sit et optio illum.', 'dolor');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('17', 'Facere harum porro laudantium dolores minus. Iste laboriosam est natus ipsa maxime dolores nisi. Consequatur assumenda explicabo voluptatem velit molestiae ut enim. Ut non ipsam aspernatur ducimus nemo.', 'praesentium');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('18', 'Mollitia non dolorem labore doloremque ut. Sed est similique illum ut consequatur est eveniet. Harum vel esse ipsum deleniti quidem quis.', 'ut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('19', 'Non rerum rerum in. Deserunt sed quibusdam fugiat vero voluptas.', 'perspiciatis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('20', 'Iste voluptas voluptate odit neque provident numquam consequatur. Eveniet animi voluptas autem. Voluptates rerum accusantium nesciunt dolor repellat voluptatem autem.', 'provident');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('21', 'Quibusdam voluptates numquam quos facilis. Eum culpa quis mollitia. Quia quasi quasi ut doloremque sunt quia doloremque. Laborum ea omnis quis delectus.', 'enim');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('22', 'Odit debitis dolore voluptas repellendus velit aut. Est repudiandae laboriosam et necessitatibus. Debitis commodi amet molestias ut sunt. Molestiae aperiam non perferendis et minus ut eum rerum.', 'dolorum');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('23', 'Nisi expedita ea sequi impedit itaque dicta. Quod dolor atque deleniti expedita. Voluptatem voluptas nemo doloremque ut. Rerum ab harum voluptas sit ex.', 'est');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('24', 'Quo voluptatibus reiciendis perspiciatis. Quo quo quaerat ea dolorem voluptatibus tempora rerum. Ut id deleniti dolorum totam laboriosam tenetur quo.', 'et');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('25', 'Placeat ut autem ipsam quis beatae eum nam. Eos dolorum modi tempora ut. Aut qui voluptatem libero eaque soluta. Vel modi itaque accusamus mollitia quia enim repellendus. Aut explicabo dolor harum nulla voluptate sapiente.', 'maxime');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('26', 'Iure aliquam illo quis accusantium sed quidem fugit. Consequuntur iste facere reprehenderit beatae. Rerum voluptas iusto minus beatae recusandae aliquam soluta. Voluptatibus voluptatum officiis autem suscipit.', 'numquam');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('27', 'Unde quo eum aut ut autem corporis dolor. Et rerum quia culpa nam. Possimus quae ex impedit corrupti voluptatum est. Distinctio qui corrupti earum consequatur.', 'nisi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('28', 'Neque accusantium omnis consequuntur rerum nulla consectetur. Laboriosam culpa quibusdam dolores dolores.', 'modi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('29', 'Itaque ab id vero similique earum. Quibusdam et omnis qui. Quia repudiandae repellendus labore adipisci. Ut ipsum praesentium vitae aperiam vel.', 'et');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('30', 'Ab atque est commodi praesentium et. Et repellat quod cupiditate voluptatum ut asperiores occaecati. Expedita fuga hic eveniet est pariatur aut facilis. Qui suscipit magnam ab. Sunt et omnis deleniti itaque numquam.', 'magnam');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('31', 'Ut nobis rerum autem voluptatibus eos dolorum numquam minima. Earum quis ut aut quam expedita.', 'eum');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('32', 'Quis ipsum corporis asperiores fuga. Pariatur earum facilis sed.', 'doloremque');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('33', 'Nulla beatae qui et ea at. Repellendus tenetur aspernatur aut quia maiores ipsam quia numquam. Officia qui et quia quia ea omnis veritatis.', 'dolorum');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('34', 'Ad qui ipsam soluta asperiores. Ipsum sunt odit dolore ut quasi molestias.', 'tenetur');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('35', 'Numquam adipisci aut dolorum nihil ducimus quia voluptatem. Sed libero qui laborum. Enim porro qui dolores dolores totam blanditiis et.', 'nihil');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('36', 'Facilis blanditiis quod aut temporibus quidem sed voluptas. Consequatur ut autem sunt qui architecto illum ullam. Corrupti consequatur nisi vel libero est officiis quia. Consequatur aut nihil corporis officia quisquam maiores.', 'tempora');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('37', 'Doloremque quibusdam saepe aut consequuntur sint. Quis ipsum ut aut. Facere et magni quod nesciunt. Exercitationem praesentium dolores quia sed autem asperiores ex.', 'ut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('38', 'Ratione repellat saepe nemo corrupti adipisci. Nisi sit assumenda harum totam dolorum quis. Provident nostrum quo sit et delectus similique sapiente.', 'tempore');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('39', 'Qui maiores iste dolor porro. Nostrum repellat perferendis expedita nam deleniti libero. Est perspiciatis repudiandae unde laboriosam.', 'omnis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('40', 'Praesentium commodi explicabo rerum. Minima error laborum totam consectetur velit.', 'tenetur');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('41', 'Deserunt perferendis eum quis hic labore dolor enim. Reiciendis voluptatum voluptas sint quos. Ut necessitatibus quia error et laboriosam numquam consequatur repellat. Alias similique eaque aliquid perspiciatis omnis.', 'aut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('42', 'Facere quia aut doloremque labore quae. Dicta neque maiores ex doloribus architecto cum maiores minus. Dignissimos laborum voluptas tenetur et.', 'doloribus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('43', 'Sint aperiam quia aspernatur quidem sed rerum omnis. Enim similique tenetur odio eveniet est id qui. Ipsum ipsum repellendus magni eos maiores dolorum.', 'eum');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('44', 'Consequatur veritatis voluptatibus cumque numquam est ex esse. Dicta quis voluptatem non cum dolor dolores. Explicabo ipsa illum ut consequatur quia qui ad. Ex in est quasi necessitatibus.', 'ut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('45', 'Autem ea et id et. Et ducimus voluptatum reprehenderit animi rem non. Iusto sapiente error aut et odio consequuntur. Dolor quaerat saepe architecto odit.', 'et');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('46', 'In ea corporis deleniti omnis recusandae. Totam et quia illo ipsam. Vitae tempore aspernatur vel praesentium. Incidunt culpa qui aut vero sit.', 'culpa');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('47', 'Voluptatibus at exercitationem maxime. Rerum sapiente doloribus maxime sed ea praesentium eum molestias. Reprehenderit facere pariatur officiis maxime. Dolores officiis necessitatibus et omnis.', 'aut');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('48', 'Ut dolorum iste et quisquam. Asperiores quidem ducimus excepturi distinctio cum aut. Qui et in dolor dolores quas aliquam non. Vel id modi quia fugit ex voluptas id.', 'vitae');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('49', 'Illum amet et est cupiditate ipsa. Et et ab veritatis voluptatem qui quia magnam in. Non sed nemo eligendi eos sapiente nesciunt dolore. Architecto aut et inventore corrupti cupiditate dolorum laudantium.', 'aspernatur');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('50', 'Deserunt minima ab vel inventore. Dolore accusamus et est rerum in. Quia perferendis cumque omnis. Maiores et fuga illum assumenda repellat dolor.', 'similique');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('51', 'Quos consequatur dolore nostrum iste id ea corporis veritatis. Porro velit ad debitis optio. Dolores reprehenderit iure iure qui deserunt. Soluta ea ut excepturi deserunt est autem officiis.', 'neque');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('52', 'Ea laborum ut beatae autem ratione. Nobis esse doloribus vitae ut non. Nostrum voluptatum aut amet incidunt. Vel consequatur quis vero et nesciunt voluptas commodi.', 'id');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('53', 'Nostrum nisi debitis quia. Et aliquam earum voluptatem laborum. Adipisci autem quidem ipsa ad fuga quisquam. Dolor non possimus laudantium et.', 'deserunt');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('54', 'Ab ipsum est recusandae dolorem. Ut porro eos nihil ullam debitis earum quia. Odit rerum debitis repellat assumenda maiores et.', 'saepe');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('55', 'Occaecati dolores consectetur fugiat dolore. Mollitia modi est ratione. Iure odio sequi provident quia et.', 'similique');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('56', 'Sed sit libero voluptatum veritatis. Est reprehenderit id amet reprehenderit natus labore debitis. Officia ratione voluptatem voluptatibus eligendi rerum.', 'magni');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('57', 'Eaque dicta qui unde omnis et expedita culpa enim. Qui odio id sit voluptas laboriosam. Placeat quia omnis rerum et autem eligendi.', 'fuga');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('58', 'Accusamus et necessitatibus a illo eaque. Vero possimus beatae ut adipisci sed et. Asperiores nisi cum illum.', 'corrupti');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('59', 'Quaerat culpa non enim. Tempore consequuntur quasi vel velit sed ut et dolores. Ipsum sed possimus quo laboriosam pariatur nesciunt doloribus. Et quos aperiam alias perferendis et. Aliquam quisquam molestias rem sunt consequatur qui excepturi.', 'ab');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('60', 'Iure dignissimos vero sed culpa ea voluptate aliquid voluptatum. Omnis ullam recusandae vero vel in ut. Ad aperiam est ducimus recusandae.', 'non');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('61', 'Earum voluptas est non ut. Maiores soluta dolore perspiciatis velit sed. Nesciunt quaerat laboriosam voluptate est voluptatem.', 'sit');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('62', 'Id incidunt occaecati atque non quas quia magnam. Eveniet molestiae ut consequuntur et et omnis.', 'quod');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('63', 'Iure ea qui cum natus est nam. Natus et est quis enim. Aut nihil officia nulla sit voluptatum. Rerum eos eum dolorem voluptate.', 'iste');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('64', 'Reiciendis et soluta tempora reiciendis. Dolore at atque voluptatem eveniet perferendis saepe quos. Quia iusto et officia accusantium. Blanditiis laborum beatae molestiae officia nihil illum accusamus.', 'est');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('65', 'Labore ducimus et at qui aut ea. Aut nam corporis id asperiores totam laborum quaerat. Aliquam voluptatem autem dolores maiores. Omnis similique maxime ratione ut.', 'officiis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('66', 'Qui omnis velit quis aut est iste harum alias. Vel earum deserunt ut rem est voluptatem occaecati sed. Et qui omnis culpa harum repellendus.', 'deleniti');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('67', 'Non qui tempora aut omnis reiciendis non impedit. Occaecati doloremque vero ea et rerum. Asperiores veniam fuga qui. Aliquam sit corporis sequi velit sunt necessitatibus voluptatem.', 'voluptas');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('68', 'Nobis quia quia ipsa et. Dolor commodi expedita enim et eos. Et illo cum perferendis facere voluptatem. Quidem nemo sapiente exercitationem minus ipsa illum reiciendis.', 'hic');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('69', 'In ad dolorem debitis porro velit. Culpa dignissimos cumque exercitationem voluptatem. Voluptatem culpa quae esse facilis dolorem.', 'vero');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('70', 'Rem est culpa esse tenetur asperiores dignissimos. Sunt aliquid velit quia sint. Occaecati ad optio quod laudantium omnis non. Ad fugiat totam est consequatur dolor cupiditate.', 'repudiandae');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('71', 'Occaecati asperiores soluta qui impedit aut. Odit nulla molestias alias cupiditate. Quo et beatae velit in sed ut tenetur provident.', 'qui');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('72', 'Nulla quia eum aspernatur placeat aliquid iusto veritatis. Maiores itaque tempore non minus. Expedita qui provident corporis minus nulla omnis odio quo. Quis eum id illum a sint culpa dolore ratione. Minus doloremque illo voluptatem sit ab autem sed.', 'veritatis');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('73', 'Quis reprehenderit voluptas nihil qui sed voluptatem ad. In neque quia earum dolores harum doloremque. Suscipit vel aliquam est repudiandae. Aut repellendus ab et consequatur.', 'et');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('74', 'Perferendis sunt id ut nisi accusamus. Rerum aut ducimus voluptatibus dolorum ad. Quisquam vel facilis quidem sunt repellendus natus est voluptatem.', 'molestiae');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('75', 'Est minima fugiat aut autem sit et. Nobis distinctio iusto et eos cumque quaerat.', 'rem');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('76', 'Facere porro modi est nisi dolores qui quos. Fugit sed natus amet dolor qui accusamus. Tempore necessitatibus voluptas placeat molestiae. Dolorum ex nihil et commodi aspernatur error. Asperiores itaque temporibus quo sunt quasi praesentium.', 'odit');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('77', 'Et laboriosam sequi maxime qui inventore omnis. Ut officiis eligendi perferendis hic voluptatem voluptatem. Exercitationem vero rem occaecati eligendi.', 'quasi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('78', 'Quisquam optio sint tenetur voluptas soluta nulla. Sed expedita voluptates molestias. Est rerum repellendus ut.', 'iure');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('79', 'Non mollitia quam laboriosam nihil quia. Totam cumque similique reiciendis sint laboriosam voluptate quae. Quia libero aut occaecati nobis qui harum.', 'possimus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('80', 'Rerum nihil esse facilis eos dolores laboriosam. Facilis enim quia quisquam sit molestias ipsa. Non optio consectetur consectetur harum odit.', 'repellat');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('81', 'Et reiciendis suscipit voluptatem aut maxime. Corrupti delectus tenetur illo fuga dicta odit sint doloremque. Consectetur voluptatum sed molestiae et voluptates.', 'consequatur');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('82', 'Libero qui facere vel aliquid cum repellat repellendus. Ea dolores voluptate quas minus eos. Expedita nobis est eligendi dolor quia. Eum praesentium autem vel tempora odit et aut et.', 'eaque');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('83', 'Consequatur ipsum aliquid voluptas nihil nostrum in quisquam. Laboriosam nihil nostrum amet. Consequatur numquam non eum aliquam debitis in placeat quia. Possimus aut nobis quo iste eum aspernatur earum.', 'a');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('84', 'Aperiam velit consequatur et aspernatur. Quo et et dolore esse dolor natus et.', 'praesentium');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('85', 'Autem laboriosam pariatur sint rerum est aliquid magnam. Voluptas sed sed omnis est. Similique impedit quasi qui.', 'vel');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('86', 'Voluptas pariatur asperiores aspernatur aut. Aut dolor voluptates aut. Est minus et qui mollitia in. Distinctio fuga quod quia blanditiis magni et quasi nesciunt.', 'adipisci');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('87', 'Et aut autem quisquam ipsa. Sequi architecto voluptatem ab aut explicabo natus. Ea deleniti consequatur fugiat ut odit itaque magni. Dignissimos numquam eligendi quia aut. Autem atque cum accusamus consequatur dolorem et dolorem.', 'sequi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('88', 'Nobis veritatis ut delectus dolore nihil occaecati. Nemo quod hic quisquam libero corrupti. Cum et doloribus similique.', 'quasi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('89', 'Quia accusamus ab nihil quia voluptatem perferendis itaque corrupti. Porro ducimus doloremque quod similique. Et et reiciendis minus tempore quod dolor non soluta. Quibusdam quia ut veniam et eum.', 'consequatur');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('90', 'Molestiae necessitatibus totam enim asperiores ducimus. Nemo non deserunt totam sequi dignissimos impedit molestiae quod. Omnis praesentium placeat quasi aut.', 'totam');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('91', 'Voluptas laborum et aspernatur est officia rem. Quia quo id nemo et numquam labore ut. Assumenda facilis sapiente qui rerum.', 'atque');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('92', 'Sit recusandae rem velit eum nulla ea. Quia amet hic beatae et hic. Provident velit sapiente necessitatibus pariatur consequatur sit vitae unde. Rerum minima possimus perspiciatis fugiat excepturi ut eaque.', 'accusamus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('93', 'Deserunt aut dolor magni officiis consequatur molestias officia. Aut hic est laborum officia voluptatem quos voluptatem. Beatae vitae aperiam esse voluptas eius odit qui.', 'est');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('94', 'Voluptatum numquam quaerat sit placeat praesentium et. Qui perferendis dolores iste mollitia consequuntur explicabo qui. Cumque perferendis omnis veniam. Est hic iste corporis ipsa rerum. Quia et minus deserunt et non similique quod.', 'sequi');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('95', 'Dicta esse quis laborum atque qui quia dolorem. Rem dolores debitis consequuntur ipsa provident qui. Voluptatem natus qui commodi recusandae quidem. Ex itaque assumenda nesciunt.', 'dolorem');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('96', 'Est aut error nisi. Voluptate tempore qui et omnis. Iure autem libero et a ut quis sit.', 'molestiae');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('97', 'Suscipit modi delectus vel non incidunt. Excepturi placeat amet dolore ut rem consequatur consectetur. Hic assumenda ipsum reiciendis est. Numquam minima ut molestiae ipsa ea.', 'est');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('98', 'Consequatur recusandae voluptates et nulla non magni voluptas. Facilis quibusdam consequatur vero aut ipsum praesentium. Rerum nam consequatur incidunt enim consequatur distinctio blanditiis. Quo quia optio enim possimus eaque aut. Fugiat esse eaque nihil qui velit officiis et.', 'temporibus');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('99', 'At dolore quod sit laboriosam corporis corrupti est aspernatur. Blanditiis autem qui aspernatur iure reiciendis molestiae. Asperiores debitis est est non.', 'voluptas');
+INSERT INTO `faculties` (`id`, `description`, `name`) VALUES ('100', 'Quam nihil autem rerum tenetur temporibus. Reprehenderit libero eos asperiores. Qui voluptatum vel eos officia qui harum. Impedit excepturi harum accusantium ut inventore aut non.', 'excepturi');
+
+
+#
+# TABLE STRUCTURE FOR: grades
+#
+
+DROP TABLE IF EXISTS `grades`;
+
+CREATE TABLE `grades` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `exam_protocol_number` smallint(6) NOT NULL,
+  `grade` tinyint(4) NOT NULL,
+  `session_type` tinyint(4) NOT NULL,
+  `student_id` bigint(20) NOT NULL,
+  `subject_id` bigint(20) NOT NULL,
+  `teacher_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK13a16545m7vvrcspc999r15s9` (`student_id`),
+  KEY `FKrc0s5tgvm9r4ccxitaqtu88k5` (`subject_id`),
+  KEY `FKjkankww1vg2lw4ysxo90qp51h` (`teacher_id`),
+  CONSTRAINT `FK13a16545m7vvrcspc999r15s9` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`),
+  CONSTRAINT `FKjkankww1vg2lw4ysxo90qp51h` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`),
+  CONSTRAINT `FKrc0s5tgvm9r4ccxitaqtu88k5` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`),
+  CONSTRAINT `grades_chk_1` CHECK (`session_type` between 0 and 2)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('1', 32767, 3, 1, '1', '1', '1');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('2', 205, 3, 0, '2', '2', '2');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('3', 32767, 6, 1, '3', '3', '3');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('4', 13919, 2, 0, '4', '4', '4');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('5', 32767, 3, 2, '5', '5', '5');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('6', 5, 3, 2, '6', '6', '6');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('7', 550, 4, 1, '7', '7', '7');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('8', 32767, 6, 1, '8', '8', '8');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('9', 32767, 5, 0, '9', '9', '9');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('10', 427, 2, 2, '10', '10', '10');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('11', 0, 6, 2, '11', '11', '11');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('12', 89, 3, 0, '12', '12', '12');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('13', 3, 5, 2, '13', '13', '13');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('14', 32767, 5, 0, '14', '14', '14');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('15', 32767, 4, 0, '15', '15', '15');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('16', 32767, 4, 0, '16', '16', '16');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('17', 687, 2, 1, '17', '17', '17');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('18', 28, 5, 0, '18', '18', '18');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('19', 4, 3, 2, '19', '19', '19');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('20', 352, 4, 2, '20', '20', '20');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('21', 32767, 2, 0, '21', '21', '21');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('22', 2734, 4, 0, '22', '22', '22');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('23', 32767, 5, 2, '23', '23', '23');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('24', 32767, 6, 0, '24', '24', '24');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('25', 32767, 2, 1, '25', '25', '25');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('26', 32767, 6, 1, '26', '26', '26');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('27', 32767, 5, 1, '27', '27', '27');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('28', 32767, 5, 0, '28', '28', '28');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('29', 32767, 2, 0, '29', '29', '29');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('30', 936, 4, 1, '30', '30', '30');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('31', 0, 3, 1, '31', '31', '31');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('32', 32767, 4, 2, '32', '32', '32');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('33', 32767, 2, 2, '33', '33', '33');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('34', 9978, 6, 0, '34', '34', '34');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('35', 735, 4, 2, '35', '35', '35');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('36', 32767, 6, 2, '36', '36', '36');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('37', 9580, 4, 0, '37', '37', '37');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('38', 32767, 5, 0, '38', '38', '38');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('39', 32767, 2, 0, '39', '39', '39');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('40', 70, 5, 0, '40', '40', '40');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('41', 32767, 2, 1, '41', '41', '41');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('42', 7427, 5, 2, '42', '42', '42');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('43', 4740, 4, 2, '43', '43', '43');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('44', 32767, 4, 1, '44', '44', '44');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('45', 0, 4, 2, '45', '45', '45');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('46', 2, 2, 1, '46', '46', '46');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('47', 0, 4, 1, '47', '47', '47');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('48', 32767, 4, 1, '48', '48', '48');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('49', 32767, 2, 2, '49', '49', '49');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('50', 0, 2, 0, '50', '50', '50');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('51', 32767, 6, 1, '51', '51', '51');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('52', 19564, 4, 1, '52', '52', '52');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('53', 32767, 3, 0, '53', '53', '53');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('54', 662, 6, 1, '54', '54', '54');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('55', 32767, 6, 2, '55', '55', '55');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('56', 426, 5, 0, '56', '56', '56');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('57', 690, 6, 0, '57', '57', '57');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('58', 7, 3, 0, '58', '58', '58');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('59', 1, 5, 1, '59', '59', '59');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('60', 39, 4, 0, '60', '60', '60');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('61', 69, 2, 0, '61', '61', '61');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('62', 32767, 6, 2, '62', '62', '62');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('63', 32767, 2, 1, '63', '63', '63');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('64', 32767, 4, 0, '64', '64', '64');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('65', 32767, 5, 0, '65', '65', '65');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('66', 32767, 5, 0, '66', '66', '66');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('67', 32767, 3, 0, '67', '67', '67');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('68', 32767, 6, 1, '68', '68', '68');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('69', 32767, 2, 2, '69', '69', '69');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('70', 32767, 5, 2, '70', '70', '70');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('71', 0, 4, 1, '71', '71', '71');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('72', 32767, 6, 2, '72', '72', '72');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('73', 32767, 6, 1, '73', '73', '73');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('74', 0, 3, 2, '74', '74', '74');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('75', 603, 3, 2, '75', '75', '75');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('76', 43, 4, 0, '76', '76', '76');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('77', 7, 5, 2, '77', '77', '77');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('78', 26383, 5, 1, '78', '78', '78');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('79', 8, 3, 2, '79', '79', '79');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('80', 5668, 5, 0, '80', '80', '80');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('81', 6, 5, 2, '81', '81', '81');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('82', 32767, 4, 1, '82', '82', '82');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('83', 535, 3, 1, '83', '83', '83');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('84', 32767, 6, 1, '84', '84', '84');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('85', 9096, 5, 1, '85', '85', '85');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('86', 32767, 5, 0, '86', '86', '86');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('87', 5, 5, 1, '87', '87', '87');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('88', 60, 6, 1, '88', '88', '88');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('89', 32767, 3, 2, '89', '89', '89');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('90', 11218, 4, 2, '90', '90', '90');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('91', 5035, 4, 2, '91', '91', '91');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('92', 32767, 3, 0, '92', '92', '92');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('93', 0, 4, 1, '93', '93', '93');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('94', 32767, 2, 1, '94', '94', '94');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('95', 32767, 6, 1, '95', '95', '95');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('96', 246, 3, 0, '96', '96', '96');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('97', 32767, 5, 2, '97', '97', '97');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('98', 32767, 6, 2, '98', '98', '98');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('99', 32767, 3, 1, '99', '99', '99');
+INSERT INTO `grades` (`id`, `exam_protocol_number`, `grade`, `session_type`, `student_id`, `subject_id`, `teacher_id`) VALUES ('100', 0, 3, 1, '100', '100', '100');
+
+
+#
+# TABLE STRUCTURE FOR: health_insurance_payments
+#
+
+DROP TABLE IF EXISTS `health_insurance_payments`;
+
+CREATE TABLE `health_insurance_payments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(38,2) NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `period` datetime(6) NOT NULL,
+  `student_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKik8bugsnnf5d0ik9q42sj1xsl` (`student_id`),
+  CONSTRAINT `FKik8bugsnnf5d0ik9q42sj1xsl` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('1', '851125.88', '2020-02-23 00:00:00.000000', '1989-11-04 00:00:00.000000', '1');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('2', '65.66', '1982-05-10 00:00:00.000000', '2015-10-05 00:00:00.000000', '2');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('3', '34978.40', '2001-12-13 00:00:00.000000', '1994-05-30 00:00:00.000000', '3');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('4', '557.23', '2014-09-14 00:00:00.000000', '1973-08-17 00:00:00.000000', '4');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('5', '1.80', '1982-03-02 00:00:00.000000', '1974-09-15 00:00:00.000000', '5');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('6', '647.00', '2009-10-02 00:00:00.000000', '2023-11-10 00:00:00.000000', '6');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('7', '12712.83', '2012-06-09 00:00:00.000000', '2016-02-04 00:00:00.000000', '7');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('8', '4168307.91', '1976-04-08 00:00:00.000000', '2008-06-10 00:00:00.000000', '8');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('9', '525300.90', '1987-12-10 00:00:00.000000', '1988-03-30 00:00:00.000000', '9');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('10', '47.14', '2013-07-28 00:00:00.000000', '2000-08-09 00:00:00.000000', '10');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('11', '0.00', '1995-01-15 00:00:00.000000', '2018-12-05 00:00:00.000000', '11');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('12', '0.00', '1988-08-17 00:00:00.000000', '2003-03-30 00:00:00.000000', '12');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('13', '4.13', '2012-06-14 00:00:00.000000', '1980-06-10 00:00:00.000000', '13');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('14', '582633968.19', '1976-01-17 00:00:00.000000', '2023-04-19 00:00:00.000000', '14');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('15', '1.58', '1990-02-14 00:00:00.000000', '1994-09-12 00:00:00.000000', '15');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('16', '11.37', '1983-06-26 00:00:00.000000', '2021-10-24 00:00:00.000000', '16');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('17', '0.00', '2012-03-07 00:00:00.000000', '2013-01-25 00:00:00.000000', '17');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('18', '232175.41', '1971-08-20 00:00:00.000000', '2013-11-20 00:00:00.000000', '18');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('19', '28.01', '2006-03-18 00:00:00.000000', '2020-10-03 00:00:00.000000', '19');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('20', '192652237.60', '2010-10-20 00:00:00.000000', '1974-10-20 00:00:00.000000', '20');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('21', '565154770.96', '2017-03-06 00:00:00.000000', '1971-09-07 00:00:00.000000', '21');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('22', '2116.67', '2005-04-06 00:00:00.000000', '1973-05-29 00:00:00.000000', '22');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('23', '5054.51', '2012-03-25 00:00:00.000000', '2009-02-01 00:00:00.000000', '23');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('24', '29513.72', '1996-02-10 00:00:00.000000', '2016-12-25 00:00:00.000000', '24');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('25', '24351.67', '1972-03-17 00:00:00.000000', '2019-05-01 00:00:00.000000', '25');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('26', '732054.04', '1996-06-05 00:00:00.000000', '1976-04-16 00:00:00.000000', '26');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('27', '276950.73', '2019-12-17 00:00:00.000000', '1979-12-28 00:00:00.000000', '27');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('28', '92983107.48', '1990-10-02 00:00:00.000000', '2000-12-09 00:00:00.000000', '28');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('29', '24236.00', '1978-09-06 00:00:00.000000', '2005-01-05 00:00:00.000000', '29');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('30', '11419.24', '2014-01-25 00:00:00.000000', '2004-06-10 00:00:00.000000', '30');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('31', '7286600.71', '1978-10-31 00:00:00.000000', '2004-04-21 00:00:00.000000', '31');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('32', '26.00', '1972-05-03 00:00:00.000000', '1976-11-27 00:00:00.000000', '32');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('33', '244990.70', '1979-01-14 00:00:00.000000', '2018-11-20 00:00:00.000000', '33');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('34', '0.00', '2008-08-28 00:00:00.000000', '1984-05-25 00:00:00.000000', '34');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('35', '2546050.03', '2002-11-12 00:00:00.000000', '2002-07-06 00:00:00.000000', '35');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('36', '712486.55', '2006-04-04 00:00:00.000000', '1980-04-07 00:00:00.000000', '36');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('37', '12253.65', '1996-05-16 00:00:00.000000', '2002-08-22 00:00:00.000000', '37');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('38', '258562740.61', '1978-08-26 00:00:00.000000', '2013-10-14 00:00:00.000000', '38');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('39', '0.00', '2005-02-04 00:00:00.000000', '2015-01-10 00:00:00.000000', '39');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('40', '1.70', '2001-03-02 00:00:00.000000', '2019-08-08 00:00:00.000000', '40');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('41', '640.92', '1989-12-04 00:00:00.000000', '2016-02-13 00:00:00.000000', '41');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('42', '90881.98', '1974-06-15 00:00:00.000000', '2007-08-07 00:00:00.000000', '42');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('43', '1991996.92', '1974-08-15 00:00:00.000000', '1986-11-24 00:00:00.000000', '43');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('44', '1406.18', '1979-11-09 00:00:00.000000', '1989-09-23 00:00:00.000000', '44');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('45', '23452.00', '1993-06-04 00:00:00.000000', '1998-08-01 00:00:00.000000', '45');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('46', '28134687.00', '1970-11-24 00:00:00.000000', '2013-12-15 00:00:00.000000', '46');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('47', '0.00', '1988-01-02 00:00:00.000000', '1983-07-27 00:00:00.000000', '47');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('48', '87.84', '1970-08-10 00:00:00.000000', '2002-08-27 00:00:00.000000', '48');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('49', '29.44', '1993-11-24 00:00:00.000000', '1997-12-02 00:00:00.000000', '49');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('50', '88814728.85', '2014-03-06 00:00:00.000000', '1979-07-01 00:00:00.000000', '50');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('51', '2.22', '2002-07-18 00:00:00.000000', '2006-02-19 00:00:00.000000', '51');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('52', '5.00', '1992-10-14 00:00:00.000000', '2024-04-09 00:00:00.000000', '52');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('53', '6044561.00', '2007-10-02 00:00:00.000000', '1992-09-23 00:00:00.000000', '53');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('54', '5373.17', '2011-07-23 00:00:00.000000', '2006-01-23 00:00:00.000000', '54');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('55', '6694245.34', '1980-11-26 00:00:00.000000', '2015-12-09 00:00:00.000000', '55');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('56', '51340829.00', '2018-01-17 00:00:00.000000', '1978-05-11 00:00:00.000000', '56');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('57', '3242803.47', '1975-02-04 00:00:00.000000', '1988-10-16 00:00:00.000000', '57');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('58', '410104757.60', '1991-09-21 00:00:00.000000', '2012-06-27 00:00:00.000000', '58');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('59', '0.00', '1981-08-21 00:00:00.000000', '1990-10-12 00:00:00.000000', '59');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('60', '0.00', '2022-05-05 00:00:00.000000', '1998-05-20 00:00:00.000000', '60');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('61', '20987.85', '2004-12-26 00:00:00.000000', '1994-12-31 00:00:00.000000', '61');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('62', '0.00', '1997-01-01 00:00:00.000000', '2002-03-18 00:00:00.000000', '62');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('63', '27319.10', '2002-01-24 00:00:00.000000', '1979-03-10 00:00:00.000000', '63');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('64', '112.88', '1997-10-30 00:00:00.000000', '1972-06-15 00:00:00.000000', '64');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('65', '0.98', '2024-09-20 00:00:00.000000', '2021-07-18 00:00:00.000000', '65');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('66', '1398.26', '1982-06-10 00:00:00.000000', '2003-07-23 00:00:00.000000', '66');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('67', '183761555.93', '1996-02-17 00:00:00.000000', '1988-12-22 00:00:00.000000', '67');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('68', '681.40', '2005-04-05 00:00:00.000000', '1992-02-05 00:00:00.000000', '68');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('69', '18585.60', '2013-09-04 00:00:00.000000', '1978-03-02 00:00:00.000000', '69');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('70', '67.69', '1995-06-13 00:00:00.000000', '2012-06-05 00:00:00.000000', '70');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('71', '444069.20', '2015-02-08 00:00:00.000000', '1973-04-28 00:00:00.000000', '71');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('72', '330844.22', '2018-06-10 00:00:00.000000', '1979-10-24 00:00:00.000000', '72');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('73', '0.00', '2008-04-19 00:00:00.000000', '1971-09-12 00:00:00.000000', '73');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('74', '2.09', '2002-05-24 00:00:00.000000', '2023-03-15 00:00:00.000000', '74');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('75', '2.23', '2016-10-07 00:00:00.000000', '1974-10-23 00:00:00.000000', '75');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('76', '0.00', '1994-10-29 00:00:00.000000', '1970-12-16 00:00:00.000000', '76');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('77', '6417035.17', '1972-04-13 00:00:00.000000', '2007-02-05 00:00:00.000000', '77');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('78', '167547205.32', '2015-12-16 00:00:00.000000', '2018-03-13 00:00:00.000000', '78');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('79', '5325568.00', '2022-09-01 00:00:00.000000', '1984-11-11 00:00:00.000000', '79');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('80', '27986287.44', '2017-08-16 00:00:00.000000', '1981-01-15 00:00:00.000000', '80');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('81', '224394.77', '1992-10-07 00:00:00.000000', '1979-07-24 00:00:00.000000', '81');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('82', '0.00', '1988-05-14 00:00:00.000000', '1974-05-31 00:00:00.000000', '82');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('83', '36.03', '1993-07-10 00:00:00.000000', '1993-07-11 00:00:00.000000', '83');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('84', '14089.89', '1980-02-01 00:00:00.000000', '2001-04-01 00:00:00.000000', '84');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('85', '1783068.92', '1996-05-01 00:00:00.000000', '2018-01-13 00:00:00.000000', '85');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('86', '90298.16', '2022-10-10 00:00:00.000000', '2021-07-24 00:00:00.000000', '86');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('87', '32906782.90', '2018-03-17 00:00:00.000000', '1974-04-29 00:00:00.000000', '87');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('88', '75003.01', '1992-04-07 00:00:00.000000', '2011-07-11 00:00:00.000000', '88');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('89', '435529152.00', '1970-07-05 00:00:00.000000', '1982-04-06 00:00:00.000000', '89');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('90', '6210.81', '1996-03-19 00:00:00.000000', '1993-11-20 00:00:00.000000', '90');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('91', '294054232.27', '2012-12-09 00:00:00.000000', '2007-06-18 00:00:00.000000', '91');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('92', '0.49', '1988-04-20 00:00:00.000000', '2023-09-05 00:00:00.000000', '92');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('93', '15485265.83', '2014-10-14 00:00:00.000000', '2024-06-12 00:00:00.000000', '93');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('94', '87.32', '2013-04-10 00:00:00.000000', '1976-08-30 00:00:00.000000', '94');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('95', '0.00', '1980-06-07 00:00:00.000000', '1977-01-12 00:00:00.000000', '95');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('96', '11.10', '1980-10-27 00:00:00.000000', '1990-08-13 00:00:00.000000', '96');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('97', '0.67', '1998-03-22 00:00:00.000000', '2002-09-24 00:00:00.000000', '97');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('98', '79.52', '1985-04-23 00:00:00.000000', '1989-12-22 00:00:00.000000', '98');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('99', '857.49', '1996-09-25 00:00:00.000000', '1999-04-01 00:00:00.000000', '99');
+INSERT INTO `health_insurance_payments` (`id`, `amount`, `date`, `period`, `student_id`) VALUES ('100', '24.52', '2008-06-05 00:00:00.000000', '2008-08-10 00:00:00.000000', '100');
+
+
+#
+# TABLE STRUCTURE FOR: payments
+#
+
+DROP TABLE IF EXISTS `payments`;
+
+CREATE TABLE `payments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(38,2) NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `payment_status_enum` tinyint(4) NOT NULL,
+  `payment_type` tinyint(4) NOT NULL,
+  `student_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK6ooq278k2bs5xi8t5o6oort1v` (`student_id`),
+  CONSTRAINT `FK6ooq278k2bs5xi8t5o6oort1v` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`),
+  CONSTRAINT `payments_chk_1` CHECK (`payment_status_enum` between 0 and 2),
+  CONSTRAINT `payments_chk_2` CHECK (`payment_type` between 0 and 3)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('1', '22156.63', '1974-01-26 00:00:00.000000', 1, 0, '1');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('2', '5.50', '2005-11-17 00:00:00.000000', 2, 2, '2');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('3', '112244090.20', '2004-08-06 00:00:00.000000', 2, 1, '3');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('4', '0.00', '1970-11-16 00:00:00.000000', 0, 3, '4');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('5', '55216.82', '1975-03-08 00:00:00.000000', 2, 2, '5');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('6', '3201.70', '1991-03-12 00:00:00.000000', 1, 1, '6');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('7', '0.00', '1985-12-01 00:00:00.000000', 1, 3, '7');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('8', '9360954.20', '1998-12-02 00:00:00.000000', 0, 2, '8');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('9', '388.50', '1995-12-29 00:00:00.000000', 2, 1, '9');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('10', '0.00', '2021-10-27 00:00:00.000000', 0, 3, '10');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('11', '346.39', '1982-12-11 00:00:00.000000', 0, 1, '11');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('12', '8.85', '2001-02-26 00:00:00.000000', 2, 2, '12');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('13', '40.46', '2024-01-01 00:00:00.000000', 1, 0, '13');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('14', '0.00', '1980-06-11 00:00:00.000000', 0, 3, '14');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('15', '253576.50', '1993-01-24 00:00:00.000000', 2, 3, '15');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('16', '284984.67', '1999-09-15 00:00:00.000000', 0, 0, '16');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('17', '35233618.18', '2008-05-05 00:00:00.000000', 0, 0, '17');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('18', '420340.00', '2011-07-09 00:00:00.000000', 0, 1, '18');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('19', '3699.78', '2000-09-09 00:00:00.000000', 1, 2, '19');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('20', '313709681.70', '1975-09-05 00:00:00.000000', 0, 3, '20');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('21', '364.69', '2018-10-25 00:00:00.000000', 0, 2, '21');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('22', '4219687.60', '1993-12-26 00:00:00.000000', 1, 3, '22');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('23', '8635.61', '2016-05-27 00:00:00.000000', 2, 2, '23');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('24', '531.70', '1970-04-24 00:00:00.000000', 1, 3, '24');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('25', '678762.97', '1984-06-11 00:00:00.000000', 2, 2, '25');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('26', '21857.54', '2022-06-24 00:00:00.000000', 0, 3, '26');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('27', '72452.88', '2010-08-31 00:00:00.000000', 2, 0, '27');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('28', '23607.90', '2014-02-01 00:00:00.000000', 1, 2, '28');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('29', '11200511.07', '2005-05-15 00:00:00.000000', 0, 0, '29');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('30', '1557505.53', '1991-10-08 00:00:00.000000', 0, 3, '30');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('31', '25.02', '2021-08-21 00:00:00.000000', 2, 1, '31');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('32', '238601958.82', '1984-06-22 00:00:00.000000', 2, 2, '32');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('33', '1520.09', '2004-05-06 00:00:00.000000', 2, 3, '33');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('34', '453406.21', '1990-04-11 00:00:00.000000', 1, 1, '34');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('35', '185602427.40', '2019-09-03 00:00:00.000000', 2, 3, '35');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('36', '11742409.11', '1979-06-27 00:00:00.000000', 1, 2, '36');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('37', '0.10', '2016-05-29 00:00:00.000000', 2, 3, '37');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('38', '4306101.00', '1974-05-16 00:00:00.000000', 2, 2, '38');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('39', '1024.70', '1995-06-24 00:00:00.000000', 2, 0, '39');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('40', '1092.58', '2020-05-12 00:00:00.000000', 0, 0, '40');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('41', '10067481.79', '2022-07-09 00:00:00.000000', 1, 0, '41');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('42', '493671543.31', '2012-11-10 00:00:00.000000', 1, 1, '42');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('43', '153819133.33', '1979-05-08 00:00:00.000000', 1, 0, '43');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('44', '355480.18', '1981-04-23 00:00:00.000000', 0, 1, '44');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('45', '201.83', '2025-01-22 00:00:00.000000', 2, 2, '45');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('46', '44.96', '1995-09-13 00:00:00.000000', 0, 0, '46');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('47', '122309372.01', '1987-09-19 00:00:00.000000', 1, 1, '47');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('48', '3567.72', '1975-05-07 00:00:00.000000', 1, 3, '48');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('49', '409.80', '1986-10-23 00:00:00.000000', 1, 0, '49');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('50', '223871.70', '1990-12-06 00:00:00.000000', 2, 1, '50');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('51', '0.00', '2001-11-18 00:00:00.000000', 1, 3, '51');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('52', '30678328.26', '1977-10-10 00:00:00.000000', 0, 2, '52');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('53', '260.31', '2024-05-18 00:00:00.000000', 1, 2, '53');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('54', '13258814.46', '1990-09-30 00:00:00.000000', 0, 3, '54');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('55', '411342.80', '1996-01-08 00:00:00.000000', 0, 3, '55');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('56', '2287925.79', '1975-12-12 00:00:00.000000', 2, 2, '56');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('57', '2524858.46', '1994-02-22 00:00:00.000000', 1, 1, '57');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('58', '4666153.47', '2010-12-16 00:00:00.000000', 2, 0, '58');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('59', '149987.20', '1988-07-26 00:00:00.000000', 1, 0, '59');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('60', '290925496.41', '1986-09-27 00:00:00.000000', 2, 3, '60');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('61', '0.00', '1970-01-05 00:00:00.000000', 2, 0, '61');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('62', '0.32', '1986-08-09 00:00:00.000000', 1, 1, '62');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('63', '1296.60', '1972-10-21 00:00:00.000000', 1, 2, '63');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('64', '70770075.80', '1972-08-26 00:00:00.000000', 0, 0, '64');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('65', '1865.14', '2005-04-30 00:00:00.000000', 1, 0, '65');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('66', '529387779.12', '2016-08-30 00:00:00.000000', 1, 0, '66');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('67', '61808960.00', '2020-06-23 00:00:00.000000', 1, 1, '67');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('68', '96050.39', '2004-09-08 00:00:00.000000', 2, 0, '68');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('69', '870919.60', '1991-08-30 00:00:00.000000', 0, 1, '69');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('70', '7207581.00', '2004-03-08 00:00:00.000000', 2, 3, '70');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('71', '1306689.28', '1989-07-14 00:00:00.000000', 1, 2, '71');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('72', '101020373.85', '1980-08-26 00:00:00.000000', 1, 0, '72');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('73', '558090.61', '1980-03-09 00:00:00.000000', 0, 3, '73');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('74', '537762489.94', '1990-05-04 00:00:00.000000', 0, 2, '74');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('75', '112986221.61', '1975-07-11 00:00:00.000000', 0, 2, '75');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('76', '5.42', '1982-10-08 00:00:00.000000', 2, 2, '76');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('77', '183510.83', '2005-03-31 00:00:00.000000', 0, 1, '77');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('78', '212999.00', '2015-02-18 00:00:00.000000', 2, 1, '78');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('79', '1.04', '1984-09-30 00:00:00.000000', 1, 1, '79');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('80', '5967773.30', '2023-04-12 00:00:00.000000', 0, 0, '80');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('81', '0.31', '1981-04-02 00:00:00.000000', 0, 2, '81');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('82', '0.00', '2014-08-30 00:00:00.000000', 2, 2, '82');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('83', '0.72', '2016-08-29 00:00:00.000000', 1, 3, '83');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('84', '1.71', '2015-08-18 00:00:00.000000', 0, 2, '84');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('85', '205367.09', '2017-06-07 00:00:00.000000', 0, 3, '85');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('86', '2408.00', '1976-01-14 00:00:00.000000', 1, 0, '86');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('87', '589.93', '2008-03-20 00:00:00.000000', 2, 1, '87');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('88', '124538891.40', '1989-10-17 00:00:00.000000', 0, 2, '88');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('89', '16.15', '2017-01-29 00:00:00.000000', 0, 3, '89');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('90', '0.00', '1987-06-19 00:00:00.000000', 1, 2, '90');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('91', '303470.09', '2005-03-13 00:00:00.000000', 1, 2, '91');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('92', '753759.60', '2009-01-06 00:00:00.000000', 1, 0, '92');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('93', '387898827.86', '2005-06-12 00:00:00.000000', 2, 1, '93');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('94', '1419042.86', '2008-03-16 00:00:00.000000', 2, 3, '94');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('95', '425.11', '1975-05-23 00:00:00.000000', 0, 0, '95');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('96', '41.70', '2020-06-16 00:00:00.000000', 1, 0, '96');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('97', '0.00', '2001-08-27 00:00:00.000000', 0, 1, '97');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('98', '19.97', '1978-12-09 00:00:00.000000', 0, 1, '98');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('99', '0.00', '2011-06-26 00:00:00.000000', 0, 1, '99');
+INSERT INTO `payments` (`id`, `amount`, `date`, `payment_status_enum`, `payment_type`, `student_id`) VALUES ('100', '399.00', '2010-07-12 00:00:00.000000', 0, 0, '100');
+
+
+#
+# TABLE STRUCTURE FOR: rooms
+#
+
+DROP TABLE IF EXISTS `rooms`;
+
+CREATE TABLE `rooms` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `block` bigint(20) NOT NULL,
+  `capacity` tinyint(4) NOT NULL,
+  `floor` smallint(6) NOT NULL,
+  `number` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('1', '18', 127, 5, 5);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('2', '5', 65, 1, 1);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('3', '8', 103, 5, 46);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('4', '14', 18, 3, 24);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('5', '12', 104, 2, 38);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('6', '17', 107, 3, 17);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('7', '4', 69, 5, 38);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('8', '15', 37, 5, 8);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('9', '1', 48, 5, 16);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('10', '3', 89, 3, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('11', '9', 127, 5, 15);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('12', '3', 124, 1, 38);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('13', '6', 42, 3, 24);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('14', '5', 127, 2, 13);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('15', '17', 30, 5, 46);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('16', '18', 59, 3, 7);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('17', '11', 90, 3, 11);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('18', '8', 114, 4, 22);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('19', '10', 16, 5, 17);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('20', '12', 44, 1, 33);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('21', '8', 127, 3, 37);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('22', '18', 127, 4, 50);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('23', '3', 55, 5, 37);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('24', '12', 127, 3, 25);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('25', '16', 122, 5, 29);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('26', '20', 56, 2, 4);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('27', '17', 127, 2, 28);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('28', '20', 109, 1, 44);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('29', '5', 127, 1, 37);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('30', '10', 101, 3, 31);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('31', '3', 106, 5, 24);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('32', '3', 27, 3, 45);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('33', '12', 60, 3, 50);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('34', '19', 15, 2, 33);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('35', '15', 127, 2, 20);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('36', '5', 127, 4, 33);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('37', '10', 127, 3, 11);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('38', '19', 87, 2, 41);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('39', '5', 127, 2, 31);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('40', '10', 127, 1, 39);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('41', '8', 127, 1, 25);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('42', '10', 46, 3, 27);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('43', '18', 105, 1, 49);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('44', '6', 62, 2, 46);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('45', '9', 113, 3, 6);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('46', '20', 83, 1, 20);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('47', '3', 95, 4, 40);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('48', '17', 33, 1, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('49', '8', 127, 3, 9);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('50', '8', 127, 4, 24);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('51', '11', 56, 1, 38);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('52', '17', 127, 5, 30);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('53', '20', 127, 2, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('54', '20', 127, 3, 13);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('55', '17', 127, 5, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('56', '15', 127, 3, 10);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('57', '15', 127, 3, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('58', '19', 110, 3, 45);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('59', '8', 73, 2, 11);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('60', '4', 127, 5, 17);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('61', '9', 127, 2, 49);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('62', '5', 127, 2, 2);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('63', '6', 65, 1, 4);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('64', '15', 57, 4, 4);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('65', '3', 127, 2, 46);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('66', '4', 127, 3, 6);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('67', '18', 48, 4, 31);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('68', '1', 43, 4, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('69', '13', 127, 3, 29);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('70', '11', 101, 2, 39);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('71', '7', 107, 5, 31);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('72', '16', 127, 2, 49);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('73', '19', 127, 1, 41);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('74', '10', 36, 3, 10);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('75', '5', 114, 5, 34);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('76', '1', 127, 2, 33);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('77', '8', 71, 2, 22);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('78', '12', 106, 3, 45);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('79', '9', 38, 2, 20);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('80', '12', 63, 1, 3);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('81', '18', 21, 2, 36);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('82', '19', 33, 2, 17);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('83', '17', 36, 5, 18);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('84', '10', 127, 5, 46);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('85', '9', 127, 2, 3);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('86', '5', 127, 5, 9);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('87', '9', 108, 4, 36);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('88', '5', 54, 5, 47);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('89', '15', 127, 2, 44);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('90', '10', 127, 5, 37);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('91', '12', 41, 4, 7);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('92', '6', 127, 1, 19);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('93', '8', 127, 5, 20);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('94', '10', 67, 3, 41);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('95', '3', 63, 1, 26);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('96', '9', 127, 3, 9);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('97', '3', 127, 2, 50);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('98', '16', 78, 3, 23);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('99', '20', 90, 1, 1);
+INSERT INTO `rooms` (`id`, `block`, `capacity`, `floor`, `number`) VALUES ('100', '11', 127, 4, 6);
+
+
+#
+# TABLE STRUCTURE FOR: scholarship
+#
+
+DROP TABLE IF EXISTS `scholarship`;
+
+CREATE TABLE `scholarship` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `amount` decimal(10,2) NOT NULL,
+  `application_status` tinyint(4) NOT NULL,
+  `date` datetime(6) NOT NULL,
+  `semester_id` bigint(20) NOT NULL,
+  `student_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKm58lslc1kiv2vbsvotk6o76vh` (`semester_id`),
+  KEY `FKphvh20vkwoumbr2hiloa1a10f` (`student_id`),
+  CONSTRAINT `FKm58lslc1kiv2vbsvotk6o76vh` FOREIGN KEY (`semester_id`) REFERENCES `semesters` (`id`),
+  CONSTRAINT `FKphvh20vkwoumbr2hiloa1a10f` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`),
+  CONSTRAINT `scholarship_chk_1` CHECK (`application_status` between 0 and 2)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('1', '9687838.45', 2, '2022-08-13 00:00:00.000000', '1', '1');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('2', '99999999.99', 0, '2025-02-27 00:00:00.000000', '2', '2');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('3', '9905486.13', 2, '1978-09-09 00:00:00.000000', '3', '3');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('4', '120.01', 2, '2017-02-02 00:00:00.000000', '4', '4');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('5', '99999999.99', 0, '2011-12-03 00:00:00.000000', '5', '5');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('6', '0.00', 1, '1997-07-12 00:00:00.000000', '6', '6');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('7', '664179.66', 2, '1988-12-09 00:00:00.000000', '7', '7');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('8', '17.99', 1, '1983-05-17 00:00:00.000000', '8', '8');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('9', '0.46', 1, '2019-02-03 00:00:00.000000', '9', '9');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('10', '4561792.01', 0, '1983-08-05 00:00:00.000000', '10', '10');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('11', '15401.90', 1, '2000-09-02 00:00:00.000000', '11', '11');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('12', '26.00', 0, '1997-12-31 00:00:00.000000', '12', '12');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('13', '1.17', 1, '1974-01-23 00:00:00.000000', '13', '13');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('14', '2368.41', 2, '2017-04-10 00:00:00.000000', '14', '14');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('15', '0.00', 1, '1975-01-11 00:00:00.000000', '15', '15');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('16', '1.15', 1, '2009-02-09 00:00:00.000000', '16', '16');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('17', '99999999.99', 0, '2019-09-24 00:00:00.000000', '17', '17');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('18', '3.66', 2, '1999-05-22 00:00:00.000000', '18', '18');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('19', '21935.84', 0, '2023-12-27 00:00:00.000000', '19', '19');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('20', '99999999.99', 0, '1981-07-26 00:00:00.000000', '20', '20');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('21', '63283.00', 0, '2006-10-26 00:00:00.000000', '21', '21');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('22', '49105497.63', 1, '2018-07-20 00:00:00.000000', '22', '22');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('23', '32041.00', 1, '1983-06-03 00:00:00.000000', '23', '23');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('24', '99999999.99', 1, '2012-11-21 00:00:00.000000', '24', '24');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('25', '6772432.71', 0, '1989-04-10 00:00:00.000000', '25', '25');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('26', '107807.00', 0, '1988-07-05 00:00:00.000000', '26', '26');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('27', '5.74', 2, '1996-04-07 00:00:00.000000', '27', '27');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('28', '346785.00', 2, '1971-10-26 00:00:00.000000', '28', '28');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('29', '99999999.99', 2, '2013-08-13 00:00:00.000000', '29', '29');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('30', '5581.14', 2, '1995-12-29 00:00:00.000000', '30', '30');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('31', '1.73', 2, '2022-09-21 00:00:00.000000', '31', '31');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('32', '184818.02', 2, '2012-03-18 00:00:00.000000', '32', '32');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('33', '99999999.99', 2, '2009-09-28 00:00:00.000000', '33', '33');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('34', '5572.46', 0, '2012-03-01 00:00:00.000000', '34', '34');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('35', '97430.50', 1, '2005-03-27 00:00:00.000000', '35', '35');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('36', '40.64', 1, '2013-02-15 00:00:00.000000', '36', '36');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('37', '231065.06', 0, '1975-10-10 00:00:00.000000', '37', '37');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('38', '55.15', 0, '1987-12-11 00:00:00.000000', '38', '38');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('39', '100.70', 2, '2012-10-05 00:00:00.000000', '39', '39');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('40', '0.36', 0, '1982-04-06 00:00:00.000000', '40', '40');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('41', '268.14', 0, '1986-11-07 00:00:00.000000', '41', '41');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('42', '4327934.27', 2, '2021-01-19 00:00:00.000000', '42', '42');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('43', '32.92', 2, '1991-08-28 00:00:00.000000', '43', '43');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('44', '4454905.00', 1, '1988-08-08 00:00:00.000000', '44', '44');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('45', '0.00', 1, '2001-12-29 00:00:00.000000', '45', '45');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('46', '22068321.42', 0, '2000-04-13 00:00:00.000000', '46', '46');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('47', '91714394.52', 1, '2017-07-08 00:00:00.000000', '47', '47');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('48', '12957.09', 2, '2006-08-28 00:00:00.000000', '48', '48');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('49', '5.80', 1, '1996-08-01 00:00:00.000000', '49', '49');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('50', '20.05', 1, '2016-12-21 00:00:00.000000', '50', '50');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('51', '42.11', 1, '2016-09-11 00:00:00.000000', '51', '51');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('52', '0.32', 0, '1997-05-22 00:00:00.000000', '52', '52');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('53', '29392001.56', 0, '2019-02-10 00:00:00.000000', '53', '53');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('54', '0.00', 2, '2001-08-06 00:00:00.000000', '54', '54');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('55', '3.63', 0, '1979-08-14 00:00:00.000000', '55', '55');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('56', '23333615.85', 1, '2000-05-27 00:00:00.000000', '56', '56');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('57', '16401.88', 1, '2019-07-22 00:00:00.000000', '57', '57');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('58', '8916292.99', 1, '1998-08-16 00:00:00.000000', '58', '58');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('59', '69038.12', 1, '1991-01-10 00:00:00.000000', '59', '59');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('60', '66461033.04', 1, '2016-10-20 00:00:00.000000', '60', '60');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('61', '0.00', 2, '2005-01-26 00:00:00.000000', '61', '61');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('62', '6.79', 0, '1991-08-27 00:00:00.000000', '62', '62');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('63', '609.77', 0, '2003-10-30 00:00:00.000000', '63', '63');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('64', '417241.84', 0, '1986-12-09 00:00:00.000000', '64', '64');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('65', '92.80', 2, '2017-05-08 00:00:00.000000', '65', '65');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('66', '99999999.99', 2, '1998-03-20 00:00:00.000000', '66', '66');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('67', '4.09', 0, '1978-03-30 00:00:00.000000', '67', '67');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('68', '20186.40', 1, '2012-12-06 00:00:00.000000', '68', '68');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('69', '24.84', 2, '2017-04-02 00:00:00.000000', '69', '69');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('70', '1463081.40', 0, '2004-05-06 00:00:00.000000', '70', '70');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('71', '737.00', 2, '1994-10-19 00:00:00.000000', '71', '71');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('72', '229213.66', 0, '2006-01-19 00:00:00.000000', '72', '72');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('73', '8055137.00', 1, '2016-12-07 00:00:00.000000', '73', '73');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('74', '3851959.35', 2, '1996-01-07 00:00:00.000000', '74', '74');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('75', '1723538.23', 1, '1978-10-22 00:00:00.000000', '75', '75');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('76', '483.29', 1, '1992-04-15 00:00:00.000000', '76', '76');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('77', '33473036.68', 0, '1995-03-26 00:00:00.000000', '77', '77');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('78', '99999999.99', 1, '1974-06-26 00:00:00.000000', '78', '78');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('79', '0.00', 0, '2013-12-23 00:00:00.000000', '79', '79');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('80', '7011.13', 2, '2022-03-09 00:00:00.000000', '80', '80');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('81', '2626.62', 1, '2016-01-01 00:00:00.000000', '81', '81');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('82', '306.96', 0, '2002-09-28 00:00:00.000000', '82', '82');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('83', '15.00', 0, '1996-07-23 00:00:00.000000', '83', '83');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('84', '27.00', 0, '2002-02-22 00:00:00.000000', '84', '84');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('85', '46455.99', 1, '2003-11-25 00:00:00.000000', '85', '85');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('86', '99999999.99', 0, '2017-11-04 00:00:00.000000', '86', '86');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('87', '0.00', 0, '2024-03-09 00:00:00.000000', '87', '87');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('88', '629.28', 2, '2011-09-29 00:00:00.000000', '88', '88');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('89', '99999999.99', 2, '1980-05-21 00:00:00.000000', '89', '89');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('90', '1.67', 0, '1978-06-20 00:00:00.000000', '90', '90');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('91', '0.00', 1, '1996-08-17 00:00:00.000000', '91', '91');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('92', '623.93', 1, '2021-12-17 00:00:00.000000', '92', '92');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('93', '7147730.10', 1, '1990-04-17 00:00:00.000000', '93', '93');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('94', '209.81', 2, '2003-11-29 00:00:00.000000', '94', '94');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('95', '5237567.86', 2, '1982-08-16 00:00:00.000000', '95', '95');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('96', '2.36', 2, '1994-11-14 00:00:00.000000', '96', '96');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('97', '0.00', 2, '2010-05-21 00:00:00.000000', '97', '97');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('98', '67198.39', 1, '2011-05-31 00:00:00.000000', '98', '98');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('99', '158045.00', 0, '1984-10-13 00:00:00.000000', '99', '99');
+INSERT INTO `scholarship` (`id`, `amount`, `application_status`, `date`, `semester_id`, `student_id`) VALUES ('100', '3943.95', 1, '1978-11-24 00:00:00.000000', '100', '100');
+
+
+#
+# TABLE STRUCTURE FOR: semesters
+#
+
+DROP TABLE IF EXISTS `semesters`;
+
+CREATE TABLE `semesters` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `end_date` datetime(6) NOT NULL,
+  `number` int(11) NOT NULL,
+  `start_date` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('1', '2009-01-23 00:00:00.000000', 4, '1975-04-13 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('2', '1987-03-21 00:00:00.000000', 6, '2002-10-26 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('3', '1978-04-16 00:00:00.000000', 7, '1997-02-10 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('4', '2011-08-10 00:00:00.000000', 4, '1987-05-30 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('5', '2011-12-14 00:00:00.000000', 4, '1977-12-15 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('6', '1978-10-24 00:00:00.000000', 3, '2015-04-29 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('7', '2016-11-24 00:00:00.000000', 7, '1989-11-17 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('8', '2017-01-01 00:00:00.000000', 5, '1998-01-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('9', '1980-01-16 00:00:00.000000', 4, '2000-04-20 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('10', '2013-05-14 00:00:00.000000', 7, '2017-06-16 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('11', '2012-09-12 00:00:00.000000', 3, '2014-05-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('12', '2012-02-14 00:00:00.000000', 2, '1986-01-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('13', '1997-02-10 00:00:00.000000', 8, '1992-11-06 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('14', '2013-12-15 00:00:00.000000', 7, '2013-05-12 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('15', '2014-01-29 00:00:00.000000', 1, '1997-09-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('16', '2024-11-06 00:00:00.000000', 6, '2016-03-08 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('17', '2016-07-11 00:00:00.000000', 7, '2015-10-26 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('18', '2020-02-15 00:00:00.000000', 6, '1993-01-01 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('19', '2008-02-24 00:00:00.000000', 8, '1983-11-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('20', '1997-07-19 00:00:00.000000', 6, '1993-03-14 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('21', '1999-05-21 00:00:00.000000', 2, '2019-12-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('22', '2009-07-16 00:00:00.000000', 2, '2020-10-18 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('23', '2003-12-23 00:00:00.000000', 7, '2001-05-28 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('24', '1971-10-28 00:00:00.000000', 4, '2005-11-14 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('25', '1979-07-29 00:00:00.000000', 5, '1980-10-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('26', '2001-10-16 00:00:00.000000', 5, '2017-06-11 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('27', '2024-06-20 00:00:00.000000', 5, '1983-01-28 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('28', '1983-04-03 00:00:00.000000', 4, '1983-02-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('29', '2012-03-29 00:00:00.000000', 6, '1974-07-12 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('30', '1980-02-25 00:00:00.000000', 8, '1981-10-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('31', '1993-08-20 00:00:00.000000', 6, '1970-06-13 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('32', '1999-09-28 00:00:00.000000', 4, '1999-11-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('33', '2000-04-25 00:00:00.000000', 8, '2022-02-08 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('34', '2012-05-03 00:00:00.000000', 5, '2004-04-02 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('35', '2025-03-24 00:00:00.000000', 2, '2018-12-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('36', '1994-07-14 00:00:00.000000', 4, '1979-08-03 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('37', '1975-02-06 00:00:00.000000', 2, '2019-03-07 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('38', '1995-04-16 00:00:00.000000', 5, '1974-11-02 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('39', '1997-05-10 00:00:00.000000', 1, '2023-08-12 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('40', '1986-11-07 00:00:00.000000', 8, '2004-07-22 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('41', '2005-10-13 00:00:00.000000', 1, '1970-01-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('42', '1989-05-27 00:00:00.000000', 3, '1997-02-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('43', '1979-11-21 00:00:00.000000', 1, '2022-04-10 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('44', '1995-11-26 00:00:00.000000', 2, '1974-06-14 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('45', '2002-01-29 00:00:00.000000', 8, '1976-04-12 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('46', '1992-09-19 00:00:00.000000', 7, '2005-10-01 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('47', '2013-12-18 00:00:00.000000', 4, '2013-10-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('48', '2006-04-25 00:00:00.000000', 1, '1976-04-15 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('49', '1978-07-20 00:00:00.000000', 4, '2010-12-29 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('50', '2017-12-03 00:00:00.000000', 1, '1996-05-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('51', '2022-02-14 00:00:00.000000', 3, '2020-07-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('52', '2015-05-01 00:00:00.000000', 8, '2018-03-25 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('53', '1987-04-20 00:00:00.000000', 1, '1996-02-23 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('54', '1982-09-05 00:00:00.000000', 1, '2018-10-11 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('55', '1988-08-28 00:00:00.000000', 3, '1972-01-25 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('56', '2006-06-30 00:00:00.000000', 2, '1983-10-30 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('57', '2016-11-04 00:00:00.000000', 8, '1972-08-25 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('58', '1970-08-16 00:00:00.000000', 5, '2000-09-06 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('59', '1974-05-08 00:00:00.000000', 5, '2009-03-15 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('60', '2014-07-10 00:00:00.000000', 3, '1986-09-29 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('61', '2002-08-03 00:00:00.000000', 4, '2018-03-22 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('62', '1990-02-01 00:00:00.000000', 8, '1979-07-29 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('63', '1976-06-20 00:00:00.000000', 2, '1988-02-26 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('64', '1986-10-21 00:00:00.000000', 3, '2011-07-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('65', '1997-09-30 00:00:00.000000', 1, '2001-08-10 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('66', '1996-11-19 00:00:00.000000', 6, '1976-07-18 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('67', '2020-03-14 00:00:00.000000', 6, '1975-01-18 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('68', '1974-04-30 00:00:00.000000', 7, '1995-03-08 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('69', '2012-07-18 00:00:00.000000', 4, '1991-03-21 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('70', '1984-06-13 00:00:00.000000', 3, '2021-08-30 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('71', '2004-09-10 00:00:00.000000', 8, '1980-09-15 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('72', '2022-06-20 00:00:00.000000', 8, '2003-09-06 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('73', '2018-08-04 00:00:00.000000', 4, '1989-10-02 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('74', '1992-04-29 00:00:00.000000', 7, '2001-03-03 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('75', '1975-12-01 00:00:00.000000', 4, '2015-09-18 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('76', '1977-08-18 00:00:00.000000', 1, '2018-03-02 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('77', '2002-10-10 00:00:00.000000', 7, '1984-09-08 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('78', '2001-04-11 00:00:00.000000', 1, '2017-02-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('79', '1990-01-20 00:00:00.000000', 4, '1986-10-16 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('80', '2021-03-03 00:00:00.000000', 3, '2011-04-04 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('81', '1980-09-23 00:00:00.000000', 8, '2013-01-08 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('82', '2003-09-17 00:00:00.000000', 1, '2020-06-03 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('83', '2002-01-11 00:00:00.000000', 1, '1999-11-11 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('84', '2021-03-22 00:00:00.000000', 2, '1996-04-02 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('85', '2018-05-09 00:00:00.000000', 7, '1980-12-18 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('86', '2004-08-07 00:00:00.000000', 4, '2001-08-03 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('87', '2015-09-27 00:00:00.000000', 5, '2021-11-28 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('88', '1974-11-02 00:00:00.000000', 2, '1986-11-17 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('89', '1974-11-23 00:00:00.000000', 2, '1971-02-07 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('90', '1977-01-02 00:00:00.000000', 3, '2000-12-14 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('91', '1981-11-15 00:00:00.000000', 5, '2024-02-19 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('92', '2002-04-20 00:00:00.000000', 5, '2009-05-16 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('93', '2022-07-25 00:00:00.000000', 4, '1998-07-15 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('94', '2014-10-22 00:00:00.000000', 3, '1970-04-20 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('95', '1994-10-29 00:00:00.000000', 4, '2005-05-09 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('96', '1988-01-21 00:00:00.000000', 2, '1980-10-07 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('97', '2008-07-17 00:00:00.000000', 1, '2007-05-26 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('98', '2003-02-14 00:00:00.000000', 5, '1976-11-03 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('99', '2018-07-18 00:00:00.000000', 7, '1987-12-05 00:00:00.000000');
+INSERT INTO `semesters` (`id`, `end_date`, `number`, `start_date`) VALUES ('100', '1992-07-11 00:00:00.000000', 4, '2013-07-05 00:00:00.000000');
+
+
+#
+# TABLE STRUCTURE FOR: specialties
+#
+
+DROP TABLE IF EXISTS `specialties`;
+
+CREATE TABLE `specialties` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `description` text DEFAULT NULL,
+  `name` varchar(250) NOT NULL,
+  `study_stage` tinyint(4) NOT NULL,
+  `faculty_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK5ixq1r5lwo87m7sob3a57xr7l` (`faculty_id`),
+  CONSTRAINT `FK5ixq1r5lwo87m7sob3a57xr7l` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`id`),
+  CONSTRAINT `specialties_chk_1` CHECK (`study_stage` between 0 and 2)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('1', 'Illo qui sint ipsa voluptatem qui. Delectus ab libero tenetur sit qui. At et maiores accusantium iusto.', 'fugit', 2, '1');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('2', 'Aspernatur sit rerum illo aperiam esse odit. Suscipit architecto maxime aut repellat fugiat laudantium.', 'eos', 2, '2');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('3', 'Nobis quod quia quas. Laborum cumque illum placeat rem occaecati quidem adipisci. Dolorem nisi iusto consequatur qui quae dolor iure.', 'molestiae', 2, '3');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('4', 'Quos fugit temporibus sapiente cupiditate odio repellendus nam tempore. Esse et iure rerum quo est.', 'voluptas', 2, '4');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('5', 'Blanditiis molestiae numquam nihil quia porro quis incidunt. In nulla autem soluta voluptatem dolor sunt nam. Ut blanditiis perferendis doloremque quos. Sapiente quo adipisci eum esse et autem sit.', 'pariatur', 0, '5');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('6', 'Sequi molestiae saepe voluptatibus eveniet repudiandae adipisci eos repellat. Ex velit nesciunt vitae maiores qui iste architecto. Molestiae similique dolor id repellendus nam. Non alias illum voluptatem ut itaque sit voluptatibus corrupti.', 'sequi', 1, '6');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('7', 'Ipsa neque maxime ut adipisci. Minima earum labore perspiciatis temporibus est voluptas. Vel quo dolorum consectetur aut quas praesentium veritatis.', 'in', 0, '7');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('8', 'Error est et minima et. Quis dolores et soluta sequi. Repudiandae ut tempora incidunt rem et. Recusandae hic in sit nesciunt fugiat.', 'explicabo', 1, '8');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('9', 'Provident maiores non rerum ullam qui. Omnis eveniet a repellendus et. Non voluptas culpa sint aut repellendus perferendis in.', 'ea', 0, '9');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('10', 'Iste quis blanditiis totam repellat velit facilis. Quisquam suscipit delectus quas aut repellendus corporis ut. Quo delectus ut quo. Ad ipsam sed corporis animi laudantium nisi.', 'soluta', 1, '10');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('11', 'Corporis deserunt cupiditate occaecati excepturi veniam ea praesentium porro. Velit incidunt consectetur aliquid voluptatum doloremque ipsum est. Sequi aliquam voluptatem officiis eveniet.', 'laudantium', 2, '11');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('12', 'Sit rerum adipisci itaque molestiae corrupti maiores. Ut commodi commodi accusamus eos architecto sed. Esse eius harum aliquid hic blanditiis.', 'est', 1, '12');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('13', 'Harum voluptatum id perferendis. Ut inventore est odit. Qui enim impedit tenetur sed est beatae.', 'amet', 1, '13');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('14', 'Maiores voluptatem cumque qui quae. Amet magni reiciendis ut ipsum in fugit minima eius. Eum omnis dolores facilis officiis voluptas earum sapiente. Quaerat magni iusto minus ipsa culpa. Voluptas omnis modi provident dolores et quas.', 'quasi', 1, '14');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('15', 'Adipisci necessitatibus ullam temporibus rem consequatur nesciunt. Non distinctio voluptatum iusto est. Architecto magnam dicta qui dolores nihil. Illum et vero ipsum temporibus facilis tenetur ad voluptas.', 'maiores', 2, '15');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('16', 'Qui odit laboriosam omnis exercitationem. Eaque necessitatibus ut qui quia. Illo et eos sequi optio consequatur.', 'distinctio', 0, '16');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('17', 'Non nobis deleniti mollitia et quae odit ex. Ex ut culpa quibusdam aut neque perferendis. Molestiae nisi iusto ea excepturi ut dignissimos quia. Adipisci reiciendis beatae magni quos quia.', 'illo', 1, '17');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('18', 'Qui unde dolor sunt iure. In eos distinctio cupiditate amet corporis veritatis. Voluptatum sed sed et ratione sunt qui aperiam. Aut vel reprehenderit soluta odit eligendi molestiae.', 'aut', 2, '18');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('19', 'Cumque ut et sequi. Eos nesciunt accusantium recusandae et. Dolores eveniet facilis officia vel et doloribus.', 'fuga', 2, '19');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('20', 'Omnis omnis eaque facilis. Ratione animi sint dignissimos id vel et ut. Et incidunt voluptas laboriosam reiciendis nisi corporis. Explicabo rerum a soluta sapiente ipsa enim qui.', 'earum', 1, '20');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('21', 'Veritatis qui autem a. Et facilis veniam sit occaecati quas ullam distinctio qui. Dolor quaerat rerum qui id expedita. Quia animi incidunt occaecati ipsum non dolores nihil veniam.', 'laudantium', 1, '21');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('22', 'Dolores ad placeat perferendis maiores aut nihil. Voluptate in et pariatur et rerum. Deleniti at omnis voluptatem consequatur. Atque asperiores recusandae facere.', 'est', 1, '22');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('23', 'Velit magnam est repellat. Nulla dolor et consequatur voluptates impedit perferendis natus. Et voluptates praesentium est aliquam aut aut. Et eveniet et quas voluptatem id. Saepe facilis qui libero repellendus enim est.', 'dolorum', 0, '23');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('24', 'Beatae eos dolores distinctio debitis. Vel officiis eos officiis quam consequatur. In et laborum dolore rem eos eveniet. Dignissimos aut recusandae non suscipit. Maiores quo itaque nostrum dignissimos.', 'dolores', 2, '24');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('25', 'Voluptatem corrupti ut temporibus qui ipsa id enim. Assumenda velit corrupti sunt. Voluptatem magnam debitis ut et numquam. Quos est id eos ut praesentium dolore odit.', 'culpa', 1, '25');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('26', 'Explicabo voluptas vel omnis cum ut. Et maxime ex ratione inventore et voluptate ratione.', 'esse', 0, '26');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('27', 'Qui reiciendis dolorem officiis sit eum. Aut quae maiores quidem. Neque aliquid est ut tenetur.', 'aut', 1, '27');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('28', 'Non nostrum eum et similique dolor vel eius. Doloremque et nostrum labore accusamus. Maiores est voluptatem libero enim et aliquid facilis. Assumenda veritatis et et esse dolorem id voluptatem.', 'quas', 2, '28');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('29', 'Dolores molestias voluptates sit quibusdam sequi occaecati. Qui non molestias reiciendis vero libero blanditiis cumque. Distinctio nobis aut omnis iure quos. Quaerat dolore error qui et et.', 'explicabo', 2, '29');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('30', 'Distinctio dolorem dicta omnis eaque atque. Et aut aspernatur quo aut placeat amet ut. Dolorem rerum nam consectetur molestias. Nobis et earum nihil tempore sed consectetur.', 'dolorem', 0, '30');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('31', 'Voluptas consequatur eos inventore molestias ut corporis unde. Soluta est tenetur totam ipsum non. Quasi quidem rerum tempore nesciunt temporibus perspiciatis.', 'ea', 2, '31');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('32', 'Voluptatem harum iste laborum magni. Aut vitae deserunt et dolor inventore quis.', 'et', 2, '32');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('33', 'Qui esse illum explicabo aliquid et ipsum. Odit et qui et id. Quia animi et quod voluptates qui tempore animi est.', 'modi', 0, '33');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('34', 'Eligendi molestias est quasi rem voluptatem et. Vero pariatur nisi dolores facilis omnis sed aperiam. Est qui quis modi facere in exercitationem iste velit. Qui illo et modi doloribus molestiae ab. Et natus necessitatibus cum.', 'qui', 1, '34');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('35', 'Quisquam tempore nostrum suscipit aut optio pariatur. Minima sint sapiente nesciunt molestiae neque doloremque. Quod labore quis perspiciatis optio libero ea velit in.', 'alias', 2, '35');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('36', 'Praesentium magni eos non porro aliquid. Aut eligendi doloremque dolores iure. Praesentium repellat rerum harum non. Dolores qui est ut quo id vero. Esse voluptatem voluptates non corrupti dolor.', 'laborum', 2, '36');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('37', 'Tenetur qui sit doloremque reiciendis quo eos est. Nihil dolorum facilis voluptas corporis autem necessitatibus quo.', 'eius', 2, '37');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('38', 'Itaque mollitia atque debitis. Iusto ab ut voluptas officia quae. Accusamus quae ex a officia illo. Dolor sapiente eum magni voluptatem. Amet aperiam aperiam reprehenderit voluptatum id rerum.', 'totam', 0, '38');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('39', 'Similique et architecto ipsum suscipit quae. Vel deleniti corporis qui ut adipisci eveniet. Magni illo veniam recusandae vero delectus qui in.', 'quia', 1, '39');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('40', 'Quos dolorum eveniet aut minima ut. Non voluptate delectus cumque recusandae repellat odio enim. Aperiam doloribus culpa minus rerum quibusdam ipsa. Ipsum qui sit modi a dolorum id labore earum.', 'minus', 1, '40');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('41', 'Quod ratione quidem sequi quasi expedita eos ea. Quidem et magni dolore magni et officia consequuntur.', 'minus', 2, '41');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('42', 'Omnis earum et et harum autem rerum. Tenetur ipsa corrupti magnam ut. Eveniet cum maxime et non autem.', 'dolorum', 1, '42');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('43', 'Soluta facilis amet rerum quod et. Nesciunt dicta est veniam quo quibusdam est. Voluptas sit quia quia.', 'eaque', 0, '43');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('44', 'Voluptatum qui sit quidem dolorem voluptates. Doloremque quos doloribus delectus deleniti. Ut minima corrupti temporibus qui laboriosam delectus. Qui rerum aut molestias sed corporis.', 'cupiditate', 2, '44');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('45', 'Cum fugit officiis officiis cumque quis et. Id aut animi eum ea a. Totam magnam cumque et perferendis nisi sint.', 'suscipit', 2, '45');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('46', 'Expedita vel tempore earum magnam. Saepe voluptas ex et accusamus facere eos officia aut. Laborum suscipit id eos hic. Rerum et et non modi nam harum qui id.', 'rerum', 1, '46');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('47', 'Aspernatur soluta molestiae qui optio alias. Distinctio velit veritatis autem rem est. Accusamus illum et officia est sint temporibus at quisquam. Tempora eos et autem aut quis temporibus qui.', 'dolor', 1, '47');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('48', 'Rem placeat et quam ut sed sed et. Ex quasi quisquam eligendi voluptatem sunt et quisquam. Consequuntur reprehenderit ullam vel saepe nihil eaque voluptate.', 'eveniet', 0, '48');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('49', 'Itaque autem adipisci sed voluptatem voluptatem fugit enim quasi. Natus et fugiat placeat quasi qui sint. Consequuntur sunt quae similique non omnis quasi. Dolores odio veniam minima dignissimos ad error.', 'ad', 0, '49');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('50', 'Ullam eos dignissimos et. Porro dolorum veniam ut consequatur natus itaque omnis. Quis eos beatae consequatur soluta.', 'et', 0, '50');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('51', 'Provident sequi ab consectetur sapiente esse quia illo. Magni magni laboriosam ut modi molestiae.', 'quasi', 0, '51');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('52', 'Ab ullam omnis velit aliquam. Esse voluptatum non dolorum laudantium voluptates aspernatur qui. Aperiam laborum id ullam asperiores totam. Vel blanditiis iste est.', 'necessitatibus', 1, '52');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('53', 'Sit quis quidem voluptas impedit. Exercitationem rerum optio voluptas voluptas repellendus quisquam quis sit. Occaecati consequatur qui quod asperiores excepturi temporibus. Numquam voluptatem optio quibusdam accusantium.', 'qui', 0, '53');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('54', 'Molestiae est ipsa animi voluptatem harum. Qui laborum non corporis consequuntur tempora iusto consequatur tempora. Rerum consectetur ut facilis commodi ea odit. Vel quas omnis nihil ut eius.', 'similique', 1, '54');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('55', 'Molestias architecto nobis minima rerum. Consequatur quam non eveniet qui possimus aut repudiandae fugiat. Omnis est cumque dicta unde.', 'repudiandae', 2, '55');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('56', 'Labore enim non temporibus impedit temporibus. Quasi enim qui nulla velit ad eveniet. Et ut aliquam in tempora nesciunt amet quis. Reprehenderit tenetur qui et sunt odio.', 'dolor', 1, '56');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('57', 'Officiis necessitatibus et deserunt eos in. Illo maiores aliquam sequi temporibus culpa natus. Ipsa nam et magni. Est repellat aperiam neque nostrum quod sit inventore beatae.', 'ad', 0, '57');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('58', 'Cum dolor optio animi maiores harum enim. Eum quod architecto explicabo voluptatibus distinctio sint. Minus vel et sapiente nam et. Totam sapiente modi eius quae.', 'dicta', 0, '58');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('59', 'Reiciendis dolorem possimus inventore ut expedita sed quo. Quo quas doloremque et.', 'architecto', 0, '59');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('60', 'Sint sunt ad vitae illum. Sapiente fuga harum debitis eos praesentium quo. Sint sed sit facilis neque qui inventore consequatur.', 'atque', 1, '60');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('61', 'Quia sunt illo velit autem. Minima velit enim vitae dolore quae. Modi ex quibusdam ratione eaque sit dolorem consequatur distinctio.', 'explicabo', 0, '61');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('62', 'Facilis ratione necessitatibus qui quis. Dolor occaecati dolorem minus est ad sint. Id repellat sint molestiae aut excepturi voluptates. Et eos consequuntur quod et excepturi.', 'inventore', 2, '62');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('63', 'Iste perspiciatis dolor tempore nobis aspernatur iure est. Velit dignissimos tempore qui doloribus aliquam et. Sit est quod deleniti nobis esse et.', 'velit', 1, '63');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('64', 'In architecto est maiores. Placeat illo officia eaque voluptatem. Provident rerum voluptas culpa ipsum qui. Animi quae tempora consequatur autem.', 'enim', 1, '64');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('65', 'Ipsa similique quo dolorem eveniet. Ut consequatur voluptatem magni animi quis commodi.', 'enim', 0, '65');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('66', 'Animi vel fugit aut. Eligendi sint voluptatem recusandae necessitatibus eaque omnis.', 'veritatis', 0, '66');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('67', 'Ea nostrum vel blanditiis dolore. Hic voluptatibus hic nesciunt laudantium. Molestiae voluptates quis dolore hic voluptatem. Accusantium dolore consequatur distinctio deleniti possimus laborum est.', 'iste', 1, '67');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('68', 'Repellat natus modi aut placeat et consectetur quo. Alias porro ipsam et. Ipsum quo eum nobis quis atque eius sunt velit. Adipisci aut est voluptate ut ipsam odit qui.', 'sit', 0, '68');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('69', 'Fugiat quam ad odio et rerum. Commodi facilis et ut architecto magnam. Vel sint tempora eveniet necessitatibus. Vitae voluptatum tempora totam impedit neque.', 'aut', 2, '69');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('70', 'Repellat quae ea sit id molestias laborum vitae ipsum. Vel sint eius nihil qui nihil. Impedit non in est quia laborum. Consequatur quod vero et qui possimus.', 'dolorem', 0, '70');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('71', 'Qui nihil inventore corrupti doloremque. Vitae temporibus sit sit necessitatibus molestiae ea voluptate. Sunt nihil nostrum voluptas sunt voluptas. Illo et ducimus eligendi ut dolores veritatis.', 'culpa', 2, '71');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('72', 'Voluptas deleniti sit porro numquam. Quia perspiciatis nisi officia. Ad quis repellendus odit rerum autem. Minima in soluta quia consectetur ipsam placeat assumenda. Voluptatum eum optio reiciendis libero sed repellat.', 'sint', 1, '72');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('73', 'Cum ipsam dolor nostrum nihil repellendus. Dolorem distinctio tenetur pariatur exercitationem adipisci. Nisi necessitatibus facere beatae corrupti. Fugiat molestias aut libero vel doloremque quod ut. Illo soluta quae quia quibusdam beatae adipisci.', 'quaerat', 2, '73');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('74', 'Vel est amet quia itaque neque. Voluptatem veritatis molestiae corrupti voluptatum necessitatibus. Voluptas sint provident ullam corrupti.', 'voluptas', 1, '74');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('75', 'Voluptas non et beatae corporis architecto hic ducimus. Occaecati eos ipsum officiis consequatur voluptatem expedita. Consequatur quos et laudantium quibusdam asperiores at harum ut. Sapiente qui ut soluta.', 'error', 1, '75');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('76', 'Voluptate blanditiis ratione in laudantium. Recusandae fuga sint dolores hic sint. Reprehenderit dolore provident est odio quia minus ut. Id architecto exercitationem amet architecto aut eos voluptas.', 'praesentium', 2, '76');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('77', 'Iste odit dolores rem praesentium qui tenetur. Dolorem aperiam repudiandae pariatur. Quo id harum soluta vel eos consequatur voluptas. Eum quo deleniti ut.', 'maxime', 2, '77');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('78', 'Enim fugit sint non quae ea. Iste et illum rem suscipit delectus. Omnis cupiditate repellat ipsam ad sit sed recusandae. Nihil illo quis quo. Molestiae est at praesentium omnis tempore aspernatur tenetur.', 'quo', 1, '78');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('79', 'Autem recusandae minima minima animi. Error consequuntur quas omnis id aspernatur rerum incidunt. Beatae eos ipsum et ut accusamus est aspernatur.', 'est', 0, '79');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('80', 'Impedit hic dolorem in ut impedit quas molestias. Et enim qui ab earum nemo.', 'assumenda', 2, '80');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('81', 'Et impedit accusantium fuga officiis. Ratione sunt occaecati cupiditate labore necessitatibus molestias ea.', 'sit', 2, '81');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('82', 'Et placeat nobis aliquid vitae. Doloremque minus incidunt voluptatibus et dicta. Ea et maxime mollitia repellendus sed.', 'eius', 0, '82');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('83', 'Voluptas sunt vel sit ut ratione et libero sed. Veritatis quia odit non voluptatem.', 'nostrum', 2, '83');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('84', 'Totam harum error quia iusto qui. Possimus tenetur similique ut dolor animi. Quas architecto omnis officia quam dolor quisquam similique nihil.', 'incidunt', 2, '84');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('85', 'Error porro rerum est eveniet occaecati et. Vero qui ratione voluptates ipsa facere possimus ut. Numquam quo ut inventore at cupiditate aut est aliquid. Commodi qui sapiente et consequatur incidunt esse natus.', 'cum', 1, '85');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('86', 'Sint blanditiis voluptatem perferendis nulla. Doloribus dolorem qui autem recusandae beatae dolorem optio voluptas. Qui dolor qui et laboriosam et vel.', 'amet', 2, '86');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('87', 'Natus dignissimos a non id incidunt. Consequatur voluptatem aut soluta sit aut qui qui. Expedita similique quibusdam fuga velit quibusdam. Voluptas doloribus nemo ut deserunt. Dicta fugit fuga cupiditate at quae nobis aut aliquid.', 'perspiciatis', 0, '87');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('88', 'Asperiores corrupti soluta et eaque deserunt ex a. Pariatur repellendus fugiat quisquam quia. Nesciunt et eligendi dolorem blanditiis dolorem pariatur. Et voluptas et in.', 'expedita', 2, '88');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('89', 'In quia mollitia voluptas in velit aliquam ullam. Quo fuga eligendi non quia reprehenderit. Et et ullam sunt quas dolore. Quo dolores reiciendis quia eveniet consectetur.', 'nulla', 1, '89');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('90', 'Sint vel atque voluptatibus ea error praesentium. Alias alias nisi est commodi non. Sequi dolore molestias aut vero quibusdam.', 'recusandae', 1, '90');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('91', 'Accusamus eum quos alias nemo et quasi at. Ipsa nisi quibusdam illum ut. Iste quia at et qui velit velit.', 'quasi', 0, '91');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('92', 'Corrupti quo excepturi dolor soluta. Fugiat voluptatem est occaecati et eos. Deserunt quia qui eum dolor voluptas.', 'id', 2, '92');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('93', 'Sit sapiente quae qui illo. Enim adipisci quo ab aut cumque optio quis.', 'est', 0, '93');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('94', 'Vero quibusdam dolore sint. Minima sit ut porro illum aut illum. Molestias necessitatibus quas voluptas et non occaecati.', 'perferendis', 2, '94');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('95', 'Mollitia pariatur impedit ut autem. Exercitationem perspiciatis eos autem hic quibusdam consequatur. Et non et repellendus soluta illo enim. Ab error enim non consequatur sint asperiores corrupti.', 'earum', 0, '95');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('96', 'Corrupti et ut mollitia nihil. Nulla qui voluptatum ut tenetur ut. Tenetur nobis iure ut tempora nihil harum voluptatem. Sunt nesciunt autem temporibus ratione voluptatem.', 'et', 0, '96');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('97', 'Iste laudantium qui et consectetur praesentium commodi et. Eos optio quo fugit maxime quas quidem eos iste. Ipsam eaque ad dolorum suscipit dolorem. Ex quidem itaque asperiores perspiciatis impedit.', 'natus', 2, '97');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('98', 'Libero voluptatem eos aut quas sint rerum. Doloremque quae aut vel. Autem est odio rerum.', 'ipsa', 0, '98');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('99', 'Eveniet ut quia sit non. Ad dolores voluptatem dolores dolorem est. Similique esse omnis quod neque.', 'hic', 2, '99');
+INSERT INTO `specialties` (`id`, `description`, `name`, `study_stage`, `faculty_id`) VALUES ('100', 'Occaecati ratione perspiciatis aliquam aut debitis totam ab. Fugiat dolorem est cupiditate blanditiis et totam. Sed est nihil qui enim facere fuga labore nam. Odit ut et atque incidunt.', 'non', 1, '100');
+
+
+#
+# TABLE STRUCTURE FOR: students
+#
+
+DROP TABLE IF EXISTS `students`;
+
+CREATE TABLE `students` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `birth_date` datetime(6) NOT NULL,
+  `eng` varchar(10) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `learning_type` tinyint(4) NOT NULL,
+  `middle_name` varchar(50) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `personal_email` varchar(320) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
+  `reception_type` tinyint(4) NOT NULL,
+  `student_number` varchar(50) NOT NULL,
+  `work_email` varchar(320) NOT NULL,
+  `group_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UKmsjk5pftkp1bodqu79ntabgct` (`eng`),
+  UNIQUE KEY `UKh7gboo6v79gig1eo7lt1fubew` (`student_number`),
+  KEY `FKgsn0ixio7vqq81vkwdk2y3fy0` (`group_id`),
+  CONSTRAINT `FKgsn0ixio7vqq81vkwdk2y3fy0` FOREIGN KEY (`group_id`) REFERENCES `students_groups` (`id`),
+  CONSTRAINT `students_chk_1` CHECK (`learning_type` between 0 and 3),
+  CONSTRAINT `students_chk_2` CHECK (`reception_type` between 0 and 1)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('1', '1978-06-04 00:00:00.000000', '8472318995', 'Devante', 'Lowe', 3, 'Stoltenberg', '70d49e9d9c6510be67b8a374c09e02497df9d348', 'turcotte.joaquin@example.com', '209.111.8515', 0, '54217065', 'merl.prohaska@example.net', '1');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('2', '2012-12-11 00:00:00.000000', '6041384989', 'Rudy', 'Breitenberg', 3, 'Jacobi', '5bc02077928a10ae4df6aba9d04163ecc80b956d', 'ola.jakubowski@example.com', '695-449-9915', 1, '8', 'alyson.schmidt@example.net', '2');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('3', '1983-07-05 00:00:00.000000', '4781378554', 'Raymundo', 'Langosh', 1, 'Zulauf', 'c0a29a99886d8a20894441876ecf58b180a83792', 'hollie.quigley@example.org', '(892)963-7885x9', 0, '21', 'vidal.schroeder@example.com', '3');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('4', '1973-02-09 00:00:00.000000', '6285740424', 'Janie', 'Lowe', 2, 'Skiles', '027c85457dc4f9978a044272576a3e39ad46b1fb', 'connelly.unique@example.net', '586.681.5541', 1, '981400', 'rosamond.graham@example.net', '4');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('5', '2017-06-23 00:00:00.000000', '2371244649', 'Camilla', 'Herman', 3, 'Hauck', '7836182700de20f92b3a969ca5bc22cb823f7780', 'johnathon75@example.com', '(659)831-9220', 0, '822948444', 'fschroeder@example.org', '5');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('6', '1973-04-07 00:00:00.000000', '2145124994', 'Alan', 'Casper', 0, 'Morar', '663b90fcbdc9be83c1614bf523323d87ce4a1c39', 'lynch.kurtis@example.net', '(578)218-8043', 1, '773167', 'electa87@example.com', '6');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('7', '2007-01-07 00:00:00.000000', '6959892990', 'Juanita', 'Goyette', 3, 'Yundt', 'f2f34f1c09d59fc8d1736af7f9925033c06ee81b', 'stanton.bertrand@example.com', '05132721858', 0, '7', 'heaney.marvin@example.net', '7');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('8', '2016-01-30 00:00:00.000000', '3439827630', 'Torey', 'Dare', 0, 'Metz', '1348ff3171210a311db9cf642a0bc805fb73dc1d', 'providenci.mueller@example.net', '(684)104-2882x9', 1, '57', 'howe.kelsi@example.com', '8');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('9', '1986-07-30 00:00:00.000000', '4306486798', 'Arnulfo', 'Heller', 1, 'Corwin', '0b666f76e189682b0d23f1c96132401b28f0c7cb', 'lola74@example.com', '1-661-791-7947x', 1, '9830', 'wuckert.aniya@example.com', '9');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('10', '1989-06-27 00:00:00.000000', '1127717520', 'Kevon', 'Bernhard', 3, 'Grady', 'cdeed743aba377cf9dc56d400680309923961e6b', 'johnpaul.kuhn@example.net', '+73(2)330955118', 0, '59190', 'lurline81@example.com', '10');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('11', '1996-12-17 00:00:00.000000', '3395896508', 'Ricky', 'O\'Conner', 0, 'Stehr', '92628e476165bb7e63f8116674e80c8b98ad5c36', 'smcclure@example.com', '1-686-752-2792x', 1, '786', 'julie29@example.net', '11');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('12', '1991-04-02 00:00:00.000000', '9976308065', 'Kenya', 'Zemlak', 2, 'Flatley', '9d67036820d2bb70f79af17218b6386f08e668b3', 'durgan.dante@example.net', '687-250-3614x11', 0, '500', 'ayden96@example.org', '12');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('13', '2011-12-26 00:00:00.000000', '3356205895', 'Florida', 'Hahn', 1, 'Ryan', 'b18646dc7fad2555ae0fb39ba561a96ece1ac871', 'purdy.heath@example.com', '(840)932-2320x2', 1, '74', 'mariano.torp@example.net', '13');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('14', '1999-01-30 00:00:00.000000', '3426220139', 'Hortense', 'Metz', 0, 'Bogan', '5fe4942d196d9203e1bcd7966c120568560fd42a', 'london.hettinger@example.net', '(604)254-9155x5', 0, '7018994', 'gilbert.kohler@example.org', '14');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('15', '1998-03-13 00:00:00.000000', '5820099265', 'Angelina', 'Marvin', 2, 'Blanda', '38b952ebf39581c6fb9da61663deb84ef4710335', 'oscar.sauer@example.com', '+47(5)366438992', 0, '138649109', 'd\'amore.wayne@example.net', '15');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('16', '1980-03-26 00:00:00.000000', '2568625403', 'Rhoda', 'Mayert', 2, 'Erdman', '678419127bc3070729d9c1f55f37b8bda795b1b5', 'dion.hirthe@example.org', '109-829-3637', 0, '31253657', 'lschuppe@example.com', '16');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('17', '2002-10-08 00:00:00.000000', '7907102801', 'Kylie', 'Schamberger', 1, 'Smith', '581845a29c38ba8c1e79f059cbefea1ef38ad335', 'cruickshank.tre@example.com', '1-060-373-2083x', 1, '524414265', 'nathaniel.bins@example.net', '17');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('18', '2007-06-20 00:00:00.000000', '3227772138', 'Cathryn', 'Conroy', 2, 'Cartwright', 'd1e54d5895e299b2380c26622c3be9b090872c00', 'jack.dietrich@example.com', '1-972-467-1347', 1, '88225', 'jessika71@example.org', '18');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('19', '2017-01-08 00:00:00.000000', '8544394898', 'Titus', 'Krajcik', 2, 'Moen', '9f0e62174a63e5658bec5c8a737a7ba0c2525bb5', 'ross.hegmann@example.com', '(921)026-6789', 0, '71061', 'chadd.mayer@example.org', '19');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('20', '2005-05-16 00:00:00.000000', '3930511858', 'Zakary', 'Torphy', 3, 'Kertzmann', '01b9ef76131fae19d416bc0bd8c50d06ea4f4975', 'hoppe.carissa@example.com', '1-467-671-9228x', 0, '6', 'loy.volkman@example.com', '20');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('21', '2000-08-16 00:00:00.000000', '1559851586', 'Daniela', 'Upton', 0, 'Flatley', '0f84efc6ba3c2b74cd38e291cbf8aafc467ab82d', 'lucie54@example.net', '1-037-810-5802x', 0, '657', 'mbraun@example.net', '21');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('22', '1993-08-01 00:00:00.000000', '4817065507', 'Glenda', 'Turcotte', 3, 'Padberg', 'b8c645f5704beaa76c7d534d9cd9c22e9c63fcfb', 'lorenza78@example.org', '1-709-050-3121x', 1, '3303870', 'fahey.brionna@example.net', '22');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('23', '2021-02-17 00:00:00.000000', '4843383699', 'Antonia', 'Koelpin', 2, 'Vandervort', '9fb686d7910c97c13e582678b7a9c1586bac87a7', 'rosie.brekke@example.net', '178.585.1498x42', 0, '270', 'welch.penelope@example.com', '23');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('24', '2020-03-16 00:00:00.000000', '8684772300', 'Oscar', 'Dare', 1, 'Wilkinson', '84dd0e872b86eb4041352d10a44cc794186d1a49', 'heath.botsford@example.com', '(844)170-3261', 1, '6044', 'nasir06@example.net', '24');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('25', '1999-02-22 00:00:00.000000', '3865278882', 'Marguerite', 'Franecki', 0, 'Schimmel', '454e3c26f15621ec011ef2d2bb3c0bbc9d39cfb8', 'rae.lang@example.net', '764-783-0759x11', 1, '814', 'hjohnson@example.org', '25');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('26', '2013-10-04 00:00:00.000000', '9339649835', 'Maxie', 'Feil', 1, 'Tromp', '07fb5c872cb3b5afb13586281078fd1212b9414a', 'cpaucek@example.org', '1-559-412-6241x', 1, '291918700', 'eusebio85@example.net', '26');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('27', '1984-07-19 00:00:00.000000', '9120165564', 'Cory', 'Dibbert', 3, 'Bartell', 'cefa2948ae2750b38036fe2b7a74907e1dea1ed5', 'kameron19@example.net', '1-265-105-8976', 0, '19589', 'melba31@example.net', '27');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('28', '1984-11-24 00:00:00.000000', '1070408159', 'Faustino', 'Green', 3, 'Moore', 'ec860e9974deb4ace376dc4e678b1d0ed50e6f69', 'walsh.melyna@example.net', '525.172.0395x81', 0, '578', 'gfadel@example.net', '28');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('29', '2002-10-05 00:00:00.000000', '8015672911', 'Annamae', 'Thompson', 3, 'Schuster', 'd15c8f1f1f6f60ca23e385467ae4ca9e063f08b7', 'bechtelar.destiny@example.com', '116-419-5512x58', 1, '2831', 'betsy.bergnaum@example.net', '29');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('30', '2020-01-23 00:00:00.000000', '2598550074', 'Alessandro', 'Cremin', 2, 'D\'Amore', '81394258fbdaee9cda59aea4d9e52c1577f044df', 'selina44@example.com', '986.933.6334x45', 0, '63', 'cedrick.keebler@example.net', '30');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('31', '2016-10-25 00:00:00.000000', '4621151644', 'Stanton', 'Paucek', 2, 'Olson', 'a4b7e889ae1ec8f299cfa6fa56b5e7e531196ed4', 'elittel@example.net', '1-319-498-4746x', 0, '88228', 'dolores.olson@example.com', '31');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('32', '1978-05-15 00:00:00.000000', '7861999655', 'Joe', 'Berge', 2, 'Vandervort', '71c54a2383ff52de3d38b953ef2e3b7b83c31d81', 'constantin.bashirian@example.net', '687-322-6286', 1, '1288926', 'frami.adrian@example.com', '32');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('33', '2012-12-07 00:00:00.000000', '1161694966', 'Kameron', 'Stokes', 3, 'Abernathy', '58461a5259aa88b1c5a4355d422c66d4f48095a9', 'jalon.kuhic@example.org', '01359285129', 1, '3', 'jcruickshank@example.com', '33');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('34', '1975-11-26 00:00:00.000000', '8765608100', 'Madisen', 'Roob', 0, 'Littel', '15d3a3d4854983776add125b0cfa0a02fd1548df', 'margaretta.bins@example.com', '494.899.4205', 1, '184738', 'uroberts@example.net', '34');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('35', '1974-10-13 00:00:00.000000', '9045867252', 'Lennie', 'Grady', 1, 'Fay', '45e04bbc4044e2e57b8f9ac9e04ad213cc85d999', 'runolfsson.gage@example.org', '627.695.2196x62', 1, '713045', 'kautzer.susanna@example.org', '35');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('36', '1997-01-27 00:00:00.000000', '4536002893', 'Anita', 'Dibbert', 0, 'Welch', 'cd39c6e57c2d190db56552a63148b5c76f395d68', 'goodwin.madison@example.com', '02122733916', 0, '14915', 'johnson.princess@example.com', '36');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('37', '2020-05-04 00:00:00.000000', '8226048071', 'Damon', 'Satterfield', 2, 'Dietrich', 'f56938b5403952e333119d97ebc9990e831fdae9', 'uspinka@example.org', '750-191-8651x69', 0, '679', 'mercedes04@example.com', '37');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('38', '2011-06-09 00:00:00.000000', '9573721073', 'Enoch', 'Labadie', 2, 'Schaden', '1116a7541feee6241976e90f550a7b9e55e0affc', 'o\'keefe.hettie@example.com', '(893)992-6362x3', 0, '', 'crist.alvis@example.net', '38');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('39', '2018-12-12 00:00:00.000000', '2808968692', 'Carlee', 'Windler', 3, 'Huels', '38ee5d9a7a10e252413189bfef511d8bb32f0f2c', 'hrau@example.net', '(973)188-5169x7', 1, '9342774', 'corkery.marvin@example.net', '39');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('40', '2025-01-27 00:00:00.000000', '6321321834', 'Casandra', 'Wolf', 3, 'McClure', '0cf4ac28af046ee47856932166d2a16d311a8856', 'alexane.klocko@example.org', '290-630-8579x50', 0, '3696', 'davis.timmy@example.org', '40');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('41', '1973-01-30 00:00:00.000000', '9967040906', 'Sunny', 'Bosco', 1, 'Nicolas', '276d4c00fdc0e7f3b010a38180debc035c11e79d', 'mccullough.ryan@example.net', '095-722-5344', 1, '1322171', 'may.beahan@example.net', '41');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('42', '2000-03-19 00:00:00.000000', '3218418205', 'Aurelio', 'Waelchi', 0, 'Gleichner', '50629d6a9e391a1880e2d0a74fe48e20a13bda31', 'kelly20@example.org', '1-657-576-9911', 1, '8477878', 'donnell60@example.org', '42');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('43', '2005-10-18 00:00:00.000000', '6912114605', 'Candice', 'Schmeler', 1, 'Boyer', '56c419599c604c1c046d5e427f800e9a6af2e3a2', 'zaria.brekke@example.net', '572.454.0469x34', 0, '10771715', 'maverick80@example.org', '43');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('44', '1994-01-11 00:00:00.000000', '1114533872', 'Donny', 'Doyle', 3, 'Koepp', 'b0362bd0c1590b0a342140d39071c4004c5d5039', 'bahringer.meggie@example.net', '(518)964-6531', 1, '49168207', 'jayda63@example.org', '44');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('45', '2013-10-23 00:00:00.000000', '7992992445', 'Josh', 'Schuppe', 2, 'Daniel', '689e236c8d47277b16ec4e6dba1d7d32f40d2888', 'lang.anika@example.net', '125.912.5194x58', 1, '978666', 'erunolfsdottir@example.net', '45');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('46', '1985-03-05 00:00:00.000000', '9553699031', 'Einar', 'Mosciski', 3, 'Fritsch', '5e34605969105b3919009d8d4cecc5eeefab2b07', 'branson.lind@example.com', '1-669-949-1101', 1, '324363', 'mante.elody@example.com', '46');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('47', '1978-05-10 00:00:00.000000', '4014049913', 'Millie', 'Rogahn', 1, 'Dooley', 'fd276b61eee8e4307cfbfeecbdf5a3bdbbf9338b', 'alexanne.homenick@example.org', '(829)651-5750', 1, '4710144', 'flatley.elwin@example.net', '47');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('48', '2009-12-15 00:00:00.000000', '5413853006', 'Angelina', 'Bogisich', 1, 'Rippin', '12876256a78ae38bd1c5a947c7af511b20f1e42f', 'oschoen@example.net', '067.153.4595x22', 0, '198', 'christop.legros@example.com', '48');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('49', '1972-12-08 00:00:00.000000', '5784435795', 'Ryleigh', 'Smitham', 1, 'Feest', 'e3736a8ad42152d0118f87fea04af9ef9c5ac86c', 'lucie25@example.org', '629.970.8157x79', 0, '83314968', 'enrico.lind@example.org', '49');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('50', '1989-12-29 00:00:00.000000', '8947866059', 'Murl', 'Marvin', 2, 'Bashirian', 'b073088a8142936bc727e9091ca0c144a14afed1', 'srippin@example.org', '014-779-5225', 0, '713843', 'vena.koepp@example.com', '50');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('51', '1988-09-01 00:00:00.000000', '2342991110', 'Leonie', 'King', 1, 'Kihn', '689535a0f3527b0780914fbd57360d80e47a8d01', 'baby.buckridge@example.org', '331-201-1187x72', 0, '94825', 'sedrick.thompson@example.com', '51');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('52', '1981-09-01 00:00:00.000000', '5338500293', 'Floy', 'Kihn', 1, 'Gerlach', '7a4a2516a4ab699d0b8939334e476706ed1a3f1d', 'joanie.dicki@example.net', '552.304.0937x64', 1, '63998276', 'dwight.dietrich@example.org', '52');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('53', '2008-01-31 00:00:00.000000', '7450427223', 'Kaitlyn', 'DuBuque', 0, 'Abbott', 'e1decf3253eea0cb337d7e9df73c09bb569934da', 'vwatsica@example.com', '(747)667-1832', 1, '727', 'yundt.edna@example.net', '53');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('54', '1989-06-03 00:00:00.000000', '6817869886', 'August', 'Hartmann', 2, 'Little', '34a248799533c363e04b3917f83396b5f24324cf', 'nstokes@example.org', '680-998-0507', 1, '91988740', 'schinner.arno@example.com', '54');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('55', '1974-07-14 00:00:00.000000', '9960630940', 'Stacey', 'Greenfelder', 0, 'Bernhard', '0f1c0058fd0f09e7ec46830e8e0d1ed3968def91', 'mason15@example.com', '+75(0)209925116', 1, '191573', 'murray.tiffany@example.net', '55');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('56', '1977-11-12 00:00:00.000000', '2369497185', 'Maybell', 'Hegmann', 3, 'Haley', '0ce49ecc6f2ba67f18797f1e494ed7e148b1dc47', 'burley07@example.org', '(719)588-6397', 1, '74384616', 'arturo.block@example.org', '56');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('57', '1999-02-07 00:00:00.000000', '1140584189', 'Zaria', 'Roob', 3, 'Durgan', '142a63b303eb7e140a929e38ac84065aa7057e1e', 'judd.muller@example.com', '576-401-8277', 1, '468711', 'greyson.boyer@example.org', '57');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('58', '1983-07-31 00:00:00.000000', '6679835544', 'Jane', 'Muller', 0, 'Bauch', 'f77fd7182a12bdcda2772fab0e0cc69996d1146d', 'myrtie35@example.net', '(767)402-5690', 0, '19218573', 'khintz@example.org', '58');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('59', '1999-06-11 00:00:00.000000', '7977396070', 'Angeline', 'Altenwerth', 1, 'Kulas', '536bfcb81f204963119164f7348b4cfa1c520703', 'jrobel@example.org', '310.651.0197', 1, '62', 'hessel.jerrold@example.com', '59');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('60', '2019-10-09 00:00:00.000000', '7004683769', 'Armani', 'Herman', 1, 'Abbott', '3caf1c6d044240ea72c3413a41d01891dce69072', 'magdalena18@example.org', '(590)190-8442', 0, '51915', 'robbie.ratke@example.org', '60');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('61', '1981-05-28 00:00:00.000000', '9563384457', 'Frederick', 'McLaughlin', 0, 'Gislason', 'f8add0050787a1fe86e51600b601c0ff0f9712de', 'cbarrows@example.com', '1-656-626-4938x', 0, '565703961', 'kshlerin.russell@example.com', '61');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('62', '1999-01-16 00:00:00.000000', '7616906934', 'Pansy', 'Brekke', 2, 'Braun', '493ff2dff7af1422cde5de74c4a6c05426a485be', 'aufderhar.christine@example.com', '500-802-8019x56', 0, '105815', 'general.hudson@example.net', '62');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('63', '1993-03-16 00:00:00.000000', '1424214249', 'Kristin', 'Cartwright', 3, 'Fritsch', '2c6480b2b60226c2b3bf2804c922c166188c2358', 'lionel63@example.net', '(787)031-8714x1', 0, '89', 'swaniawski.rahsaan@example.com', '63');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('64', '1974-06-08 00:00:00.000000', '2064331037', 'Bert', 'Runte', 3, 'Gutkowski', 'a6b0913ec422513ce09ead787048b6a19d73e7d1', 'laisha61@example.com', '507-627-2567', 0, '837003437', 'hintz.rosetta@example.net', '64');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('65', '1991-12-29 00:00:00.000000', '8817109992', 'Fabian', 'Graham', 2, 'Cassin', '284d0a97540f0a34cd0fb25f5b2f023391433a3f', 'zboncak.zion@example.com', '+68(1)910151181', 0, '71338', 'zmayer@example.com', '65');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('66', '2019-07-22 00:00:00.000000', '4058716057', 'Elliot', 'McKenzie', 3, 'Upton', 'c117da9c73d2dc77645629e888101c0c12f29dc3', 'alexanne29@example.org', '(524)441-0302x7', 1, '518758182', 'guadalupe93@example.com', '66');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('67', '1988-05-03 00:00:00.000000', '1663376049', 'Frederick', 'Gutmann', 1, 'Heller', '0518d963f5457ff4f2b20fa00fc0c5bb3796502e', 'ashlynn48@example.net', '(443)286-9430', 0, '8764', 'plind@example.net', '67');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('68', '2012-01-25 00:00:00.000000', '8934152334', 'Abby', 'Weissnat', 1, 'Mayert', '6a66e8852d3ad1bc72173ee6c2151f0fd18a85a8', 'boehm.ignacio@example.net', '578.126.0540', 1, '552', 'ukulas@example.com', '68');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('69', '1999-01-11 00:00:00.000000', '7562705397', 'Mario', 'Hudson', 3, 'McClure', 'f38e454a59ed0f012b9545109341108bd7f969a3', 'jerde.julian@example.com', '(324)237-8587', 1, '732', 'june.hills@example.org', '69');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('70', '1986-07-16 00:00:00.000000', '2946721109', 'Sim', 'Spinka', 0, 'Botsford', '40194cd0ee4716c9b56b0ec0fd54f97ea3221bcd', 'jlebsack@example.org', '826-140-9379', 0, '1983632', 'kyler.cormier@example.com', '70');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('71', '1981-06-20 00:00:00.000000', '1053419888', 'Dariana', 'Rosenbaum', 1, 'Casper', '7884e3e7e00e959f08f53227b42d4969d4cf84a3', 'gideon58@example.net', '+41(5)666706014', 1, '205', 'anahi.runolfsdottir@example.com', '71');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('72', '1979-12-03 00:00:00.000000', '7738477814', 'America', 'Quigley', 2, 'Schamberger', '2881a2cf76b4eb411f9e50e9ac1ffa5f3809009f', 'umayer@example.org', '(600)056-1871x6', 1, '5692', 'brisa.jacobson@example.org', '72');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('73', '1994-02-15 00:00:00.000000', '2139425436', 'Brook', 'Schamberger', 1, 'Tillman', 'fb66259175940f5c064a2064dd318545010f1838', 'omer62@example.org', '1-339-939-2737x', 0, '5054', 'xdubuque@example.net', '73');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('74', '2006-08-18 00:00:00.000000', '6657948247', 'Abigayle', 'Christiansen', 2, 'Wilderman', 'cecd7daf1d7a20b5a440b0ab4e3fdbb0f949170b', 'vandervort.dillon@example.org', '561-866-3315', 0, '18787787', 'stanton.amparo@example.org', '74');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('75', '1975-08-07 00:00:00.000000', '1568911288', 'Ada', 'Brown', 1, 'Renner', '102f882ab0578b5ae8cae1639a6c4826b3695a0a', 'kerluke.adan@example.net', '540-591-7377x78', 0, '858721188', 'friesen.abigayle@example.com', '75');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('76', '1971-02-02 00:00:00.000000', '9527927860', 'Genesis', 'Bernier', 0, 'Kovacek', 'dba72a13fb3ad6b4d74c4b2aa68190a476e5a44d', 'theller@example.com', '047-920-0915x96', 1, '60345817', 'lubowitz.alexanne@example.org', '76');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('77', '2006-01-27 00:00:00.000000', '8271759980', 'Eino', 'Emard', 1, 'Sipes', '3a565edc8a51e18a7093546800f9bcbbf5942f87', 'qwolf@example.com', '481.433.6973x22', 1, '3078', 'horacio.zboncak@example.net', '77');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('78', '2004-01-09 00:00:00.000000', '2074531860', 'Cortez', 'Hills', 1, 'Hintz', 'c52b5b26a17da9470801f7ae5f5d095ca47e4c01', 'mabelle09@example.org', '+22(0)884355736', 1, '56265582', 'talia38@example.org', '78');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('79', '2012-03-30 00:00:00.000000', '6876566058', 'Zelma', 'Rau', 0, 'Herzog', '9de50d3d90f096888a9dc9795c3a6483a12d764b', 'modesta49@example.org', '445.820.4104x25', 1, '77', 'uriel.grant@example.com', '79');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('80', '2018-01-01 00:00:00.000000', '5737509121', 'Cassandre', 'Gorczany', 3, 'Mayert', '0fd9f134d9234e4132b386de13578aa691c02037', 'violette23@example.org', '05443597369', 0, '684341', 'crist.liam@example.com', '80');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('81', '2020-06-07 00:00:00.000000', '4364795791', 'Loy', 'Hintz', 3, 'Quitzon', 'b646bd229fb1d0aa2302888721e64b59b5ebb9f2', 'rico.anderson@example.net', '1-930-835-7567x', 1, '3265', 'frutherford@example.com', '81');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('82', '1974-06-21 00:00:00.000000', '6915573597', 'Phyllis', 'Wiza', 3, 'Flatley', 'b0271421c572c321e97fc919ab8292ab217f9d8e', 'qrath@example.net', '(219)151-1669x3', 1, '980203845', 'fjerde@example.net', '82');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('83', '1986-05-31 00:00:00.000000', '8770335690', 'Arch', 'Sawayn', 2, 'Franecki', '2ff8851103da62435e2a645fc34f99517e2570b7', 'pkunde@example.com', '(587)806-8977x0', 1, '272', 'ethelyn.howell@example.net', '83');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('84', '1993-10-26 00:00:00.000000', '1164554668', 'Carissa', 'Treutel', 3, 'Bosco', '13ebe3a5d12c9ede969f75581bd25ef5b6c3e639', 'carissa69@example.com', '+25(7)113815127', 0, '46', 'natasha66@example.net', '84');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('85', '1971-07-26 00:00:00.000000', '2093719666', 'Clara', 'Walter', 1, 'Breitenberg', '269d1b608806c4ca57c8d4a8ef83b3e67d050945', 'julie58@example.net', '036-629-0069x66', 0, '91512', 'caleb19@example.net', '85');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('86', '2019-04-27 00:00:00.000000', '8317526641', 'Garfield', 'Walsh', 0, 'Treutel', 'bd699baf5cbae767c99041ff90b29626b1d52e0d', 'jovan28@example.net', '190-232-7304', 0, '72', 'yessenia03@example.org', '86');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('87', '2010-10-12 00:00:00.000000', '1390009498', 'Madalyn', 'Schoen', 1, 'Mitchell', '950fe225efe3bb913dd8e0f36f65cff0ab35be47', 'danika83@example.org', '540.826.2034', 0, '50', 'witting.mattie@example.com', '87');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('88', '1974-04-22 00:00:00.000000', '4316681459', 'Chet', 'Lemke', 2, 'Schulist', 'c2088ccaae392417844c130ba67c3eab4e1778d7', 'cchristiansen@example.net', '381.765.9729x07', 0, '608', 'wilmer71@example.com', '88');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('89', '2004-05-24 00:00:00.000000', '5602966025', 'Dayana', 'Robel', 0, 'Schulist', 'c062f48bf3c4940c40050c6809cf44337723f91a', 'candace05@example.net', '267.989.7403', 1, '47500', 'kreiger.mozelle@example.com', '89');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('90', '2005-07-15 00:00:00.000000', '5275807243', 'Buford', 'Heidenreich', 0, 'Haag', '00f281b3072d1f918d61fb551ce12329a37fc613', 'tgislason@example.net', '(693)028-1476x4', 0, '37435', 'smith.anahi@example.org', '90');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('91', '1971-04-20 00:00:00.000000', '6843967476', 'Anderson', 'Waelchi', 2, 'Schmitt', '954fdab7ff3b43a7d73d8ed566ceb8986be36ca7', 'douglas59@example.com', '132-507-1285', 1, '39770', 'uspencer@example.org', '91');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('92', '1970-08-15 00:00:00.000000', '8191913733', 'Napoleon', 'Batz', 0, 'Hilpert', '8d45a57da09c47e129af2e71bd9c575d2f71280e', 'jeffery.wilkinson@example.com', '073-367-1620', 1, '148983857', 'geo83@example.net', '92');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('93', '1992-01-10 00:00:00.000000', '9650625346', 'Nicholas', 'Langworth', 3, 'Howell', '45f5703a19c5ccf4e19df77e30c1043821fe5792', 'nickolas.bernier@example.com', '572-420-7815x08', 0, '45742207', 'audra85@example.org', '93');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('94', '1970-11-04 00:00:00.000000', '5801943714', 'Dortha', 'Waters', 2, 'Windler', 'a028f6ebbcf93fb8f38a88633782f11485b480ea', 'pflatley@example.org', '313-016-0761x44', 0, '4', 'wiegand.freeman@example.com', '94');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('95', '1992-05-01 00:00:00.000000', '3169428588', 'Ashlee', 'Stiedemann', 1, 'Bruen', '3f0e743e2b3e495414c3f64df19b09c6f7a1d0f6', 'koepp.elyse@example.net', '(124)492-9568', 1, '93159', 'kcrist@example.net', '95');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('96', '2007-01-06 00:00:00.000000', '5506669195', 'Cleo', 'Hoppe', 1, 'Willms', 'f4639a8141ad90239dab53c4db00948498941493', 'hoeger.idella@example.com', '1-253-363-4859', 1, '668412', 'goyette.vaughn@example.com', '96');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('97', '2011-06-28 00:00:00.000000', '4374527249', 'Zechariah', 'Schoen', 1, 'Mayer', '16689de04efde73c24a264a6a8b70c1551f341c8', 'hreynolds@example.org', '754.519.9125x27', 0, '13', 'amber.hartmann@example.org', '97');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('98', '1973-06-03 00:00:00.000000', '1356990249', 'Tiara', 'Ebert', 0, 'Runte', 'e7357df7bba1ffac77fb49f7c9039090de1b4b8e', 'zcarter@example.com', '062.258.2180x36', 1, '554', 'berge.heber@example.com', '98');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('99', '2008-08-03 00:00:00.000000', '3989010606', 'Arturo', 'Mitchell', 0, 'Rempel', '0677485b902d5658d238e81fa15696d9ad3acc1c', 'dickens.kurt@example.org', '908.394.3318x20', 1, '53454442', 'cartwright.thomas@example.net', '99');
+INSERT INTO `students` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `learning_type`, `middle_name`, `password`, `personal_email`, `phone_number`, `reception_type`, `student_number`, `work_email`, `group_id`) VALUES ('100', '1976-09-04 00:00:00.000000', '9950220379', 'Shaina', 'Harber', 3, 'Veum', '15b4bf57845b535d81c4d29b302aa4eafc9ab851', 'shany.wiegand@example.net', '587.337.0928x80', 0, '4259', 'schuppe.brain@example.net', '100');
+
+
+#
+# TABLE STRUCTURE FOR: students_groups
+#
+
+DROP TABLE IF EXISTS `students_groups`;
+
+CREATE TABLE `students_groups` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(5) NOT NULL,
+  `foreman_id` bigint(20) DEFAULT NULL,
+  `specialty_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKlxfed9nugeic5xwcvde2q1w2c` (`foreman_id`),
+  KEY `FKcvrnsj3mn4xmgcmiash07b3d8` (`specialty_id`),
+  CONSTRAINT `FKcvrnsj3mn4xmgcmiash07b3d8` FOREIGN KEY (`specialty_id`) REFERENCES `specialties` (`id`),
+  CONSTRAINT `FKlxfed9nugeic5xwcvde2q1w2c` FOREIGN KEY (`foreman_id`) REFERENCES `students` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('1', 'tempo', NULL, '1');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('2', 'in', NULL, '2');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('3', 'tempo', NULL, '3');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('4', 'qui', NULL, '4');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('5', 'sequi', NULL, '5');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('6', 'nesci', NULL, '6');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('7', 'et', NULL, '7');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('8', 'in', NULL, '8');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('9', 'minus', NULL, '9');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('10', 'sit', NULL, '10');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('11', 'odio', NULL, '11');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('12', 'volup', NULL, '12');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('13', 'sunt', NULL, '13');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('14', 'possi', NULL, '14');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('15', 'est', NULL, '15');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('16', 'atque', NULL, '16');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('17', 'rerum', NULL, '17');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('18', 'velit', NULL, '18');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('19', 'tempo', NULL, '19');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('20', 'iusto', NULL, '20');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('21', 'liber', NULL, '21');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('22', 'magna', NULL, '22');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('23', 'odio', NULL, '23');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('24', 'eaque', NULL, '24');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('25', 'sequi', NULL, '25');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('26', 'eum', NULL, '26');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('27', 'numqu', NULL, '27');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('28', 'volup', NULL, '28');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('29', 'nihil', NULL, '29');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('30', 'omnis', NULL, '30');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('31', 'autem', NULL, '31');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('32', 'vel', NULL, '32');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('33', 'conse', NULL, '33');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('34', 'dolor', NULL, '34');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('35', 'inven', NULL, '35');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('36', 'quia', NULL, '36');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('37', 'error', NULL, '37');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('38', 'magni', NULL, '38');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('39', 'delec', NULL, '39');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('40', 'volup', NULL, '40');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('41', 'aut', NULL, '41');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('42', 'at', NULL, '42');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('43', 'quae', NULL, '43');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('44', 'excep', NULL, '44');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('45', 'eum', NULL, '45');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('46', 'est', NULL, '46');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('47', 'nulla', NULL, '47');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('48', 'tempo', NULL, '48');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('49', 'offic', NULL, '49');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('50', 'asper', NULL, '50');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('51', 'reici', NULL, '51');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('52', 'autem', NULL, '52');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('53', 'tenet', NULL, '53');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('54', 'illo', NULL, '54');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('55', 'place', NULL, '55');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('56', 'velit', NULL, '56');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('57', 'paria', NULL, '57');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('58', 'minus', NULL, '58');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('59', 'non', NULL, '59');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('60', 'exped', NULL, '60');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('61', 'lauda', NULL, '61');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('62', 'fugia', NULL, '62');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('63', 'eum', NULL, '63');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('64', 'quia', NULL, '64');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('65', 'illo', NULL, '65');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('66', 'cum', NULL, '66');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('67', 'corru', NULL, '67');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('68', 'aut', NULL, '68');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('69', 'eaque', NULL, '69');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('70', 'quisq', NULL, '70');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('71', 'sit', NULL, '71');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('72', 'repel', NULL, '72');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('73', 'facer', NULL, '73');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('74', 'et', NULL, '74');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('75', 'culpa', NULL, '75');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('76', 'volup', NULL, '76');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('77', 'numqu', NULL, '77');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('78', 'odit', NULL, '78');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('79', 'imped', NULL, '79');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('80', 'dolor', NULL, '80');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('81', 'dolor', NULL, '81');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('82', 'quas', NULL, '82');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('83', 'quos', NULL, '83');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('84', 'nesci', NULL, '84');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('85', 'et', NULL, '85');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('86', 'quis', NULL, '86');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('87', 'et', NULL, '87');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('88', 'volup', NULL, '88');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('89', 'est', NULL, '89');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('90', 'ea', NULL, '90');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('91', 'et', NULL, '91');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('92', 'molli', NULL, '92');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('93', 'quisq', NULL, '93');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('94', 'moles', NULL, '94');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('95', 'archi', NULL, '95');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('96', 'numqu', NULL, '96');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('97', 'eum', NULL, '97');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('98', 'id', NULL, '98');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('99', 'cum', NULL, '99');
+INSERT INTO `students_groups` (`id`, `name`, `foreman_id`, `specialty_id`) VALUES ('100', 'sed', NULL, '100');
+
+
+#
+# TABLE STRUCTURE FOR: subjects
+#
+
+DROP TABLE IF EXISTS `subjects`;
+
+CREATE TABLE `subjects` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `semester_id` bigint(20) NOT NULL,
+  `specialty_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK3hrxtqye5kwc2fx3q9ekjrqxm` (`semester_id`),
+  KEY `FKfcv7uhpgxgaqpyc30iqntqkvp` (`specialty_id`),
+  CONSTRAINT `FK3hrxtqye5kwc2fx3q9ekjrqxm` FOREIGN KEY (`semester_id`) REFERENCES `semesters` (`id`),
+  CONSTRAINT `FKfcv7uhpgxgaqpyc30iqntqkvp` FOREIGN KEY (`specialty_id`) REFERENCES `specialties` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('1', 'Nam sit modi ex est autem rem non. Quae explicabo vitae accusamus quis. Debitis consequuntur ipsam neque dolor recusandae. Soluta sint illo nulla repellat officia omnis consequuntur.', 'est', '1', '1');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('2', 'Dolores omnis autem nesciunt cupiditate nam nulla vel. Eaque voluptatem ipsa pariatur repellat natus.', 'alias', '2', '2');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('3', 'Et nostrum perspiciatis architecto exercitationem iusto aliquid vel velit. Laboriosam porro eos sit est facere temporibus. Est voluptates autem odio rerum occaecati. Accusantium aliquid sint occaecati fugiat magni.', 'voluptas', '3', '3');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('4', 'Corrupti cupiditate praesentium ut cumque. Sed ut quod commodi eos ea aperiam adipisci. Laborum consectetur sint a et. Cupiditate sit et voluptas inventore quibusdam ipsam.', 'mollitia', '4', '4');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('5', 'Vero iste ea autem voluptatem ea natus et. Nisi mollitia iusto sunt sint. Quam ipsam quis vel qui reiciendis.', 'sunt', '5', '5');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('6', 'Ad perspiciatis maxime ut et. Ipsum odio velit sed et est. Id autem incidunt et molestiae nesciunt eos et sint.', 'molestias', '6', '6');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('7', 'Libero a sint dolore quis deserunt rerum quisquam. Eveniet qui dolor minus architecto.', 'ea', '7', '7');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('8', 'Iure esse consequatur eius qui nisi aut libero. Dicta et accusantium nobis eos vero id.', 'et', '8', '8');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('9', 'Quasi ipsa quos exercitationem iste animi dolor. Modi magni occaecati quidem tempora. Neque voluptatibus dolorem est quisquam voluptatem voluptas. Illo totam et dignissimos dolorum quas voluptatem culpa.', 'recusandae', '9', '9');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('10', 'Rerum aut qui id. Ipsum ut itaque quod veritatis est. Quibusdam sit rerum et.', 'quo', '10', '10');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('11', 'Optio molestias autem repellat ut quisquam ut rerum. Aperiam quibusdam maiores quidem nobis qui temporibus suscipit. Reprehenderit rerum et accusantium vel voluptates laboriosam.', 'rerum', '11', '11');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('12', 'Neque voluptatem qui rerum temporibus tenetur. Reiciendis dignissimos saepe occaecati qui maxime quos. Perspiciatis officiis ut et vel adipisci et voluptas. Ullam voluptatem nam repudiandae nemo.', 'natus', '12', '12');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('13', 'Eos quia cum quaerat in. Aliquam eum aliquam ut beatae. Et facilis culpa hic voluptas inventore voluptas. Aliquid dolor fugit aliquam.', 'eligendi', '13', '13');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('14', 'Et aut repudiandae quam incidunt in possimus dignissimos. Voluptates ut ipsum quaerat.', 'aut', '14', '14');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('15', 'Ad est nihil qui aperiam. Quibusdam et sed qui libero iusto perspiciatis. Voluptas perferendis blanditiis omnis. Tempora aut quo corporis.', 'ducimus', '15', '15');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('16', 'Fugiat praesentium neque sit aliquid ex repellat. Minima blanditiis eaque suscipit consequatur excepturi. Possimus saepe dolor ut itaque velit rem alias.', 'molestiae', '16', '16');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('17', 'Quis autem quam non vitae sint nam. Dolore repudiandae libero provident sint. Ipsam et dolore numquam vitae ratione asperiores velit.', 'unde', '17', '17');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('18', 'Ea aut culpa repellendus qui explicabo ut architecto. Ea suscipit iusto dolores quis cupiditate blanditiis natus. Distinctio delectus magnam sit ut blanditiis eveniet.', 'veritatis', '18', '18');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('19', 'Voluptatibus sed impedit aut est consectetur et. Nihil ipsam quam quos voluptas ducimus. Aut perspiciatis sed fugit architecto est facilis possimus impedit. Accusantium rerum veniam reprehenderit distinctio.', 'ea', '19', '19');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('20', 'Quibusdam laborum incidunt magni quisquam. Sunt fugit consectetur quam dolorem et qui in qui. Provident maiores corrupti iste quo cum temporibus ut. Laudantium at totam id atque natus perferendis.', 'voluptatem', '20', '20');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('21', 'Quo facilis possimus dolore. Ut suscipit quisquam sed.', 'enim', '21', '21');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('22', 'Ipsam reprehenderit rerum consectetur cupiditate debitis. Est reiciendis fuga aut vel ut soluta. Ea minima velit rem qui sunt voluptatem. Qui aut sint suscipit tenetur praesentium maiores et.', 'ut', '22', '22');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('23', 'Sit officia sapiente ducimus soluta voluptatibus dolor. Exercitationem placeat est maxime quae ex quisquam velit ipsa. Fugit voluptatem veritatis molestias eum.', 'dolor', '23', '23');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('24', 'Laboriosam fugit saepe non. Saepe similique aspernatur ipsa et quis vitae beatae dolor. Ut accusantium ea omnis ut. Culpa enim ut ullam perferendis.', 'doloribus', '24', '24');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('25', 'Incidunt omnis sed adipisci necessitatibus quas omnis quas. Dolores tenetur nobis porro velit. Sequi est possimus sapiente qui deserunt.', 'est', '25', '25');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('26', 'Corrupti corrupti hic libero recusandae. Quidem aliquam dolorem nobis cupiditate qui quidem. Est enim ex molestiae reprehenderit odio aperiam.', 'quasi', '26', '26');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('27', 'Optio non amet officiis pariatur. Mollitia voluptas blanditiis labore officiis tempore. Est non aut mollitia ut tempore. Deserunt rem asperiores inventore quis quidem nihil.', 'eos', '27', '27');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('28', 'Numquam enim deserunt et eum est assumenda. Tenetur eius dicta dolor dolore velit repudiandae possimus vel. Inventore nihil sed animi in quo ea molestiae. Reiciendis et rerum odio sit et quasi reprehenderit voluptas.', 'molestias', '28', '28');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('29', 'Vitae possimus modi natus cum. Ipsam est officiis sunt ut est deserunt qui inventore. Quis qui molestias error recusandae eos eum nemo. Cumque repellat ut tempora est.', 'eos', '29', '29');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('30', 'Tenetur quia impedit quibusdam voluptatum enim architecto. Itaque omnis qui fugit aut. Consequatur ut aspernatur aut tenetur tenetur tempora. Eos corrupti sunt excepturi minima eligendi repellendus dicta.', 'omnis', '30', '30');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('31', 'Dolore repellendus aliquam et quam molestias. Aliquam non sapiente dolorem inventore et. Earum nostrum sint velit voluptatem ut inventore aut.', 'id', '31', '31');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('32', 'Molestiae dolore aut voluptatem facilis et minima incidunt. Ratione consequatur reiciendis et est optio aut voluptatem qui. Dolores excepturi necessitatibus culpa aliquam cum odio. Aperiam ipsa sed qui qui.', 'et', '32', '32');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('33', 'Mollitia suscipit fugiat nemo quo. Totam consequatur aspernatur quibusdam vero temporibus facere. Esse ad odit nemo incidunt et. Et voluptatibus quos velit distinctio nesciunt et.', 'excepturi', '33', '33');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('34', 'Dicta ut quaerat amet accusantium. Ut sapiente in modi. Quibusdam quis maiores odio voluptatum. Aut quas similique harum voluptatibus.', 'eum', '34', '34');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('35', 'Inventore sit officiis tempore iure delectus sint ipsam. Aut occaecati cumque et quis animi. Atque amet quam eos soluta. Non et aut cum et voluptatibus saepe distinctio.', 'consectetur', '35', '35');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('36', 'Perspiciatis aperiam nihil qui natus consequatur doloribus blanditiis. Voluptas iure nam qui modi fugit.', 'nisi', '36', '36');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('37', 'Explicabo quod qui porro. Fuga sint ipsa enim quae officia. Aperiam et dignissimos temporibus quam ut repudiandae. Quis vitae accusantium expedita.', 'ut', '37', '37');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('38', 'Illo error inventore occaecati autem tempore perspiciatis ullam. Ipsam veritatis quibusdam explicabo eos ea totam. Et facere ducimus fuga voluptatem. Rem amet blanditiis quia.', 'error', '38', '38');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('39', 'Possimus voluptatem ut corrupti non nulla sequi sit. Blanditiis eos cumque in sed eaque rerum reprehenderit. Est aspernatur repellendus eum nihil.', 'quo', '39', '39');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('40', 'Non porro nisi atque consequatur illo amet enim. Quisquam vel reprehenderit nulla magnam tempora. Culpa vel nemo reiciendis blanditiis delectus aliquid. Eos quaerat facere perspiciatis aut assumenda consequatur.', 'tempore', '40', '40');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('41', 'Error fugiat eum doloremque. Voluptas dolorum tempore in accusantium est quis ea. Pariatur tenetur voluptates vel omnis odio nobis sed. Et nihil molestiae qui consequatur perferendis deleniti.', 'impedit', '41', '41');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('42', 'Id veniam quaerat minus sed. Soluta repellat repudiandae asperiores recusandae architecto repellendus minus rem. Eius rerum beatae eum doloremque.', 'veniam', '42', '42');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('43', 'Saepe nemo est aut quos quis. At tenetur facere enim ratione.', 'voluptates', '43', '43');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('44', 'Eveniet voluptatem doloribus facere quidem est vero. Dignissimos optio unde eum labore aliquam molestiae et. Eligendi maiores sed aut quis in est eos. Dolores odit ratione consectetur accusantium.', 'est', '44', '44');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('45', 'Aliquam facilis voluptates ipsa maxime voluptatem et. Quo cumque ut ut corporis fugiat. Ut esse reiciendis aperiam nemo quia illum. Doloribus odit quis velit quam laborum doloribus sed exercitationem.', 'similique', '45', '45');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('46', 'Libero veniam maiores nihil impedit qui provident sunt architecto. Ad nobis sit ut aliquam. Harum excepturi ex veniam id placeat.', 'doloribus', '46', '46');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('47', 'Temporibus qui cupiditate voluptate. Quia animi nesciunt enim beatae placeat quia. Velit itaque nostrum saepe porro. Voluptas rerum quod modi deleniti commodi.', 'qui', '47', '47');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('48', 'Dolor consectetur non iusto cumque fugiat est. Expedita facilis omnis voluptas. Atque eos eius necessitatibus qui nobis. Aut voluptas ducimus rerum quia. Exercitationem consequatur distinctio qui quia autem.', 'blanditiis', '48', '48');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('49', 'Nisi perferendis vel non fuga non veritatis et. Dignissimos perspiciatis et quaerat autem commodi nulla quia.', 'sit', '49', '49');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('50', 'Rem nesciunt dolorum qui aut. Quaerat ad eos sit eos ut. Perferendis fugit ab possimus et.', 'dolorem', '50', '50');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('51', 'Laudantium aut recusandae assumenda. Sint occaecati ducimus enim molestiae. Ipsum quos dignissimos esse inventore aut nostrum. Sed vitae reprehenderit omnis. Omnis explicabo qui quos dolores.', 'voluptatem', '51', '51');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('52', 'Voluptatem rerum cupiditate veritatis et ea. Nihil eveniet ut consequuntur esse reiciendis nam. Architecto neque itaque quia voluptas.', 'totam', '52', '52');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('53', 'Quod voluptatem voluptatem dolor iure. Incidunt aliquid modi odio nihil magnam corrupti enim. Sit non deleniti at maiores. Perspiciatis placeat laboriosam ut ut.', 'et', '53', '53');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('54', 'Dolor possimus facere officia nihil odit. Reiciendis doloremque blanditiis magni aliquam. Dignissimos voluptas pariatur omnis nulla voluptas ea.', 'quasi', '54', '54');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('55', 'Ipsam explicabo eos quia saepe commodi libero sequi. Magni enim et dolore. Quo quod excepturi hic ratione vel.', 'voluptatibus', '55', '55');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('56', 'Aut minus nihil cumque ut quia repudiandae veritatis. Quam magnam facilis nisi omnis suscipit. Magnam autem aliquam numquam rerum unde tempore. Soluta voluptatum aut fugit magni nam corrupti cumque maxime.', 'veritatis', '56', '56');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('57', 'Odit dicta rerum ipsam reprehenderit nesciunt qui eligendi. Nemo quia magnam beatae dolore. Libero rerum voluptatem eius ut ut ut.', 'tenetur', '57', '57');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('58', 'Minus laboriosam voluptatem molestiae placeat atque ea at. Quasi dolore quia velit ratione. Voluptas ut est incidunt aut ut. Praesentium explicabo molestiae hic non.', 'optio', '58', '58');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('59', 'Quia voluptatem labore voluptatem consectetur possimus eos. Voluptatem consequatur magnam voluptatem aut qui est. Rem praesentium consequatur unde dolores est. Placeat voluptate beatae rerum eaque sit.', 'tempore', '59', '59');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('60', 'Corporis repudiandae aliquid occaecati magni ipsa iste. Ut et sint magni provident. Non quis deleniti velit distinctio voluptatem ipsam dignissimos.', 'error', '60', '60');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('61', 'Qui ullam corporis deleniti distinctio ad repellat corporis. Dolorem placeat quae nobis. Molestiae vitae sunt aliquid debitis omnis optio perspiciatis aut. Eius amet quidem ea ea ratione culpa unde.', 'dolorum', '61', '61');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('62', 'Laboriosam velit laboriosam quia autem nihil provident. Omnis dolores voluptatem aliquid. Perferendis atque tempore id aliquam.', 'voluptatum', '62', '62');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('63', 'Optio commodi illum sint laborum reiciendis impedit. Commodi inventore dolore et quos sunt consequatur. Omnis voluptatem officiis quisquam rerum sapiente id recusandae deleniti. Quidem et nihil in ipsum nihil doloribus ipsam.', 'error', '63', '63');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('64', 'Sequi ut quia est et suscipit explicabo. Nostrum est ut animi. Itaque quae esse aut exercitationem unde tenetur ad.', 'dolor', '64', '64');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('65', 'Atque velit et quae temporibus quaerat ducimus. Laboriosam rerum esse ut assumenda. Maxime quos porro et magnam occaecati molestiae similique dicta.', 'quisquam', '65', '65');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('66', 'Facilis quod error et reprehenderit quia adipisci enim. Assumenda est dolorem aut optio ex perspiciatis.', 'voluptate', '66', '66');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('67', 'Reprehenderit quo non saepe distinctio hic et sit. Et et placeat quia. Et corporis aliquam enim minima aspernatur optio. Optio qui est fugit occaecati.', 'qui', '67', '67');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('68', 'Quas labore non sunt iure. Quos numquam aut ad molestias nulla. Omnis sapiente molestiae aut non id consequatur et. Quos adipisci similique eos quam nulla dolor fugiat.', 'adipisci', '68', '68');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('69', 'Aspernatur ut voluptates et laudantium animi sunt. Sed autem accusantium ducimus vitae. Enim et accusamus laboriosam id enim vel earum cumque.', 'repellat', '69', '69');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('70', 'Eos aut autem sit soluta cumque. Soluta velit non magni vitae numquam et et. Architecto reprehenderit blanditiis repudiandae iure. Eligendi pariatur sequi quae illum odit praesentium odio.', 'ea', '70', '70');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('71', 'Dolore perferendis neque quod blanditiis consequatur non repellat. Labore atque consequatur et similique. Quia totam cumque corporis in accusamus sint voluptatibus.', 'odit', '71', '71');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('72', 'Aperiam repellat et velit quas eius natus. Maiores sunt sunt explicabo cupiditate. Illum doloribus consequatur earum repellat. Eaque in omnis quidem est. In aut tempora eveniet non.', 'aut', '72', '72');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('73', 'Quidem cumque eveniet magni autem dignissimos aut. Qui ipsum adipisci dolorem architecto reprehenderit aliquam quidem. Minus magnam sint illum.', 'et', '73', '73');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('74', 'Aperiam aspernatur impedit velit excepturi voluptatem et repellat. Qui tenetur odio voluptatem ut ex odio. Maiores odio ducimus quia libero impedit. Vero alias quos omnis fuga architecto ad.', 'in', '74', '74');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('75', 'Ut consequatur aspernatur totam et deleniti illum. Nulla ratione hic quo. Culpa esse necessitatibus quo aperiam.', 'reprehenderit', '75', '75');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('76', 'Non architecto ut deleniti dolor inventore minus perspiciatis soluta. Ullam vel aperiam cumque id magnam temporibus. Voluptas quo et sed. A qui aut temporibus qui.', 'eligendi', '76', '76');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('77', 'Autem ducimus minima est impedit officiis nulla aliquam. Rem voluptatibus ipsum repudiandae in quae earum sed vero. Culpa porro sunt impedit blanditiis ea excepturi. Odit quis ab ab enim hic.', 'quis', '77', '77');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('78', 'Qui minima quos odio et nostrum est deserunt. Alias sapiente quibusdam nobis hic sequi ab. Est soluta saepe quia molestiae est.', 'occaecati', '78', '78');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('79', 'Sit nihil quidem quidem veniam provident fugiat dignissimos. Aperiam est et est tempora. Quisquam itaque ullam sint ab mollitia exercitationem est. Dolorum in ad perferendis ipsa.', 'sunt', '79', '79');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('80', 'Magni id animi sunt architecto. Et cum perferendis qui sed et. Dolorem et voluptatem aut perspiciatis.', 'dignissimos', '80', '80');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('81', 'Nam qui ut sed quia. Magnam nostrum nesciunt dolor.', 'quia', '81', '81');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('82', 'Pariatur ducimus voluptas dicta molestiae suscipit. Quisquam beatae qui corporis ea debitis eveniet ut. Optio vero harum commodi labore id et. Assumenda fuga possimus qui modi itaque natus.', 'qui', '82', '82');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('83', 'Occaecati odio dolorem officiis cupiditate dolores. Ut ad explicabo libero. Hic culpa et fugit tenetur vel non. Hic consequatur dolores sed omnis quidem non.', 'animi', '83', '83');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('84', 'Adipisci sunt fugiat corporis. Cumque debitis saepe eos occaecati veritatis. Aut rerum placeat in sed sit distinctio. Maiores asperiores nobis laborum ut et. Sint labore blanditiis est aspernatur.', 'corrupti', '84', '84');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('85', 'Quia nam harum error aspernatur impedit. Iste magni ducimus et voluptatem. Cupiditate officia ipsam qui modi aut facere vel.', 'architecto', '85', '85');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('86', 'Magni harum sed et voluptatum eligendi voluptates animi. Omnis odio ipsum tempore incidunt quasi voluptates minima.', 'molestiae', '86', '86');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('87', 'Rerum atque cum nesciunt ut laborum et vel. Sed inventore architecto at corporis. Vel quia quia aspernatur tenetur alias molestias. Iure minima non et molestiae ex qui.', 'adipisci', '87', '87');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('88', 'Omnis inventore error velit. Maiores qui aliquid et est et consectetur ea voluptas. Debitis commodi quibusdam nobis quo eum saepe consequatur nulla. Sit velit corrupti aut deserunt voluptas vitae incidunt. Ex laborum asperiores esse recusandae labore moll', 'ut', '88', '88');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('89', 'Beatae hic consequatur a et et consequuntur. Quia culpa possimus et et. Praesentium qui non dolores perferendis ex id. Dolorem quis ex voluptatem omnis.', 'tenetur', '89', '89');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('90', 'Autem unde rerum totam ut praesentium ipsam. Iure qui eum ut recusandae quibusdam. Incidunt laudantium exercitationem atque eveniet consequatur veritatis voluptatem.', 'molestiae', '90', '90');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('91', 'Amet omnis ipsum dignissimos blanditiis ut. Ducimus eligendi perferendis quidem sunt laborum. Neque assumenda facere voluptas accusantium pariatur et ex minima. Saepe qui blanditiis aut quia repellendus vel.', 'dolorem', '91', '91');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('92', 'Molestias ea reiciendis minima placeat voluptas ullam. Itaque et voluptas quidem quidem. Rerum laboriosam reprehenderit qui est odit.', 'et', '92', '92');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('93', 'Aliquid quaerat necessitatibus illum et. Dolorum quod amet odio rem assumenda omnis modi rerum.', 'nihil', '93', '93');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('94', 'Ut ipsa dolores tempora recusandae. Aut molestiae ut error incidunt nam rerum at. Sit in placeat corrupti hic nulla numquam est. Voluptas ut necessitatibus dolores quo omnis aut ad. Occaecati adipisci magni autem.', 'architecto', '94', '94');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('95', 'Earum soluta ut quas culpa. Et officia aut est voluptas labore est qui. Id laborum velit non esse aut officiis.', 'ipsa', '95', '95');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('96', 'Cum asperiores voluptas quia et laboriosam eveniet quaerat. Quae quia quis ut nam quia ipsam. Optio reprehenderit dolorem est accusantium consectetur est culpa.', 'omnis', '96', '96');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('97', 'Et earum optio nihil amet. Modi vel vel quia ipsa ea in quo. Aliquid et voluptatum dolore quo distinctio.', 'quod', '97', '97');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('98', 'Natus tempora illum fugiat ut sint deleniti sit. Quia quae enim repellendus dolore dolorem temporibus facilis. Animi molestiae vero eius reiciendis.', 'quo', '98', '98');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('99', 'Ut ullam sunt quis sit provident omnis. Nesciunt magnam unde id quod dolorem rerum et quia. Non aut officia id voluptas quis repudiandae soluta. Adipisci vel unde omnis voluptatem excepturi ex rerum iure.', 'ducimus', '99', '99');
+INSERT INTO `subjects` (`id`, `description`, `name`, `semester_id`, `specialty_id`) VALUES ('100', 'Doloribus autem itaque autem dolores praesentium. Aperiam perspiciatis nisi nulla nihil voluptatum vel maxime. Harum ut hic non consequatur eos et.', 'veniam', '100', '100');
+
+
+#
+# TABLE STRUCTURE FOR: teachers
+#
+
+DROP TABLE IF EXISTS `teachers`;
+
+CREATE TABLE `teachers` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `birth_date` datetime(6) NOT NULL,
+  `eng` varchar(10) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `middle_name` varchar(50) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `personal_email` varchar(320) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
+  `work_email` varchar(320) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK3xpwk2gje6tbwticfd2d8d2ho` (`birth_date`),
+  UNIQUE KEY `UKji6x59byfj8ille4388784vdg` (`personal_email`),
+  UNIQUE KEY `UKnrbwxmkop2aawwn03ft79f9vw` (`phone_number`),
+  UNIQUE KEY `UK9pw6iocm41i7sg54ecx0dkgsd` (`work_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('1', '2002-10-24 00:00:00.000000', '4253007420', 'Ladarius', 'Gulgowski', 'Wunsch', 'c1df296e4acd6eb6108d9939e1f130c07a525e53', 'graham.mike@example.org', '05370219820', 'afranecki@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('2', '1970-12-07 00:00:00.000000', '3977743897', 'Misty', 'Dare', 'Cartwright', 'eede83481dc11678707c5f04d53aa3f0f7d65441', 'xreichert@example.net', '442-185-5860', 'raquel.langosh@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('3', '2011-06-24 00:00:00.000000', '8913348980', 'Miles', 'Moen', 'Mohr', 'c43bea719c7b59dc12274cbe5757cef02df7e8d2', 'okuneva.clementine@example.net', '1-666-059-5301', 'hildegard80@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('4', '2000-11-03 00:00:00.000000', '1680049438', 'Jack', 'Feest', 'Klocko', '33ebc30ce6602bcad30626c93233fa71232ce963', 'pat83@example.com', '105-751-3398x30', 'wintheiser.mayra@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('5', '1974-03-06 00:00:00.000000', '2522073203', 'Anastasia', 'Mraz', 'Jerde', 'a9ea2f0e4a80637f273dcd3c6568e55a0dc30fbc', 'osinski.reilly@example.net', '1-451-717-0228', 'bd\'amore@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('6', '1993-08-12 00:00:00.000000', '3934434083', 'Eunice', 'Howell', 'Schultz', '72b5edb6ac6d7935a253d91b005cc5b9512b857a', 'concepcion.wehner@example.com', '1-638-646-0765x', 'jeff72@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('7', '1977-03-23 00:00:00.000000', '4570189008', 'Joyce', 'Wehner', 'Donnelly', '64b0902cc9ce2f3ead5c3ef9e269d920b15bf6ff', 'spagac@example.com', '05576004269', 'ofeest@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('8', '1991-09-28 00:00:00.000000', '9410542643', 'Mateo', 'Mosciski', 'McKenzie', 'e3773a6f073fe7744b5ef54e9cc285bb8d354bd2', 'durgan.billy@example.org', '121.680.2831x33', 'adeline.langosh@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('9', '1998-09-23 00:00:00.000000', '3735416128', 'Alexys', 'Olson', 'Willms', 'b6368b5ebc86b22db3596422772d0458c9689161', 'jesse.torphy@example.net', '385.471.5108', 'brianne05@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('10', '1971-08-04 00:00:00.000000', '3679487912', 'Craig', 'Ward', 'Parker', '3a6a1c254f1490c7137c7ea32608cc3008388095', 'qosinski@example.org', '199-183-3101x03', 'legros.emmy@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('11', '1970-05-07 00:00:00.000000', '2978477410', 'Susana', 'Donnelly', 'Turcotte', 'e4f6cfdc1ee3f202282c65443d7da4420bc192a2', 'feffertz@example.org', '775-727-5672x85', 'lucius.torphy@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('12', '2016-10-15 00:00:00.000000', '8920205975', 'Juston', 'Emmerich', 'Nicolas', 'db9f1d6d8840fc017829e1a1d8f98d509d9d5ee7', 'po\'keefe@example.org', '1-297-141-5608x', 'jadon07@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('13', '2019-09-11 00:00:00.000000', '9346691501', 'Kelsie', 'Considine', 'Nicolas', 'f170ceed67118526a680e37f5157ea33f350483f', 'bode.dayton@example.net', '320-614-3183x64', 'mabelle45@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('14', '1985-10-18 00:00:00.000000', '9844606434', 'Palma', 'Connelly', 'Bogisich', 'd417786240b511c6f49b73f3a3cbbb857b897680', 'felipa.stiedemann@example.org', '1-085-049-6763x', 'blanda.russ@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('15', '1978-09-19 00:00:00.000000', '3982956185', 'Moises', 'Barrows', 'Oberbrunner', 'b7bb352d977cb17231f10df24c2856f594d501f4', 'imorar@example.com', '1-869-565-5586x', 'druecker@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('16', '2005-12-20 00:00:00.000000', '4358060345', 'Jennyfer', 'Parisian', 'Von', '34a56375473dac28b53748ef52e294c74eca6e89', 'brice.abbott@example.com', '1-885-154-1641x', 'lynch.austin@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('17', '2017-02-18 00:00:00.000000', '9937546663', 'Berniece', 'Orn', 'Stiedemann', '1407efa01780ac1dff94a22f56135981503b2e92', 'qd\'amore@example.net', '1-884-314-8221', 'jamil70@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('18', '1983-06-11 00:00:00.000000', '2905075627', 'Priscilla', 'Bergnaum', 'Schimmel', 'a7a49dd4eb7d5e5b28eeaa1aca7e5b8fed2525e5', 'umills@example.com', '1-959-345-5070x', 'chad30@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('19', '2022-06-27 00:00:00.000000', '3548857186', 'Cortez', 'Abernathy', 'Ankunding', '3dc3e44658a7c542f6bc52aed5f03b5af5962dce', 'schmidt.gonzalo@example.com', '1-028-072-2627x', 'szulauf@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('20', '2020-05-10 00:00:00.000000', '7495648233', 'Catharine', 'Pollich', 'Fisher', '6cc55783de4662192e47990a1e75904c284a5632', 'ferry.graham@example.org', '1-658-933-9799', 'hstehr@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('21', '2015-11-18 00:00:00.000000', '1364522083', 'Malinda', 'Jacobs', 'Witting', '556962a63d7718fccf8b24c61913c71ca7201d78', 'hermann.madisyn@example.org', '+60(1)718419715', 'kuhn.ramon@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('22', '1971-08-01 00:00:00.000000', '8537727500', 'Jamar', 'Becker', 'Goyette', '5ee70fc15a41de9790019e5a2d8fba31a37a188f', 'wmoore@example.com', '1-446-274-1610', 'cwilkinson@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('23', '1991-05-08 00:00:00.000000', '5007153548', 'Amina', 'Gottlieb', 'Bailey', 'fea540745852695d0e92a199054d0758ef940cd8', 'godfrey62@example.net', '400.731.5027x33', 'kreiger.foster@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('24', '1982-08-01 00:00:00.000000', '6178502661', 'Tyrell', 'Feil', 'Bergstrom', 'ff792cfb0abd3744f1fa8132adf20c66943dccfd', 'jerel.blanda@example.net', '(643)775-1382x2', 'gusikowski.camden@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('25', '2023-11-10 00:00:00.000000', '3367700176', 'Montana', 'D\'Amore', 'Marquardt', '54ea5f31f11f1566f212bd8106b8eb5021187fdc', 'schumm.darian@example.com', '871-522-3398x31', 'xthompson@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('26', '2017-12-20 00:00:00.000000', '8124403269', 'Devin', 'Stracke', 'Schowalter', 'b702568ed47949141b16d61ed5b6d659b0f40cac', 'theresa27@example.net', '(378)520-7886', 'jermain21@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('27', '1979-10-24 00:00:00.000000', '9230074870', 'Osbaldo', 'Ortiz', 'Wisoky', 'f80d13a46158dc3ff73884af6e8c0adf9b23b6a9', 'dare.nestor@example.net', '915-287-5248', 'tcrist@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('28', '1971-08-24 00:00:00.000000', '4175200257', 'Vita', 'Murazik', 'Corkery', '0fa560fdf8ede0c23caadda32e06a41c307ffcf0', 'kertzmann.meredith@example.com', '+63(2)376876597', 'dschaden@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('29', '2014-09-20 00:00:00.000000', '2362381764', 'Ashly', 'Baumbach', 'Koss', '5ad54e4f8619a8bd583c74323fae6155b60e62b6', 'tyreek.veum@example.org', '751.299.2403', 'casimir.corkery@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('30', '1984-01-27 00:00:00.000000', '3238852454', 'Lenora', 'Toy', 'Flatley', '649488bd5011d01de87dd0fd4f7ff0d1a5a46cf5', 'jmorar@example.com', '323-879-8811', 'lamont46@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('31', '2018-11-11 00:00:00.000000', '5649037601', 'Elaina', 'Fritsch', 'Rohan', '838a887572b6b0b97d3c47603df98602ac8c0afe', 'noemi53@example.org', '363.927.6849x70', 'winona83@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('32', '2001-10-02 00:00:00.000000', '4443196124', 'Rickey', 'Wunsch', 'Abbott', '3941782f1da963570c6e134443dda2286f48a7aa', 'dhowe@example.com', '511.432.7147x08', 'eldred95@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('33', '1991-03-01 00:00:00.000000', '6002242569', 'Norene', 'Nader', 'Paucek', 'c5ce3049f35ce1199cb22fbc949bc7b0a4b6c828', 'feest.john@example.org', '239-785-2768x14', 'dortha.okuneva@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('34', '2005-04-05 00:00:00.000000', '6772577915', 'Anika', 'Roberts', 'Rosenbaum', '36ebeefb2532b2122e845d711c893bfe5e6aa23d', 'mwest@example.org', '354-221-1401x68', 'maude.mcdermott@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('35', '1989-03-09 00:00:00.000000', '8263585880', 'Wilma', 'Grant', 'Kuhic', '26cc63ee9be2d1c28b5ba85a9b4c1920d203d8d5', 'ullrich.lonnie@example.org', '975.055.5842x85', 'gmayer@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('36', '1993-01-04 00:00:00.000000', '9481507857', 'Era', 'Friesen', 'Witting', '3f442e7024e3ab7dcc7ceb973046bb241a13b692', 'jamey10@example.net', '018.820.1014x58', 'bennie.cronin@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('37', '2015-08-29 00:00:00.000000', '4958589827', 'Delilah', 'Upton', 'Mohr', '40baf0b00c77dc1e51f72b2e93c5ca27c869a8a9', 'oschimmel@example.net', '(097)162-3529', 'hrath@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('38', '1994-02-17 00:00:00.000000', '5642065643', 'Adolf', 'Bode', 'Fadel', 'a749dd94010f43633645b6c5a9b1927a80fb8f91', 'rhett.brown@example.org', '1-187-296-1568', 'qo\'reilly@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('39', '1977-05-24 00:00:00.000000', '9949801672', 'Evert', 'O\'Reilly', 'Gutkowski', 'bdcb0c92aae1503d1c9b849f11f1e289e85f5e70', 'linda61@example.org', '184-761-8687', 'mylene.renner@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('40', '2002-01-15 00:00:00.000000', '3494946346', 'Nathanial', 'Wiegand', 'Graham', '643a4bf7046627b8fe156943f65b4e653af35d10', 'annabel24@example.net', '880.711.7210x55', 'hills.terrill@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('41', '1998-04-30 00:00:00.000000', '3599351494', 'Carli', 'Ortiz', 'Cremin', 'a79651796c8059c83f047f300e2acbe81a6104db', 'blanda.laisha@example.com', '078-793-6671x74', 'mccullough.sammy@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('42', '2023-07-08 00:00:00.000000', '1594561996', 'Evalyn', 'Welch', 'O\'Keefe', 'cfbc2cce4838df750e5be299c5d0a6922ee537b8', 'estell.stehr@example.com', '1-263-861-1249', 'wuckert.kiera@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('43', '2018-12-30 00:00:00.000000', '4744594938', 'Grant', 'Keeling', 'Stracke', '1994b04fb0f6c236fd5305dff1aaa569d46593f3', 'nathan.keebler@example.net', '1-351-339-8375x', 'cassin.gerhard@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('44', '2017-03-24 00:00:00.000000', '4558528981', 'Elizabeth', 'Corwin', 'VonRueden', '0d70f97b66ea94a9b4aab56e5784a530d7b08e27', 'nwatsica@example.com', '969.311.0537x21', 'marquardt.michelle@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('45', '1997-02-24 00:00:00.000000', '6683837666', 'Gudrun', 'King', 'Botsford', '5fa9f26a4c35191c46816950e05b17cdab38be3d', 'myah89@example.org', '474-219-0852x73', 'braun.conor@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('46', '2023-05-10 00:00:00.000000', '5842924440', 'Janet', 'Kulas', 'Buckridge', '3d10e36c6d70e4d129a89db84de97b21ff7ca436', 'lubowitz.angie@example.org', '(829)137-8002', 'yessenia64@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('47', '1991-05-18 00:00:00.000000', '4040397309', 'Obie', 'Tromp', 'Watsica', '1339b3e28a189b392d2a3f4101da2eff90264180', 'vbahringer@example.net', '1-218-802-0979x', 'makenzie.feest@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('48', '2015-08-03 00:00:00.000000', '2439212318', 'Katrina', 'Brekke', 'Rutherford', '64ae886f0bf8ffa22ddd6257d5ab0d15cc0b84a5', 'hamill.karson@example.com', '929.764.3907x97', 'alexandria46@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('49', '1995-02-15 00:00:00.000000', '7719084776', 'Ashtyn', 'Rosenbaum', 'Borer', '719f1150539b8cbd425b07c2fdbe96338d6a328a', 'angelica47@example.net', '1-490-373-6688', 'wiegand.lexie@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('50', '2015-11-27 00:00:00.000000', '3077737420', 'Kellen', 'Stanton', 'Beier', 'a7ab25ab6b0f8feaf3906e3cc8aa69bd26e31f20', 'kaela20@example.org', '(920)763-1740x7', 'casey23@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('51', '1998-05-24 00:00:00.000000', '4777934760', 'Jordy', 'Bradtke', 'Roob', 'c774257bef179de7b2b217384b305e6ab29188b4', 'schroeder.stephanie@example.org', '779.592.0196x34', 'logan78@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('52', '2011-05-20 00:00:00.000000', '5220130751', 'Philip', 'Raynor', 'Lynch', 'd245c546caa68b0f9d9a8fd4f17d18868b1d2f20', 'tillman.calista@example.com', '03188896277', 'elsie66@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('53', '1970-10-13 00:00:00.000000', '2430196540', 'Casper', 'Larkin', 'Kuhn', '2196c9fa6df4155f732fbde9220ef06a92480429', 'georgianna.mclaughlin@example.net', '1-034-984-7695x', 'fdooley@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('54', '1980-01-22 00:00:00.000000', '9757580790', 'Emanuel', 'Bailey', 'Corkery', '768f87e7e3a9f573f4c6a964284fa6a33bcabfd8', 'bwatsica@example.com', '(093)828-5417x7', 'yhyatt@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('55', '2006-10-05 00:00:00.000000', '8361130881', 'Jada', 'Fadel', 'Ortiz', '83728772be26266dc3ef0aca5ec5cf7b8a0011bb', 'general69@example.com', '208.163.0049', 'stephen.vonrueden@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('56', '2007-10-10 00:00:00.000000', '8243304622', 'Edgar', 'Halvorson', 'Mraz', 'df174441111ec1f01c3d11ce1e428a4601fad37b', 'kshlerin.wilhelm@example.org', '+97(9)419270350', 'shany71@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('57', '2013-04-24 00:00:00.000000', '8320229287', 'Mason', 'Bradtke', 'Bechtelar', 'a1636e57ef9f10aa9f2d6312c03f0388fe9d9717', 'rodrick89@example.org', '165.178.0584', 'benton45@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('58', '1981-08-17 00:00:00.000000', '3334041778', 'Haylie', 'Schumm', 'Quigley', '1b2936d94ed77e9c492894d02322a68080c4ca83', 'gabriel.wolff@example.com', '388.073.0460x25', 'brannon41@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('59', '1988-05-01 00:00:00.000000', '3600425436', 'Marley', 'Bahringer', 'Stanton', '7f69977d397fe190ec99262ce042b8b9bd226448', 'mhermiston@example.net', '1-823-405-5683x', 'davonte76@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('60', '1998-10-29 00:00:00.000000', '6588022449', 'Dakota', 'Zieme', 'Dare', 'bb98ed85e28e69dcf55f723ebced191007cc5c0c', 'shana.will@example.net', '+72(4)665778431', 'king.dexter@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('61', '1981-12-18 00:00:00.000000', '5196278225', 'Daisha', 'Durgan', 'Goldner', '1ec9c92b90f661f7ea983576b62ba453e6915c82', 'lschimmel@example.com', '663-511-2964x64', 'mueller.dejah@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('62', '1995-12-14 00:00:00.000000', '9274008008', 'Imogene', 'Lind', 'Runolfsson', 'e1eac3ae1ebcf5f13d64142d6e3de4c4816046cf', 'emely.crona@example.org', '272.277.8865x01', 'jovany30@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('63', '2001-03-02 00:00:00.000000', '2285122760', 'Marina', 'Williamson', 'Parisian', '3b4499e93af372c175f3a41bde0f1470fccf690c', 'tromp.geovanni@example.net', '(832)910-2872x8', 'chloe.wolff@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('64', '1988-06-28 00:00:00.000000', '2934064756', 'Boyd', 'Lowe', 'O\'Keefe', '5c3a3fd8286763d18499226976f05e1b17f23eeb', 'jkuhic@example.net', '(639)009-7425', 'dion38@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('65', '1983-07-20 00:00:00.000000', '8962800169', 'Lucius', 'Hegmann', 'Quitzon', 'aa38f97cf6b80b949b54ac56c81636acc7ce35bf', 'aurore59@example.com', '(832)401-5414', 'ibrahim.yundt@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('66', '2016-04-30 00:00:00.000000', '1830944285', 'Velma', 'Gislason', 'Waelchi', '040840cf7cc1ce3aa2072cbbe9b2cf25e3f8a185', 'ayden24@example.com', '1-278-392-8304', 'kunde.emmanuel@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('67', '1993-06-27 00:00:00.000000', '8112687101', 'Madge', 'Rogahn', 'Schneider', '4305fb876deb5483a89656a8cb4a006760e4a746', 'jturner@example.org', '849.076.3153', 'kenna.howe@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('68', '2003-08-13 00:00:00.000000', '3108567398', 'Cecelia', 'Cruickshank', 'Johnston', '064c508899f35890a6978640fb0187db1055d345', 'pearl.pacocha@example.com', '(671)271-6514', 'garett45@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('69', '1990-12-31 00:00:00.000000', '5358341235', 'Aliza', 'Howell', 'Koss', '38c9e39bb8729ebd62b2e7133a9128911d520d48', 'daphney81@example.org', '1-526-185-2416x', 'krista65@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('70', '2010-01-17 00:00:00.000000', '9152105036', 'Issac', 'Renner', 'Hilll', '85053d6db10e78854805ceddd04fea9e540f23a0', 'vrogahn@example.net', '378.177.6727x28', 'royce.heller@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('71', '1986-09-22 00:00:00.000000', '5041231028', 'Terrance', 'Dicki', 'Torp', 'b2dd8c34b4e8960c83c02c4a2b7fc34b0e89bba8', 'predovic.lucie@example.com', '+09(7)045653116', 'foster39@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('72', '1972-02-11 00:00:00.000000', '5470589047', 'Eulalia', 'Fay', 'Kertzmann', '6f8800b0854de44a4d34bd6f58861976d13d6bac', 'sharon.doyle@example.org', '876.044.6446x07', 'antwan.o\'kon@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('73', '1992-11-12 00:00:00.000000', '3616633945', 'Dexter', 'Nitzsche', 'Stroman', '18508f9546993e52ae64ba35f5242c44c96a994a', 'wisozk.marcelino@example.org', '+59(8)016032533', 'esta93@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('74', '1990-11-16 00:00:00.000000', '1455060520', 'Ursula', 'Shields', 'Hayes', 'b68e2920d0c97db2b4a498a892c53b6c1f877151', 'conor27@example.org', '615-180-8323x18', 'dillon.renner@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('75', '1995-06-24 00:00:00.000000', '3441641171', 'Jaime', 'Spinka', 'Wiza', '26eb234d0b7f5d19ba36ef518005175b7cd856e4', 'amckenzie@example.org', '1-056-893-6560', 'vivian.kessler@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('76', '2008-09-07 00:00:00.000000', '3204452100', 'Brycen', 'Rolfson', 'Strosin', 'd8b5aac8980b53d23ee3ab67c90174f6bad11b04', 'farrell.marquise@example.net', '969.120.8612x14', 'alan.beahan@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('77', '2017-09-04 00:00:00.000000', '7538283989', 'Elsie', 'Bergnaum', 'McCullough', 'dc1b105b96a4c122087d57f832d5b3faf57c39ff', 'schinner.arlene@example.net', '128-902-6009x95', 'jbeahan@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('78', '1977-08-27 00:00:00.000000', '9406187777', 'Rylee', 'Volkman', 'Gaylord', '8fec9a6c7288fea03b287a598fa3b6d5fcf1e4fd', 'koss.amalia@example.com', '1-928-268-6874x', 'xreinger@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('79', '2011-11-09 00:00:00.000000', '4183874792', 'Citlalli', 'Swaniawski', 'McLaughlin', 'a5248a2ca2a832bade1227a741435991c7ad889f', 'feest.monty@example.net', '+27(0)865885340', 'bethany.rice@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('80', '2011-04-15 00:00:00.000000', '6792483742', 'Dolly', 'Sauer', 'Orn', '22bbef34eb6acba85bf01ce89f4ea19375288560', 'williamson.eli@example.com', '049-218-1484x20', 'ltreutel@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('81', '2012-07-17 00:00:00.000000', '4518357992', 'Annamae', 'Dach', 'Schumm', '12a4ee76971b5f46041bd4d72d6f9adf5e219f9f', 'kamille33@example.org', '05412214652', 'kenton74@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('82', '2010-02-08 00:00:00.000000', '1202596965', 'Dortha', 'Reinger', 'Schiller', '1203bfc9c36122a0bca294bcd40132c09abf21e2', 'qleannon@example.net', '(586)873-1786x6', 'abbott.zoe@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('83', '2017-12-25 00:00:00.000000', '3287319459', 'Sally', 'Gerhold', 'Doyle', 'b91cdcf795f22ffc46cd933ba2ad3e3b9432b4a1', 'kuphal.david@example.net', '(720)705-6068x7', 'kieran.frami@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('84', '2001-11-09 00:00:00.000000', '7063534962', 'Raphaelle', 'Runolfsdottir', 'Walker', '597010dfd19e522710929297b6f1d64c040893e8', 'vbechtelar@example.org', '(923)260-7727x4', 'dietrich.mollie@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('85', '1977-07-29 00:00:00.000000', '5576382882', 'Cicero', 'Runte', 'Gibson', 'ee84b6301efd9e761f108d12b937bcdba6bb309e', 'krunolfsson@example.org', '306-396-1125x54', 'johnson.victoria@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('86', '1994-11-02 00:00:00.000000', '3050798677', 'Della', 'Terry', 'Crona', '3f3cdbdc307e57568999827b03f88cd06feadeb4', 'esteban66@example.com', '065-907-9164', 'rempel.forest@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('87', '1989-10-16 00:00:00.000000', '1568689657', 'Laron', 'Ward', 'Gusikowski', 'b1569e001f011e443aa49c3f95ac3fb3038b9347', 'jshields@example.org', '647-931-0991', 'alexane.lowe@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('88', '2002-01-30 00:00:00.000000', '1277243485', 'Litzy', 'Rutherford', 'Doyle', '5a729bffd8d36e7a16e4601031e0fbbb6d8786bf', 'zemlak.bill@example.net', '562-526-9243', 'cpredovic@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('89', '2014-04-13 00:00:00.000000', '6414035320', 'Verna', 'Douglas', 'Robel', '2364a593ab4bea98e853022b787fc6274692efe9', 'coy.jacobs@example.net', '657-277-5834', 'walton.ledner@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('90', '1981-02-21 00:00:00.000000', '4637917171', 'Elvera', 'Bernhard', 'Baumbach', '538d193d1c432a845ac04248398cbd03a2d23e62', 'arvilla.hodkiewicz@example.org', '290-386-9412x00', 'gislason.norval@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('91', '1997-04-25 00:00:00.000000', '1661729783', 'Meta', 'Schmitt', 'Connelly', 'e9ba549240ca6d647ea5be68a0a914c961968b9f', 'barton.fabian@example.net', '(340)316-3789x1', 'emmet60@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('92', '1978-11-10 00:00:00.000000', '6005528908', 'Julianne', 'Schmitt', 'Hodkiewicz', 'ceab5cb377cf63aa8742638d9d1b743e4787a7b0', 'langosh.priscilla@example.net', '(884)810-3740x4', 'werner.jenkins@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('93', '1975-12-08 00:00:00.000000', '6767268318', 'Shanon', 'Miller', 'Schimmel', '22d60ff701b784643accf58122795be657a224d7', 'hand.josianne@example.net', '(697)567-7324', 'ronaldo29@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('94', '1985-02-07 00:00:00.000000', '7740134861', 'Pascale', 'Lind', 'Schimmel', 'd8a3fdff76bbe4bd5bec9468e79441c96b63740b', 'amie.oberbrunner@example.net', '03463005495', 'tromp.wiley@example.net');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('95', '1977-05-29 00:00:00.000000', '9595651778', 'Thurman', 'Labadie', 'Roob', '416aa3f7e2bfc4e2b0fedd9986241d38ec918952', 'sheridan83@example.com', '1-557-484-1705', 'valerie64@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('96', '2014-12-11 00:00:00.000000', '2117516784', 'Omer', 'Simonis', 'Tillman', '730a6499a37be397e1be238e18675c42432a9973', 'jazmyn.larkin@example.org', '647-673-7141x82', 'ortiz.darlene@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('97', '2013-09-16 00:00:00.000000', '6667813623', 'Uriah', 'Reinger', 'Toy', 'f0f065ead71ac0964bd060dd483e59bc0c53f7e7', 'tia.considine@example.com', '(970)258-4056x1', 'giovanny21@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('98', '2008-09-25 00:00:00.000000', '8021526323', 'Estefania', 'Kertzmann', 'Schuster', 'd139abf834243464cd6a2d840a186c5a04d252f1', 'bogisich.lulu@example.org', '(109)748-4775', 'rachael.schneider@example.org');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('99', '1977-02-21 00:00:00.000000', '7277102270', 'Candelario', 'Zboncak', 'Carroll', '4b12747f00f09f4e429509f51fd304530d2ce918', 'ikautzer@example.net', '400.226.4530', 'roob.marc@example.com');
+INSERT INTO `teachers` (`id`, `birth_date`, `eng`, `first_name`, `last_name`, `middle_name`, `password`, `personal_email`, `phone_number`, `work_email`) VALUES ('100', '2000-01-14 00:00:00.000000', '4647055894', 'Izaiah', 'Farrell', 'Block', '4b233eba4225ce469a41f455ceb317e20f89ed77', 'drew39@example.org', '228-305-9993', 'joanie.murazik@example.com');
+
+
+#
+# TABLE STRUCTURE FOR: weekly_schedules
+#
+
+DROP TABLE IF EXISTS `weekly_schedules`;
+
+CREATE TABLE `weekly_schedules` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `academic_activities` tinyint(4) NOT NULL,
+  `day_of_week` tinyint(4) NOT NULL,
+  `start_on_week` int(11) NOT NULL,
+  `start_time` time(6) NOT NULL,
+  `week_repeating` tinyint(4) NOT NULL,
+  `group_id` bigint(20) NOT NULL,
+  `room_id` bigint(20) NOT NULL,
+  `subject_id` bigint(20) NOT NULL,
+  `teacher_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK1qsaarqv3bvksy5ij9u4xhsgo` (`group_id`),
+  KEY `FKiqt4e3id3q71pqpmg3rd3yinc` (`room_id`),
+  KEY `FKjojjx52etj2qm3t0k1ia2mnn3` (`subject_id`),
+  KEY `FKa9i5n6e8ym8tgv6i91lyoj2ob` (`teacher_id`),
+  CONSTRAINT `FK1qsaarqv3bvksy5ij9u4xhsgo` FOREIGN KEY (`group_id`) REFERENCES `students_groups` (`id`),
+  CONSTRAINT `FKa9i5n6e8ym8tgv6i91lyoj2ob` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`),
+  CONSTRAINT `FKiqt4e3id3q71pqpmg3rd3yinc` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`),
+  CONSTRAINT `FKjojjx52etj2qm3t0k1ia2mnn3` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`),
+  CONSTRAINT `weekly_schedules_chk_1` CHECK (`academic_activities` between 0 and 2),
+  CONSTRAINT `weekly_schedules_chk_2` CHECK (`day_of_week` between 0 and 6),
+  CONSTRAINT `weekly_schedules_chk_3` CHECK (`week_repeating` between 0 and 2)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('1', 0, 4, 8, '00:27:53.000000', 0, '1', '1', '1', '1');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('2', 0, 3, 3, '07:32:59.000000', 2, '2', '2', '2', '2');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('3', 2, 2, 11, '15:25:46.000000', 0, '3', '3', '3', '3');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('4', 1, 0, 4, '13:15:40.000000', 0, '4', '4', '4', '4');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('5', 1, 6, 6, '12:34:03.000000', 1, '5', '5', '5', '5');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('6', 2, 3, 12, '11:54:18.000000', 1, '6', '6', '6', '6');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('7', 0, 3, 12, '13:54:06.000000', 0, '7', '7', '7', '7');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('8', 1, 3, 5, '12:06:16.000000', 0, '8', '8', '8', '8');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('9', 0, 2, 11, '08:04:29.000000', 2, '9', '9', '9', '9');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('10', 1, 4, 9, '12:22:34.000000', 1, '10', '10', '10', '10');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('11', 0, 4, 10, '07:55:31.000000', 1, '11', '11', '11', '11');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('12', 1, 3, 13, '07:19:51.000000', 1, '12', '12', '12', '12');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('13', 2, 5, 6, '14:31:44.000000', 2, '13', '13', '13', '13');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('14', 2, 2, 5, '04:42:50.000000', 2, '14', '14', '14', '14');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('15', 2, 5, 9, '20:39:15.000000', 2, '15', '15', '15', '15');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('16', 0, 4, 9, '23:58:17.000000', 0, '16', '16', '16', '16');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('17', 2, 4, 10, '01:36:58.000000', 2, '17', '17', '17', '17');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('18', 2, 3, 5, '12:16:42.000000', 0, '18', '18', '18', '18');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('19', 0, 5, 13, '22:50:52.000000', 0, '19', '19', '19', '19');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('20', 2, 5, 1, '17:34:43.000000', 0, '20', '20', '20', '20');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('21', 2, 5, 11, '13:40:25.000000', 1, '21', '21', '21', '21');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('22', 0, 0, 12, '06:49:13.000000', 2, '22', '22', '22', '22');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('23', 2, 5, 10, '11:58:13.000000', 1, '23', '23', '23', '23');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('24', 2, 0, 12, '02:49:28.000000', 2, '24', '24', '24', '24');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('25', 0, 1, 12, '08:02:15.000000', 0, '25', '25', '25', '25');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('26', 1, 5, 10, '09:47:16.000000', 2, '26', '26', '26', '26');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('27', 2, 5, 12, '17:15:55.000000', 1, '27', '27', '27', '27');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('28', 1, 6, 10, '22:13:21.000000', 0, '28', '28', '28', '28');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('29', 1, 6, 7, '17:32:14.000000', 1, '29', '29', '29', '29');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('30', 2, 5, 6, '17:17:25.000000', 0, '30', '30', '30', '30');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('31', 1, 0, 13, '15:15:27.000000', 0, '31', '31', '31', '31');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('32', 0, 4, 8, '18:28:38.000000', 1, '32', '32', '32', '32');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('33', 2, 2, 10, '03:16:02.000000', 0, '33', '33', '33', '33');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('34', 1, 3, 11, '10:43:11.000000', 2, '34', '34', '34', '34');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('35', 2, 3, 10, '00:04:37.000000', 2, '35', '35', '35', '35');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('36', 1, 2, 11, '05:18:19.000000', 1, '36', '36', '36', '36');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('37', 1, 3, 10, '02:44:04.000000', 2, '37', '37', '37', '37');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('38', 0, 2, 6, '10:06:03.000000', 0, '38', '38', '38', '38');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('39', 1, 3, 6, '00:38:49.000000', 1, '39', '39', '39', '39');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('40', 1, 1, 3, '04:32:33.000000', 2, '40', '40', '40', '40');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('41', 1, 0, 6, '18:22:31.000000', 1, '41', '41', '41', '41');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('42', 1, 5, 9, '08:30:53.000000', 2, '42', '42', '42', '42');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('43', 2, 2, 10, '14:50:44.000000', 2, '43', '43', '43', '43');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('44', 2, 5, 3, '03:17:14.000000', 1, '44', '44', '44', '44');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('45', 1, 0, 8, '06:47:44.000000', 2, '45', '45', '45', '45');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('46', 1, 3, 8, '22:53:07.000000', 2, '46', '46', '46', '46');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('47', 2, 4, 8, '05:33:30.000000', 0, '47', '47', '47', '47');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('48', 1, 2, 4, '15:41:47.000000', 2, '48', '48', '48', '48');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('49', 1, 5, 7, '01:09:08.000000', 1, '49', '49', '49', '49');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('50', 1, 2, 5, '21:49:31.000000', 0, '50', '50', '50', '50');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('51', 2, 6, 3, '18:41:16.000000', 0, '51', '51', '51', '51');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('52', 1, 0, 10, '23:39:47.000000', 2, '52', '52', '52', '52');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('53', 2, 3, 3, '21:41:42.000000', 2, '53', '53', '53', '53');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('54', 1, 0, 2, '22:01:36.000000', 1, '54', '54', '54', '54');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('55', 2, 4, 3, '09:50:05.000000', 0, '55', '55', '55', '55');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('56', 2, 2, 2, '16:59:18.000000', 1, '56', '56', '56', '56');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('57', 0, 1, 7, '08:48:40.000000', 0, '57', '57', '57', '57');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('58', 2, 6, 5, '16:40:51.000000', 0, '58', '58', '58', '58');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('59', 1, 3, 4, '14:34:31.000000', 2, '59', '59', '59', '59');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('60', 1, 2, 6, '07:03:10.000000', 2, '60', '60', '60', '60');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('61', 2, 3, 13, '20:31:00.000000', 0, '61', '61', '61', '61');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('62', 1, 0, 12, '13:54:05.000000', 0, '62', '62', '62', '62');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('63', 2, 2, 7, '04:44:22.000000', 2, '63', '63', '63', '63');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('64', 2, 5, 12, '19:55:32.000000', 0, '64', '64', '64', '64');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('65', 1, 5, 4, '04:12:27.000000', 0, '65', '65', '65', '65');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('66', 0, 0, 8, '08:14:56.000000', 1, '66', '66', '66', '66');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('67', 0, 2, 4, '00:54:02.000000', 1, '67', '67', '67', '67');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('68', 2, 5, 12, '19:40:34.000000', 1, '68', '68', '68', '68');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('69', 2, 3, 2, '14:01:42.000000', 0, '69', '69', '69', '69');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('70', 1, 2, 12, '08:54:05.000000', 2, '70', '70', '70', '70');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('71', 2, 5, 8, '07:51:53.000000', 0, '71', '71', '71', '71');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('72', 1, 6, 9, '11:13:16.000000', 1, '72', '72', '72', '72');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('73', 1, 5, 11, '06:05:36.000000', 1, '73', '73', '73', '73');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('74', 1, 2, 10, '23:30:56.000000', 0, '74', '74', '74', '74');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('75', 1, 6, 4, '08:30:42.000000', 1, '75', '75', '75', '75');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('76', 2, 4, 7, '03:59:32.000000', 0, '76', '76', '76', '76');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('77', 0, 2, 7, '06:03:12.000000', 1, '77', '77', '77', '77');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('78', 2, 4, 3, '00:46:39.000000', 2, '78', '78', '78', '78');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('79', 2, 0, 8, '01:09:28.000000', 1, '79', '79', '79', '79');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('80', 2, 2, 5, '20:41:50.000000', 2, '80', '80', '80', '80');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('81', 0, 6, 4, '11:22:45.000000', 0, '81', '81', '81', '81');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('82', 2, 4, 2, '23:10:46.000000', 1, '82', '82', '82', '82');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('83', 1, 6, 8, '01:06:06.000000', 2, '83', '83', '83', '83');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('84', 1, 6, 5, '18:12:32.000000', 2, '84', '84', '84', '84');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('85', 1, 2, 11, '15:21:49.000000', 2, '85', '85', '85', '85');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('86', 2, 0, 5, '04:25:45.000000', 0, '86', '86', '86', '86');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('87', 0, 0, 13, '14:27:30.000000', 0, '87', '87', '87', '87');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('88', 0, 5, 13, '14:10:12.000000', 1, '88', '88', '88', '88');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('89', 0, 6, 13, '08:02:18.000000', 0, '89', '89', '89', '89');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('90', 1, 6, 13, '17:08:02.000000', 2, '90', '90', '90', '90');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('91', 2, 4, 13, '01:54:19.000000', 2, '91', '91', '91', '91');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('92', 0, 6, 10, '19:22:50.000000', 2, '92', '92', '92', '92');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('93', 0, 2, 8, '02:07:39.000000', 0, '93', '93', '93', '93');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('94', 0, 3, 7, '01:51:03.000000', 0, '94', '94', '94', '94');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('95', 0, 5, 8, '07:54:27.000000', 0, '95', '95', '95', '95');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('96', 1, 3, 4, '22:58:05.000000', 2, '96', '96', '96', '96');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('97', 1, 3, 6, '06:52:12.000000', 1, '97', '97', '97', '97');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('98', 2, 4, 5, '19:30:44.000000', 0, '98', '98', '98', '98');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('99', 0, 5, 6, '03:37:21.000000', 2, '99', '99', '99', '99');
+INSERT INTO `weekly_schedules` (`id`, `academic_activities`, `day_of_week`, `start_on_week`, `start_time`, `week_repeating`, `group_id`, `room_id`, `subject_id`, `teacher_id`) VALUES ('100', 2, 6, 4, '04:25:00.000000', 0, '100', '100', '100', '100');
+
+

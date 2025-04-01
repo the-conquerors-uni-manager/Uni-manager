@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -83,56 +84,6 @@ public class Student extends BaseEntity {
     @Column(name = "birthDate", nullable = false)
     private Date birthDate;
 
-    public String getStudentNumber() {
-        return studentNumber;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEgn() {
-        return egn;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getPersonalEmail() {
-        return personalEmail;
-    }
-
-    public String getWorkEmail() {
-        return workEmail;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public ReceptionTypeEnum getReceptionType() {
-        return receptionType;
-    }
-
-    public LearningTypeEnum getLearningType() {
-        return learningType;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-
-
     public Student(){}
     //Constructor for test views
     public Student(String studentNumber, String firstName, String middleName, String lastName, String egn, String personalEmail, String workEmail, String phoneNumber, ReceptionTypeEnum receptionType, LearningTypeEnum learningType, Date birthDate) {
@@ -154,19 +105,19 @@ public class Student extends BaseEntity {
     private Group group;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private HashSet<Grade> grades;
+    private Set<Grade> grades = new HashSet<Grade>();
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Scholarship.class)
-    private HashSet<Scholarship> scholarships;
+    private Set<Scholarship> scholarships= new HashSet<Scholarship>();
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Payment.class)
-    private HashSet<Payment> payments;
+    private Set<Payment> payments= new HashSet<Payment>();
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = HealthInsurancePayment.class)
-    private HashSet<HealthInsurancePayment> healthInsurancePayments;
+    private Set<HealthInsurancePayment> healthInsurancePayments= new HashSet<HealthInsurancePayment>();
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
-    private HashSet<DormitoryAssignment> dormitoryAssignments;
+    private Set<DormitoryAssignment> dormitoryAssignments= new HashSet<DormitoryAssignment>();
 
     @OneToOne(mappedBy = "foreman",cascade = CascadeType.ALL,targetEntity = Group.class)
     private Group groupForeman;

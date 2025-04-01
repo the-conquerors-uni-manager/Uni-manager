@@ -1,12 +1,8 @@
 package com.theconquerors.unimanager.controller;
 
-import com.theconquerors.unimanager.model.entity.Grade;
 import com.theconquerors.unimanager.model.entity.Student;
-import com.theconquerors.unimanager.model.entity.Subject;
-import com.theconquerors.unimanager.model.entity.Teacher;
 import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
 import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
-import com.theconquerors.unimanager.model.entity.enums.SessionTypeEnum;
 import com.theconquerors.unimanager.service.StudentService;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
@@ -37,67 +33,69 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
-
-    @GetMapping("")
+    @GetMapping({"","/","/grades","/grades/","/weekly-schedule","/weekly-schedule/","/exams","/exams/","/payments/scholarship-application","/payments/scholarship-application/","/payments/scholarship","/payments/scholarship/","/payments","/payments/","/payments/health-insurance","/payments/health-insurance/","/dormitory", "/dormitory/"})
     public String login(Model model){
-        return "redirect:login";
+        return "login";
     }
 
-    @GetMapping("/information")
-    public String information(Model model){     //@PathVariable("studentId") String studentId,Model model){
-        //var student = studentService.getInformation(parseLong(studentId));
+    @GetMapping("/{studentId}")
+    public String information(@PathVariable("studentId") String studentId,Model model){
+        var student = studentService.getInformation(parseLong(studentId));
         //Hibernate.initialize(student.getDormitoryAssignments());
         //model.addAttribute("Name",(student.getFirstName() + " " + student.getMiddleName() + " " + student.getLastName()));
 
         //Test values
-        model.addAttribute("student", user);
+        model.addAttribute("student", student);
+
+
         return "student_information";
     }
 
-    @GetMapping("/grades")
-    public String grades(Model model){ //@PathVariable("studentId") String studentId, Model model){
-
+    @GetMapping("/grades/{studentId}")
+    public String grades(@PathVariable("studentId") String studentId, Model model){
+        var grades = studentService.getGrades(parseLong(studentId));
+        log.warn(Long.toString(grades.size()));
         return "student_grades";
     }
 
-    @GetMapping("/weekly-schedule")
-    public String weeklySchedule(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/weekly-schedule/{studentId}")
+    public String weeklySchedule(@PathVariable("studentId") String studentId,Model model){
 
         return "student_weeklySchedule";
     }
 
-    @GetMapping("/exams")
-    public String exams(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/exams/{studentId}")
+    public String exams(@PathVariable("studentId") String studentId,Model model){
 
         return "student_exams";
     }
 
-    @GetMapping("/payments/scholarship-application")
-    public String scholarshipApplication(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/payments/scholarship-application/{studentId}")
+    public String scholarshipApplication(@PathVariable("studentId") String studentId,Model model){
 
         return "student_payments_scholarshipApplication";
     }
 
-    @GetMapping("/payments/scholarship")
-    public String scholarship(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/payments/scholarship/{studentId}")
+    public String scholarship(@PathVariable("studentId") String studentId,Model model){
 
         return "student_payments_scholarship";
     }
 
-    @GetMapping("/payments")
-    public String payments(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/payments/{studentId}")
+    public String payments(@PathVariable("studentId") String studentId,Model model){
 
         return "student_payments";
     }
 
-    @GetMapping("/payments/health-insurance")
-    public String healthInsurance(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/payments/health-insurance/{studentId}")
+    public String healthInsurance(@PathVariable("studentId") String studentId,Model model){
 
         return "student_payments_health";
     }
 
-    @GetMapping("/dormitory")
-    public String dormitory(Model model){ //@PathVariable("studentId") String studentId, Model model){
+    @GetMapping("/dormitory/{studentId}")
+    public String dormitory(@PathVariable("studentId") String studentId,Model model){
 
         return "student_dormitory";
     }
