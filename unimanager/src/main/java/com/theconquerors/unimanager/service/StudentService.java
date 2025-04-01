@@ -2,12 +2,15 @@ package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.entity.*;
+import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
+import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -42,8 +45,18 @@ public class StudentService {
         this.dormitoryAssignmentRepository=dormitoryAssignmentRepository;
     }
 
-    public Student getInformation(Long studentId) {
-        return studentRepository.getReferenceById(studentId);
+    public Student getStudent(Long id) {
+        return studentRepository.findStudentById(id);
+    }
+
+    public StudentInformationDto getInformation(Long studentId) {
+        Student student = studentRepository.findStudentById(studentId);
+
+        if (student == null) {
+            return null;
+        }
+
+        return new StudentInformationDto(student);
     }
 
     public List<Grade> getGrades(Long studentId) {
@@ -51,7 +64,7 @@ public class StudentService {
     }
 
     public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
-        var student = getInformation(studentId);
+        Student student = getStudent(studentId);
         Hibernate.initialize(student.getGroup());
         var group = student.getGroup();
         return weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());

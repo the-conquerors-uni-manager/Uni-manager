@@ -48,6 +48,11 @@
     <div class="row">
         <div class="col-md-6">
             <div class="info-card">
+                <span class="info-label">Student Number:</span>
+                <span class="info-value" th:text="${student.studentNumber}"></span>
+            </div>
+
+            <div class="info-card">
                 <span class="info-label">First Name:</span>
                 <span class="info-value" th:text="${student.firstName}"></span>
             </div>
@@ -62,21 +67,31 @@
                 <span class="info-value" th:text="${student.lastName}"></span>
             </div>
 
+<!--            <div class="info-card">-->
+<!--                <span class="info-label">Group:</span>-->
+<!--                <span class="info-value" th:text="${student.groupName}"></span>-->
+<!--            </div>-->
+
             <div class="info-card">
                 <span class="info-label">Birth Date:</span>
                 <span class="info-value" th:text="${student.birthDate}"></span>
-            </div>
-
-            <div class="info-card">
-                <span class="info-label">EGN:</span>
-                <span class="info-value" th:text="${student.egn}"></span>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="info-card">
+                <span class="info-label">EGN:</span>
+                <span class="info-value" th:text="${student.egn}"></span>
+            </div>
+
+            <div class="info-card">
                 <span class="info-label">Personal Email:</span>
                 <span class="info-value" th:text="${student.personalEmail}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Student Email:</span>
+                <span class="info-value" th:text="${student.workEmail}"></span>
             </div>
 
             <div class="info-card">
@@ -86,17 +101,12 @@
 
             <div class="info-card">
                 <span class="info-label">Learning Type:</span>
-                <span class="info-value" th:text="${student.receptionType}"></span>
+                <span class="info-value" th:text="${student.learningType != null ? student.learningType.name() : ''}"></span>
             </div>
 
             <div class="info-card">
-                <span class="info-label">Student Email:</span>
-                <span class="info-value" th:text="${student.workEmail}"></span>
-            </div>
-
-            <div class="info-card">
-                <span class="info-label">Student Number:</span>
-                <span class="info-value" th:text="${student.studentNumber}"></span>
+                <span class="info-label">Reception Type:</span>
+                <span class="info-value" th:text="${student.receptionType != null ? student.receptionType.name() : ''}"></span>
             </div>
         </div>
     </div>
