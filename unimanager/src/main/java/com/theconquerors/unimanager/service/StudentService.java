@@ -56,6 +56,12 @@ public class StudentService {
             return null;
         }
 
+        Hibernate.initialize(student.getGroup());
+
+        if (student.getGroup() == null) {
+            return null;
+        }
+
         return new StudentInformationDto(student);
     }
 

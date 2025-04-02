@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -27,12 +28,12 @@ public class Group extends BaseEntity {
     @JoinColumn(name = "foreman_id", referencedColumnName = "id",nullable = true)
     private Student foreman;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Student.class)
-    private HashSet<Student> students;
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Student.class, fetch = FetchType.LAZY)
+    private Set<Student> students;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Exam.class)
-    private HashSet<Exam> exams;
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Exam.class,fetch = FetchType.LAZY)
+    private Set<Exam> exams;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
-    private HashSet<WeeklySchedule> weeklySchedules;
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class,fetch = FetchType.LAZY)
+    private Set<WeeklySchedule> weeklySchedules;
 }

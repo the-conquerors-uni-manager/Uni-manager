@@ -48,7 +48,7 @@ public class StudentInformationDto {
         setReceptionType(student.getReceptionType());
         setLearningType(student.getLearningType());
         setBirthDate(student.getBirthDate());
-        setGroupName(student.getGroup().toString());
+        setGroupName(student.getGroup().getName());
     }
 
 }
