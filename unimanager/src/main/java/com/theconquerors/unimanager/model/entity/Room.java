@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -32,5 +33,5 @@ public class Room extends BaseEntity{
     private byte capacity;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
-    private HashSet<WeeklySchedule> weeklySchedules;
+    private Set<WeeklySchedule> weeklySchedules;
 }

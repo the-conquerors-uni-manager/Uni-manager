@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -66,11 +67,11 @@ public class Teacher extends BaseEntity {
     private Date birthDate;
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private HashSet<Grade> grades;
+    private Set<Grade> grades;
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = Exam.class)
-    private HashSet<Exam> exams;
+    private Set<Exam> exams;
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
-    private HashSet<WeeklySchedule> weeklySchedules;
+    private Set<WeeklySchedule> weeklySchedules;
 }

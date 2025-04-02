@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,5 +25,5 @@ public class Faculty extends BaseEntity{
     private String description;
 
     @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL, targetEntity = Specialty.class)
-    private HashSet<Specialty> specialties;
+    private Set<Specialty> specialties;
 }

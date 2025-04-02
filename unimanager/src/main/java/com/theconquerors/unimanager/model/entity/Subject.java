@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -33,11 +34,11 @@ public class Subject extends BaseEntity{
     private Semester semester;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Grade.class)
-    private HashSet<Grade> grades;
+    private Set<Grade> grades;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = Exam.class)
-    private HashSet<Exam> exams;
+    private Set<Exam> exams;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class)
-    private HashSet<WeeklySchedule> weeklySchedules;
+    private Set<WeeklySchedule> weeklySchedules;
 }

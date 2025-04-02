@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -27,8 +28,8 @@ public class Semester extends BaseEntity {
     private Date endDate;
 
     @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Scholarship.class)
-   private HashSet<Scholarship> scholarships;
+   private Set<Scholarship> scholarships;
 
     @OneToMany(mappedBy = "semester", cascade = CascadeType.ALL,targetEntity = Subject.class)
-    private HashSet<Subject> subjects;
+    private Set<Subject> subjects;
 }
