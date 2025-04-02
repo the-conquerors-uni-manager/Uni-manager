@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.service;
 
+import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -65,8 +67,33 @@ public class StudentService {
         return new StudentInformationDto(student);
     }
 
-    public List<Grade> getGrades(Long studentId) {
-        return gradeRepository.findGradesByStudentId(studentId);
+    public List<StudentGradesDto> getGrades(Long studentId) {
+        var grades = gradeRepository.findGradesByStudentId(studentId);
+
+        if (grades == null) {
+            return null;
+        }
+
+        var gradesDtos = new ArrayList<StudentGradesDto>();
+
+        for (var grade : grades){
+
+            Hibernate.initialize(grade.getTeacher());
+
+            if (grade.getTeacher() == null) {
+                return null;
+            }
+
+            Hibernate.initialize(grade.getStudent());
+
+            if (grade.getStudent() == null) {
+                return null;
+            }
+
+            gradesDtos.add(new StudentGradesDto(grade));
+        }
+
+        return gradesDtos;
     }
 
     public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
