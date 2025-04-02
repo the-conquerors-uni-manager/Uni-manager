@@ -43,7 +43,10 @@ public class StudentController {
     @GetMapping("/grades/{studentId}")
     public String grades(@PathVariable("studentId") String studentId, Model model) {
         var grades = studentService.getGrades(parseLong(studentId));
-        log.warn(Long.toString(grades.size()));
+
+        log.error(Long.toString(grades.size()));
+
+        model.addAttribute("grades", grades);
         return "student_grades";
     }
 
