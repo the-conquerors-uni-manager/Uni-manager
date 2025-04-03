@@ -24,6 +24,11 @@ public class AccountController {
         return "";
     }
 
+    @GetMapping("/contact")
+    public String contact(Model model){
+        return "contact";
+    }
+
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handle404(Model model) {
         return "error";
