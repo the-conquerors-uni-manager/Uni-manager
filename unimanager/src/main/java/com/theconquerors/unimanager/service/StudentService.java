@@ -10,8 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class StudentService {
@@ -73,7 +72,123 @@ public class StudentService {
         Student student = getStudent(studentId);
         Hibernate.initialize(student.getGroup());
         var group = student.getGroup();
-        return weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());
+       // return weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());
+        return new List<WeeklySchedule>() {
+            @Override
+            public int size() {
+                return 0;
+            }
+
+            @Override
+            public boolean isEmpty() {
+                return false;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator<WeeklySchedule> iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public <T> T[] toArray(T[] a) {
+                return null;
+            }
+
+            @Override
+            public boolean add(WeeklySchedule weeklySchedule) {
+                return false;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(Collection<? extends WeeklySchedule> c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(int index, Collection<? extends WeeklySchedule> c) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+
+            @Override
+            public WeeklySchedule get(int index) {
+                return null;
+            }
+
+            @Override
+            public WeeklySchedule set(int index, WeeklySchedule element) {
+                return null;
+            }
+
+            @Override
+            public void add(int index, WeeklySchedule element) {
+
+            }
+
+            @Override
+            public WeeklySchedule remove(int index) {
+                return null;
+            }
+
+            @Override
+            public int indexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public int lastIndexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public ListIterator<WeeklySchedule> listIterator() {
+                return null;
+            }
+
+            @Override
+            public ListIterator<WeeklySchedule> listIterator(int index) {
+                return null;
+            }
+
+            @Override
+            public List<WeeklySchedule> subList(int fromIndex, int toIndex) {
+                return null;
+            }
+        };
     }
 
     public List<Exam> getExams(Long studentId) {

@@ -121,4 +121,100 @@ public class Student extends BaseEntity {
 
     @OneToOne(mappedBy = "foreman",cascade = CascadeType.ALL,targetEntity = Group.class)
     private Group groupForeman;
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEgn() {
+        return egn;
+    }
+
+    public String getPersonalEmail() {
+        return personalEmail;
+    }
+
+    public String getWorkEmail() {
+        return workEmail;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public ReceptionTypeEnum getReceptionType() {
+        return receptionType;
+    }
+
+    public LearningTypeEnum getLearningType() {
+        return learningType;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEgn(String egn) {
+        this.egn = egn;
+    }
+
+    public void setPersonalEmail(String personalEmail) {
+        this.personalEmail = personalEmail;
+    }
+
+    public void setWorkEmail(String workEmail) {
+        this.workEmail = workEmail;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setReceptionType(ReceptionTypeEnum receptionType) {
+        this.receptionType = receptionType;
+    }
+
+    public void setLearningType(LearningTypeEnum learningType) {
+        this.learningType = learningType;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 }

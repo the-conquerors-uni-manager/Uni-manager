@@ -36,4 +36,8 @@ public class Group extends BaseEntity {
 
     @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class,fetch = FetchType.LAZY)
     private Set<WeeklySchedule> weeklySchedules;
+
+    public String getName() {
+        return name;
+    }
 }
