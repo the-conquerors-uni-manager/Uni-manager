@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Table Rows from List</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Rows from List</title>
+    <style>
         /* Page background with gradient */
         body {
             background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
@@ -82,72 +82,29 @@
 <body>
 
 <div class="container">
-  <caption><h1>Student Exams</h1></caption>
-  <table id="myTable">
-    <thead>
-    <tr>
-      <th>Teacher</th>
-      <th>Subject</th>
-      <th>Group</th>
-      <th>Date</th>
-      <th>Start time</th>
-      <th>End time</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- Dynamic rows will be inserted here -->
-    </tbody>
-  </table>
+    <caption><h1>Student Exams</h1></caption>
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Teacher</th>
+            <th>Subject</th>
+            <th>Group</th>
+            <th>Start time</th>
+            <th>End time</th>
+            <th>Duration</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="exam : ${studentExams}">
+            <td th:text="${exam.teacherName}"></td>
+            <td th:text="${exam.subjectName}"></td>
+            <td th:text="${exam.date}"></td>
+            <td th:text="${exam.startTime}"></td>
+            <td th:text="${exam.endTime}"></td>
+            <td th:text="${exam.duration}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
-<script>
-        //test values
-        let exam1 = new Object();
-        exam1.teacher = "John Doe";
-        exam1.subject = "Math";
-        exam1.group = "39";
-        exam1.date = "30.06";
-        exam1.startTime = "9:30";
-        exam1.endTime = "12:00";
-
-        let exam2 = new Object();
-        exam2.teacher = "John Doe";
-        exam2.subject = "Physic";
-        exam2.grade = "40";
-        exam2.date = "26.06";
-        exam2.startTime = "15:45";
-        exam2.endTime = "17:15";
-
-        let listItems = [exam1, exam2];
-
-        //function for display values into table
-        function showValuesIntoPage(list) {
-
-            // Get the table body where rows will be inserted
-            let tableBody = document.querySelector("#myTable tbody");
-
-            // Clear the existing rows in case the list has changed
-            tableBody.innerHTML = '';
-
-            // Loop through the list items and create rows dynamically
-            list.forEach(item => {
-
-                let row = document.createElement("tr");
-
-                // Loop through the items property and create cells dynamically
-                Object.values(item).forEach(prop => {
-
-                    let cell = document.createElement("td");
-                    cell.textContent = prop;
-                    row.appendChild(cell);
-              });
-
-              tableBody.appendChild(row);
-            });
-        }
-
-        showValuesIntoPage(listItems);
-    </script>
-
 </body>
 </html>

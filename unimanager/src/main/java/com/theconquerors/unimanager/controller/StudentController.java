@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
+import com.theconquerors.unimanager.model.dto.StudentExam;
 import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
@@ -40,7 +41,6 @@ public class StudentController {
     @GetMapping("/{studentId}")
     public String getStudentInformation(@PathVariable("studentId") String studentId, Model model) {
         StudentInformationDto studentInformationDto = studentService.getInformation(Long.valueOf(studentId));
-
         model.addAttribute("student", studentInformationDto);
         return "student_information";
     }
@@ -55,7 +55,6 @@ public class StudentController {
     @GetMapping("/weekly-schedule/{studentId}")
     public String weeklySchedule(@PathVariable("studentId") String studentId, Model model) {
         List<StudentWeeklyScheduleDto> weeklyScheduleForStudent = studentService.getWeeklySchedule(parseLong(studentId));
-        log.warn(Long.toString(weeklyScheduleForStudent.size()));
 
         model.addAttribute("mondaySchedules", weeklyScheduleForStudent.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
@@ -78,7 +77,8 @@ public class StudentController {
 
     @GetMapping("/exams/{studentId}")
     public String exams(@PathVariable("studentId") String studentId, Model model) {
-
+        List<StudentExam> studentExams = studentService.getExams(parseLong(studentId));
+        model.addAttribute("studentExams", studentExams);
         return "student_exams";
     }
 
