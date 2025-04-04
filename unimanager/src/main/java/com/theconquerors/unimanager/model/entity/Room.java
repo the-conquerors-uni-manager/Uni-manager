@@ -33,4 +33,8 @@ public class Room extends BaseEntity {
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, targetEntity = WeeklySchedule.class)
     private Set<WeeklySchedule> weeklySchedules;
+
+    public String getRoomNumber() {
+        return (Long.toString(block) + Short.toString(floor) + Byte.toString(number));
+    }
 }

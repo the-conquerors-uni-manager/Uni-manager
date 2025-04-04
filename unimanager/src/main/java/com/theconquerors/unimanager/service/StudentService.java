@@ -2,6 +2,7 @@ package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
+import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
@@ -93,11 +94,19 @@ public class StudentService {
         return gradesDtos;
     }
 
-    public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
+    public List<StudentWeeklyScheduleDto> getWeeklySchedule(Long studentId) {
         Student student = getStudent(studentId);
         Hibernate.initialize(student.getGroup());
-        var group = student.getGroup();
-        return weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());
+        Group group = student.getGroup();
+
+        List<WeeklySchedule> weeklySchedules = weeklyScheduleRepository.findWeeklyScheduleByGroupId(group.getId());
+        List<StudentWeeklyScheduleDto> weeklySchedulesDtos = new ArrayList<>();
+
+        for (WeeklySchedule weeklySchedule : weeklySchedules) {
+            weeklySchedulesDtos.add(new StudentWeeklyScheduleDto(weeklySchedule));
+        }
+
+        return weeklySchedulesDtos;
     }
 
     public List<Exam> getExams(Long studentId) {
