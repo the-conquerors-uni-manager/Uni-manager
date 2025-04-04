@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -21,21 +21,21 @@ public class Specialty extends BaseEntity {
     private String name;
 
     @NotBlank
-    @Column(name = "description", nullable = true,columnDefinition = "TEXT")
+    @Column(name = "description", nullable = true, columnDefinition = "TEXT")
     private String description;
 
     @NotBlank
     @Column(name = "studyStage", nullable = false)
     private StudyStageEnum studyStage;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity =  Faculty.class)
-    @JoinColumn(name = "faculty_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Faculty.class)
+    @JoinColumn(name = "faculty_id", referencedColumnName = "id", nullable = false)
     private Faculty faculty;
 
-    @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL,targetEntity = Group.class)
-    private HashSet<Group> groupList;
+    @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL, targetEntity = Group.class)
+    private Set<Group> groupList;
 
-    @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL,targetEntity = Subject.class)
-    private HashSet<Subject> subjects;
+    @OneToMany(mappedBy = "specialty", cascade = CascadeType.ALL, targetEntity = Subject.class)
+    private Set<Subject> subjects;
 
 }

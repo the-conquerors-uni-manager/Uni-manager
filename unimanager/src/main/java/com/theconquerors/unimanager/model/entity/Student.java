@@ -3,7 +3,10 @@ package com.theconquerors.unimanager.model.entity;
 import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
 import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,51 +27,51 @@ public class Student extends BaseEntity {
      */
 
     @NotBlank
-    @Column(name = "studentNumber", nullable = false, unique = true,length = 50)
+    @Column(name = "studentNumber", nullable = false, unique = true, length = 50)
     @Size(max = 50)
     private String studentNumber;
 
     @NotBlank
-    @Column(name = "firstName", nullable = false,length = 50)
+    @Column(name = "firstName", nullable = false, length = 50)
     @Size(max = 50)
     private String firstName;
 
     @NotBlank
-    @Column(name = "middleName", nullable = false,length = 50)
+    @Column(name = "middleName", nullable = false, length = 50)
     @Size(max = 50)
     private String middleName;
 
     @NotBlank
-    @Column(name = "lastName", nullable = false,length = 50)
+    @Column(name = "lastName", nullable = false, length = 50)
     @Size(max = 50)
     private String lastName;
 
     @NotBlank
-    @Column(name = "egn", nullable = false, unique = true,length = 10)
+    @Column(name = "egn", nullable = false, unique = true, length = 10)
     @Size(max = 10)
     private String egn;
 
     @Email
     @NotBlank
-    @Column(name = "password", nullable = false,length = 512)
+    @Column(name = "password", nullable = false, length = 512)
     @Size(max = 512)
     private String password;
 
     @Email
     @NotNull
-    @Column(name = "personalEmail", nullable = false,length = 320)
+    @Column(name = "personalEmail", nullable = false, length = 320)
     @Size(max = 320)
     private String personalEmail;
 
     @Email
     @NotNull
-    @Column(name = "workEmail", nullable = false,length = 320)
+    @Column(name = "workEmail", nullable = false, length = 320)
     @Size(max = 320)
     private String workEmail;
 
     @Email
     @NotNull
-    @Column(name = "phoneNumber", nullable = false,length = 15)
+    @Column(name = "phoneNumber", nullable = false, length = 15)
     @Size(max = 15)
     private String phoneNumber;
 
@@ -84,7 +87,9 @@ public class Student extends BaseEntity {
     @Column(name = "birthDate", nullable = false)
     private Date birthDate;
 
-    public Student(){}
+    public Student() {
+    }
+
     //Constructor for test views
     public Student(String studentNumber, String firstName, String middleName, String lastName, String egn, String personalEmail, String workEmail, String phoneNumber, ReceptionTypeEnum receptionType, LearningTypeEnum learningType, Date birthDate) {
         this.studentNumber = studentNumber;
@@ -100,26 +105,26 @@ public class Student extends BaseEntity {
         this.birthDate = birthDate;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
-    @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Group.class)
+    @JoinColumn(name = "group_id", referencedColumnName = "id", nullable = false)
     private Group group;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Grade.class)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, targetEntity = Grade.class)
     private Set<Grade> grades = new HashSet<Grade>();
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Scholarship.class)
-    private Set<Scholarship> scholarships= new HashSet<Scholarship>();
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, targetEntity = Scholarship.class)
+    private Set<Scholarship> scholarships = new HashSet<Scholarship>();
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = Payment.class)
-    private Set<Payment> payments= new HashSet<Payment>();
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, targetEntity = Payment.class)
+    private Set<Payment> payments = new HashSet<Payment>();
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = HealthInsurancePayment.class)
-    private Set<HealthInsurancePayment> healthInsurancePayments= new HashSet<HealthInsurancePayment>();
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, targetEntity = HealthInsurancePayment.class)
+    private Set<HealthInsurancePayment> healthInsurancePayments = new HashSet<HealthInsurancePayment>();
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
-    private Set<DormitoryAssignment> dormitoryAssignments= new HashSet<DormitoryAssignment>();
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, targetEntity = DormitoryAssignment.class)
+    private Set<DormitoryAssignment> dormitoryAssignments = new HashSet<DormitoryAssignment>();
 
-    @OneToOne(mappedBy = "foreman",cascade = CascadeType.ALL,targetEntity = Group.class)
+    @OneToOne(mappedBy = "foreman", cascade = CascadeType.ALL, targetEntity = Group.class)
     private Group groupForeman;
 
     public Group getGroup() {

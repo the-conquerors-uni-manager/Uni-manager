@@ -6,13 +6,13 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "faculties")
-public class Faculty extends BaseEntity{
+public class Faculty extends BaseEntity {
 
     @NotBlank
     @Column(name = "name", nullable = false, length = 250)
@@ -20,9 +20,9 @@ public class Faculty extends BaseEntity{
     private String name;
 
     @NotBlank
-    @Column(name = "description", nullable = true,columnDefinition = "TEXT")
+    @Column(name = "description", nullable = true, columnDefinition = "TEXT")
     private String description;
 
     @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL, targetEntity = Specialty.class)
-    private HashSet<Specialty> specialties;
+    private Set<Specialty> specialties;
 }

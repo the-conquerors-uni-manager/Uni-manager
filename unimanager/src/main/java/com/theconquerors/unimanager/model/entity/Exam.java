@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -14,20 +13,20 @@ import java.util.Date;
 @Entity
 @Table(
         name = "exams",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"subject","teacher","semester","group"})
+        uniqueConstraints = @UniqueConstraint(columnNames = {"subject", "teacher", "semester", "group"})
 )
-public class Exam extends BaseEntity{
+public class Exam extends BaseEntity {
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Subject.class)
-    @JoinColumn(name = "subject_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Subject.class)
+    @JoinColumn(name = "subject_id", referencedColumnName = "id", nullable = false)
     private Subject subject;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Teacher.class)
-    @JoinColumn(name = "teacher_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Teacher.class)
+    @JoinColumn(name = "teacher_id", referencedColumnName = "id", nullable = false)
     private Teacher teacher;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Group.class)
-    @JoinColumn(name = "group_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Group.class)
+    @JoinColumn(name = "group_id", referencedColumnName = "id", nullable = false)
     private Group group;
 
     @NotBlank
@@ -40,7 +39,7 @@ public class Exam extends BaseEntity{
 
     @NotBlank
     @Column(name = "endTime", nullable = false)
-    private LocalTime endTime ;
+    private LocalTime endTime;
 
     //private Duration duration = Duration.between(startTime, endTime);
 }

@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
+import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.service.StudentService;
 import org.slf4j.Logger;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 import static java.lang.Long.parseLong;
 
@@ -42,8 +44,8 @@ public class StudentController {
 
     @GetMapping("/grades/{studentId}")
     public String grades(@PathVariable("studentId") String studentId, Model model) {
-        var grades = studentService.getGrades(parseLong(studentId));
-        log.warn(Long.toString(grades.size()));
+        List<StudentGradesDto> grades = studentService.getGrades(parseLong(studentId));
+        model.addAttribute("grades", grades);
         return "student_grades";
     }
 

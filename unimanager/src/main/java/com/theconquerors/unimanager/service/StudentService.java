@@ -1,16 +1,16 @@
 package com.theconquerors.unimanager.service;
 
+import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.entity.*;
-import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
-import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class StudentService {
@@ -36,12 +36,12 @@ public class StudentService {
             DormitoryAssignmentRepository dormitoryAssignmentRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
-        this.weeklyScheduleRepository=weeklyScheduleRepository;
+        this.weeklyScheduleRepository = weeklyScheduleRepository;
         this.examRepository = examRepository;
-        this.paymentRepository =paymentRepository;
-        this.scholarshipApplicationRepository=scholarshipApplicationRepository;
-        this.healthInsurancePaymentRepository=healthInsurancePaymentRepository;
-        this.dormitoryAssignmentRepository=dormitoryAssignmentRepository;
+        this.paymentRepository = paymentRepository;
+        this.scholarshipApplicationRepository = scholarshipApplicationRepository;
+        this.healthInsurancePaymentRepository = healthInsurancePaymentRepository;
+        this.dormitoryAssignmentRepository = dormitoryAssignmentRepository;
     }
 
     public Student getStudent(Long id) {
@@ -64,8 +64,33 @@ public class StudentService {
         return new StudentInformationDto(student);
     }
 
-    public List<Grade> getGrades(Long studentId) {
-        return gradeRepository.findGradesByStudentId(studentId);
+    public List<StudentGradesDto> getGrades(Long studentId) {
+        List<Grade> grades = gradeRepository.findGradesByStudentId(studentId);
+
+        if (grades == null) {
+            return null;
+        }
+
+        List<StudentGradesDto> gradesDtos = new ArrayList<>();
+
+        for (Grade grade : grades) {
+
+            Hibernate.initialize(grade.getTeacher());
+
+            if (grade.getTeacher() == null) {
+                return null;
+            }
+
+            Hibernate.initialize(grade.getStudent());
+
+            if (grade.getStudent() == null) {
+                return null;
+            }
+
+            gradesDtos.add(new StudentGradesDto(grade));
+        }
+
+        return gradesDtos;
     }
 
     public List<WeeklySchedule> getWeeklySchedule(Long studentId) {
@@ -193,9 +218,9 @@ public class StudentService {
 
     public List<Exam> getExams(Long studentId) {
         var student = getInformation(studentId);
-       // Hibernate.initialize(student.getGroup());
-       // return examRepository.findExamByGroupId(student.getGroup().getId());
-        return  null;
+        // Hibernate.initialize(student.getGroup());
+        // return examRepository.findExamByGroupId(student.getGroup().getId());
+        return null;
     }
 
     public Boolean sendScholarshipApplication(Scholarship scholarship) {

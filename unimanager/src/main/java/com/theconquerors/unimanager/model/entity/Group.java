@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -20,21 +19,21 @@ public class Group extends BaseEntity {
     @Size(max = 5)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Specialty.class)
-    @JoinColumn(name = "specialty_id", referencedColumnName = "id",nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Specialty.class)
+    @JoinColumn(name = "specialty_id", referencedColumnName = "id", nullable = false)
     private Specialty specialty;
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = Student.class)
-    @JoinColumn(name = "foreman_id", referencedColumnName = "id",nullable = true)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Student.class)
+    @JoinColumn(name = "foreman_id", referencedColumnName = "id", nullable = true)
     private Student foreman;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Student.class, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, targetEntity = Student.class, fetch = FetchType.LAZY)
     private Set<Student> students;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = Exam.class,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, targetEntity = Exam.class, fetch = FetchType.LAZY)
     private Set<Exam> exams;
 
-    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL,targetEntity = WeeklySchedule.class,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "group", cascade = CascadeType.ALL, targetEntity = WeeklySchedule.class, fetch = FetchType.LAZY)
     private Set<WeeklySchedule> weeklySchedules;
 
     public String getName() {
