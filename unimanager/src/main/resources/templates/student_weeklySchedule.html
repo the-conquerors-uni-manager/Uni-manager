@@ -1,153 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Table Rows from List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schedule</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-        /* Page background with gradient */
-        body {
-            background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Main container */
-        .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Light white background with transparency */
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 1000px;
-        }
-
-        /* Stylish Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 16px;
-            text-align: center;
-        }
-
-        /* Table header style */
-        th {
-            background-color: #00f2fe;
-            color: white;
-            padding: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #4facfe;
-        }
-
-        /* Table row style */
-        td {
-            padding: 10px;
-            background-color: #f4f7fc;
-            border-bottom: 1px solid #ddd;
-        }
-
-        /* Alternate row background color for better readability */
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        /* Hover effect for rows */
-        tr:hover {
-            background-color: #d1f1fe;
-        }
-
-        /* Add a rounded border to the table */
-        table, th, td {
-            border-radius: 10px;
-            border: none;
-        }
-
-        /* Style for table caption */
-        caption {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-    </style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .schedule-container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .schedule-table th, .schedule-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    .schedule-table th {
+        background-color: #3498db;
+        color: white;
+    }
+    .schedule-slot {
+        background: #ecf0f1;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-  <caption><h1>Weekly Schedule</h1></caption>
-  <table id="myTable">
+<div class="schedule-container">
+  <h2 class="text-center">Седмична Програма</h2>
+  <table class="schedule-table">
     <thead>
     <tr>
-      <th>Room</th>
-      <th>Teacher</th>
-      <th>Subject</th>
-      <th>Grade</th>
-      <th>Start time</th>
-      <th>Day of week</th>
+      <th>Понеделник</th>
+      <th>Вторник</th>
+      <th>Сряда</th>
+      <th>Четвъртък</th>
+      <th>Петък</th>
     </tr>
     </thead>
     <tbody>
-    <!-- Dynamic rows will be inserted here -->
+    <tr>
+      <td th:each="mondaySlot : ${schedule.monday}">
+        <div class="schedule-slot" th:text="${mondaySlot}"></div>
+      </td>
+      <td th:each="tuesdaySlot : ${schedule.tuesday}">
+        <div class="schedule-slot" th:text="${tuesdaySlot}"></div>
+      </td>
+      <td th:each="wednesdaySlot : ${schedule.wednesday}">
+        <div class="schedule-slot" th:text="${wednesdaySlot}"></div>
+      </td>
+      <td th:each="thursdaySlot : ${schedule.thursday}">
+        <div class="schedule-slot" th:text="${thursdaySlot}"></div>
+      </td>
+      <td th:each="fridaySlot : ${schedule.friday}">
+        <div class="schedule-slot" th:text="${fridaySlot}"></div>
+      </td>
+    </tr>
     </tbody>
   </table>
 </div>
-
-<script>
-        //test values
-        let classes1 = new Object();
-        classes1.room = "1310";
-        classes1.teacher = "John Doe";
-        classes1.subject = "Math";
-        classes1.grade = "39";
-        classes1.startTime = "7:30";
-        classes1.dayOfWeek = "Monday";
-
-        let classes2 = new Object();
-        classes2.examProtocolNumber = "1406";
-        classes2.teacher = "John Doe";
-        classes2.subject = "Physic";
-        classes2.group = "40";
-        classes2.startTime = "13:45";
-        classes2.dayOfWeek = "Thurday";
-
-        let listItems = [classes1, classes2];
-
-        //function for display values into table
-        function showValuesIntoPage(list) {
-
-            // Get the table body where rows will be inserted
-            let tableBody = document.querySelector("#myTable tbody");
-
-            // Clear the existing rows in case the list has changed
-            tableBody.innerHTML = '';
-
-            // Loop through the list items and create rows dynamically
-            list.forEach(item => {
-
-                let row = document.createElement("tr");
-
-                // Loop through the items property and create cells dynamically
-                Object.values(item).forEach(prop => {
-
-                    let cell = document.createElement("td");
-                    cell.textContent = prop;
-                    row.appendChild(cell);
-              });
-
-              tableBody.appendChild(row);
-            });
-        }
-
-        showValuesIntoPage(listItems);
-    </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
