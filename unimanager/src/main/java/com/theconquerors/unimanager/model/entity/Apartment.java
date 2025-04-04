@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -13,9 +12,9 @@ import java.util.Set;
 @Entity
 @Table(
         name = "apartments",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"block","floor","number","roomType"})
+        uniqueConstraints = @UniqueConstraint(columnNames = {"block", "floor", "number", "roomType"})
 )
-public class Apartment extends BaseEntity{
+public class Apartment extends BaseEntity {
     @NotNull
     @Column(name = "block", nullable = false)
     private long block;
@@ -32,6 +31,6 @@ public class Apartment extends BaseEntity{
     @Column(name = "capacity", nullable = false)
     private byte capacity;
 
-    @OneToMany(mappedBy = "apartment", cascade = CascadeType.ALL,targetEntity = DormitoryAssignment.class)
+    @OneToMany(mappedBy = "apartment", cascade = CascadeType.ALL, targetEntity = DormitoryAssignment.class)
     private Set<DormitoryAssignment> dormitoryAssignments;
 }
