@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.service;
 
+import com.theconquerors.unimanager.model.dto.StudentExam;
 import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
@@ -11,7 +12,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class StudentService {
@@ -50,7 +53,7 @@ public class StudentService {
     }
 
     public StudentInformationDto getInformation(Long studentId) {
-        Student student = studentRepository.findStudentById(studentId);
+        Student student = getStudent(studentId);
 
         if (student == null) {
             return null;
@@ -109,13 +112,37 @@ public class StudentService {
         return weeklySchedulesDtos;
     }
 
-    public List<Exam> getExams(Long studentId) {
-        // Student student = studentRepository.findStudentById(studentId);
-        //Hibernate.initialize(student.getGroup());
-        //Hibernate.initialize(student.getGroup().getExams());
+    public List<StudentExam> getExams(Long studentId) {
+        if (studentId == null) {
+            return Collections.emptyList();
+        }
 
-        //return student.getGroup().getExams();
-        return null;
+        Student student = getStudent(studentId);
+        if (student == null) {
+            return Collections.emptyList();
+        }
+
+        Hibernate.initialize(student.getGroup());
+        if (student.getGroup() == null) {
+            return Collections.emptyList();
+        }
+
+        Hibernate.initialize(student.getGroup().getExams());
+        Set<Exam> exams = student.getGroup().getExams();
+        if (exams == null) {
+            return Collections.emptyList();
+        }
+
+        List<StudentExam> examsDTOs = new ArrayList<>();
+        for (Exam exam : exams) {
+            if (exam != null) {
+                Hibernate.initialize(exam.getTeacher());
+                Hibernate.initialize(exam.getSubject());
+                examsDTOs.add(new StudentExam(exam));
+            }
+        }
+
+        return examsDTOs;
     }
 
     public Boolean sendScholarshipApplication(Scholarship scholarship) {
