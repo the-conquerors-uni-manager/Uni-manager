@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class StudentExam {
+public class StudentExamDto {
 
     public String teacherName;
     public String subjectName;
@@ -20,7 +20,7 @@ public class StudentExam {
     public Duration duration;
 
 
-    public StudentExam(Exam exam) {
+    public StudentExamDto(Exam exam) {
         setTeacherName(exam.getTeacher().getFirstName() + " " + exam.getTeacher().getLastName());
         setSubjectName(exam.getSubject().getName());
         setDate(exam.getDate());

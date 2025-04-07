@@ -10,4 +10,6 @@ import java.util.List;
 public interface GradeRepository extends JpaRepository<Grade,Long> {
 
     List<Grade> findGradesByStudentId(Long id);
+
+    List<Grade> findGradesByTeacherId(Long id);
 }
