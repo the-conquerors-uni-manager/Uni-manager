@@ -87,21 +87,21 @@ public class TeacherController {
     @GetMapping("/weekly-schedule/{teacherId}")
     public String weeklySchedule(@PathVariable("teacherId") String teacherId,Model model){
 
-        List<StudentWeeklyScheduleDto> weeklyScheduleForStudent = teacherService.getWeeklySchedule(parseLong(teacherId));
+        List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
 
-        model.addAttribute("mondaySchedules", weeklyScheduleForStudent.stream()
+        model.addAttribute("mondaySchedules", weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
                 .collect(Collectors.toList()));
-        model.addAttribute("tuesdaySchedules", weeklyScheduleForStudent.stream()
+        model.addAttribute("tuesdaySchedules", weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
                 .collect(Collectors.toList()));
-        model.addAttribute("wednesdaySchedules", weeklyScheduleForStudent.stream()
+        model.addAttribute("wednesdaySchedules", weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.WEDNESDAY)
                 .collect(Collectors.toList()));
-        model.addAttribute("thursdaySchedules", weeklyScheduleForStudent.stream()
+        model.addAttribute("thursdaySchedules", weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
                 .collect(Collectors.toList()));
-        model.addAttribute("fridaySchedules", weeklyScheduleForStudent.stream()
+        model.addAttribute("fridaySchedules", weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.FRIDAY)
                 .collect(Collectors.toList()));
 
