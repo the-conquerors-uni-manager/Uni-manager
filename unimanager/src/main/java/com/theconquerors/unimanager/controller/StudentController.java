@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.lang.Long.parseLong;
 
@@ -56,22 +58,41 @@ public class StudentController {
     public String weeklySchedule(@PathVariable("studentId") String studentId, Model model) {
         List<StudentWeeklyScheduleDto> weeklyScheduleForStudent = studentService.getWeeklySchedule(parseLong(studentId));
 
-        model.addAttribute("mondaySchedules", weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> mondaySchedules = weeklyScheduleForStudent.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
-                .collect(Collectors.toList()));
-        model.addAttribute("tuesdaySchedules", weeklyScheduleForStudent.stream()
-                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
-                .collect(Collectors.toList()));
-        model.addAttribute("wednesdaySchedules", weeklyScheduleForStudent.stream()
+                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .collect(Collectors.toList());
+        List<StudentWeeklyScheduleDto> tuesdaySchedules = weeklyScheduleForStudent.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.TUESDAY)
+                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .collect(Collectors.toList());
+        List<StudentWeeklyScheduleDto> wednesdaySchedules = weeklyScheduleForStudent.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.WEDNESDAY)
-                .collect(Collectors.toList()));
-        model.addAttribute("thursdaySchedules", weeklyScheduleForStudent.stream()
+                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .collect(Collectors.toList());
+        List<StudentWeeklyScheduleDto> thursdaySchedules = weeklyScheduleForStudent.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
-                .collect(Collectors.toList()));
-        model.addAttribute("fridaySchedules", weeklyScheduleForStudent.stream()
+                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .collect(Collectors.toList());
+        List<StudentWeeklyScheduleDto> fridaySchedules = weeklyScheduleForStudent.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.FRIDAY)
-                .collect(Collectors.toList()));
+                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .collect(Collectors.toList());
 
+        int maxSlotIndex = Stream.of(
+                mondaySchedules.size(),
+                tuesdaySchedules.size(),
+                wednesdaySchedules.size(),
+                thursdaySchedules.size(),
+                fridaySchedules.size()
+        ).max(Integer::compare).orElse(0) - 1;
+
+        model.addAttribute("mondaySchedules", mondaySchedules);
+        model.addAttribute("tuesdaySchedules", tuesdaySchedules);
+        model.addAttribute("wednesdaySchedules", wednesdaySchedules);
+        model.addAttribute("thursdaySchedules", thursdaySchedules);
+        model.addAttribute("fridaySchedules", fridaySchedules);
+        model.addAttribute("maxSlotIndex", maxSlotIndex);
         return "student_weeklySchedule";
     }
 

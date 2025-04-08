@@ -53,45 +53,45 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td th:each="mondaySlot : ${mondaySchedules}">
-                <div class="schedule-slot">
-                    <div th:text="${mondaySlot.subjectName}"></div>
-                    <div th:text="${mondaySlot.teacherName}"></div>
-                    <div th:text="${mondaySlot.room}"></div>
-                    <div th:text="${mondaySlot.startTime}"></div>
+        <tr th:each="i : ${#numbers.sequence(0, maxSlotIndex)}">
+            <td>
+                <div th:if="${mondaySchedules.size() > i}" class="schedule-slot">
+                    <div th:text="${mondaySchedules[i].subjectName}"></div>
+                    <div th:text="${mondaySchedules[i].teacherName}"></div>
+                    <div th:text="${mondaySchedules[i].room}"></div>
+                    <div th:text="${mondaySchedules[i].startTime}"></div>
                 </div>
             </td>
-            <td th:each="tuesdaySlot : ${tuesdaySchedules}">
-                <div class="schedule-slot">
-                    <div th:text="${tuesdaySlot.subjectName}"></div>
-                    <div th:text="${tuesdaySlot.teacherName}"></div>
-                    <div th:text="${tuesdaySlot.room}"></div>
-                    <div th:text="${tuesdaySlot.startTime}"></div>
+            <td>
+                <div th:if="${tuesdaySchedules.size() > i}" class="schedule-slot">
+                    <div th:text="${tuesdaySchedules[i].subjectName}"></div>
+                    <div th:text="${tuesdaySchedules[i].teacherName}"></div>
+                    <div th:text="${tuesdaySchedules[i].room}"></div>
+                    <div th:text="${tuesdaySchedules[i].startTime}"></div>
                 </div>
             </td>
-            <td th:each="wednesdaySlot : ${wednesdaySchedules}">
-                <div class="schedule-slot">
-                    <div th:text="${wednesdaySlot.subjectName}"></div>
-                    <div th:text="${wednesdaySlot.teacherName}"></div>
-                    <div th:text="${wednesdaySlot.room}"></div>
-                    <div th:text="${wednesdaySlot.startTime}"></div>
+            <td>
+                <div th:if="${wednesdaySchedules.size() > i}" class="schedule-slot">
+                    <div th:text="${wednesdaySchedules[i].subjectName}"></div>
+                    <div th:text="${wednesdaySchedules[i].teacherName}"></div>
+                    <div th:text="${wednesdaySchedules[i].room}"></div>
+                    <div th:text="${wednesdaySchedules[i].startTime}"></div>
                 </div>
             </td>
-            <td th:each="thursdaySlot : ${thursdaySchedules}">
-                <div class="schedule-slot">
-                    <div th:text="${thursdaySlot.subjectName}"></div>
-                    <div th:text="${thursdaySlot.teacherName}"></div>
-                    <div th:text="${thursdaySlot.room}"></div>
-                    <div th:text="${thursdaySlot.startTime}"></div>
+            <td>
+                <div th:if="${thursdaySchedules.size() > i}" class="schedule-slot">
+                    <div th:text="${thursdaySchedules[i].subjectName}"></div>
+                    <div th:text="${thursdaySchedules[i].teacherName}"></div>
+                    <div th:text="${thursdaySchedules[i].room}"></div>
+                    <div th:text="${thursdaySchedules[i].startTime}"></div>
                 </div>
             </td>
-            <td th:each="fridaySlot : ${fridaySchedules}">
-                <div class="schedule-slot">
-                    <div th:text="${fridaySlot.subjectName}"></div>
-                    <div th:text="${fridaySlot.teacherName}"></div>
-                    <div th:text="${fridaySlot.room}"></div>
-                    <div th:text="${fridaySlot.startTime}"></div>
+            <td>
+                <div th:if="${fridaySchedules.size() > i}" class="schedule-slot">
+                    <div th:text="${fridaySchedules[i].subjectName}"></div>
+                    <div th:text="${fridaySchedules[i].teacherName}"></div>
+                    <div th:text="${fridaySchedules[i].room}"></div>
+                    <div th:text="${fridaySchedules[i].startTime}"></div>
                 </div>
             </td>
         </tr>
