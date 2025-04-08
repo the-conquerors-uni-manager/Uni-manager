@@ -1,5 +1,11 @@
 package com.theconquerors.unimanager.controller;
 
+import com.theconquerors.unimanager.model.dto.StudentExamDto;
+import com.theconquerors.unimanager.model.dto.StudentGradesDto;
+import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
+import com.theconquerors.unimanager.model.dto.TeacherInformationDto;
+import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
+import com.theconquerors.unimanager.service.StudentService;
 import com.theconquerors.unimanager.service.TeacherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.lang.Long.parseLong;
 
 @Controller
 @RequestMapping("/teacher")
@@ -19,10 +29,12 @@ public class TeacherController {
 
     private static final Logger log = LoggerFactory.getLogger(TeacherController.class);
     private final TeacherService teacherService;
+    private final StudentService studentService;
     private final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-    public TeacherController(TeacherService teacherService) {
+    public TeacherController(TeacherService teacherService, StudentService studentService) {
         this.teacherService = teacherService;
+        this.studentService = studentService;
     }
 
     @GetMapping("")
@@ -34,13 +46,18 @@ public class TeacherController {
     @GetMapping("/{teacherId}")
     public String information(@PathVariable("teacherId") String teacherId, Model model){
 
-        return "";
+        TeacherInformationDto teacherInformationDto = teacherService.getInformation(Long.valueOf(teacherId));
+        model.addAttribute("teacher", teacherInformationDto);
+        return "teacher_information";
     }
 
     @GetMapping("/grades/{teacherId}")
     public String allGrades(@PathVariable("teacherId") String teacherId, Model model){
 
-        return "";
+        List<StudentGradesDto> teacherGrades = teacherService.getGrades(parseLong(teacherId));
+        model.addAttribute("grades", teacherGrades);
+
+        return "teacher_grades";
     }
 
     @GetMapping("/grades/{teacherId}/student={studentId}")
@@ -70,12 +87,33 @@ public class TeacherController {
     @GetMapping("/weekly-schedule/{teacherId}")
     public String weeklySchedule(@PathVariable("teacherId") String teacherId,Model model){
 
-        return "";
+        List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
+
+        model.addAttribute("mondaySchedules", weeklyScheduleForTeacher.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
+                .collect(Collectors.toList()));
+        model.addAttribute("tuesdaySchedules", weeklyScheduleForTeacher.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
+                .collect(Collectors.toList()));
+        model.addAttribute("wednesdaySchedules", weeklyScheduleForTeacher.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.WEDNESDAY)
+                .collect(Collectors.toList()));
+        model.addAttribute("thursdaySchedules", weeklyScheduleForTeacher.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
+                .collect(Collectors.toList()));
+        model.addAttribute("fridaySchedules", weeklyScheduleForTeacher.stream()
+                .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.FRIDAY)
+                .collect(Collectors.toList()));
+
+        return "teacher_weeklySchedule";
     }
 
     @GetMapping("/exams/{teacherId}")
     public String exams(@PathVariable("teacherId") String teacherId,Model model){
 
-        return "";
+        List<StudentExamDto> studentExams = teacherService.getExams(parseLong(teacherId));
+        model.addAttribute("teacherExams", studentExams);
+
+        return "teacher_exams";
     }
 }

@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
-import com.theconquerors.unimanager.model.dto.StudentExam;
+import com.theconquerors.unimanager.model.dto.StudentExamDto;
 import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
@@ -77,7 +77,7 @@ public class StudentController {
 
     @GetMapping("/exams/{studentId}")
     public String exams(@PathVariable("studentId") String studentId, Model model) {
-        List<StudentExam> studentExams = studentService.getExams(parseLong(studentId));
+        List<StudentExamDto> studentExams = studentService.getExams(parseLong(studentId));
         model.addAttribute("studentExams", studentExams);
         return "student_exams";
     }

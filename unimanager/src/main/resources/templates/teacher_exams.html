@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Exams</title>
+  <style>
+        /* Page background with gradient */
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light white background with transparency */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        /* Stylish Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Table header style */
+        th {
+            background-color: #00f2fe;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #4facfe;
+        }
+
+        /* Table row style */
+        td {
+            padding: 10px;
+            background-color: #f4f7fc;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Alternate row background color for better readability */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Hover effect for rows */
+        tr:hover {
+            background-color: #d1f1fe;
+        }
+
+        /* Add a rounded border to the table */
+        table, th, td {
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Style for table caption */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+  <caption><h1>Teacher Exams</h1></caption>
+  <table id="myTable">
+    <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Group</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Duration</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="exam : ${teacherExams}">
+      <td th:text="${exam.subjectName}"></td>
+      <td th:text="${exam.date}"></td>
+      <td th:text="${exam.startTime}"></td>
+      <td th:text="${exam.endTime}"></td>
+      <td th:text="${exam.duration}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

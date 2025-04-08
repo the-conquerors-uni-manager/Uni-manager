@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.service;
 
-import com.theconquerors.unimanager.model.dto.StudentExam;
+import com.theconquerors.unimanager.model.dto.StudentExamDto;
 import com.theconquerors.unimanager.model.dto.StudentGradesDto;
 import com.theconquerors.unimanager.model.dto.StudentInformationDto;
 import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
@@ -112,7 +112,7 @@ public class StudentService {
         return weeklySchedulesDtos;
     }
 
-    public List<StudentExam> getExams(Long studentId) {
+    public List<StudentExamDto> getExams(Long studentId) {
         if (studentId == null) {
             return Collections.emptyList();
         }
@@ -133,12 +133,12 @@ public class StudentService {
             return Collections.emptyList();
         }
 
-        List<StudentExam> examsDTOs = new ArrayList<>();
+        List<StudentExamDto> examsDTOs = new ArrayList<>();
         for (Exam exam : exams) {
             if (exam != null) {
                 Hibernate.initialize(exam.getTeacher());
                 Hibernate.initialize(exam.getSubject());
-                examsDTOs.add(new StudentExam(exam));
+                examsDTOs.add(new StudentExamDto(exam));
             }
         }
 
