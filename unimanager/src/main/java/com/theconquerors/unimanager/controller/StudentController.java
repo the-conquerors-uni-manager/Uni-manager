@@ -39,6 +39,7 @@ public class StudentController {
 
     @GetMapping("/{studentId}")
     public String getStudentInformation(@PathVariable("studentId") String studentId, Model model) {
+
         StudentInformationDto studentInformationDto = studentService.getInformation(Long.valueOf(studentId));
         model.addAttribute("student", studentInformationDto);
         return "student_information";
@@ -46,6 +47,7 @@ public class StudentController {
 
     @GetMapping("/grades/{studentId}")
     public String grades(@PathVariable("studentId") String studentId, Model model) {
+
         List<StudentGradesDto> grades = studentService.getGrades(parseLong(studentId));
         model.addAttribute("grades", grades);
         return "student_grades";
@@ -53,6 +55,7 @@ public class StudentController {
 
     @GetMapping("/weekly-schedule/{studentId}")
     public String weeklySchedule(@PathVariable("studentId") String studentId, Model model) {
+
         List<StudentWeeklyScheduleDto> weeklyScheduleForStudent = studentService.getWeeklySchedule(parseLong(studentId));
 
         List<StudentWeeklyScheduleDto> mondaySchedules = weeklyScheduleForStudent.stream()
@@ -95,6 +98,7 @@ public class StudentController {
 
     @GetMapping("/exams/{studentId}")
     public String exams(@PathVariable("studentId") String studentId, Model model) {
+
         List<StudentExamDto> studentExams = studentService.getExams(parseLong(studentId));
         model.addAttribute("studentExams", studentExams);
         return "student_exams";
@@ -125,11 +129,17 @@ public class StudentController {
     @GetMapping("/payments/health-insurance/{studentId}")
     public String healthInsurance(@PathVariable("studentId") String studentId, Model model) {
 
+        List<StudentHealthInsurancePaymentDto> healthPayment = studentService.getHealthInsurancePayments(Long.parseLong(studentId));
+        model.addAttribute("healthPayment", healthPayment);
+
         return "student_payments_health";
     }
 
     @GetMapping("/dormitory/{studentId}")
     public String dormitory(@PathVariable("studentId") String studentId, Model model) {
+
+        List<StudentDormitoryAssignmentDto> dormitoryAssign = studentService.getDormitoryInformation(Long.parseLong(studentId));
+        model.addAttribute("dormitory", dormitoryAssign);
 
         return "student_dormitory";
     }

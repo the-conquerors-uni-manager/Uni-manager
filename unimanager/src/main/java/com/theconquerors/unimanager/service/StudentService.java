@@ -95,6 +95,7 @@ public class StudentService {
     }
 
     public List<StudentWeeklyScheduleDto> getWeeklySchedule(Long studentId) {
+
         Student student = getStudent(studentId);
         Hibernate.initialize(student.getGroup());
         Group group = student.getGroup();
@@ -194,12 +195,27 @@ public class StudentService {
         }
     }
 
-    public List<HealthInsurancePayment> getHealthInsurancePayments(Long studentId) {
-        return healthInsurancePaymentRepository.findHealthInsurancePaymentByStudentId(studentId);
+    public List<StudentHealthInsurancePaymentDto> getHealthInsurancePayments(Long studentId) {
+
+        List<HealthInsurancePayment> healthPayments = healthInsurancePaymentRepository.findHealthInsurancePaymentByStudentId(studentId);
+        List<StudentHealthInsurancePaymentDto> healthDtos = new ArrayList<>();
+
+        for (HealthInsurancePayment healthPayment : healthPayments) {
+            healthDtos.add(new StudentHealthInsurancePaymentDto(healthPayment));
+        }
+
+        return healthDtos;
     }
 
-    public DormitoryAssignment getDormitoryInformation(Long studentId) {
+    public List<StudentDormitoryAssignmentDto> getDormitoryInformation(Long studentId) {
 
-        return dormitoryAssignmentRepository.findDormitoryAssignmentByStudentId(studentId);
+        List<DormitoryAssignment> dormitoryAssignments = dormitoryAssignmentRepository.findDormitoryAssignmentByStudentId(studentId);
+        List<StudentDormitoryAssignmentDto> dormitoryAssignmentDtos = new ArrayList<>();
+
+        for (DormitoryAssignment dormitoryAssignment : dormitoryAssignments) {
+            dormitoryAssignmentDtos.add(new StudentDormitoryAssignmentDto(dormitoryAssignment));
+        }
+
+        return dormitoryAssignmentDtos;
     }
 }

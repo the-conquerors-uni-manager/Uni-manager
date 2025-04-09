@@ -1,13 +1,8 @@
 package com.theconquerors.unimanager.service;
 
-import com.theconquerors.unimanager.model.dto.StudentExamDto;
-import com.theconquerors.unimanager.model.dto.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
-import com.theconquerors.unimanager.model.dto.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.*;
 import com.theconquerors.unimanager.model.entity.*;
-import com.theconquerors.unimanager.repository.GradeRepository;
-import com.theconquerors.unimanager.repository.TeacherRepository;
-import com.theconquerors.unimanager.repository.WeeklyScheduleRepository;
+import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +20,13 @@ public class TeacherService {
     private final GradeRepository gradeRepository;
     private final TeacherRepository teacherRepository;
     private final WeeklyScheduleRepository weeklyScheduleRepository;
+    private final StudentRepository studentRepository;
 
-    public TeacherService(GradeRepository gradeRepository, TeacherRepository teacherRepository, WeeklyScheduleRepository weeklyScheduleRepository) {
+    public TeacherService(GradeRepository gradeRepository, TeacherRepository teacherRepository, WeeklyScheduleRepository weeklyScheduleRepository, StudentRepository studentRepository) {
         this.gradeRepository = gradeRepository;
         this.teacherRepository = teacherRepository;
         this.weeklyScheduleRepository = weeklyScheduleRepository;
+        this.studentRepository = studentRepository;
     }
 
     public Teacher getTeacher(Long id) {
@@ -54,6 +51,40 @@ public class TeacherService {
         }
 
         return gradesDtos;
+    }
+
+    public List<StudentGradesDto> getGradesForStudent(Long teacherId, Long studentId) {
+
+        //find grades by two filters
+        List<Grade> gradesByTeacher = gradeRepository.findGradesByTeacherId(teacherId);
+        List<Grade> gradesByStudent = gradeRepository.findGradesByStudentId(studentId);
+
+        //merge them and get only values that are in both arrays
+        ArrayList<Grade> grades = new ArrayList<>(gradesByTeacher);
+        gradesByTeacher.retainAll(gradesByStudent);
+
+        List<StudentGradesDto> gradesDtos = new ArrayList<>();
+
+        for (Grade grade : grades) {
+            gradesDtos.add(new StudentGradesDto(grade));
+        }
+
+        return gradesDtos;
+    }
+
+    public List<StudentGradesDto> getGradesForGroup(Long teacherId, Long groupId) {
+
+        //get list of students from given group
+        List<Student> students = studentRepository.findStudentByGroupId(groupId);
+
+        List<StudentGradesDto> gradesGroupDtos = new ArrayList<>();
+
+        //for every student from list, search his/her grades
+        for (Student student : students) {
+            gradesGroupDtos.addAll(getGradesForStudent(teacherId, student.getId()));
+        }
+
+        return gradesGroupDtos;
     }
 
     public List<StudentWeeklyScheduleDto> getWeeklySchedule(Long teacherId) {
