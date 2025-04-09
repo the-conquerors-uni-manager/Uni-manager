@@ -1,9 +1,6 @@
 package com.theconquerors.unimanager.service;
 
-import com.theconquerors.unimanager.model.dto.StudentExamDto;
-import com.theconquerors.unimanager.model.dto.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.StudentInformationDto;
-import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
+import com.theconquerors.unimanager.model.dto.*;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
@@ -165,8 +162,20 @@ public class StudentService {
         return scholarshipApplicationRepository.findScholarshipApplicationByStudentId(studentId);
     }
 
-    public List<Payment> getPayments(Long studentId) {
-        return paymentRepository.findPaymentByStudentId((studentId));
+    public List<StudentPaymentsDto> getPayments(Long studentId) {
+        if (studentId == null) {
+            return Collections.emptyList();
+        }
+
+        List<Payment> payments = paymentRepository.findPaymentByStudentId((studentId));
+
+        List<StudentPaymentsDto> paymentsDTOs = new ArrayList<>();
+
+        for (Payment payment : payments) {
+            paymentsDTOs.add(new StudentPaymentsDto(payment));
+        }
+
+        return paymentsDTOs;
     }
 
     public Boolean makePayment(Payment payment) {

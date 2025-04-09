@@ -1,9 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
-import com.theconquerors.unimanager.model.dto.StudentExamDto;
-import com.theconquerors.unimanager.model.dto.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.StudentInformationDto;
-import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
+import com.theconquerors.unimanager.model.dto.*;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.service.StudentService;
 import org.slf4j.Logger;
@@ -117,6 +114,10 @@ public class StudentController {
 
     @GetMapping("/payments/{studentId}")
     public String payments(@PathVariable("studentId") String studentId, Model model) {
+
+        List<StudentPaymentsDto> paymentsDtos = studentService.getPayments(Long.parseLong(studentId));
+
+        model.addAttribute("payments", paymentsDtos);
 
         return "student_payments";
     }
