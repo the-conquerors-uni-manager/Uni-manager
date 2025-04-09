@@ -93,25 +93,25 @@ public class TeacherController {
     @GetMapping("/weekly-schedule/{teacherId}")
     public String weeklySchedule(@PathVariable("teacherId") String teacherId,Model model){
 
-        List<StudentWeeklyScheduleDto> weeklyScheduleForStudent = teacherService.getWeeklySchedule(parseLong(teacherId));
+        List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
 
-        List<StudentWeeklyScheduleDto> mondaySchedules = weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> mondaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
                 .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> tuesdaySchedules = weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> tuesdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.TUESDAY)
                 .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> wednesdaySchedules = weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> wednesdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.WEDNESDAY)
                 .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> thursdaySchedules = weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> thursdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
                 .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> fridaySchedules = weeklyScheduleForStudent.stream()
+        List<StudentWeeklyScheduleDto> fridaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.FRIDAY)
                 .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
@@ -130,7 +130,7 @@ public class TeacherController {
         model.addAttribute("thursdaySchedules", thursdaySchedules);
         model.addAttribute("fridaySchedules", fridaySchedules);
         model.addAttribute("maxSlotIndex", maxSlotIndex);
-        return "student_weeklySchedule";
+        return "teacher_weeklySchedule";
     }
 
     @GetMapping("/exams/{teacherId}")

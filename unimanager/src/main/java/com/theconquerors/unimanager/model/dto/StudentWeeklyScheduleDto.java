@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.model.dto;
 
-import com.theconquerors.unimanager.model.entity.WeeklySchedule;
+import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.model.entity.enums.AcademicActivitiesEnum;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import lombok.Getter;
@@ -18,6 +18,7 @@ public class StudentWeeklyScheduleDto {
     private Time startTime;
     private DayOfWeekEnum dayOfWeek;
     private AcademicActivitiesEnum academicActivities;
+    private Group group;
 
     public StudentWeeklyScheduleDto(WeeklySchedule weeklySchedule) {
 
@@ -27,6 +28,7 @@ public class StudentWeeklyScheduleDto {
         setStartTime(weeklySchedule.getStartTime());
         setDayOfWeek(weeklySchedule.getDayOfWeek());
         setAcademicActivities(weeklySchedule.getAcademicActivities());
+        setGroup(weeklySchedule.getGroup());
     }
 
 }
