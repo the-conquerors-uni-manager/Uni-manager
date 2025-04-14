@@ -1,9 +1,6 @@
 package com.theconquerors.unimanager.model.dto;
 
-import com.theconquerors.unimanager.model.entity.Student;
 import com.theconquerors.unimanager.model.entity.Teacher;
-import com.theconquerors.unimanager.model.entity.enums.LearningTypeEnum;
-import com.theconquerors.unimanager.model.entity.enums.ReceptionTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 

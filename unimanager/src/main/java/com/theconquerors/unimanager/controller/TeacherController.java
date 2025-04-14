@@ -50,6 +50,7 @@ public class TeacherController {
 
         TeacherInformationDto teacherInformationDto = teacherService.getInformation(Long.valueOf(teacherId));
         model.addAttribute("teacher", teacherInformationDto);
+
         return "teacher_information";
     }
 
@@ -65,15 +66,16 @@ public class TeacherController {
     @GetMapping("/grades/{teacherId}/student={studentId}")
     public String gradesForStudent(@PathVariable("teacherId") String teacherId,@PathVariable("studentId") String studentId, Model model){
 
-        return "";
+        List<StudentGradesDto> gradesForStudent = teacherService.getGradesForStudent(parseLong(teacherId), parseLong(studentId));
+        model.addAttribute("grades", gradesForStudent);
+
+        return "";  //ToDo: must create page
     }
 
     @PostMapping("/grades/{teacherId}/student={studentId}")
     public String changeGradesForStudent(@PathVariable("teacherId") String teacherId,@PathVariable("studentId") String studentId, Model model){
 
-        List<StudentGradesDto> gradesForStudent = teacherService.getGradesForStudent(parseLong(teacherId), parseLong(studentId));
-        model.addAttribute("grades", gradesForStudent);
-        return ""; //ToDo: must create page
+        return "";
     }
 
     @GetMapping("/grades/{teacherId}/group={groupId}")
@@ -81,6 +83,7 @@ public class TeacherController {
 
         List<StudentGradesDto> gradesForGroup = teacherService.getGradesForGroup(parseLong(teacherId), parseLong(groupId));
         model.addAttribute("grades", gradesForGroup);
+
         return ""; //ToDo: must create page
     }
 
@@ -130,6 +133,7 @@ public class TeacherController {
         model.addAttribute("thursdaySchedules", thursdaySchedules);
         model.addAttribute("fridaySchedules", fridaySchedules);
         model.addAttribute("maxSlotIndex", maxSlotIndex);
+
         return "teacher_weeklySchedule";
     }
 
