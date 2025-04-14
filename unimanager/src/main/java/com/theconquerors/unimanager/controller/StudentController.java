@@ -45,6 +45,15 @@ public class StudentController {
         return "student_information";
     }
 
+    @GetMapping("/{studentId}/group")
+    public String group_info(@PathVariable("groupId") String studentId, Model model){
+
+        List<StudentGroupInformationDto> groupInfo = studentService.getStudentGroupInfo(parseLong(studentId));
+        model.addAttribute("groupInfo", groupInfo);
+
+        return "";  //ToDo: Create page
+    }
+
     @GetMapping("/grades/{studentId}")
     public String grades(@PathVariable("studentId") String studentId, Model model) {
 

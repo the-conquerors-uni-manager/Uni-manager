@@ -1,9 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
-import com.theconquerors.unimanager.model.dto.StudentExamDto;
-import com.theconquerors.unimanager.model.dto.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.StudentWeeklyScheduleDto;
-import com.theconquerors.unimanager.model.dto.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.*;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.service.StudentService;
 import com.theconquerors.unimanager.service.TeacherService;
@@ -64,37 +61,37 @@ public class TeacherController {
     }
 
     @GetMapping("/grades/{teacherId}/student={studentId}")
-    public String gradesForStudent(@PathVariable("teacherId") String teacherId,@PathVariable("studentId") String studentId, Model model){
+    public String gradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model){
 
         List<StudentGradesDto> gradesForStudent = teacherService.getGradesForStudent(parseLong(teacherId), parseLong(studentId));
         model.addAttribute("grades", gradesForStudent);
 
-        return "";  //ToDo: must create page
+        return "";  //ToDo: Create page
     }
 
     @PostMapping("/grades/{teacherId}/student={studentId}")
-    public String changeGradesForStudent(@PathVariable("teacherId") String teacherId,@PathVariable("studentId") String studentId, Model model){
+    public String changeGradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model){
 
         return "";
     }
 
     @GetMapping("/grades/{teacherId}/group={groupId}")
-    public String gradesForGroup(@PathVariable("teacherId") String teacherId,@PathVariable("groupId") String groupId, Model model){
+    public String gradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("groupId") String groupId, Model model){
 
         List<StudentGradesDto> gradesForGroup = teacherService.getGradesForGroup(parseLong(teacherId), parseLong(groupId));
         model.addAttribute("grades", gradesForGroup);
 
-        return ""; //ToDo: must create page
+        return "";  //ToDo: Create page
     }
 
     @PostMapping("/grades/{teacherId}/group={groupId}")
-    public String changeGradesForGroup(@PathVariable("teacherId") String teacherId,@PathVariable("studentId") String studentId, Model model){
+    public String changeGradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String groupId, Model model){
 
         return "";
     }
 
     @GetMapping("/weekly-schedule/{teacherId}")
-    public String weeklySchedule(@PathVariable("teacherId") String teacherId,Model model){
+    public String weeklySchedule(@PathVariable("teacherId") String teacherId, Model model){
 
         List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
 
@@ -138,11 +135,20 @@ public class TeacherController {
     }
 
     @GetMapping("/exams/{teacherId}")
-    public String exams(@PathVariable("teacherId") String teacherId,Model model){
+    public String exams(@PathVariable("teacherId") String teacherId, Model model){
 
         List<StudentExamDto> studentExams = teacherService.getExams(parseLong(teacherId));
         model.addAttribute("teacherExams", studentExams);
 
         return "teacher_exams";
+    }
+
+    @GetMapping("/group={groupId}")
+    public String group_info(@PathVariable("groupId") String groupId, Model model){
+
+        List<StudentGroupInformationDto> groupInfo = teacherService.getStudentGroupInfo(parseLong(groupId));
+        model.addAttribute("groupInfo", groupInfo);
+
+        return "";  //ToDo: Create page
     }
 }

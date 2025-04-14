@@ -22,11 +22,14 @@ public class TeacherService {
     private final WeeklyScheduleRepository weeklyScheduleRepository;
     private final StudentRepository studentRepository;
 
-    public TeacherService(GradeRepository gradeRepository, TeacherRepository teacherRepository, WeeklyScheduleRepository weeklyScheduleRepository, StudentRepository studentRepository) {
+    private final GroupRepository groupRepository;
+
+    public TeacherService(GradeRepository gradeRepository, TeacherRepository teacherRepository, WeeklyScheduleRepository weeklyScheduleRepository, StudentRepository studentRepository, GroupRepository groupRepository) {
         this.gradeRepository = gradeRepository;
         this.teacherRepository = teacherRepository;
         this.weeklyScheduleRepository = weeklyScheduleRepository;
         this.studentRepository = studentRepository;
+        this.groupRepository = groupRepository;
     }
 
     public Teacher getTeacher(Long id) {
@@ -129,6 +132,8 @@ public class TeacherService {
         return examsDTOs;
     }
 
+    /* Unused functionalities for teachers
+
     public Boolean sendScholarships(Long studentId, Scholarship scholarship) {
 
         return true;
@@ -159,5 +164,40 @@ public class TeacherService {
     public DormitoryAssignment getDormitoryInformation(Long studentId) {
 
         return null;
+    }*/
+
+    public List<StudentGroupInformationDto> getStudentGroupInfo(Long groupId) {
+
+        //find students at this group
+        List<Student> students = studentRepository.findStudentByGroupId(groupId);
+
+        //find group info from model
+        Group group = groupRepository.findGroupById(groupId);
+
+
+        List<StudentGroupInformationDto> groupDto = new ArrayList<>();
+
+        for (Student student : students) {
+            groupDto.add(new StudentGroupInformationDto(new StudentInformationDto(student), new StudentGroupDto(group)));
+        }
+
+        return groupDto;
+    }
+
+    public Boolean setGrade(Grade grade) {
+        try {
+
+            if (grade == null) {
+                throw new IllegalArgumentException("Grade must not be null.");
+            }
+
+            gradeRepository.save(grade);
+
+            return true;
+
+        } catch (Exception e) {
+            log.error("Failed to submit grade!", e);
+            return false;
+        }
     }
 }

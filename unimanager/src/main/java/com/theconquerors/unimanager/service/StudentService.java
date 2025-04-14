@@ -25,6 +25,7 @@ public class StudentService {
     private final ScholarshipApplicationRepository scholarshipApplicationRepository;
     private final HealthInsurancePaymentRepository healthInsurancePaymentRepository;
     private final DormitoryAssignmentRepository dormitoryAssignmentRepository;
+    private final GroupRepository groupRepository;
 
     public StudentService(
             GradeRepository gradeRepository,
@@ -34,7 +35,7 @@ public class StudentService {
             PaymentRepository paymentRepository,
             ScholarshipApplicationRepository scholarshipApplicationRepository,
             HealthInsurancePaymentRepository healthInsurancePaymentRepository,
-            DormitoryAssignmentRepository dormitoryAssignmentRepository) {
+            DormitoryAssignmentRepository dormitoryAssignmentRepository, GroupRepository groupRepository) {
         this.gradeRepository = gradeRepository;
         this.studentRepository = studentRepository;
         this.weeklyScheduleRepository = weeklyScheduleRepository;
@@ -43,6 +44,7 @@ public class StudentService {
         this.scholarshipApplicationRepository = scholarshipApplicationRepository;
         this.healthInsurancePaymentRepository = healthInsurancePaymentRepository;
         this.dormitoryAssignmentRepository = dormitoryAssignmentRepository;
+        this.groupRepository = groupRepository;
     }
 
     public Student getStudent(Long id) {
@@ -217,5 +219,27 @@ public class StudentService {
         }
 
         return dormitoryAssignmentDtos;
+    }
+
+    public List<StudentGroupInformationDto> getStudentGroupInfo(Long studentId) {
+
+        //find groupId by studentId
+        Long groupId = studentRepository.findStudentById(studentId).getGroup().getId();
+
+        //find students at this group
+        List<Student> students = studentRepository.findStudentByGroupId(groupId);
+
+        //find group info from model
+        Group group = groupRepository.findGroupById(groupId);
+
+
+        List<StudentGroupInformationDto> groupDto = new ArrayList<>();
+
+        for (Student student : students) {
+            groupDto.add(new StudentGroupInformationDto(new StudentInformationDto(student), new StudentGroupDto(group)));
+        }
+
+        return groupDto;
+
     }
 }
