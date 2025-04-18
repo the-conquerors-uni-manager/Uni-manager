@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .header {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .info-card {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .info-value {
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav th:replace="~{/teacher/fragments/teacher_navbar :: sidebar(${teacherId})}"
+         class="bg-light shadow-sm rounded p-3"/>
+</div>
+<div class="container">
+    <h1 class="header text-center">Teacher Details</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="info-card">
+                <span class="info-label">First Name:</span>
+                <span class="info-value" th:text="${teacher.firstName}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Middle Name:</span>
+                <span class="info-value" th:text="${teacher.middleName}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Last Name:</span>
+                <span class="info-value" th:text="${teacher.lastName}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Birth Date:</span>
+                <span class="info-value" th:text="${teacher.birthDate}"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="info-card">
+                <span class="info-label">EGN:</span>
+                <span class="info-value" th:text="${teacher.egn}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Personal Email:</span>
+                <span class="info-value" th:text="${teacher.personalEmail}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Work Email:</span>
+                <span class="info-value" th:text="${teacher.workEmail}"></span>
+            </div>
+
+            <div class="info-card">
+                <span class="info-label">Phone Number:</span>
+                <span class="info-value" th:text="${teacher.phoneNumber}"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Fragment</title>
+</head>
+<body>
+<nav th:fragment="sidebar(teacherId)" class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" th:href="@{'/teacher/' + ${teacherId}}">
+                    Information
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/teacher/grades/' + ${teacherId}}">
+                    Grades
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/teacher/weekly-schedule/' + ${teacherId}}">
+                    Weekly schedule
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/teacher/exams/' + ${teacherId}}">
+                    Exams
+                </a>
+            </li>
+        </ul>
+        <ul class="nav flex-column nav-bottom">
+            <li class="nav-item">
+                <a class="nav-link" href="/login">
+                    Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

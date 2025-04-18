@@ -1,0 +1,74 @@
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+    }
+
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        padding-top: 0.5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .sidebar .nav-link {
+        font-weight: 500;
+        color: #333;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 4px;
+        background-color: #e9ecef;
+        border: none;
+    }
+
+    .sidebar .nav-link:hover {
+        color: #007bff;
+        background-color: #dcdcdc;
+    }
+
+    .btn-delete {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-delete:hover {
+        color: #fff;
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+    .sidebar-sticky {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Full height */
+   }
+    .nav-bottom {
+        margin-top: auto; /* Pushes the element to the bottom */
+   }
+    .nav-bottom a {
+        color: #28A745; /* Change the color to red, modify as needed */
+   }
+   body {
+   background-color: #d8dcdc;
+   }
+   .btn-custom-width {
+           width: 350px; /* Or set a specific width like 200px */
+           display: inline-block; /* This makes the button only as wide as its content */
+       }
+   .custom-hr {
+       width: 50%; /* Adjust the width as you like */
+       margin-left: 0;
+   }
+
+   .table {
+       /* Add your styles for the table here if needed */
+   }
+

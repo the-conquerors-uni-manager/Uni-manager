@@ -42,16 +42,17 @@ public class StudentController {
 
         StudentInformationDto studentInformationDto = studentService.getInformation(Long.valueOf(studentId));
         model.addAttribute("student", studentInformationDto);
-        return "student_information";
+        return "student/student_information";
     }
 
+    /// /groupInformation/{studentId} (pop up ? )
     @GetMapping("/{studentId}/group")
-    public String group_info(@PathVariable("groupId") String studentId, Model model){
+    public String group_info(@PathVariable("groupId") String studentId, Model model) {
 
         List<StudentGroupInformationDto> groupInfo = studentService.getStudentGroupInfo(parseLong(studentId));
         model.addAttribute("groupInfo", groupInfo);
 
-        return "";  //ToDo: Create page
+        return "";  //ToDo: Create page student/
     }
 
     @GetMapping("/grades/{studentId}")
@@ -59,7 +60,7 @@ public class StudentController {
 
         List<StudentGradesDto> grades = studentService.getGrades(parseLong(studentId));
         model.addAttribute("grades", grades);
-        return "student_grades";
+        return "student/student_grades";
     }
 
     @GetMapping("/weekly-schedule/{studentId}")
@@ -102,7 +103,7 @@ public class StudentController {
         model.addAttribute("thursdaySchedules", thursdaySchedules);
         model.addAttribute("fridaySchedules", fridaySchedules);
         model.addAttribute("maxSlotIndex", maxSlotIndex);
-        return "student_weeklySchedule";
+        return "student/student_weeklySchedule";
     }
 
     @GetMapping("/exams/{studentId}")
@@ -110,19 +111,20 @@ public class StudentController {
 
         List<StudentExamDto> studentExams = studentService.getExams(parseLong(studentId));
         model.addAttribute("studentExams", studentExams);
-        return "student_exams";
+        return "student/student_exams";
     }
 
+    //Post
     @GetMapping("/payments/scholarship-application/{studentId}")
     public String scholarshipApplication(@PathVariable("studentId") String studentId, Model model) {
 
-        return "student_payments_scholarshipApplication";
+        return "student/student_payments_scholarshipApplication";
     }
 
     @GetMapping("/payments/scholarship/{studentId}")
     public String scholarship(@PathVariable("studentId") String studentId, Model model) {
 
-        return "student_payments_scholarship";
+        return "student/student_payments_scholarship";
     }
 
     @GetMapping("/payments/{studentId}")
@@ -132,7 +134,7 @@ public class StudentController {
 
         model.addAttribute("payments", paymentsDtos);
 
-        return "student_payments";
+        return "student/student_payments";
     }
 
     @GetMapping("/payments/health-insurance/{studentId}")
@@ -141,7 +143,7 @@ public class StudentController {
         List<StudentHealthInsurancePaymentDto> healthPayment = studentService.getHealthInsurancePayments(Long.parseLong(studentId));
         model.addAttribute("healthPayment", healthPayment);
 
-        return "student_payments_health";
+        return "student/student_payments_health";
     }
 
     @GetMapping("/dormitory/{studentId}")
@@ -150,6 +152,6 @@ public class StudentController {
         List<StudentDormitoryAssignmentDto> dormitoryAssign = studentService.getDormitoryInformation(Long.parseLong(studentId));
         model.addAttribute("dormitory", dormitoryAssign);
 
-        return "student_dormitory";
+        return "student/student_dormitory";
     }
 }

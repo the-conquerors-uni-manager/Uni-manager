@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <nav th:replace="~{/teacher/fragments/teacher_navbar :: sidebar(${teacherId})}"
+         class="bg-light shadow-sm rounded p-1"/>
+</div>
+<div class="content-wrapper">
+    <div class="container-custom">
+        <div class="table-responsive">
+            <table id="myTable">
+                <caption>Teacher Exams</caption>
+                <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Group</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="exam : ${teacherExams}">
+                    <td th:text="${exam.subjectName}">Math</td>
+                    <!-- <td th:text="${exam.groupName}">Group A</td>-->
+                    <td th:text="${exam.startTime}">10:00</td>
+                    <td th:text="${exam.endTime}">12:00</td>
+                    <td th:text="${exam.duration}">2 hrs</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

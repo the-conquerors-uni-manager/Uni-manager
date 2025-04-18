@@ -37,46 +37,54 @@ public class TeacherController {
     }
 
     @GetMapping("")
-    public String login(Model model){
+    public String login(Model model) {
 
         return "redirect:login";
     }
 
     @GetMapping("/{teacherId}")
-    public String information(@PathVariable("teacherId") String teacherId, Model model){
+    public String information(@PathVariable("teacherId") String teacherId, Model model) {
 
         TeacherInformationDto teacherInformationDto = teacherService.getInformation(Long.valueOf(teacherId));
         model.addAttribute("teacher", teacherInformationDto);
 
-        return "teacher_information";
+        return "teacher/teacher_information";
     }
 
     @GetMapping("/grades/{teacherId}")
-    public String allGrades(@PathVariable("teacherId") String teacherId, Model model){
+    public String allGrades(@PathVariable("teacherId") String teacherId, Model model) {
 
         List<StudentGradesDto> teacherGrades = teacherService.getGrades(parseLong(teacherId));
         model.addAttribute("grades", teacherGrades);
 
-        return "teacher_grades";
+        return "teacher/teacher_grades";
     }
 
+    /// /grades/{teacherId}${studentId}
+    /// /grades/{teacherId}?{studentId}
+    /// /grades/{teacherId}$s={studentId}
+    /// /grades/{teacherId}?s={studentId}
     @GetMapping("/grades/{teacherId}/student={studentId}")
-    public String gradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model){
+    public String gradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model) {
 
         List<StudentGradesDto> gradesForStudent = teacherService.getGradesForStudent(parseLong(teacherId), parseLong(studentId));
         model.addAttribute("grades", gradesForStudent);
 
-        return "";  //ToDo: Create page
+        return "";  //ToDo: Create page teacher/
     }
 
+    /// /grades/{teacherId}${studentId}
+    /// /grades/{teacherId}?{studentId}
     @PostMapping("/grades/{teacherId}/student={studentId}")
-    public String changeGradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model){
+    public String changeGradesForStudent(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String studentId, Model model) {
 
         return "";
     }
 
+    /// /grades/{teacherId}${studentId}
+    /// /grades/{teacherId}?{studentId}
     @GetMapping("/grades/{teacherId}/group={groupId}")
-    public String gradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("groupId") String groupId, Model model){
+    public String gradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("groupId") String groupId, Model model) {
 
         List<StudentGradesDto> gradesForGroup = teacherService.getGradesForGroup(parseLong(teacherId), parseLong(groupId));
         model.addAttribute("grades", gradesForGroup);
@@ -85,13 +93,13 @@ public class TeacherController {
     }
 
     @PostMapping("/grades/{teacherId}/group={groupId}")
-    public String changeGradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String groupId, Model model){
+    public String changeGradesForGroup(@PathVariable("teacherId") String teacherId, @PathVariable("studentId") String groupId, Model model) {
 
         return "";
     }
 
     @GetMapping("/weekly-schedule/{teacherId}")
-    public String weeklySchedule(@PathVariable("teacherId") String teacherId, Model model){
+    public String weeklySchedule(@PathVariable("teacherId") String teacherId, Model model) {
 
         List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
 
@@ -131,24 +139,24 @@ public class TeacherController {
         model.addAttribute("fridaySchedules", fridaySchedules);
         model.addAttribute("maxSlotIndex", maxSlotIndex);
 
-        return "teacher_weeklySchedule";
+        return "teacher/teacher_weeklySchedule";
     }
 
     @GetMapping("/exams/{teacherId}")
-    public String exams(@PathVariable("teacherId") String teacherId, Model model){
+    public String exams(@PathVariable("teacherId") String teacherId, Model model) {
 
         List<StudentExamDto> studentExams = teacherService.getExams(parseLong(teacherId));
         model.addAttribute("teacherExams", studentExams);
 
-        return "teacher_exams";
+        return "teacher/teacher_exams";
     }
 
     @GetMapping("/group={groupId}")
-    public String group_info(@PathVariable("groupId") String groupId, Model model){
+    public String group_info(@PathVariable("groupId") String groupId, Model model) {
 
         List<StudentGroupInformationDto> groupInfo = teacherService.getStudentGroupInfo(parseLong(groupId));
         model.addAttribute("groupInfo", groupInfo);
 
-        return "";  //ToDo: Create page
+        return "";  //ToDo: Create page teacher/
     }
 }
