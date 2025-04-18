@@ -117,13 +117,11 @@ public class StudentController {
     //Post
     @GetMapping("/payments/scholarship-application/{studentId}")
     public String scholarshipApplication(@PathVariable("studentId") String studentId, Model model) {
-
         return "student/student_payments_scholarshipApplication";
     }
 
     @GetMapping("/payments/scholarship/{studentId}")
     public String scholarship(@PathVariable("studentId") String studentId, Model model) {
-
         return "student/student_payments_scholarship";
     }
 
