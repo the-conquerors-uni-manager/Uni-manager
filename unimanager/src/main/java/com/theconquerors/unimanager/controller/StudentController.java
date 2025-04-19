@@ -148,7 +148,12 @@ public class StudentController {
     public String dormitory(@PathVariable("studentId") String studentId, Model model) {
 
         List<StudentDormitoryAssignmentDto> dormitoryAssign = studentService.getDormitoryInformation(Long.parseLong(studentId));
-        model.addAttribute("dormitory", dormitoryAssign);
+        model.addAttribute("hasDormitory", dormitoryAssign.isEmpty());
+
+        if (!dormitoryAssign.isEmpty()) {
+            model.addAttribute("dormitory", dormitoryAssign);
+            model.addAttribute("apartmentName", dormitoryAssign.getFirst().getApartment());
+        }
 
         return "student/student_dormitory";
     }

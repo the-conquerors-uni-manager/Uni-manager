@@ -33,4 +33,9 @@ public class Apartment extends BaseEntity {
 
     @OneToMany(mappedBy = "apartment", cascade = CascadeType.ALL, targetEntity = DormitoryAssignment.class)
     private Set<DormitoryAssignment> dormitoryAssignments;
+
+    @Override
+    public String toString() {
+        return String.valueOf(block) + String.valueOf(floor) + String.valueOf(number);
+    }
 }

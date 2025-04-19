@@ -211,7 +211,11 @@ public class StudentService {
 
     public List<StudentDormitoryAssignmentDto> getDormitoryInformation(Long studentId) {
 
-        List<DormitoryAssignment> dormitoryAssignments = dormitoryAssignmentRepository.findDormitoryAssignmentByStudentId(studentId);
+        List<DormitoryAssignment> studentDormitoryAssignments = dormitoryAssignmentRepository.findDormitoryAssignmentsByStudentId(studentId);
+        DormitoryAssignment assined = studentDormitoryAssignments.stream().filter(DormitoryAssignment::isLiving).findFirst().orElse(null);
+        if (assined == null) return Collections.emptyList();
+
+        List<DormitoryAssignment> dormitoryAssignments = dormitoryAssignmentRepository.findDormitoryAssignmentsByApartmentId(assined.getApartment().getId());
         List<StudentDormitoryAssignmentDto> dormitoryAssignmentDtos = new ArrayList<>();
 
         for (DormitoryAssignment dormitoryAssignment : dormitoryAssignments) {
