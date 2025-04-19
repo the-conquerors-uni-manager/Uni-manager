@@ -33,7 +33,7 @@ public class Admin extends BaseEntity {
     private String lastName;
 
     @NotBlank
-    @Column(name = "eng", nullable = false,length = 10)
+    @Column(name = "egn", nullable = false,length = 10)
     @Size(max = 10)
     private String egn;
 

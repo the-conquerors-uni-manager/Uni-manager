@@ -1,5 +1,8 @@
 package com.theconquerors.unimanager.controller;
 
+import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
+import com.theconquerors.unimanager.service.AdminService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,17 +12,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/admin/{adminId}")
 public class AdminController {
 
-    @GetMapping({"", "/"})
-    public String login(Model model) {
-        return "redirect:/login";
-    }
+    @Autowired
+    private AdminService adminService;
 
-    @GetMapping("/{adminId}")
+    @GetMapping("")
     public String getAdminInformation(@PathVariable("adminId") String adminId, Model model) {
-        return "";
+
+        AdminInformationDTO adminInformation = adminService
+                .getAdminInformation(Long.parseLong(adminId));
+
+        model.addAttribute("admin", adminInformation);
+        model.addAttribute("adminId", adminId);
+
+        return "admin/admin_info";
     }
 
     //region Users

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Navigation Fragment</title>
+</head>
+<body>
+<nav th:fragment="adminSidebar(adminId)" class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/users'}">
+                    Manage Users
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/courses'}">
+                    Manage Courses
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/reports'}">
+                    Reports
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/settings'}">
+                    Settings
+                </a>
+            </li>
+        </ul>
+        <ul class="nav flex-column nav-bottom mt-4">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">
+                    Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>
