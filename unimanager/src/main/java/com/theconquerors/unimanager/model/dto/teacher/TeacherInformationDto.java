@@ -1,4 +1,4 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.teacher;
 
 import com.theconquerors.unimanager.model.entity.Teacher;
 import lombok.Getter;

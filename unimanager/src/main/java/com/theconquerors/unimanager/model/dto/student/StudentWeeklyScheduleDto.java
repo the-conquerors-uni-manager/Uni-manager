@@ -1,6 +1,7 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.student;
 
-import com.theconquerors.unimanager.model.entity.*;
+import com.theconquerors.unimanager.model.entity.Group;
+import com.theconquerors.unimanager.model.entity.WeeklySchedule;
 import com.theconquerors.unimanager.model.entity.enums.AcademicActivitiesEnum;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.student;
 
 import com.theconquerors.unimanager.model.entity.Group;
 import com.theconquerors.unimanager.model.entity.Specialty;

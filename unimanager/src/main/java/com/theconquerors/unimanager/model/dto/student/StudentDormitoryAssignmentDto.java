@@ -1,4 +1,4 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.student;
 
 import com.theconquerors.unimanager.model.entity.DormitoryAssignment;
 import lombok.Getter;

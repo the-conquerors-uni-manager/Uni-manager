@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.service;
 
-import com.theconquerors.unimanager.model.dto.*;
+import com.theconquerors.unimanager.model.dto.student.*;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;

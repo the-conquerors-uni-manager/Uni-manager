@@ -1,6 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
-import com.theconquerors.unimanager.model.dto.*;
+import com.theconquerors.unimanager.model.dto.student.*;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.service.StudentService;
 import org.slf4j.Logger;

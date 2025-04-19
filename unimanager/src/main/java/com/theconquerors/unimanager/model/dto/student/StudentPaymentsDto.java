@@ -1,4 +1,4 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.student;
 
 import com.theconquerors.unimanager.model.entity.Payment;
 import com.theconquerors.unimanager.model.entity.enums.PaymentStatusEnum;

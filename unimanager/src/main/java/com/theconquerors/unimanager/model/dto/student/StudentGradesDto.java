@@ -1,4 +1,4 @@
-package com.theconquerors.unimanager.model.dto;
+package com.theconquerors.unimanager.model.dto.student;
 
 import com.theconquerors.unimanager.model.entity.Grade;
 import com.theconquerors.unimanager.model.entity.enums.SessionTypeEnum;
@@ -10,7 +10,7 @@ import lombok.Setter;
 public class StudentGradesDto {
 
     private short examProtocolNumber;
-    private String teacherName ;
+    private String teacherName;
     private String subjectName;
     private byte grade;
     private SessionTypeEnum sessionType;
