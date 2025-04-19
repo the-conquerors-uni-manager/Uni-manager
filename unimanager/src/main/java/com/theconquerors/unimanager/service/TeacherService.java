@@ -3,6 +3,7 @@ package com.theconquerors.unimanager.service;
 import com.theconquerors.unimanager.model.dto.student.*;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.teacher.TeascherGradesDto;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
@@ -46,13 +47,13 @@ public class TeacherService {
         return ((null == teacher) ? null : new TeacherInformationDto(teacher));
     }
 
-    public List<StudentGradesDto> getGrades(Long teacherId) {
+    public List<TeascherGradesDto> getGrades(Long teacherId) {
 
         List<Grade> grades = gradeRepository.findGradesByTeacherId(teacherId);
-        List<StudentGradesDto> gradesDtos = new ArrayList<>();
+        List<TeascherGradesDto> gradesDtos = new ArrayList<>();
 
         for (Grade grade : grades) {
-            gradesDtos.add(new StudentGradesDto(grade));
+            gradesDtos.add(new TeascherGradesDto(grade));
         }
 
         return gradesDtos;

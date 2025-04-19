@@ -5,6 +5,7 @@ import com.theconquerors.unimanager.model.dto.student.StudentGroupInformationDto
 import com.theconquerors.unimanager.model.dto.student.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.teacher.TeascherGradesDto;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.service.StudentService;
 import com.theconquerors.unimanager.service.TeacherService;
@@ -58,7 +59,7 @@ public class TeacherController {
     @GetMapping("/grades/{teacherId}")
     public String allGrades(@PathVariable("teacherId") String teacherId, Model model) {
 
-        List<StudentGradesDto> teacherGrades = teacherService.getGrades(parseLong(teacherId));
+        List<TeascherGradesDto> teacherGrades = teacherService.getGrades(parseLong(teacherId));
         model.addAttribute("grades", teacherGrades);
 
         return "teacher/teacher_grades";
