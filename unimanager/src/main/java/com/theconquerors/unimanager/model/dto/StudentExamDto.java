@@ -17,7 +17,7 @@ public class StudentExamDto {
     public Date date;
     public LocalTime startTime;
     public LocalTime endTime;
-    public Duration duration;
+    public String duration;
 
 
     public StudentExamDto(Exam exam) {
@@ -26,7 +26,15 @@ public class StudentExamDto {
         setDate(exam.getDate());
         setStartTime(exam.getStartTime());
         setEndTime(exam.getEndTime());
-        setDuration(Duration.between(startTime, endTime));
+
+        Duration duration = Duration.between(startTime, endTime);
+        long seconds = duration.getSeconds();
+        long hours = seconds / 3600;
+        long minutes = (seconds % 3600) / 60;
+        long secs = seconds % 60;
+
+        String formatted = String.format("%02d:%02d:%02d", hours, minutes, secs);
+        setDuration(formatted);
     }
 
 }
