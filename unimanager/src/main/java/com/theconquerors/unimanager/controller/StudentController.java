@@ -138,8 +138,8 @@ public class StudentController {
     @GetMapping("/payments/health-insurance/{studentId}")
     public String healthInsurance(@PathVariable("studentId") String studentId, Model model) {
 
-        List<StudentHealthInsurancePaymentDto> healthPayment = studentService.getHealthInsurancePayments(Long.parseLong(studentId));
-        model.addAttribute("healthPayment", healthPayment);
+        List<StudentHealthInsurancePaymentDto> healthPayments = studentService.getHealthInsurancePayments(Long.parseLong(studentId));
+        model.addAttribute("healthPayments", healthPayments);
 
         return "student/student_payments_health";
     }

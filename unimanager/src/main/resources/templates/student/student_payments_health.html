@@ -91,13 +91,17 @@
     <table id="myTable">
         <thead>
         <tr>
+            <th>Amound</th>
             <th>Period</th>
             <th>Date</th>
-            <th>Amound</th>
         </tr>
         </thead>
         <tbody>
-        <!-- Dynamic rows will be inserted here -->
+        <tr th:each="payment : ${healthPayments}">
+            <td th:text="${payment.amount} + ' BGN'"></td>
+            <td th:text="${#dates.format(payment.period, 'yyyy-MM-dd')}"></td>
+            <td th:text="${#dates.format(payment.date, 'yyyy-MM-dd')}"></td>
+        </tr>
         </tbody>
     </table>
 </div>
