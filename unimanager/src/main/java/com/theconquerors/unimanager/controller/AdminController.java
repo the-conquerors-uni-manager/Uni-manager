@@ -1,6 +1,7 @@
 package com.theconquerors.unimanager.controller;
 
 import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
+import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
 import com.theconquerors.unimanager.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/admin/{adminId}")
@@ -30,10 +33,15 @@ public class AdminController {
         return "admin/admin_info";
     }
 
-    //region Users
     @GetMapping("/users")
-    public String getAllUsers(Model model) {
-        return "";
+    public String getAllUsers(@PathVariable("adminId") String adminId, Model model) {
+
+        List<SystemUserDTO> users = adminService.getAllSystemUsers();
+
+        model.addAttribute("adminId", adminId);
+        model.addAttribute("users", users);
+
+        return "admin/admin_users";
     }
 
     @PostMapping("/user{operation}?{userId}")
@@ -60,7 +68,6 @@ public class AdminController {
 
         return "redirect:/admin/users";
     }
-    //endregion
 
     //region Groups
     @GetMapping("/groups")

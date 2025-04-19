@@ -10,4 +10,6 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
     Student findStudentById(Long id);
 
     List<Student> findStudentByGroupId(Long id);
+
+    List<Student> findAll();
 }
