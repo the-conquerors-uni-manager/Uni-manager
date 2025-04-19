@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Insurance Payments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .header {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <nav th:replace="~{/admin/fragments/admin_navbar :: adminSidebar(${adminId})}"
+         class="bg-light shadow-sm rounded p-3"></nav>
+</div>
+
+<div class="container">
+    <h1 class="header text-center">Health Insurance Payments</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Student Number</th>
+                <th>Period</th>
+                <th>Date of Payment</th>
+                <th>Amount (BGN)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="payment, iterStat : ${payments}">
+                <td th:text="${iterStat.count}">1</td>
+                <td>
+                    <span th:text="${payment.firstName}">First</span>
+                    <span th:text="${payment.middleName}">Middle</span>
+                    <span th:text="${payment.lastName}">Last</span>
+                </td>
+                <td th:text="${payment.period}">Student Number</td>
+                <td th:text="${#dates.format(payment.period, 'yyyy-MM')}">2025-01</td>
+                <td th:text="${#dates.format(payment.date, 'yyyy-MM-dd')}">2025-01-15</td>
+                <td th:text="${payment.amount}">100.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

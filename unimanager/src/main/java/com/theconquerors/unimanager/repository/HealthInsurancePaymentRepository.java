@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface HealthInsurancePaymentRepository extends JpaRepository<HealthInsurancePayment,Long> {
     List<HealthInsurancePayment> findHealthInsurancePaymentByStudentId(long studentId);
+
+    List<HealthInsurancePayment> findAll();
 }

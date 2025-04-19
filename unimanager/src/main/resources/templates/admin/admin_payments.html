@@ -2,131 +2,86 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Payments</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <style>
-        /* Page background with gradient */
-   body {
-       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       margin: 0;
-       padding: 20px;
-       min-height: 100vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-   }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-   /* Main container */
-   .container {
-       background-color: rgba(255, 255, 255, 0.95);
-       padding: 30px;
-       border-radius: 15px;
-       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-       width: 90%;
-       max-width: 1200px;
-       overflow: hidden;
-   }
+        .container {
+            max-width: 1000px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
 
-   /* Title style */
-   .title {
-       text-align: center;
-       color: #333;
-       margin-bottom: 25px;
-       font-size: 2.2rem;
-       font-weight: 600;
-       text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-   }
+        .header {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
 
-   /* Stylish Table */
-   table {
-       width: 100%;
-       border-collapse: separate;
-       border-spacing: 0;
-       margin: 20px 0;
-       font-size: 0.95rem;
-       text-align: center;
-       overflow: hidden;
-   }
+        .table th, .table td {
+            vertical-align: middle;
+        }
 
-   /* Table header style */
-   th {
-       background: linear-gradient(to right, #667eea, #764ba2);
-       color: white;
-       padding: 15px;
-       text-transform: uppercase;
-       letter-spacing: 1px;
-       font-weight: 600;
-       position: sticky;
-       top: 0;
-   }
+        .status-PENDING {
+            background-color: #FFC107 !important;
+            color: #333;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 5px 10px;
+            display: inline-block;
+            min-width: 30px;
+        }
 
-   /* Table row style */
-   td {
-       padding: 12px 15px;
-       border-bottom: 1px solid #e0e0e0;
-       transition: all 0.2s ease;
-   }
+        .status-SUCCESS {
+            background-color: #4CAF50 !important;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 5px 10px;
+            display: inline-block;
+            min-width: 30px;
+        }
 
-   /* Alternate row background color */
-   tr:nth-child(even) {
-       background-color: #f8f9fa;
-   }
-
-   /* Rounded corners for table */
-   table {
-       border-radius: 10px;
-       overflow: hidden;
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-   }
-
-       .status-PENDING {
-          background-color: #FFC107 !important;
-        color: #333;
-        font-weight: bold;
-        border-radius: 20px;
-        padding: 5px 10px;
-        display: inline-block;
-        min-width: 30px;
-       }
-       .status-SUCCESS {
-          background-color: #4CAF50 !important;
-        color: white;
-        font-weight: bold;
-        border-radius: 20px;
-        padding: 5px 10px;
-        display: inline-block;
-        min-width: 30px;
-       }
-       .status-FAIL {
+        .status-FAIL {
             background-color: #F44336 !important;
-        color: white;
-        font-weight: bold;
-        border-radius: 20px;
-        padding: 5px 10px;
-        display: inline-block;
-        min-width: 30px;
-       }
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 5px 10px;
+            display: inline-block;
+            min-width: 30px;
+        }
     </style>
 </head>
 <body>
+
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar (already handled with `th:replace`) -->
+        <!-- Sidebar -->
         <div class="col-md-2">
             <nav th:replace="~{/admin/fragments/admin_navbar :: adminSidebar(${adminId})}"
                  class="bg-light shadow-sm rounded p-3"></nav>
         </div>
 
-        <!-- Main content aligned left -->
+        <!-- Main Content -->
         <div class="col-md-10">
-            <div class="container mt-4">
-                <h2 class="text-left mb-4">Payments</h2>
+            <div class="container">
+                <h1 class="header text-center">Payments</h1>
+
                 <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-light">
                         <tr>
                             <th>Amount</th>
                             <th>Date</th>
@@ -151,6 +106,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

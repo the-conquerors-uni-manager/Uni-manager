@@ -1,16 +1,20 @@
 package com.theconquerors.unimanager.service;
 
+import com.theconquerors.unimanager.model.dto.admin.AdminHealthInsurancePaymentsDTO;
 import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
 import com.theconquerors.unimanager.model.dto.admin.PaymentDTO;
 import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
 import com.theconquerors.unimanager.model.entity.Admin;
+import com.theconquerors.unimanager.model.entity.HealthInsurancePayment;
 import com.theconquerors.unimanager.model.entity.Payment;
 import com.theconquerors.unimanager.model.entity.Student;
 import com.theconquerors.unimanager.model.entity.Teacher;
 import com.theconquerors.unimanager.repository.AdminRepository;
+import com.theconquerors.unimanager.repository.HealthInsurancePaymentRepository;
 import com.theconquerors.unimanager.repository.PaymentRepository;
 import com.theconquerors.unimanager.repository.StudentRepository;
 import com.theconquerors.unimanager.repository.TeacherRepository;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +36,9 @@ public class AdminService {
     @Autowired
     private PaymentRepository paymentRepository;
 
+    @Autowired
+    private HealthInsurancePaymentRepository healthInsurancePaymentRepository;
+
     public AdminInformationDTO getAdminInformation(Long adminId) {
         Admin admin = adminRepository.findAdminById(adminId);
 
@@ -47,9 +54,15 @@ public class AdminService {
     }
 
     public List<PaymentDTO> getAllPayments() {
-        List<Payment> payments = paymentRepository.findAll();
+        return parsePaymentsToPaymentsDTO(
+                paymentRepository.findAll()
+        );
+    }
 
-        return parsePaymentsToPaymentsDTO(payments);
+    public List<AdminHealthInsurancePaymentsDTO> getAllHealthInsurancePayments() {
+        return parseHealthInsurancePaymentsToDTO(
+                healthInsurancePaymentRepository.findAll()
+        );
     }
 
     private AdminInformationDTO parseAdminToAdminInformationDTO(Admin admin) {
@@ -89,6 +102,28 @@ public class AdminService {
         }
 
         return paymentDTOList;
+    }
+
+    private List<AdminHealthInsurancePaymentsDTO> parseHealthInsurancePaymentsToDTO(List<HealthInsurancePayment> payments) {
+        List<AdminHealthInsurancePaymentsDTO> paymentDTOs = new ArrayList<>();
+
+        for (HealthInsurancePayment healthInsurancePayment : payments) {
+            Hibernate.initialize(healthInsurancePayment.getStudent());
+
+            paymentDTOs.add(
+                    AdminHealthInsurancePaymentsDTO.builder()
+                            .firstName(healthInsurancePayment.getStudent().getFirstName())
+                            .middleName(healthInsurancePayment.getStudent().getMiddleName())
+                            .lastName(healthInsurancePayment.getStudent().getLastName())
+                            .studentNumber(healthInsurancePayment.getStudent().getStudentNumber())
+                            .period(healthInsurancePayment.getPeriod())
+                            .date(healthInsurancePayment.getDate())
+                            .amount(healthInsurancePayment.getAmount())
+                            .build()
+            );
+        }
+
+        return paymentDTOs;
     }
 
     private void parseStudents(List<Student> students, List<SystemUserDTO> systemUsers) {

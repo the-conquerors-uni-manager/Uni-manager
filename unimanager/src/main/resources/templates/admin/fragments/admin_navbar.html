@@ -9,30 +9,23 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId}}">
+                    Personal Information
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/users'}">
-                    Manage Users
+                    View Users
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/courses'}">
-                    Manage Courses
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/payments'}">
+                    Payments
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/reports'}">
-                    Reports
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/settings'}">
-                    Settings
-                </a>
-            </li>
-        </ul>
-        <ul class="nav flex-column nav-bottom mt-4">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/logout}">
-                    Log out
+                <a class="nav-link" th:href="@{'/admin/' + ${adminId} + '/health-insurance'}">
+                    Health Insurance Payments
                 </a>
             </li>
         </ul>

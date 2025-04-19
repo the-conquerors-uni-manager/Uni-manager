@@ -1,5 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
+import com.theconquerors.unimanager.model.dto.admin.AdminHealthInsurancePaymentsDTO;
 import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
 import com.theconquerors.unimanager.model.dto.admin.PaymentDTO;
 import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
@@ -54,19 +55,16 @@ public class AdminController {
         return "admin/admin_payments";
     }
 
-    @GetMapping("/scholarship")
-    public String getAllScholarships(Model model) {
-        return "";
-    }
-
-    @GetMapping("/dormitory")
-    public String getAllDormitories(Model model) {
-        return "";
-    }
-
     @GetMapping("/health-insurance")
-    public String getAllHealthInsurances(Model model) {
-        return "";
+    public String getAllHealthInsurances(@PathVariable("adminId") String adminId, Model model) {
+
+        List<AdminHealthInsurancePaymentsDTO> healthInsurancePayments = adminService
+                .getAllHealthInsurancePayments();
+
+        model.addAttribute("adminId", adminId);
+        model.addAttribute("healthInsurancePayments", healthInsurancePayments);
+
+        return "admin/admin_health_insurance_payments";
     }
 
 }
