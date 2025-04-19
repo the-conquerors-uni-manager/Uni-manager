@@ -1,11 +1,14 @@
 package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
+import com.theconquerors.unimanager.model.dto.admin.PaymentDTO;
 import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
 import com.theconquerors.unimanager.model.entity.Admin;
+import com.theconquerors.unimanager.model.entity.Payment;
 import com.theconquerors.unimanager.model.entity.Student;
 import com.theconquerors.unimanager.model.entity.Teacher;
 import com.theconquerors.unimanager.repository.AdminRepository;
+import com.theconquerors.unimanager.repository.PaymentRepository;
 import com.theconquerors.unimanager.repository.StudentRepository;
 import com.theconquerors.unimanager.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +29,9 @@ public class AdminService {
     @Autowired
     private TeacherRepository teacherRepository;
 
+    @Autowired
+    private PaymentRepository paymentRepository;
+
     public AdminInformationDTO getAdminInformation(Long adminId) {
         Admin admin = adminRepository.findAdminById(adminId);
 
@@ -38,6 +44,12 @@ public class AdminService {
                 adminRepository.findAll(),
                 teacherRepository.findAll(),
                 studentRepository.findAll());
+    }
+
+    public List<PaymentDTO> getAllPayments() {
+        List<Payment> payments = paymentRepository.findAll();
+
+        return parsePaymentsToPaymentsDTO(payments);
     }
 
     private AdminInformationDTO parseAdminToAdminInformationDTO(Admin admin) {
@@ -61,6 +73,22 @@ public class AdminService {
         parseStudents(students, systemUsers);
 
         return systemUsers;
+    }
+
+    private List<PaymentDTO> parsePaymentsToPaymentsDTO(List<Payment> payments) {
+        List<PaymentDTO> paymentDTOList = new ArrayList<>();
+
+        for (Payment payment : payments) {
+            paymentDTOList.add(
+                    PaymentDTO.builder()
+                            .amount(payment.getAmount())
+                            .date(payment.getDate())
+                            .paymentType(payment.getPaymentType())
+                            .paymentStatus(payment.getPaymentStatusEnum())
+                            .build());
+        }
+
+        return paymentDTOList;
     }
 
     private void parseStudents(List<Student> students, List<SystemUserDTO> systemUsers) {
