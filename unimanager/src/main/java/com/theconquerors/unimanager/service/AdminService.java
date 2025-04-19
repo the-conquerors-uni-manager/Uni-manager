@@ -4,17 +4,11 @@ import com.theconquerors.unimanager.model.dto.admin.AdminHealthInsurancePayments
 import com.theconquerors.unimanager.model.dto.admin.AdminInformationDTO;
 import com.theconquerors.unimanager.model.dto.admin.PaymentDTO;
 import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
-import com.theconquerors.unimanager.model.entity.Admin;
-import com.theconquerors.unimanager.model.entity.HealthInsurancePayment;
-import com.theconquerors.unimanager.model.entity.Payment;
-import com.theconquerors.unimanager.model.entity.Student;
-import com.theconquerors.unimanager.model.entity.Teacher;
-import com.theconquerors.unimanager.repository.AdminRepository;
-import com.theconquerors.unimanager.repository.HealthInsurancePaymentRepository;
-import com.theconquerors.unimanager.repository.PaymentRepository;
-import com.theconquerors.unimanager.repository.StudentRepository;
-import com.theconquerors.unimanager.repository.TeacherRepository;
+import com.theconquerors.unimanager.model.entity.*;
+import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +17,8 @@ import java.util.List;
 
 @Service
 public class AdminService {
+
+    private static final Logger log = LoggerFactory.getLogger(AdminService.class);
 
     @Autowired
     private AdminRepository adminRepository;
@@ -109,7 +105,6 @@ public class AdminService {
 
         for (HealthInsurancePayment healthInsurancePayment : payments) {
             Hibernate.initialize(healthInsurancePayment.getStudent());
-
             paymentDTOs.add(
                     AdminHealthInsurancePaymentsDTO.builder()
                             .firstName(healthInsurancePayment.getStudent().getFirstName())

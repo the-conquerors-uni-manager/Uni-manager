@@ -57,7 +57,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="payment, iterStat : ${payments}">
+            <tr th:each="payment, iterStat : ${healthInsurancePayments}">
                 <td th:text="${iterStat.count}">1</td>
                 <td>
                     <span th:text="${payment.firstName}">First</span>
