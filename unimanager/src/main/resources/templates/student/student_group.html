@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Group</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <style>
+        /* Page background with gradient */
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light white background with transparency */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        /* Stylish Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Table header style */
+        th {
+            background-color: #00f2fe;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #4facfe;
+        }
+
+        /* Table row style */
+        td {
+            padding: 10px;
+            background-color: #f4f7fc;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Alternate row background color for better readability */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Hover effect for rows */
+        tr:hover {
+            background-color: #d1f1fe;
+        }
+
+        /* Add a rounded border to the table */
+        table, th, td {
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Style for table caption */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav th:replace="~{/student/fragments/student_navbar :: sidebar(${studentId})}"
+         class="bg-light shadow-sm rounded p-3"/>
+</div>
+<div class="container">
+
+    <h1>Group Info</h1>
+    <p><strong>Group name : </strong> <span th:text="${groupInfo.groupName}"/></p>
+    <p><strong>Specialty : </strong> <span th:text="${groupInfo.specialtyName}"/></p>
+    <p><strong>Foreman : </strong> <span th:text="${groupInfo.foremanName}"/></p>
+    <h2>Students in this group</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Student Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="studentName : ${groupInfo.studentNames}">
+            <td th:text="${studentName}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

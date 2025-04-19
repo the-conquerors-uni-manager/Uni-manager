@@ -45,14 +45,13 @@ public class StudentController {
         return "student/student_information";
     }
 
-    /// /groupInformation/{studentId} (pop up ? )
-    @GetMapping("/{studentId}/group")
-    public String group_info(@PathVariable("groupId") String studentId, Model model) {
+    @GetMapping("/groupInformation/{studentId}")
+    public String group_info(@PathVariable("studentId") String studentId, Model model) {
 
-        List<StudentGroupInformationDto> groupInfo = studentService.getStudentGroupInfo(parseLong(studentId));
+        StudentGroupDto groupInfo = studentService.getStudentGroupInfo(parseLong(studentId));
         model.addAttribute("groupInfo", groupInfo);
 
-        return "";  //ToDo: Create page student/
+        return "student/student_group";
     }
 
     @GetMapping("/grades/{studentId}")

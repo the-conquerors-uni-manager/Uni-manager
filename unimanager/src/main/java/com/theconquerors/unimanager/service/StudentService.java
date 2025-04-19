@@ -225,7 +225,7 @@ public class StudentService {
         return dormitoryAssignmentDtos;
     }
 
-    public List<StudentGroupInformationDto> getStudentGroupInfo(Long studentId) {
+    public StudentGroupDto getStudentGroupInfo(Long studentId) {
 
         //find groupId by studentId
         Long groupId = studentRepository.findStudentById(studentId).getGroup().getId();
@@ -237,12 +237,10 @@ public class StudentService {
         Group group = groupRepository.findGroupById(groupId);
 
 
-        List<StudentGroupInformationDto> groupDto = new ArrayList<>();
-
-        for (Student student : students) {
-            groupDto.add(new StudentGroupInformationDto(new StudentInformationDto(student), new StudentGroupDto(group)));
+        StudentGroupDto groupDto = new StudentGroupDto(group);
+        for (var s : groupDto.getStudentNames()) {
+            log.warn(s);
         }
-
         return groupDto;
 
     }

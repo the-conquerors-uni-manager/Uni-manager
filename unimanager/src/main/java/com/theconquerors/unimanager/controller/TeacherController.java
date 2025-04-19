@@ -1,7 +1,6 @@
 package com.theconquerors.unimanager.controller;
 
 import com.theconquerors.unimanager.model.dto.student.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.student.StudentGroupInformationDto;
 import com.theconquerors.unimanager.model.dto.student.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
@@ -156,12 +155,12 @@ public class TeacherController {
         return "teacher/teacher_exams";
     }
 
-    @GetMapping("/group={groupId}")
+   /* @GetMapping("/group={groupId}")
     public String group_info(@PathVariable("groupId") String groupId, Model model) {
 
         List<StudentGroupInformationDto> groupInfo = teacherService.getStudentGroupInfo(parseLong(groupId));
         model.addAttribute("groupInfo", groupInfo);
 
         return "";  //ToDo: Create page teacher/
-    }
+    }*/
 }

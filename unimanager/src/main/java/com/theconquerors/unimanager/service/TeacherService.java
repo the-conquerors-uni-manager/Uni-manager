@@ -1,6 +1,7 @@
 package com.theconquerors.unimanager.service;
 
-import com.theconquerors.unimanager.model.dto.student.*;
+import com.theconquerors.unimanager.model.dto.student.StudentGradesDto;
+import com.theconquerors.unimanager.model.dto.student.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeascherGradesDto;
@@ -169,7 +170,7 @@ public class TeacherService {
         return null;
     }*/
 
-    public List<StudentGroupInformationDto> getStudentGroupInfo(Long groupId) {
+   /* public List<StudentGroupInformationDto> getStudentGroupInfo(Long groupId) {
 
         //find students at this group
         List<Student> students = studentRepository.findStudentByGroupId(groupId);
@@ -185,7 +186,7 @@ public class TeacherService {
         }
 
         return groupDto;
-    }
+    }*/
 
     public Boolean setGrade(Grade grade) {
         try {
