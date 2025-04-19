@@ -95,8 +95,8 @@
                             <td th:text="${#dates.format(payment.date, 'yyyy-MM-dd')}"></td>
                             <td th:text="${payment.paymentType}"></td>
                             <td>
-                                <span th:class="'status-' + ${payment.paymentStatusEnum}"
-                                      th:text="${payment.paymentStatusEnum}"></span>
+                                <span th:class="'status-' + ${payment.paymentStatus}"
+                                      th:text="${payment.paymentStatus}"></span>
                             </td>
                         </tr>
                         </tbody>

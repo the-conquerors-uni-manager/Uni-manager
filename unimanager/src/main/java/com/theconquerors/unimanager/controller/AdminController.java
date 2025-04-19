@@ -24,6 +24,7 @@ public class AdminController {
     @GetMapping("")
     public String getAdminInformation(@PathVariable("adminId") String adminId, Model model) {
 
+
         AdminInformationDTO adminInformation = adminService
                 .getAdminInformation(Long.parseLong(adminId));
 
