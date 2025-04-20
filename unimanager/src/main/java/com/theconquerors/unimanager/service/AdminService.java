@@ -7,8 +7,6 @@ import com.theconquerors.unimanager.model.dto.admin.SystemUserDTO;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
 import org.hibernate.Hibernate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +15,6 @@ import java.util.List;
 
 @Service
 public class AdminService {
-
-    private static final Logger log = LoggerFactory.getLogger(AdminService.class);
 
     @Autowired
     private AdminRepository adminRepository;
@@ -105,6 +101,7 @@ public class AdminService {
 
         for (HealthInsurancePayment healthInsurancePayment : payments) {
             Hibernate.initialize(healthInsurancePayment.getStudent());
+
             paymentDTOs.add(
                     AdminHealthInsurancePaymentsDTO.builder()
                             .firstName(healthInsurancePayment.getStudent().getFirstName())
