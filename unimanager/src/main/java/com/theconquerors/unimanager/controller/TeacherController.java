@@ -1,9 +1,9 @@
 package com.theconquerors.unimanager.controller;
 
 import com.theconquerors.unimanager.model.dto.student.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.student.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.teacher.TeacherWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeascherGradesDto;
 import com.theconquerors.unimanager.model.entity.enums.DayOfWeekEnum;
 import com.theconquerors.unimanager.service.StudentService;
@@ -105,27 +105,27 @@ public class TeacherController {
     @GetMapping("/weekly-schedule/{teacherId}")
     public String weeklySchedule(@PathVariable("teacherId") String teacherId, Model model) {
 
-        List<StudentWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
+        List<TeacherWeeklyScheduleDto> weeklyScheduleForTeacher = teacherService.getWeeklySchedule(parseLong(teacherId));
 
-        List<StudentWeeklyScheduleDto> mondaySchedules = weeklyScheduleForTeacher.stream()
+        List<TeacherWeeklyScheduleDto> mondaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.MONDAY)
-                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .sorted(Comparator.comparing(TeacherWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> tuesdaySchedules = weeklyScheduleForTeacher.stream()
+        List<TeacherWeeklyScheduleDto> tuesdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.TUESDAY)
-                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .sorted(Comparator.comparing(TeacherWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> wednesdaySchedules = weeklyScheduleForTeacher.stream()
+        List<TeacherWeeklyScheduleDto> wednesdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.WEDNESDAY)
-                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .sorted(Comparator.comparing(TeacherWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> thursdaySchedules = weeklyScheduleForTeacher.stream()
+        List<TeacherWeeklyScheduleDto> thursdaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.THURSDAY)
-                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .sorted(Comparator.comparing(TeacherWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
-        List<StudentWeeklyScheduleDto> fridaySchedules = weeklyScheduleForTeacher.stream()
+        List<TeacherWeeklyScheduleDto> fridaySchedules = weeklyScheduleForTeacher.stream()
                 .filter(s -> s.getDayOfWeek() == DayOfWeekEnum.FRIDAY)
-                .sorted(Comparator.comparing(StudentWeeklyScheduleDto::getStartTime))
+                .sorted(Comparator.comparing(TeacherWeeklyScheduleDto::getStartTime))
                 .collect(Collectors.toList());
 
         int maxSlotIndex = Stream.of(

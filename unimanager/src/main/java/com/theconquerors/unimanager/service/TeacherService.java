@@ -1,9 +1,9 @@
 package com.theconquerors.unimanager.service;
 
 import com.theconquerors.unimanager.model.dto.student.StudentGradesDto;
-import com.theconquerors.unimanager.model.dto.student.StudentWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherExamDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeacherInformationDto;
+import com.theconquerors.unimanager.model.dto.teacher.TeacherWeeklyScheduleDto;
 import com.theconquerors.unimanager.model.dto.teacher.TeascherGradesDto;
 import com.theconquerors.unimanager.model.entity.*;
 import com.theconquerors.unimanager.repository.*;
@@ -94,13 +94,14 @@ public class TeacherService {
         return gradesGroupDtos;
     }
 
-    public List<StudentWeeklyScheduleDto> getWeeklySchedule(Long teacherId) {
+    public List<TeacherWeeklyScheduleDto> getWeeklySchedule(Long teacherId) {
 
         List<WeeklySchedule> weeklySchedules = weeklyScheduleRepository.findWeeklyScheduleByTeacherId(teacherId);
-        List<StudentWeeklyScheduleDto> weeklySchedulesDtos = new ArrayList<>();
+        List<TeacherWeeklyScheduleDto> weeklySchedulesDtos = new ArrayList<>();
 
         for (WeeklySchedule weeklySchedule : weeklySchedules) {
-            weeklySchedulesDtos.add(new StudentWeeklyScheduleDto(weeklySchedule));
+            Hibernate.initialize(weeklySchedule.getGroup());
+            weeklySchedulesDtos.add(new TeacherWeeklyScheduleDto(weeklySchedule));
         }
 
         return weeklySchedulesDtos;
